@@ -2,15 +2,15 @@
 using System.Collections;
 
 public class PlaneMovement : MonoBehaviour {
+	// Public variables
+	public int controlMethod = 1;
+	public float forwardSpeed = 1.0f;
+	public float rotationSpeed = 1.0f;
+	public float momentumReduction = 1.0f;
+	public float levelingForce = 1.0f;
+	
 	// Declare variables
-	//public int numRotations = 10;
-	[SerializeField] float forwardSpeed = 1.0f;
-	[SerializeField] float rotationSpeed = 1.0f;
-	[SerializeField] float momentumReduction = 1.0f;
-	[SerializeField] float levelingForce = 1.0f;
 	[SerializeField] float deadZone = 0.0f;
-	private bool debugWindow = false;
-	private int controlMethod = 1;
 	private Vector3 slideTouchPos;
 	private float momentum = 0.0f;
 	private LevelLost gameState;
@@ -21,23 +21,7 @@ public class PlaneMovement : MonoBehaviour {
 	}
 	
 	void OnGUI () {
-		if (!debugWindow) {
-			if (GUI.Button(new Rect(0, 0, Screen.width, Screen.height / 8.0f), "Open Debug Window")) {
-				debugWindow = true;
-			}
-		} else {			
-			if (GUI.Button(new Rect(0, 0, Screen.width / 2.0f, Screen.height / 8.0f), "Hold Rot.")) {
-				controlMethod = 1;
-			}
-			
-			if (GUI.Button(new Rect(Screen.width / 2.0f, 0, Screen.width / 2.0f, Screen.height / 8.0f), "Slide Rot.")) {
-				controlMethod = 2;
-			}
-			
-			if (GUI.Button(new Rect(Screen.width - Screen.width / 4.0f, 0.0f + Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), "Close Window")) {
-				debugWindow = false;
-			}
-		}
+
 	}
 	
 	// Update is called once per frame
