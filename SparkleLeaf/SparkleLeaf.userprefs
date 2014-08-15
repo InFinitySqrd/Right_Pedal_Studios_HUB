@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="..\..\Pirates Vs Robots\AI TESTING\Assets\AI Testing\AI Scripts\bossAI.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpawnGates.cs">
     <Files>
-      <File FileName="..\..\Pirates Vs Robots\AI TESTING\Assets\AI Testing\AI Scripts\bossAI.cs" Line="90" Column="3" />
+      <File FileName="Assets\Scripts\SpawnGates.cs" Line="17" Column="34" />
+      <File FileName="Assets\Scripts\SpawnGates.cs" Line="70" Column="122" />
+      <File FileName="Assets\Scripts\DebugControls.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
