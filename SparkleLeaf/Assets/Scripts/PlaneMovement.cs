@@ -14,10 +14,12 @@ public class PlaneMovement : MonoBehaviour {
 	private Vector3 slideTouchPos;
 	private float momentum = 0.0f;
 	private LevelLost gameState;
+	private DebugControls pause;
 	
 	// Use this for initialization
 	void Start () {
 		gameState = this.GetComponent<LevelLost>();	
+		pause = this.GetComponent<DebugControls>();
 	}
 	
 	void OnGUI () {
@@ -26,7 +28,7 @@ public class PlaneMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (!gameState.lost) {
+		if (!gameState.lost && !pause.paused) {
 			this.transform.Translate(Vector3.forward * forwardSpeed);
 			PlaneRotation();
 		}
@@ -76,7 +78,9 @@ public class PlaneMovement : MonoBehaviour {
 	}
 	
 	private void PlaneRotation() {	
-		this.transform.Rotate(Vector3.forward * momentum);
+		if (!pause.paused) {
+			this.transform.Rotate(Vector3.forward * momentum);
+		}
 	}
 	
 	private void LevelPlane() {

@@ -3,7 +3,11 @@ using System.Collections;
 
 public class DebugControls : MonoBehaviour {
 	// Declare variables
-	[SerializeField] float sliderMaxVal = 10.0f;
+	public bool paused = false;
+	[SerializeField] float moveMax = 4.0f;
+	[SerializeField] float rotateMax = 5.0f;
+	[SerializeField] float momentumReduxMax = 10.0f;
+	[SerializeField] float levelingForceMax = 10.0f;
 	private bool debugWindow = false;
 	private PlaneMovement planeVars;
 	
@@ -18,15 +22,19 @@ public class DebugControls : MonoBehaviour {
 	
 	void OnGUI() {
 		if (!debugWindow) {
+			paused = false;
+		
 			if (GUI.Button(new Rect(0, 0, Screen.width, Screen.height / 8.0f), "Open Debug Window")) {
 				debugWindow = true;
 			}
-		} else {			
+		} else {	
+			paused = true;
+						
 			DrawControlOptions();
-			DrawSliders(0, "MoveSpeed", ref planeVars.forwardSpeed);
-			DrawSliders(1, "RotateSpeed", ref planeVars.rotationSpeed);
-			DrawSliders(2, "MomentumReduct", ref planeVars.momentumReduction);
-			DrawSliders(3, "LevelingForce", ref planeVars.levelingForce);
+			DrawSliders(0, "MoveSpeed", ref planeVars.forwardSpeed, moveMax);
+			DrawSliders(1, "RotateSpeed", ref planeVars.rotationSpeed, rotateMax);
+			DrawSliders(2, "MomentumReduct", ref planeVars.momentumReduction, momentumReduxMax);
+			DrawSliders(3, "LevelingForce", ref planeVars.levelingForce, levelingForceMax);
 			
 			
 			if (GUI.Button(new Rect(Screen.width - Screen.width / 4.0f, 4.0f * Screen.height / 12.0f + Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), "Close Window")) {
@@ -50,7 +58,7 @@ public class DebugControls : MonoBehaviour {
 		}
 	}
 	
-	private void DrawSliders(int lineNum, string labelName, ref float editedVar) {	
+	private void DrawSliders(int lineNum, string labelName, ref float editedVar, float sliderMaxVal) {	
 		GUI.Box(new Rect(0.0f, Screen.height / 8.0f + lineNum * Screen.height / 12.0f , Screen.width / 6.0f, Screen.height / 12.0f), labelName);
 		
 		float sliderValue = editedVar;

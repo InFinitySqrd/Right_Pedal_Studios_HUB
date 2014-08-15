@@ -55,7 +55,7 @@ public class SpawnGates : MonoBehaviour {
 			timer += Time.deltaTime;
 		}
 		
-		if (this.transform.position.z > gatesList[0].position.z) {
+		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
 			score++;
 			gatesList.RemoveAt(0);
 		}
