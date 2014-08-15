@@ -51,6 +51,7 @@
      <Compile Include="Assets\Scripts\DestroyOldGates.cs" />
      <Compile Include="Assets\Scripts\LevelLost.cs" />
      <Compile Include="Assets\Scripts\PlaneMovement.cs" />
+     <Compile Include="Assets\Scripts\RotateObstacle.cs" />
      <Compile Include="Assets\Scripts\SpawnGates.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

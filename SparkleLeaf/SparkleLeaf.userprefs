@@ -1,9 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SpawnGates.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlaneMovement.cs" Line="3" Column="1" />
-      <File FileName="Assets\Scripts\SpawnGates.cs" Line="39" Column="4" />
+      <File FileName="Assets\Scripts\RotateObstacle.cs" Line="7" Column="37" />
+      <File FileName="Assets\Scripts\SpawnGates.cs" Line="91" Column="5" />
+      <File FileName="Assets\Scripts\PlaneMovement.cs" Line="60" Column="49" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

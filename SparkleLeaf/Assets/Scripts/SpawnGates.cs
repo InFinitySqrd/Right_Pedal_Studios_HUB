@@ -12,6 +12,9 @@ public class SpawnGates : MonoBehaviour {
 	[SerializeField] Transform[] obstacles;
 	[SerializeField] float[] percentageSpawnChance; 
 	
+	[SerializeField] bool rotatable = true;
+	[SerializeField] float percentageToRotate = 0.5f;
+	
 	private float timer = 0.0f;
 	private Transform spawnedObstacle;
 	private List<Transform> gatesList;
@@ -19,8 +22,11 @@ public class SpawnGates : MonoBehaviour {
 	private Color planeColor;
 	private Material planeBodyColor;
 	
+	private PlaneMovement planeVars;
+	
 	void Awake() {
 		gatesList = new List<Transform>();
+		planeVars = this.GetComponent<PlaneMovement>();
 	}
 	
 	// Use this for initialization
@@ -56,7 +62,7 @@ public class SpawnGates : MonoBehaviour {
 		if (gatesList.Count > 0) {
 			RotationColour();
 		}
-	
+		
 		if (timer >= spawnTime) {
 			Vector3 spawnPoint = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + spawnDistance);
 			
@@ -76,9 +82,17 @@ public class SpawnGates : MonoBehaviour {
 			int randomNotch = (int)Random.Range(0, numRotations);
 			spawnedObstacle.transform.eulerAngles = new Vector3(spawnedObstacle.transform.eulerAngles.x, spawnedObstacle.transform.eulerAngles.y, randomNotch * (360.0f / numRotations));
 			
+			if (rotatable) {
+				float randomNum = Random.value;
+				
+				if (randomNum <= percentageToRotate) {
+					spawnedObstacle.gameObject.AddComponent<RotateObstacle>();
+				}
+			}
+			
 			timer = 0.0f;
 		} else {
-			timer += Time.deltaTime;
+			timer += Time.deltaTime * planeVars.forwardSpeed;
 		}
 		
 		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
