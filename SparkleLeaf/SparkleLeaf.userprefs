@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlaneMovement.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RotateObstacle.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlaneMovement.cs" Line="107" Column="23" />
+      <File FileName="Assets\Scripts\PlaneMovement.cs" Line="145" Column="1" />
+      <File FileName="Assets\Scripts\Rotate.cs" Line="16" Column="1" />
+      <File FileName="Assets\Scripts\RotateObstacle.cs" Line="29" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
