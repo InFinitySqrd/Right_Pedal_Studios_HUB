@@ -78,6 +78,7 @@ public class SpawnGates : MonoBehaviour {
 				
 				if (randomNumber < summedProbabilities) {
 					spawnedObstacle = (Transform)Instantiate(obstacles[i], spawnPoint, Quaternion.identity);
+					break;
 				}
 			}
 			
