@@ -37,7 +37,7 @@ public class PlaneMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (!gameState.lost && !pause.paused) {
 			this.transform.Translate(Vector3.forward * forwardSpeed);
 			PlaneRotation();
