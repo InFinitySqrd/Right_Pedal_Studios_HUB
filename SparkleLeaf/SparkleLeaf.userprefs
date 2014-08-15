@@ -1,8 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DebugControls.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlaneMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\DebugControls.cs" Line="37" Column="81" />
+      <File FileName="Assets\Scripts\PlaneMovement.cs" Line="40" Column="4" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
