@@ -26,6 +26,8 @@ public class PlaneMovement : MonoBehaviour {
 	void Start () {
 		gameState = this.GetComponent<LevelLost>();	
 		pause = this.GetComponent<DebugControls>();
+		
+		momentum = 0.0f;
 	}
 	
 	void OnGUI () {
@@ -62,25 +64,27 @@ public class PlaneMovement : MonoBehaviour {
 			momentum += Time.deltaTime * levelingForce;
 		} else if (this.transform.eulerAngles.z <= 270.0f) {
 			momentum -= Time.deltaTime * levelingForce;
-		} else {
+		} else if (this.transform.eulerAngles.z <= 360.0f){
 			momentum += Time.deltaTime * levelingForce;
 		}
 		
 		if (this.transform.eulerAngles.z > 175.0f || this.transform.eulerAngles.z < 195.0f) {
-			if (momentum > 0) {				
+			if (momentum > 0.0f) {				
 				momentum -= Time.deltaTime * (levelingForce / levelingDampener);
-			} if (momentum < 0) {				
+			} if (momentum < 0.0f) {				
 				momentum += Time.deltaTime * (levelingForce / levelingDampener);
 			}
 		}
 		
 		if (this.transform.eulerAngles.z > 345.0f || this.transform.eulerAngles.z < 15.0f) {
-			if (momentum > 0) {				
-				momentum += Time.deltaTime * (levelingForce / levelingDampener);
-			} if (momentum < 0) {				
+			if (momentum > 0.0f) {				
 				momentum -= Time.deltaTime * (levelingForce / levelingDampener);
+			} if (momentum < 0.0f) {				
+				momentum += Time.deltaTime * (levelingForce / levelingDampener);
 			}
 		}
+		
+		Debug.Log (momentum);
 	}
 	
 	private void Controls() {
