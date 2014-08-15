@@ -11,9 +11,11 @@ public class PlaneMovement : MonoBehaviour {
 	
 	// Declare variables
 	[SerializeField] float levelingDampener = 1.5f;
+	[SerializeField] float levelingDelay = 0.3f;
 	[SerializeField] float deadZone = 0.0f;
 	private Vector3 slideTouchPos;
 	private float momentum = 0.0f;
+	private float levelingTimer = 0.0f;
 	private LevelLost gameState;
 	private DebugControls pause;
 	
@@ -74,17 +76,13 @@ public class PlaneMovement : MonoBehaviour {
 			} if (momentum < 0.0f) {				
 				momentum += Time.deltaTime * (levelingForce / levelingDampener);
 			}
-		}
-		
-		if (this.transform.eulerAngles.z > 345.0f || this.transform.eulerAngles.z < 15.0f) {
+		} else if (this.transform.eulerAngles.z > 345.0f || this.transform.eulerAngles.z < 15.0f) {
 			if (momentum > 0.0f) {				
 				momentum -= Time.deltaTime * (levelingForce / levelingDampener);
 			} if (momentum < 0.0f) {				
 				momentum += Time.deltaTime * (levelingForce / levelingDampener);
 			}
 		}
-		
-		Debug.Log (momentum);
 	}
 	
 	private void Controls() {
@@ -99,6 +97,9 @@ public class PlaneMovement : MonoBehaviour {
 				} else {
 					momentum -= Time.deltaTime * rotationSpeed;
 				}
+				
+				levelingTimer = 0.0f;
+				
 			} else {
 				if (momentum > 0.0f) {
 					momentum -= Time.deltaTime * momentumReduction;
@@ -106,7 +107,11 @@ public class PlaneMovement : MonoBehaviour {
 					momentum += Time.deltaTime * momentumReduction;
 				}
 				
-				LevelPlane();
+				if (levelingTimer >= levelingDelay) {
+					LevelPlane();
+				} else {
+					levelingTimer += Time.deltaTime;
+				}
 			}
 			
 			break;
