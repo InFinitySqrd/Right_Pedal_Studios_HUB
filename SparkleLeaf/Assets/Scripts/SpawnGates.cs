@@ -23,10 +23,12 @@ public class SpawnGates : MonoBehaviour {
 	private Material planeBodyColor;
 	
 	private PlaneMovement planeVars;
+	private DebugControls pause;
 	
 	void Awake() {
 		gatesList = new List<Transform>();
 		planeVars = this.GetComponent<PlaneMovement>();
+		pause = this.GetComponent<DebugControls>();
 	}
 	
 	// Use this for initialization
@@ -63,7 +65,7 @@ public class SpawnGates : MonoBehaviour {
 			RotationColour();
 		}
 		
-		if (timer >= spawnTime) {
+		if (timer >= spawnTime && !pause.paused) {
 			Vector3 spawnPoint = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + spawnDistance);
 			
 			float randomNumber = Random.value;
