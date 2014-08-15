@@ -24,11 +24,13 @@ public class SpawnGates : MonoBehaviour {
 	
 	private PlaneMovement planeVars;
 	private DebugControls pause;
+	private LevelLost lostGame;
 	
 	void Awake() {
 		gatesList = new List<Transform>();
 		planeVars = this.GetComponent<PlaneMovement>();
 		pause = this.GetComponent<DebugControls>();
+		lostGame = this.GetComponent<LevelLost>();
 	}
 	
 	// Use this for initialization
@@ -65,7 +67,7 @@ public class SpawnGates : MonoBehaviour {
 			RotationColour();
 		}
 		
-		if (timer >= spawnTime && !pause.paused) {
+		if (timer >= spawnTime && !pause.paused && !lostGame.lost) {
 			Vector3 spawnPoint = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + spawnDistance);
 			
 			float randomNumber = Random.value;

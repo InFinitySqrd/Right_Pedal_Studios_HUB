@@ -10,6 +10,7 @@ public class PlaneMovement : MonoBehaviour {
 	public float levelingForce = 1.0f;
 	
 	// Declare variables
+	[SerializeField] float levelingDampener = 1.5f;
 	[SerializeField] float deadZone = 0.0f;
 	private Vector3 slideTouchPos;
 	private float momentum = 0.0f;
@@ -58,11 +59,27 @@ public class PlaneMovement : MonoBehaviour {
 		if (this.transform.eulerAngles.z <= 90.0f) {
 			momentum -= Time.deltaTime * levelingForce;
 		} else if (this.transform.eulerAngles.z <= 180.0f) {
-			momentum -= Time.deltaTime * levelingForce;
-		} else if (this.transform.eulerAngles.z <= 270.0f) {
 			momentum += Time.deltaTime * levelingForce;
+		} else if (this.transform.eulerAngles.z <= 270.0f) {
+			momentum -= Time.deltaTime * levelingForce;
 		} else {
 			momentum += Time.deltaTime * levelingForce;
+		}
+		
+		if (this.transform.eulerAngles.z > 175.0f || this.transform.eulerAngles.z < 195.0f) {
+			if (momentum > 0) {				
+				momentum -= Time.deltaTime * (levelingForce / levelingDampener);
+			} if (momentum < 0) {				
+				momentum += Time.deltaTime * (levelingForce / levelingDampener);
+			}
+		}
+		
+		if (this.transform.eulerAngles.z > 345.0f || this.transform.eulerAngles.z < 15.0f) {
+			if (momentum > 0) {				
+				momentum += Time.deltaTime * (levelingForce / levelingDampener);
+			} if (momentum < 0) {				
+				momentum -= Time.deltaTime * (levelingForce / levelingDampener);
+			}
 		}
 	}
 	
