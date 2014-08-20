@@ -25,6 +25,8 @@ public class SpawnGates : MonoBehaviour {
 	private PlaneMovement planeVars;
 	private DebugControls pause;
 	private LevelLost lostGame;
+
+	[SerializeField] bool RightSideUpScore = false;
 	
 	void Awake() {
 		gatesList = new List<Transform>();
@@ -101,7 +103,14 @@ public class SpawnGates : MonoBehaviour {
 		}
 		
 		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
-			score++;
+
+			Vector3 playerRotation = this.transform.rotation.eulerAngles;
+			if (RightSideUpScore) {
+			if (playerRotation.z < 90 || playerRotation.z > 270) {
+				score++;
+			}
+			}
+					score ++;
 			gatesList.RemoveAt(0);
 		}
 	}

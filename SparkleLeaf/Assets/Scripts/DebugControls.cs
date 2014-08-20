@@ -24,7 +24,7 @@ public class DebugControls : MonoBehaviour {
 		if (!debugWindow) {
 			paused = false;
 		
-			if (GUI.Button(new Rect(0, 0, Screen.width, Screen.height / 8.0f), "Open Debug Window")) {
+			if (GUI.Button(new Rect(0, 0, Screen.width, Screen.height / 8.0f), "Open Debug Window" + "         " + (int)(1.0f / Time.smoothDeltaTime) + " FPS")) {
 				debugWindow = true;
 			}
 		} else {	
