@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
@@ -47,139 +46,12 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Components\GA_Tracker.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Examples\Scripts\ComboBox.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleBall.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleController.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleFloor.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleHighScore.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleManager.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleMoveWithPlayer.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleTarget.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleWall.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_AdSupport.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Archive.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Business.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_ContinuationManager.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_CustomAdTrigger.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_DataPoint.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Debug.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Design.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Error.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_FacebookSDK.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_GUIHelper.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_GameObjectManager.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_GenericInfo.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Gui.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_HeatMapDataFilter.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_HeatMapDataFilterBase.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_HeatMapRenderer.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_HeatmapData.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Histogram.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_MiniJson.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Queue.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Request.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_ServerFieldTypes.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Settings.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_SpecialEvents.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Submit.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_SystemTracker.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_Tracking.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\GA_User.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\MD5.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Scripts\MD5Wrapper.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Playmaker\ConvertFloatToLowestCurrencyUnit.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Playmaker\QueueEndSubmit.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Playmaker\QueueForceSubmit.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Playmaker\SendBusinessEvent.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Playmaker\SendDesignEvent.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Playmaker\SendErrorEvent.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Playmaker\SendUserEvent.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Playmaker\SetCustomArea.cs" />
-     <Compile Include="Assets\Game Analytics\GameAnalytics\Plugins\Playmaker\SetCustomUserID.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\DebugControls.cs" />
      <Compile Include="Assets\Scripts\DestroyOldGates.cs" />
      <Compile Include="Assets\Scripts\LevelLost.cs" />
      <Compile Include="Assets\Scripts\PlaneMovement.cs" />
-     <Compile Include="Assets\Scripts\Rotate.cs" />
-     <Compile Include="Assets\Scripts\RotateObstacle.cs" />
-     <Compile Include="Assets\Scripts\SpawnGates.cs" />
-     <None Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Shaders\GA_HeatMapSolidOverlay.shader" />
-     <None Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Shaders\GA_HeatMapTransparentOverlay.shader" />
-     <None Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Shaders\GA_HeatMapSolid.shader" />
-     <None Include="Assets\Game Analytics\GameAnalytics\Plugins\Framework\Shaders\GA_HeatMapTransparent.shader" />
-     <None Include="Assets\Game Analytics\GameAnalytics\Plugins\WebPlayer\Readme_WebPlayer.txt" />
-     <None Include="Assets\Game Analytics\GameAnalytics\Plugins\iOS\iOS_Readme.txt" />
-     <None Include="Assets\Game Analytics\Plugins\Android\AndroidManifest.xml" />
-     <None Include="Assets\Game Analytics\GameAnalytics\Plugins\WebPlayer\crossdomain.xml" />
-     <None Include="Assets\Game Analytics\GameAnalytics\Plugins\Android\Android_Readme.txt" />
-  </ItemGroup>
-  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-	   Other similar extension points exist, see Microsoft.Common.targets.
-  <Target Name="BeforeBuild">
-  </Target>
-  <Target Name="AfterBuild">
-  </Target>
-  -->
-  
-</Project>
-=======
-<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-  <PropertyGroup>
-	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-	<ProductVersion>10.0.20506</ProductVersion>
-	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{80B4F1E5-79D1-E511-5979-5DEBC21EC0AC}</ProjectGuid>
-	<OutputType>Library</OutputType>
-	<AppDesignerFolder>Properties</AppDesignerFolder>
-	<RootNamespace></RootNamespace>
-	<AssemblyName>Assembly-CSharp</AssemblyName>
-	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-	<FileAlignment>512</FileAlignment>
-	<BaseDirectory>Assets</BaseDirectory>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-	<DebugSymbols>true</DebugSymbols>
-	<DebugType>full</DebugType>
-	<Optimize>false</Optimize>
-	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_4_5_3;UNITY_4_5;UNITY_IPHONE;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;UNITY_IPHONE_API;INCLUDE_WP_BLUE_SUPPORT;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_2D_PHYSICS;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_OSX</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-	<DebugType>pdbonly</DebugType>
-	<Optimize>true</Optimize>
-	<OutputPath>Temp\bin\Release\</OutputPath>
-	<DefineConstants>TRACE</DefineConstants>
-	<ErrorReport>prompt</ErrorReport>
-	<WarningLevel>4</WarningLevel>
-	<NoWarn>0169</NoWarn>
-  </PropertyGroup>
-  <ItemGroup>
-	<Reference Include="System" />
-    <Reference Include="System.XML" />
-	<Reference Include="System.Core" />
-	<Reference Include="System.Xml.Linq" />
-	<Reference Include="UnityEngine">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
-	</Reference>
-	<Reference Include="UnityEditor">
-	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
-	</Reference>
-  </ItemGroup>
-  <ItemGroup>
-     <Compile Include="Assets\Scripts\CameraMovement.cs" />
-     <Compile Include="Assets\Scripts\DebugControls.cs" />
-     <Compile Include="Assets\Scripts\DestroyOldGates.cs" />
-     <Compile Include="Assets\Scripts\LevelLost.cs" />
-     <Compile Include="Assets\Scripts\PlaneMovement.cs" />
+     <Compile Include="Assets\Scripts\RandomlyGenerateEnvironment.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\RotateObstacle.cs" />
      <Compile Include="Assets\Scripts\SpawnGates.cs" />
@@ -194,4 +66,3 @@
   -->
   
 </Project>
->>>>>>> origin/development

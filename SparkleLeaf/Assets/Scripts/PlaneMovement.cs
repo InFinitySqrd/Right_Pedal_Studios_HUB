@@ -23,6 +23,9 @@ public class PlaneMovement : MonoBehaviour {
 	[SerializeField] float speedIncreaseRate = 5.0f;
 	[SerializeField] float speedIncrementor = 0.2f;
 	private float speedIncreaseTimer = 0.0f;
+	
+	// Environment
+	private Transform environmentCentre;
 
 	void Awake() {
 		Application.targetFrameRate = 60;
@@ -32,13 +35,9 @@ public class PlaneMovement : MonoBehaviour {
 	void Start () {
 		gameState = this.GetComponent<LevelLost>();	
 		pause = this.GetComponent<DebugControls>();
+		environmentCentre = GameObject.FindGameObjectWithTag("EnvironmentCentre").transform;
 		
 		momentum = 0.0f;
-<<<<<<< HEAD
-=======
-
-
->>>>>>> origin/development
 	}
 	
 	void OnGUI () {
@@ -46,13 +45,13 @@ public class PlaneMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-<<<<<<< HEAD
-=======
-		print (transform.rotation.eulerAngles);
->>>>>>> origin/development
+	void FixedUpdate () {		
 		if (!gameState.lost && !pause.paused) {
-			this.transform.Translate(Vector3.forward * forwardSpeed);
+			// Move the plane forward
+			//this.transform.Translate(Vector3.forward * forwardSpeed);
+			// Rotate the environment around the player
+			environmentCentre.transform.Rotate(Vector3.left * Time.deltaTime * forwardSpeed);
+					
 			PlaneRotation();
 		}
 		
