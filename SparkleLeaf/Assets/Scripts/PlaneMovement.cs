@@ -25,7 +25,7 @@ public class PlaneMovement : MonoBehaviour {
 	private float speedIncreaseTimer = 0.0f;
 	
 	// Environment
-	private Transform environmentCentre;
+	public Transform environmentCentre;
 
 	void Awake() {
 		Application.targetFrameRate = 60;
@@ -50,7 +50,7 @@ public class PlaneMovement : MonoBehaviour {
 			// Move the plane forward
 			//this.transform.Translate(Vector3.forward * forwardSpeed);
 			// Rotate the environment around the player
-			environmentCentre.transform.Rotate(Vector3.left * Time.deltaTime * forwardSpeed);
+			environmentCentre.transform.Rotate(Vector3.left * forwardSpeed / 4.0f);
 					
 			PlaneRotation();
 		}

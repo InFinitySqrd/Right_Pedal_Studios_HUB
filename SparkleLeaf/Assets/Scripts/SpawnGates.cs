@@ -66,11 +66,11 @@ public class SpawnGates : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (gatesList.Count > 0) {
-			RotationColour();
+			//RotationColour();
 		}
 		
 		if (timer >= spawnTime && !pause.paused && !lostGame.lost) {
-			Vector3 spawnPoint = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z + spawnDistance);
+			Vector3 spawnPoint = new Vector3(this.transform.position.x, planeVars.environmentCentre.position.y / 16.0f, this.transform.position.z + spawnDistance);
 			
 			float randomNumber = Random.value;
 			float summedProbabilities = 0.0f;
@@ -88,6 +88,7 @@ public class SpawnGates : MonoBehaviour {
 			
 			int randomNotch = (int)Random.Range(0, numRotations);
 			spawnedObstacle.transform.eulerAngles = new Vector3(spawnedObstacle.transform.eulerAngles.x, spawnedObstacle.transform.eulerAngles.y, randomNotch * (360.0f / numRotations));
+			spawnedObstacle.gameObject.AddComponent<MovingGates>();
 			
 			if (rotatable) {
 				float randomNum = Random.value;

@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\DebugControls.cs" />
      <Compile Include="Assets\Scripts\DestroyOldGates.cs" />
      <Compile Include="Assets\Scripts\LevelLost.cs" />
+     <Compile Include="Assets\Scripts\MovingGates.cs" />
      <Compile Include="Assets\Scripts\PlaneMovement.cs" />
      <Compile Include="Assets\Scripts\RandomlyGenerateEnvironment.cs" />
      <Compile Include="Assets\Scripts\Rotate.cs" />
