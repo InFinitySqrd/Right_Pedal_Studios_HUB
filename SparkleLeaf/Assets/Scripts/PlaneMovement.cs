@@ -23,13 +23,22 @@ public class PlaneMovement : MonoBehaviour {
 	[SerializeField] float speedIncreaseRate = 5.0f;
 	[SerializeField] float speedIncrementor = 0.2f;
 	private float speedIncreaseTimer = 0.0f;
-	
+
+	void Awake() {
+		Application.targetFrameRate = 60;
+	}
+
 	// Use this for initialization
 	void Start () {
 		gameState = this.GetComponent<LevelLost>();	
 		pause = this.GetComponent<DebugControls>();
 		
 		momentum = 0.0f;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/development
 	}
 	
 	void OnGUI () {
@@ -38,6 +47,10 @@ public class PlaneMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+<<<<<<< HEAD
+=======
+		print (transform.rotation.eulerAngles);
+>>>>>>> origin/development
 		if (!gameState.lost && !pause.paused) {
 			this.transform.Translate(Vector3.forward * forwardSpeed);
 			PlaneRotation();
@@ -82,6 +95,7 @@ public class PlaneMovement : MonoBehaviour {
 			} if (momentum < 0.0f) {				
 				momentum += Time.deltaTime * (levelingForce / levelingDampener);
 			}
+
 		}
 	}
 	
@@ -93,7 +107,7 @@ public class PlaneMovement : MonoBehaviour {
 			if (Input.GetMouseButton(0)) {
 				// if (Input.touches[0].position.x < Screen.width / 2.0f) {
 				if (Input.mousePosition.x < Screen.width / 2.0f) {
-					momentum += Time.deltaTime * rotationSpeed;
+						momentum += Time.deltaTime * rotationSpeed;
 				} else {
 					momentum -= Time.deltaTime * rotationSpeed;
 				}
