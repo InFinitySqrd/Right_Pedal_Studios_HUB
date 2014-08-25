@@ -49,6 +49,7 @@
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\DebugControls.cs" />
      <Compile Include="Assets\Scripts\DestroyOldGates.cs" />
+     <Compile Include="Assets\Scripts\FadeOutMonsters.cs" />
      <Compile Include="Assets\Scripts\LevelLost.cs" />
      <Compile Include="Assets\Scripts\MovingGates.cs" />
      <Compile Include="Assets\Scripts\PlaneMovement.cs" />
@@ -56,6 +57,7 @@
      <Compile Include="Assets\Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\RotateObstacle.cs" />
      <Compile Include="Assets\Scripts\SpawnGates.cs" />
+     <None Include="Assets\Art\Shaders\MatCap Shaders\Shaders\MatCap_TextureAdd.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

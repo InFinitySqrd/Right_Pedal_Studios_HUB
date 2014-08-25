@@ -10,6 +10,7 @@ public class PlaneMovement : MonoBehaviour {
 	public float levelingForce = 1.0f;
 	
 	// Declare variables
+	[SerializeField] float maxRotationSpeed = 4.0f;
 	[SerializeField] float levelingDampener = 1.5f;
 	[SerializeField] float levelingDelay = 0.3f;
 	[SerializeField] float deadZone = 0.0f;
@@ -152,6 +153,11 @@ public class PlaneMovement : MonoBehaviour {
 	
 	public void IncreaseMovement(float incrementor) {
 		forwardSpeed += incrementor;
-		rotationSpeed += incrementor;
+		
+		if (rotationSpeed < maxRotationSpeed) {
+			rotationSpeed += incrementor;
+		} else {
+			rotationSpeed = maxRotationSpeed;
+		}
 	}
 }
