@@ -23,6 +23,7 @@ public class PlaneMovement : MonoBehaviour {
 	// Variables to control speed increases
 	[SerializeField] float speedIncreaseRate = 5.0f;
 	[SerializeField] float speedIncrementor = 0.2f;
+	[SerializeField] float speedGrowthPerStep = 1.01f;
 	private float speedIncreaseTimer = 0.0f;
 	
 	// Environment
@@ -59,7 +60,7 @@ public class PlaneMovement : MonoBehaviour {
 		Controls();
 		
 		if (speedIncreaseTimer >= speedIncreaseRate) {
-			IncreaseMovement(speedIncrementor);
+			IncreaseMovement(ref speedIncrementor);
 			speedIncreaseTimer = 0.0f;
 		} else {
 			speedIncreaseTimer += Time.deltaTime;
@@ -151,8 +152,9 @@ public class PlaneMovement : MonoBehaviour {
 		}
 	}
 	
-	public void IncreaseMovement(float incrementor) {
+	public void IncreaseMovement(ref float incrementor) {
 		forwardSpeed += incrementor;
+		incrementor *= speedGrowthPerStep;
 		
 		if (rotationSpeed < maxRotationSpeed) {
 			rotationSpeed += incrementor;
