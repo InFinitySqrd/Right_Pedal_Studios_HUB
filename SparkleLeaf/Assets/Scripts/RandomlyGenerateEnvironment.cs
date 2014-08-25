@@ -59,7 +59,7 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 		for (int i = 0; i <= numPasses; i++) {
 			if (Random.value <= environmentChance) {
 				Transform environment = (Transform)GameObject.Instantiate(environmentModels[Random.Range(0, environmentModels.Length)], planeSpawned.position, planeSpawned.rotation);
-				environment.eulerAngles = new Vector3(270.0f, 180.0f, 0.0f);
+				environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range(0.0f, 360.0f));
 				
 				if (Random.value > 0.5f) {
 					environment.position = new Vector3(Random.Range(-25.0f, -5.0f), Random.Range(-7.0f,-5.0f), 0.0f);
