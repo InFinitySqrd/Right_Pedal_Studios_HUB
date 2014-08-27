@@ -27,6 +27,7 @@ public class SpawnGates : MonoBehaviour {
 	private LevelLost lostGame;
 
 	[SerializeField] bool RightSideUpScore = false;
+	private bool crossAvailable = false;
 	
 	void Awake() {
 		gatesList = new List<Transform>();
@@ -107,13 +108,19 @@ public class SpawnGates : MonoBehaviour {
 
 			Vector3 playerRotation = this.transform.rotation.eulerAngles;
 			if (RightSideUpScore) {
-			if (playerRotation.z < 90 || playerRotation.z > 270) {
-				score++;
+				if (playerRotation.z < 90 || playerRotation.z > 270) {
+					score++;
+				}
 			}
-			}
-					score ++;
+			score ++;
 			gatesList.RemoveAt(0);
 		}
+
+		/*if (RightSideUpScore) {
+			if (playerRotation.z < 90 || playerRotation.z > 270) {
+
+			}
+		}*/
 	}
 	
 	private void RotationColour() {

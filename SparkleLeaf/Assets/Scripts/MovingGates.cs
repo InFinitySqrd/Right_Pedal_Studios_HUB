@@ -20,7 +20,7 @@ public class MovingGates : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (this.transform.position == player.transform.position) {
 			atPlayer = true;
 		}

@@ -11,6 +11,7 @@ public class PlaneMovement : MonoBehaviour {
 	
 	// Declare variables
 	[SerializeField] float maxRotationSpeed = 4.0f;
+	[SerializeField] float maxMomentum = 7.5f;
 	[SerializeField] float levelingDampener = 1.5f;
 	[SerializeField] float levelingDelay = 0.3f;
 	[SerializeField] float deadZone = 0.0f;
@@ -64,6 +65,10 @@ public class PlaneMovement : MonoBehaviour {
 			speedIncreaseTimer = 0.0f;
 		} else {
 			speedIncreaseTimer += Time.deltaTime;
+		}
+
+		if (Mathf.Abs (momentum) > maxMomentum) {
+			momentum = maxMomentum * Mathf.Clamp(momentum, -1, 1);
 		}
 	}
 	

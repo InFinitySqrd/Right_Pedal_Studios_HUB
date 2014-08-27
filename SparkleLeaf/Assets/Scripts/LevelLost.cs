@@ -22,10 +22,14 @@ public class LevelLost : MonoBehaviour {
 			GUIStyle skin = new GUIStyle();
 			skin.fontSize = 40;
 			skin.alignment = TextAnchor.MiddleCenter;
-			GUI.Box(new Rect(0.0f, Screen.height - Screen.height / 8.0f, Screen.width, Screen.height / 8.0f), "YOU LOST", skin);
+			GUI.Box(new Rect(0.0f, Screen.height - Screen.height / 8.0f, Screen.width, Screen.height / 8.0f), "Game Over", skin);
 			
-			if (GUI.Button(new Rect(0.0f + Screen.width / 3.0f, 0.0f + 2.0f * Screen.height / 3.0f, Screen.width / 3.0f, Screen.height / 8.0f), "Restart?")) {
+			if (GUI.Button(new Rect(0.0f + Screen.width / 3.0f, 0.0f + Screen.height / 3.0f, Screen.width / 3.0f, Screen.height / 8.0f), "Restart?")) {
 				Application.LoadLevel(Application.loadedLevel);
+			}
+
+			if (GUI.Button(new Rect(0.0f + Screen.width / 3.0f, 0.0f + 2 * Screen.height / 3.0f, Screen.width / 3.0f, Screen.height / 8.0f), "Menu")) {
+				Application.LoadLevel(Application.loadedLevel-1);
 			}
 		}
 	}
