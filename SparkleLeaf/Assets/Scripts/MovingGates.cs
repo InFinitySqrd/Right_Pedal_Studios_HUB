@@ -2,6 +2,10 @@
 using System.Collections;
 
 public class MovingGates : MonoBehaviour {
+	// Declare public variables
+	public int gateType = 0;	// 1 = Gate, 2 = Cross
+	public string gateName;
+
 	// Declare variables
 	private PlaneMovement planeVars;
 	private LevelLost lostGame;
@@ -23,6 +27,20 @@ public class MovingGates : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		if (gateType != 0) {
+			switch (gateType) {
+				case 1:
+					gateName = "Gate";
+					break;
+				case 2:
+					gateName = "Cross";
+					break;
+				default:
+					Debug.LogError("Incorrect Gate Type");
+					break;
+			}
+		}
+
 		if (this.transform.position == player.transform.position) {
 			atPlayer = true;
 		}

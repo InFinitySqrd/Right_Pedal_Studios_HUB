@@ -5,15 +5,17 @@ public class LevelLost : MonoBehaviour {
 	// Declare variables
 	[SerializeField] string loseText;
 	public bool lost = false;
-	
+
+	private float timeUntilDeath;
+
 	// Use this for initialization
 	void Start () {
-	
+		timeUntilDeath = 0.0f;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		timeUntilDeath += Time.deltaTime;
 	}
 	
 	void OnGUI() {
@@ -37,6 +39,10 @@ public class LevelLost : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == "Obstacle") {
 			lost = true;
+
+			string name = other.transform.parent.GetComponent<MovingGates>().gateName;
+
+			GA.API.Design.NewEvent("Player Died To " + name, timeUntilDeath);
 		}
 	}
 }

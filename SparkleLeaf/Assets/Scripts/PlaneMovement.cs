@@ -20,6 +20,8 @@ public class PlaneMovement : MonoBehaviour {
 	private float levelingTimer = 0.0f;
 	private LevelLost gameState;
 	private DebugControls pause;
+	private float avgMomentum;
+	private float leftTimer = 0.0f, rightTimer = 0.0f;
 	
 	// Variables to control speed increases
 	[SerializeField] float speedIncreaseRate = 5.0f;
@@ -70,6 +72,16 @@ public class PlaneMovement : MonoBehaviour {
 		if (Mathf.Abs (momentum) > maxMomentum) {
 			momentum = maxMomentum * Mathf.Clamp(momentum, -1, 1);
 		}
+
+		// Calculate the player's average momentum
+		avgMomentum += momentum;
+		avgMomentum /= Time.time;
+
+		if (gameState.lost) {
+			GA.API.Design.NewEvent("Average Momentum", avgMomentum);
+			GA.API.Design.NewEvent("Time Spent Turning Anticlockwise", leftTimer);
+			GA.API.Design.NewEvent("Time Spent Turning Clockwise", rightTimer);
+		}
 	}
 	
 	private void PlaneRotation() {	
@@ -113,9 +125,11 @@ public class PlaneMovement : MonoBehaviour {
 			if (Input.GetMouseButton(0)) {
 				// if (Input.touches[0].position.x < Screen.width / 2.0f) {
 				if (Input.mousePosition.x < Screen.width / 2.0f) {
-						momentum += Time.deltaTime * rotationSpeed;
+					momentum += Time.deltaTime * rotationSpeed;
+					leftTimer += Time.deltaTime;
 				} else {
 					momentum -= Time.deltaTime * rotationSpeed;
+					rightTimer += Time.deltaTime;
 				}
 				
 				levelingTimer = 0.0f;

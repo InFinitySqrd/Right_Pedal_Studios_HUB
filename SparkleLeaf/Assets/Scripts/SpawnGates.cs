@@ -66,6 +66,8 @@ public class SpawnGates : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		int gateNumber = 0;
+
 		if (gatesList.Count > 0) {
 			//RotationColour();
 		}
@@ -81,6 +83,7 @@ public class SpawnGates : MonoBehaviour {
 				
 				if (randomNumber < summedProbabilities) {
 					spawnedObstacle = (Transform)Instantiate(obstacles[i], spawnPoint, Quaternion.identity);
+					gateNumber = i + 1;
 					break;
 				}
 			}
@@ -90,6 +93,7 @@ public class SpawnGates : MonoBehaviour {
 			int randomNotch = (int)Random.Range(0, numRotations);
 			spawnedObstacle.transform.eulerAngles = new Vector3(spawnedObstacle.transform.eulerAngles.x, spawnedObstacle.transform.eulerAngles.y, randomNotch * (360.0f / numRotations));
 			spawnedObstacle.gameObject.AddComponent<MovingGates>();
+			spawnedObstacle.GetComponent<MovingGates>().gateType = gateNumber;
 			
 			if (rotatable) {
 				float randomNum = Random.value;
@@ -110,9 +114,11 @@ public class SpawnGates : MonoBehaviour {
 			if (RightSideUpScore) {
 				if (playerRotation.z < 90 || playerRotation.z > 270) {
 					score++;
+					GA.API.Design.NewEvent("Double Points");
 				}
 			}
 			score ++;
+			GA.API.Design.NewEvent("Scored", score);
 			gatesList.RemoveAt(0);
 		}
 
