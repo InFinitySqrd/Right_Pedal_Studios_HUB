@@ -3,7 +3,8 @@ using System.Collections;
 
 public class MovingGates : MonoBehaviour {
 	// Declare variables
-	private PlaneMovement planeVars;	
+	private PlaneMovement planeVars;
+	private LevelLost lostGame;
 	private Transform player;
 	private float movementSpeed;
 	private bool atPlayer = false;
@@ -11,6 +12,7 @@ public class MovingGates : MonoBehaviour {
 	void Awake () {
 		player = GameObject.FindGameObjectWithTag("Player").transform;
 		planeVars = player.gameObject.GetComponent<PlaneMovement>();
+		lostGame = player.gameObject.GetComponent<LevelLost>();
 		movementSpeed = planeVars.forwardSpeed;
 	}
 	
@@ -24,11 +26,13 @@ public class MovingGates : MonoBehaviour {
 		if (this.transform.position == player.transform.position) {
 			atPlayer = true;
 		}
-		
-		if (!atPlayer) {	
-			this.transform.position = Vector3.MoveTowards(this.transform.position, player.position, movementSpeed);
-		} else {
-			this.transform.Translate(Vector3.back * movementSpeed);	
+
+		if (!lostGame.lost) {
+			if (!atPlayer ) {	
+				this.transform.position = Vector3.MoveTowards(this.transform.position, player.position, movementSpeed);
+			} else {
+				this.transform.Translate(Vector3.back * movementSpeed);	
+			}
 		}
 		
 		if (this.transform.eulerAngles.x > 0.05f) {
