@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class SpawnGates : MonoBehaviour {
+	// Declare public variables
+	public int score = 0;
+
+	// Declare variables
 	[SerializeField] int numRotations = 10;
 	[SerializeField] float spawnTime = 6.0f;
 	[SerializeField] float spawnDistance = 10.0f;
@@ -18,7 +22,6 @@ public class SpawnGates : MonoBehaviour {
 	private float timer = 0.0f;
 	private Transform spawnedObstacle;
 	private List<Transform> gatesList;
-	private int score = 0;
 	private Color planeColor;
 	private Material planeBodyColor;
 	

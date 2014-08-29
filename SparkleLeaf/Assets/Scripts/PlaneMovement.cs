@@ -28,6 +28,9 @@ public class PlaneMovement : MonoBehaviour {
 	[SerializeField] float speedIncrementor = 0.2f;
 	[SerializeField] float speedGrowthPerStep = 1.01f;
 	private float speedIncreaseTimer = 0.0f;
+
+	// Audio variables
+	private GameObject rotationSound;
 	
 	// Environment
 	public Transform environmentCentre;
@@ -41,7 +44,8 @@ public class PlaneMovement : MonoBehaviour {
 		gameState = this.GetComponent<LevelLost>();	
 		pause = this.GetComponent<DebugControls>();
 		environmentCentre = GameObject.FindGameObjectWithTag("EnvironmentCentre").transform;
-		
+		rotationSound = GameObject.Find("Rotation Sound");
+
 		momentum = 0.0f;
 	}
 	
@@ -50,7 +54,7 @@ public class PlaneMovement : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {		
+	void FixedUpdate () {	
 		if (!gameState.lost && !pause.paused) {
 			// Move the plane forward
 			//this.transform.Translate(Vector3.forward * forwardSpeed);
@@ -87,6 +91,9 @@ public class PlaneMovement : MonoBehaviour {
 	private void PlaneRotation() {	
 		if (!pause.paused) {
 			this.transform.Rotate(Vector3.forward * momentum);
+
+			// Play audio for rotation relative to the momentum of the plane
+			rotationSound.audio.volume = Mathf.Abs(momentum);
 		}
 	}
 	
