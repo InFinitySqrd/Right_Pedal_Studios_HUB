@@ -11,6 +11,10 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 	[SerializeField] int maxNumElements = 3;
 	[SerializeField] Texture[] textures;
 	[SerializeField] Transform[] environmentModels;
+
+	// Variables to control spawning of environmental objects
+	[SerializeField] float minXRange = 10.0f, maxXRange = 45.0f;
+	[SerializeField] float minYRange = 5.0f, maxYRange = 7.0f;
 	
 	private Transform centre;
 	private Transform player;
@@ -71,10 +75,10 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 				//environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range(0.0f, 360.0f));
 				
 				if (Random.value > 0.5f) {
-					environment.position = new Vector3(Random.Range(-45.0f, -10.0f), Random.Range(-7.0f,-5.0f), 0.0f);
+					environment.position = new Vector3(Random.Range(-maxXRange, -minXRange), Random.Range(minYRange, maxYRange), 0.0f);
 					environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range (0, 180));
 				} else {
-					environment.position = new Vector3(Random.Range(10.0f, 45.0f), Random.Range(-7.0f,-5.0f), 0.0f);
+					environment.position = new Vector3(Random.Range(minXRange, maxXRange), Random.Range(minYRange, minYRange), 0.0f);
 					environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range (180,360));
 				}
 				
