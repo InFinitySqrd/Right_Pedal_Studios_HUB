@@ -49,10 +49,6 @@ public class PlaneMovement : MonoBehaviour {
 		momentum = 0.0f;
 	}
 	
-	void OnGUI () {
-
-	}
-	
 	// Update is called once per frame
 	void FixedUpdate () {	
 		if (!gameState.lost && !pause.paused) {
@@ -93,7 +89,8 @@ public class PlaneMovement : MonoBehaviour {
 			this.transform.Rotate(Vector3.forward * momentum);
 
 			// Play audio for rotation relative to the momentum of the plane
-			rotationSound.audio.volume = Mathf.Abs(momentum);
+			Debug.Log (Mathf.Clamp(Mathf.Abs(momentum), 0.0f, 1.0f));
+			rotationSound.GetComponent<AudioSource>().volume = Mathf.Clamp(Mathf.Abs(momentum), 0.0f, 1.0f);
 		}
 	}
 	

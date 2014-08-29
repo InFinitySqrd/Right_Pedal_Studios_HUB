@@ -23,14 +23,17 @@ public class LevelLost : MonoBehaviour {
 			// Display that the player has lost the game
 			GUIStyle skin = new GUIStyle();
 			skin.fontSize = 40;
-			skin.alignment = TextAnchor.MiddleCenter;
-			GUI.Box(new Rect(0.0f, Screen.height - Screen.height / 8.0f, Screen.width, Screen.height / 8.0f), "Game Over", skin);
+			skin.alignment = TextAnchor.MiddleCenter;			
+			skin.normal.textColor = Color.white;
 			
-			if (GUI.Button(new Rect(0.0f + Screen.width / 3.0f, 0.0f + Screen.height / 3.0f, Screen.width / 3.0f, Screen.height / 8.0f), "Restart?")) {
+			GUI.Box(new Rect(0.0f, Screen.height - Screen.height / 8.0f, Screen.width, Screen.height / 8.0f), "Game Over", skin);
+
+			skin.fontSize = 34;
+			if (GUI.Button(new Rect(0.0f, 0.0f + Screen.height / 3.0f, Screen.width, Screen.height / 8.0f), "Restart?", skin)) {
 				Application.LoadLevel(Application.loadedLevel);
 			}
 
-			if (GUI.Button(new Rect(0.0f + Screen.width / 3.0f, 0.0f + 2 * Screen.height / 3.0f, Screen.width / 3.0f, Screen.height / 8.0f), "Menu")) {
+			if (GUI.Button(new Rect(0.0f + Screen.width / 3.0f, 0.0f + 1.6f * Screen.height / 3.0f, Screen.width / 3.0f, Screen.height / 8.0f), "Menu", skin)) {
 				Application.LoadLevel(Application.loadedLevel-1);
 			}
 		}

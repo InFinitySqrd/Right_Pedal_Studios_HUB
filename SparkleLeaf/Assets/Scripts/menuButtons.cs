@@ -17,9 +17,8 @@ public class menuButtons : MonoBehaviour {
 		GUIStyle skin = new GUIStyle();
 		skin.fontSize = 60;
 		skin.alignment = TextAnchor.MiddleCenter;
-		if (GUI.Button(new Rect(Screen.width/3, Screen.height/3, Screen.width/3f, Screen.height/3f), "Start Game!", skin)) {
+		if (GUI.Button(new Rect(0.0f, 0.0f, Screen.width, Screen.height), "Start Game!", skin)) {
 			Application.LoadLevel(Application.loadedLevel + 1);
-
 		}
-		}
+	}
 }
