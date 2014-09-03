@@ -78,14 +78,17 @@ public class DebugControls : MonoBehaviour {
 	private void DrawControlOptions() {
 		if (GUI.Button(new Rect(0, 0, Screen.width / 3.0f, Screen.height / 8.0f), "Hold Rot.")) {
 			planeVars.controlMethod = 1;
+			PlayerPrefs.SetInt("Control Method", 1);
 		}
 		
 		if (GUI.Button(new Rect(Screen.width / 3.0f, 0, Screen.width / 3.0f, Screen.height / 8.0f), "Slide Rot.")) {
 			planeVars.controlMethod = 2;
+			PlayerPrefs.SetInt("Control Method", 2);
 		}
 
 		if (GUI.Button(new Rect(2.0f * Screen.width / 3.0f, 0, Screen.width / 3.0f, Screen.height / 8.0f), "Tilt Rot.")) {
 			planeVars.controlMethod = 3;
+			PlayerPrefs.SetInt("Control Method", 3);
 		}
 	}
 	

@@ -52,6 +52,12 @@ public class PlaneMovement : MonoBehaviour {
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
 
 		momentum = 0.0f;
+
+		controlMethod = PlayerPrefs.GetInt ("Control Method");
+
+		if (controlMethod == 0) {
+			controlMethod = 1;
+		}
 	}
 	
 	// Update is called once per frame
@@ -207,18 +213,18 @@ public class PlaneMovement : MonoBehaviour {
 		case 3:
 			// Rotate the plane using tilt controls
 			if (Input.acceleration.x > tiltDeadZone) {
-				if (momentum >= 0.0f) {
-					momentum += Time.deltaTime * rotationSpeed;
-				} else {
-					momentum += Time.deltaTime * rotationSpeed * oppositeDirectionPush;
-				}
-
-				levelingTimer = 0.0f;
-			} else if (Input.acceleration.z < -tiltDeadZone){
 				if (momentum <= 0.0f) {
 					momentum -= Time.deltaTime * rotationSpeed;
 				} else {
 					momentum -= Time.deltaTime * rotationSpeed * oppositeDirectionPush;
+				}
+
+				levelingTimer = 0.0f;
+			} else if (Input.acceleration.z < -tiltDeadZone){
+				if (momentum >= 0.0f) {
+					momentum += Time.deltaTime * rotationSpeed;
+				} else {
+					momentum += Time.deltaTime * rotationSpeed * oppositeDirectionPush;
 				}
 
 				levelingTimer = 0.0f;
