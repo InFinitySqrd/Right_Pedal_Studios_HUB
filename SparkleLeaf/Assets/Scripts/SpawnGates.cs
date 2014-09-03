@@ -31,19 +31,23 @@ public class SpawnGates : MonoBehaviour {
 
 	[SerializeField] bool RightSideUpScore = false;
 	private bool crossAvailable = false;
+
+	private GameAnalytics GAStuff;
+	private int doubleScore = 0;
 	
 	void Awake() {
 		gatesList = new List<Transform>();
 		planeVars = this.GetComponent<PlaneMovement>();
 		pause = this.GetComponent<DebugControls>();
 		lostGame = this.GetComponent<LevelLost>();
+
+		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
 	}
 	
 	// Use this for initialization
 	void Start () {
 		timer = spawnTime;
 		planeColor = this.renderer.material.color;
-		planeBodyColor = this.transform.GetChild(0).renderer.material;
 		
 		if (obstacles.Length != percentageSpawnChance.Length) {
 			Debug.LogError("Not an equal number of objects and percentages");
@@ -117,11 +121,12 @@ public class SpawnGates : MonoBehaviour {
 			if (RightSideUpScore) {
 				if (playerRotation.z < 90 || playerRotation.z > 270) {
 					score++;
-					GA.API.Design.NewEvent("Double Points");
+					doubleScore++;
+					GAStuff.SetDoubleScores(doubleScore);
 				}
 			}
-			score ++;
-			GA.API.Design.NewEvent("Scored", score);
+			score++;
+			GAStuff.SetScore(score);
 			gatesList.RemoveAt(0);
 		}
 

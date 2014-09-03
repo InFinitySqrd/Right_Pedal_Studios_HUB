@@ -7,9 +7,12 @@ public class LevelLost : MonoBehaviour {
 	public bool lost = false;
 
 	private float timeUntilDeath;
+	private GameAnalytics GAStuff;
 
 	// Use this for initialization
 	void Start () {
+		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
+
 		timeUntilDeath = 0.0f;
 	}
 	
@@ -44,8 +47,8 @@ public class LevelLost : MonoBehaviour {
 			lost = true;
 
 			string name = other.transform.parent.GetComponent<MovingGates>().gateName;
-
-			GA.API.Design.NewEvent("Player Died To " + name, timeUntilDeath);
+			GAStuff.SetObstacleDeath(name);
+			GAStuff.SetTimeBeforeDeath(timeUntilDeath);
 		}
 	}
 }

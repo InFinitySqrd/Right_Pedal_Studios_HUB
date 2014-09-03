@@ -101,6 +101,7 @@
      <Compile Include="Assets\Scripts\DebugControls.cs" />
      <Compile Include="Assets\Scripts\DestroyOldGates.cs" />
      <Compile Include="Assets\Scripts\FadeOutMonsters.cs" />
+     <Compile Include="Assets\Scripts\GameAnalytics.cs" />
      <Compile Include="Assets\Scripts\LevelLost.cs" />
      <Compile Include="Assets\Scripts\MaterialLerp.cs" />
      <Compile Include="Assets\Scripts\MovingGates.cs" />

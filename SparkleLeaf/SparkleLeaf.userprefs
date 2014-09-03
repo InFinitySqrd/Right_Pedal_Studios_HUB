@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\LevelLost.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlaneMovement.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlaneMovement.cs" Line="93" Column="31" />
-      <File FileName="Assets\Scripts\LevelLost.cs" Line="32" Column="59" />
+      <File FileName="Assets\Scripts\DebugControls.cs" Line="48" Column="73" />
+      <File FileName="Assets\Scripts\PlaneMovement.cs" Line="204" Column="43" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

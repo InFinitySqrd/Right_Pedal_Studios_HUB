@@ -8,20 +8,21 @@ public class PlaneMovement : MonoBehaviour {
 	public float rotationSpeed = 1.0f;
 	public float momentumReduction = 1.0f;
 	public float levelingForce = 1.0f;
+	public float maxRotationSpeed = 4.0f;
+	public float maxMomentum = 7.5f;
+	public float levelingDampener = 1.5f;
+	public float levelingDelay = 0.3f;
+	public float oppositeDirectionPush = 2.0f;
 	
 	// Declare variables
-	[SerializeField] float maxRotationSpeed = 4.0f;
-	[SerializeField] float maxMomentum = 7.5f;
-	[SerializeField] float levelingDampener = 1.5f;
-	[SerializeField] float levelingDelay = 0.3f;
 	[SerializeField] float deadZone = 0.0f;
+	[SerializeField] float tiltDeadZone = 0.1f;
 	private Vector3 slideTouchPos;
 	private float momentum = 0.0f;
 	private float levelingTimer = 0.0f;
 	private LevelLost gameState;
 	private DebugControls pause;
 	private float avgMomentum;
-	private float leftTimer = 0.0f, rightTimer = 0.0f;
 	
 	// Variables to control speed increases
 	[SerializeField] float speedIncreaseRate = 5.0f;
@@ -35,6 +36,8 @@ public class PlaneMovement : MonoBehaviour {
 	// Environment
 	public Transform environmentCentre;
 
+	private GameAnalytics GAStuff;
+
 	void Awake() {
 		Application.targetFrameRate = 60;
 	}
@@ -45,6 +48,8 @@ public class PlaneMovement : MonoBehaviour {
 		pause = this.GetComponent<DebugControls>();
 		environmentCentre = GameObject.FindGameObjectWithTag("EnvironmentCentre").transform;
 		rotationSound = GameObject.Find("Rotation Sound");
+
+		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
 
 		momentum = 0.0f;
 	}
@@ -78,9 +83,7 @@ public class PlaneMovement : MonoBehaviour {
 		avgMomentum /= Time.time;
 
 		if (gameState.lost) {
-			GA.API.Design.NewEvent("Average Momentum", avgMomentum);
-			GA.API.Design.NewEvent("Time Spent Turning Anticlockwise", leftTimer);
-			GA.API.Design.NewEvent("Time Spent Turning Clockwise", rightTimer);
+			GAStuff.SetAverageMomentum(avgMomentum);
 		}
 	}
 	
@@ -89,7 +92,6 @@ public class PlaneMovement : MonoBehaviour {
 			this.transform.Rotate(Vector3.forward * momentum);
 
 			// Play audio for rotation relative to the momentum of the plane
-			Debug.Log (Mathf.Clamp(Mathf.Abs(momentum), 0.0f, 1.0f));
 			rotationSound.GetComponent<AudioSource>().volume = Mathf.Clamp(Mathf.Abs(momentum), 0.0f, 1.0f);
 		}
 	}
@@ -129,11 +131,17 @@ public class PlaneMovement : MonoBehaviour {
 			if (Input.GetMouseButton(0)) {
 				// if (Input.touches[0].position.x < Screen.width / 2.0f) {
 				if (Input.mousePosition.x < Screen.width / 2.0f) {
-					momentum += Time.deltaTime * rotationSpeed;
-					leftTimer += Time.deltaTime;
+					if (momentum >= 0.0f) {
+						momentum += Time.deltaTime * rotationSpeed;
+					} else {
+						momentum += Time.deltaTime * rotationSpeed * oppositeDirectionPush;
+					}
 				} else {
-					momentum -= Time.deltaTime * rotationSpeed;
-					rightTimer += Time.deltaTime;
+					if (momentum <= 0.0f) {
+						momentum -= Time.deltaTime * rotationSpeed;
+					} else {
+						momentum -= Time.deltaTime * rotationSpeed * oppositeDirectionPush;
+					}
 				}
 				
 				levelingTimer = 0.0f;
@@ -159,15 +167,71 @@ public class PlaneMovement : MonoBehaviour {
 				if (Input.touches[0].phase == TouchPhase.Began) {
 					// Store the starting touch position
 					slideTouchPos = Input.touches[0].position;
+					levelingTimer = 0.0f;
 				} else if (Input.touches[0].phase == TouchPhase.Moved || Input.touches[0].phase == TouchPhase.Stationary) {
 					// Rotate the plane based off of the new touch position
 					if (Input.touches[0].position.x < slideTouchPos.x + deadZone) {
-						momentum += Time.deltaTime;
+						if (momentum >= 0.0f) {
+							momentum += Time.deltaTime * rotationSpeed;
+						} else {
+							momentum += Time.deltaTime * rotationSpeed;// * oppositeDirectionPush;
+						}
 					} else if (Input.touches[0].position.x > slideTouchPos.x - deadZone){
-						momentum -= Time.deltaTime;
+						if (momentum <= 0.0f) {
+							momentum -= Time.deltaTime * rotationSpeed;
+						} else {
+							momentum -= Time.deltaTime * rotationSpeed;// * oppositeDirectionPush;
+						}
+					}
+
+					levelingTimer = 0.0f;
+				} else {
+					if (momentum > 0.0f) {
+						momentum -= Time.deltaTime * momentumReduction;
+					} else if (momentum < 0.0f) {
+						momentum += Time.deltaTime * momentumReduction;
+					}
+					
+					if (levelingTimer >= levelingDelay) {
+						LevelPlane();
+					} else {
+						levelingTimer += Time.deltaTime;
 					}
 				}
 			}
+			break;
+		case 3:
+			// Rotate the plane using tilt controls
+			if (Input.acceleration.x > tiltDeadZone) {
+				if (momentum >= 0.0f) {
+					momentum += Time.deltaTime * rotationSpeed;
+				} else {
+					momentum += Time.deltaTime * rotationSpeed * oppositeDirectionPush;
+				}
+
+				levelingTimer = 0.0f;
+			} else if (Input.acceleration.z < -tiltDeadZone){
+				if (momentum <= 0.0f) {
+					momentum -= Time.deltaTime * rotationSpeed;
+				} else {
+					momentum -= Time.deltaTime * rotationSpeed * oppositeDirectionPush;
+				}
+
+				levelingTimer = 0.0f;
+			} else {
+				if (momentum > 0.0f) {
+					momentum -= Time.deltaTime * momentumReduction;
+				} else if (momentum < 0.0f) {
+					momentum += Time.deltaTime * momentumReduction;
+				}
+				
+				if (levelingTimer >= levelingDelay) {
+					LevelPlane();
+				} else {
+					levelingTimer += Time.deltaTime;
+				}
+			}
+
 			break;
 		default:
 			Debug.LogError("Invalid Control Scheme");
