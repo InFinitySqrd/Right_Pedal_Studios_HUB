@@ -64,6 +64,10 @@ public class PlaneMovement : MonoBehaviour {
 					
 			PlaneRotation();
 		}
+
+		if (pause.paused) {
+			momentum = 0.0f;
+		}
 		
 		Controls();
 		

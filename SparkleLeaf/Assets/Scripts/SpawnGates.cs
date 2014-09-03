@@ -111,7 +111,7 @@ public class SpawnGates : MonoBehaviour {
 			}
 			
 			timer = 0.0f;
-		} else {
+		} else if (!pause.paused){
 			timer += Time.deltaTime * planeVars.forwardSpeed;
 		}
 		
