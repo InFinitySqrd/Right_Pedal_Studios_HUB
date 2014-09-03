@@ -35,6 +35,10 @@ public class GameAnalytics : MonoBehaviour {
 		obstacleName = name;
 	}
 
+	void OnAwake() {
+		gameState = GameObject.FindGameObjectWithTag("Player").GetComponent<LevelLost>();
+	}
+
 	// Use this for initialization
 	void Start () {
 		gameState = GameObject.FindGameObjectWithTag("Player").GetComponent<LevelLost>();

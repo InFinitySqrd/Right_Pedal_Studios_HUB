@@ -1,9 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlaneMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\DebugControls.cs">
     <Files>
-      <File FileName="Assets\Scripts\DebugControls.cs" Line="48" Column="73" />
-      <File FileName="Assets\Scripts\PlaneMovement.cs" Line="204" Column="43" />
+      <File FileName="Assets\Scripts\DebugControls.cs" Line="39" Column="4" />
+      <File FileName="..\..\Pirates Vs Robots\Project Files\Assets\Scripts\SteelshinSwordTrail.cs" Line="19" Column="16" />
+      <File FileName="Assets\Scripts\menuButtons.cs" Line="19" Column="40" />
+      <File FileName="Assets\Scripts\GameAnalytics.cs" Line="39" Column="84" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
