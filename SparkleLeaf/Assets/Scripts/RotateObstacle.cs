@@ -3,8 +3,6 @@ using System.Collections;
 
 public class RotateObstacle : MonoBehaviour {
 	// Declare variabes
-	private const float  minSpeed = 0.2f;
-	private const  float maxSpeed = 1.4f;
 	private float rotationSpeed;
 	private bool clockwiseRot;
 
@@ -13,7 +11,6 @@ public class RotateObstacle : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		pauseGame = GameObject.FindGameObjectWithTag("Player").GetComponent<DebugControls>();
-		rotationSpeed = Random.Range(minSpeed, maxSpeed);
 		
 		if (Random.value >= 0.5f) {
 			clockwiseRot = true;
@@ -30,4 +27,9 @@ public class RotateObstacle : MonoBehaviour {
 			}
 		}
 	}
+
+    public void SetRotationSpeed(float speed)
+    {
+        rotationSpeed = speed;
+    }
 }

@@ -4,6 +4,7 @@ using System.Collections;
 public class menuButtons : MonoBehaviour {
 	// Declare variables
 	[SerializeField] PlaneMovement planeVars;
+    [SerializeField] SpawnGates gateVars;
 
 	// Use this for initialization
 	void Start () {
@@ -17,6 +18,13 @@ public class menuButtons : MonoBehaviour {
 		PlayerPrefs.SetFloat("levelingDamp", planeVars.levelingDampener);
 		PlayerPrefs.SetFloat("levelingDelay", planeVars.levelingDelay);
 		PlayerPrefs.SetFloat("oppositeDirPush", planeVars.oppositeDirectionPush);
+
+        // Load optimum values for gateVars
+        PlayerPrefs.SetFloat("spawnTime", gateVars.spawnTime);
+        PlayerPrefs.SetFloat("spawnDistance", gateVars.spawnDistance);
+        PlayerPrefs.SetFloat("rotationPercentage", gateVars.percentageToRotate);
+        PlayerPrefs.SetFloat("minRotationSpeed", gateVars.minSpeed);
+        PlayerPrefs.SetFloat("maxRotationSpeed", gateVars.maxSpeed);
 	}
 	
 	// Update is called once per frame
