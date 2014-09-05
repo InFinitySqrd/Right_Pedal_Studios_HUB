@@ -21,5 +21,9 @@ public class FadeOutMonsters : MonoBehaviour {
 		if (fading) {
 			this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, this.renderer.material.color.a - fadeSpeed * Time.deltaTime);
 		}
+
+        if (this.renderer.material.color.a <= 0.01f) {
+            Destroy(this.transform.parent.gameObject);
+        }
 	}
 }

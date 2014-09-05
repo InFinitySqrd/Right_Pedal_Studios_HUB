@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class setToScreenSize : MonoBehaviour {
+public class SetToScreenSize : MonoBehaviour {
 	// Declare variables
 	[SerializeField] bool mainMenu = false;
 

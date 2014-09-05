@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class menuButtons : MonoBehaviour {
+public class MenuButtons : MonoBehaviour {
 	// Declare variables
 	[SerializeField] PlaneMovement planeVars;
     [SerializeField] SpawnGates gateVars;
 
 	// Use this for initialization
 	void Start () {
+        // Reset the tutorial values in player prefs
+        PlayerPrefs.SetInt("Tutorial Completed", 0);
+
 		// Load default variables into player prefs for the optimum planeVars configuration
 		PlayerPrefs.SetFloat("movement", planeVars.forwardSpeed);
 		PlayerPrefs.SetFloat("rotation", planeVars.rotationSpeed);

@@ -7,7 +7,12 @@ public class RotateObstacle : MonoBehaviour {
 	private bool clockwiseRot;
 
 	private DebugControls pauseGame;
-	
+    private MonsterPopUp monster;
+
+    void Awake() {
+        monster = this.transform.GetChild(0).GetComponent<MonsterPopUp>();
+    }
+
 	// Use this for initialization
 	void Start () {
 		pauseGame = GameObject.FindGameObjectWithTag("Player").GetComponent<DebugControls>();
@@ -19,7 +24,7 @@ public class RotateObstacle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		if (!pauseGame.paused) {
+		if (!pauseGame.paused && monster.flipped) {
 			if (clockwiseRot) {
 				this.transform.Rotate(Vector3.forward, rotationSpeed);
 			} else {

@@ -54,9 +54,9 @@ public class MovingGates : MonoBehaviour {
 				}
 			}
 			
-			if (this.transform.eulerAngles.x > 0.05f) {
+			/*if (this.transform.eulerAngles.x > 0.05f) {
 				this.transform.Rotate(Vector3.forward * movementSpeed);
-			}
+			}*/
 		}
 	}
 }

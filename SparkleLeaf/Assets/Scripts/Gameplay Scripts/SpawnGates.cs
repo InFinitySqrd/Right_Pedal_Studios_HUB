@@ -82,9 +82,9 @@ public class SpawnGates : MonoBehaviour {
 		if (gatesList.Count > 0) {
 			//RotationColour();
 		}
-		
+
         // Spawn a gate if we are able to
-		if (timer >= spawnTime && !pause.paused && !lostGame.lost) {
+		if (PlayerPrefs.GetInt("Tutorial Completed") == 1 && timer >= spawnTime && !pause.paused && !lostGame.lost) {
             // Grab a spawn point
 			Vector3 spawnPoint = new Vector3(this.transform.position.x, planeVars.environmentCentre.position.y / 16.0f, this.transform.position.z + spawnDistance);
 			
@@ -132,13 +132,13 @@ public class SpawnGates : MonoBehaviour {
 		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
 
 			Vector3 playerRotation = this.transform.rotation.eulerAngles;
-			if (RightSideUpScore) {
+			/*if (RightSideUpScore) {
 				if (playerRotation.z < 90 || playerRotation.z > 270) {
 					score++;
 					doubleScore++;
 					GAStuff.SetDoubleScores(doubleScore);
 				}
-			}
+			}*/
 			score++;
 			GAStuff.SetScore(score);
 			gatesList.RemoveAt(0);
