@@ -51,7 +51,11 @@ public class PlaneMovement : MonoBehaviour {
 
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
 
-		momentum = maxMomentum * 0.85f;
+        if (PlayerPrefs.GetInt("Tutorial Complete") == 0) {
+            momentum = maxMomentum * 0.85f;
+        } else {
+            momentum = 0.0f;
+        }
 
 		controlMethod = PlayerPrefs.GetInt ("Control Method");
 

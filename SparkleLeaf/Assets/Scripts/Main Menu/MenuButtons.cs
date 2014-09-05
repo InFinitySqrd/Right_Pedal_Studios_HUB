@@ -28,6 +28,10 @@ public class MenuButtons : MonoBehaviour {
         PlayerPrefs.SetFloat("rotationPercentage", gateVars.percentageToRotate);
         PlayerPrefs.SetFloat("minRotationSpeed", gateVars.minSpeed);
         PlayerPrefs.SetFloat("maxRotationSpeed", gateVars.maxSpeed);
+        PlayerPrefs.SetFloat("newObstacleTime", gateVars.newObstacleTime);
+        PlayerPrefs.SetFloat("rotateNewObstacleTime", gateVars.rotateNewObstacleTime);
+        PlayerPrefs.SetFloat("randomRotationSpeedIncrementor", gateVars.randomRotationSpeedIncrementor);
+        PlayerPrefs.SetFloat("rotationSpeedIncreaseTime", gateVars.rotationSpeedIncreaseTime);
 	}
 	
 	// Update is called once per frame
@@ -42,5 +46,8 @@ public class MenuButtons : MonoBehaviour {
 		if (GUI.Button(new Rect(0.0f, 0.0f, Screen.width, Screen.height), "Start Game!", skin)) {
 			Application.LoadLevel(Application.loadedLevel + 1);
 		}
+
+        skin.fontSize = 32;
+        GUI.Box(new Rect(Screen.width / 4.0f, 0.0f, Screen.width / 2.0f, Screen.height / 6.0f), "Top Score: " + PlayerPrefs.GetInt("Top Score"), skin);
 	}
 }

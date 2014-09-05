@@ -7,21 +7,24 @@ public class SpawnGates : MonoBehaviour {
 	public int score = 0;
     public float spawnTime = 6.0f;
     public float spawnDistance = 10.0f;
+    public float newObstacleTime = 20.0f;
+    public float rotateNewObstacleTime = 10.0f;
     public float percentageToRotate = 0.5f;
     public float minSpeed = 0.2f;
-    public float maxSpeed = 1.4f;
+    public float maxSpeed = 1.4f;    
+    public float randomRotationSpeedIncrementor = 0.4f;
+    public float rotationSpeedIncreaseTime = 10.0f;
 
 	// Declare variables	
     [SerializeField] int numRotations = 360;
 	[SerializeField] Transform[] obstacles;
-	[SerializeField] float[] percentageSpawnChance; 
-	
-	[SerializeField] bool rotatable = true;
 
     // Colour change variables
     [SerializeField] float closeRotation = 5.0f;
     [SerializeField] float colourChangeRate = 4.0f;
 	
+    private bool[] rotatable;
+
 	private float timer = 0.0f;
 	private Transform spawnedObstacle;
 	private List<Transform> gatesList;
@@ -37,6 +40,15 @@ public class SpawnGates : MonoBehaviour {
 
 	private GameAnalytics GAStuff;
 	private int doubleScore = 0;
+
+    private int spawnedGateNum = 0;
+
+    // Incremental difficulty variables
+    private float randomRotationRangeTimer = 0.0f;
+    private int gatesAbleToSpawn = 1;
+    private float addNewGateTimer = 0.0f;
+    private bool startRotationTimer = true;
+    private float rotatableTimer = 0.0f;
 	
 	void Awake() {
 		gatesList = new List<Transform>();
@@ -52,18 +64,11 @@ public class SpawnGates : MonoBehaviour {
 		timer = spawnTime;
 		planeColor = this.renderer.material.color;
 		
-		if (obstacles.Length != percentageSpawnChance.Length) {
-			Debug.LogError("Not an equal number of objects and percentages");
-		}
-		
-		float percentage = 0.0f;
-		for (int i = 0; i < percentageSpawnChance.Length; i++) {
-			percentage += percentageSpawnChance[i];
-		}
-		
-		if (percentage != 1.0f) {
-			Debug.LogError("Percentages do not add up to 1.0");
-		}
+        // Initialise the array of booleans to tell if an object can be rotated
+        rotatable = new bool[obstacles.Length];
+        for (int i = 0; i < rotatable.Length; i++) {
+            rotatable[i] = false;
+        }
 	}
 	
 	void OnGUI() {
@@ -77,6 +82,17 @@ public class SpawnGates : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        if (lostGame.lost) {
+            if (score > PlayerPrefs.GetInt("Top Score")) {
+                PlayerPrefs.SetInt("Top Score", score);
+            }
+        } else if (PlayerPrefs.GetInt("Tutorial Complete") == 1){
+            // Counters to increase the difficulty of the game over time
+            IncreaseRandomRotationRange();
+            IncreaseGatesToBeSpawned();
+            SetNextObstacleToBeRotatable();
+        }
+
 		int gateNumber = 0;
 
 		if (gatesList.Count > 0) {
@@ -91,13 +107,14 @@ public class SpawnGates : MonoBehaviour {
 			float randomNumber = Random.value;
 			float summedProbabilities = 0.0f;
 			
-			for (int i = 0; i < obstacles.Length; i++) {
-				summedProbabilities += percentageSpawnChance[i];
+			for (int i = 0; i < gatesAbleToSpawn; i++) {
+				summedProbabilities += (1.0f / (float)gatesAbleToSpawn);
 				
                 // Spawn a random gate
 				if (randomNumber < summedProbabilities) {
 					spawnedObstacle = (Transform)Instantiate(obstacles[i], spawnPoint, Quaternion.identity);
-					gateNumber = i + 1;
+					spawnedGateNum = i;
+                    gateNumber = i + 1;
 					break;
 				}
 			}
@@ -114,7 +131,7 @@ public class SpawnGates : MonoBehaviour {
 			spawnedObstacle.GetComponent<MovingGates>().gateType = gateNumber;
 			
             // Determine if this object should be rotating or not
-			if (rotatable) {
+			if (rotatable[spawnedGateNum]) {
 				float randomNum = Random.value;
 				
 				if (randomNum <= percentageToRotate) {
@@ -130,15 +147,7 @@ public class SpawnGates : MonoBehaviour {
 		
         // Determine the score to be added to the player's total
 		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
-
 			Vector3 playerRotation = this.transform.rotation.eulerAngles;
-			/*if (RightSideUpScore) {
-				if (playerRotation.z < 90 || playerRotation.z > 270) {
-					score++;
-					doubleScore++;
-					GAStuff.SetDoubleScores(doubleScore);
-				}
-			}*/
 			score++;
 			GAStuff.SetScore(score);
 			gatesList.RemoveAt(0);
@@ -156,4 +165,43 @@ public class SpawnGates : MonoBehaviour {
 			planeBodyColor.color = this.renderer.material.color;
 		}
 	}
+
+    private void IncreaseRandomRotationRange() {
+        if (randomRotationRangeTimer >= rotationSpeedIncreaseTime) {
+            minSpeed += randomRotationSpeedIncrementor;
+            maxSpeed += randomRotationSpeedIncrementor;
+
+            randomRotationRangeTimer = 0.0f;
+        } else {
+            randomRotationRangeTimer += Time.deltaTime;
+        }
+    }
+
+    private void IncreaseGatesToBeSpawned() {
+        if (addNewGateTimer >= newObstacleTime) {
+            gatesAbleToSpawn++;
+
+            addNewGateTimer = 0.0f;
+            startRotationTimer = true;
+        } else {
+            addNewGateTimer += Time.deltaTime;
+        }
+        
+        if (gatesAbleToSpawn > obstacles.Length) {
+            gatesAbleToSpawn = obstacles.Length;
+        }
+    }
+
+    private void SetNextObstacleToBeRotatable() {
+        if (startRotationTimer) {
+            if (rotatableTimer >= rotationSpeedIncreaseTime) {
+                rotatable[gatesAbleToSpawn - 1] = true;
+
+                rotatableTimer = 0.0f;
+                startRotationTimer = false;
+            } else {
+                rotatableTimer += Time.deltaTime;
+            }
+        }
+    }
 }

@@ -19,10 +19,14 @@ public class DebugControls : MonoBehaviour
 
     // Serialized gate maxSliderValues
     [SerializeField] float spawnTimeMax = 10.0f;
-    [SerializeField] float spawnDistanceMax = 10.0f;
+    [SerializeField] float spawnDistanceMax = 200.0f;
+    [SerializeField] float newObstacleTimeMax = 100.0f;
+    [SerializeField] float rotateNewObstacleMax = 100.0f;
     [SerializeField] float rotatePercentageMax = 1.0f;
     [SerializeField] float minRotationSpeedMax = 10.0f;
     [SerializeField] float maxRotationSpeedMax = 10.0f;
+    [SerializeField] float rotationSpeedIncrementMax = 10.0f;
+    [SerializeField] float rotationSpeedIncreaseTimeMax = 100.0f;
 
     private bool debugWindow = false;
     private bool planeWindow = true;
@@ -52,9 +56,13 @@ public class DebugControls : MonoBehaviour
         // Initialise gate values from player prefs
         gateVars.spawnTime = PlayerPrefs.GetFloat("spawnTime");
         gateVars.spawnDistance = PlayerPrefs.GetFloat("spawnDistance");
+        gateVars.newObstacleTime = PlayerPrefs.GetFloat("newObstacleTime");
+        gateVars.rotateNewObstacleTime = PlayerPrefs.GetFloat("rotateNewObstacleTime");
         gateVars.percentageToRotate = PlayerPrefs.GetFloat("rotationPercentage");
         gateVars.minSpeed = PlayerPrefs.GetFloat("minRotationSpeed");
         gateVars.maxSpeed = PlayerPrefs.GetFloat("maxRotationSpeed");
+        gateVars.randomRotationSpeedIncrementor = PlayerPrefs.GetFloat("randomRotationSpeedIncrementor");
+        gateVars.rotationSpeedIncreaseTime = PlayerPrefs.GetFloat("rotationSpeedIncreaseTime");
     }
 
     void OnGUI()
@@ -92,9 +100,13 @@ public class DebugControls : MonoBehaviour
                 // Draw controls for the gate spawning variables
                 DrawSliders(0, "SpawnTime", ref gateVars.spawnTime, spawnTimeMax);
                 DrawSliders(1, "SpawnDistance", ref gateVars.spawnDistance, spawnDistanceMax);
-                DrawSliders(2, "RotatePercentage", ref gateVars.percentageToRotate, rotatePercentageMax);
-                DrawSliders(3, "MinRotateSpeed", ref gateVars.minSpeed, minRotationSpeedMax);
-                DrawSliders(4, "MaxRotateSpeed", ref gateVars.maxSpeed, maxRotationSpeedMax);
+                DrawSliders(2, "NewObstacleTime", ref gateVars.newObstacleTime, newObstacleTimeMax);
+                DrawSliders(3, "NewRotateTime", ref gateVars.rotateNewObstacleTime, rotateNewObstacleMax);
+                DrawSliders(4, "RotatePercentage", ref gateVars.percentageToRotate, rotatePercentageMax);
+                DrawSliders(5, "MinRotateSpeed", ref gateVars.minSpeed, minRotationSpeedMax);
+                DrawSliders(6, "MaxRotateSpeed", ref gateVars.maxSpeed, maxRotationSpeedMax);
+                DrawSliders(7, "RotationSpeed", ref gateVars.randomRotationSpeedIncrementor, rotationSpeedIncrementMax);
+                DrawSliders(8, "IncRotSpeedTime", ref gateVars.rotationSpeedIncreaseTime, rotationSpeedIncreaseTimeMax);
             }
 
             // Draw a control to switch between windows in the debug menu
@@ -136,6 +148,10 @@ public class DebugControls : MonoBehaviour
                 PlayerPrefs.SetFloat("rotationPercentage", gateVars.percentageToRotate);
                 PlayerPrefs.SetFloat("minRotationSpeed", gateVars.minSpeed);
                 PlayerPrefs.SetFloat("maxRotationSpeed", gateVars.maxSpeed);
+                PlayerPrefs.SetFloat("newObstacleTime", gateVars.newObstacleTime);
+                PlayerPrefs.SetFloat("rotateNewObstacleTime", gateVars.rotateNewObstacleTime);
+                PlayerPrefs.SetFloat("randomRotationSpeedIncrementor", gateVars.randomRotationSpeedIncrementor);
+                PlayerPrefs.SetFloat("rotationSpeedIncreaseTime", gateVars.rotationSpeedIncreaseTime);
             }
         }
     }
