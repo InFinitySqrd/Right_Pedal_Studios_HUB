@@ -42,9 +42,12 @@ public class MonsterPopUp : MonoBehaviour {
 	void Update () {
         this.transform.position = gateParent.transform.position;
         pivotPoint = gateParent.transform.position + differenceVector;
-        pivotObject.transform.position = pivotPoint;
 
-        if (Vector3.Distance(gateParent.transform.position, player.position) <= flipDistance) {
+        if (!flipped) {
+            pivotObject.transform.position = pivotPoint;
+        }
+
+        if (!flipped && Vector3.Distance(gateParent.transform.position, player.position) <= flipDistance) {
             Flip();
         }
 	}
