@@ -15,27 +15,31 @@ public class Tutorial : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        // Spawn hold points
-        for (int i = -1; i < 2; i += 2) {
-            // Set up an appropriate spawn point
-            Vector3 spawnPoint = new Vector3(Screen.width / 2.0f + (i * Screen.width / 3.0f), Screen.height / 8.0f, -Camera.main.transform.position.z);
-            spawnPoint = Camera.main.ScreenToWorldPoint(spawnPoint);
+        if (PlayerPrefs.GetInt("Tutorial Completed") == 1) {
+            this.GetComponent<Tutorial>().enabled = false;
+        } else {        
+            // Spawn hold points
+            for (int i = -1; i < 2; i += 2) {
+                // Set up an appropriate spawn point
+                Vector3 spawnPoint = new Vector3(Screen.width / 2.0f + (i * Screen.width / 3.0f), Screen.height / 8.0f, -Camera.main.transform.position.z);
+                spawnPoint = Camera.main.ScreenToWorldPoint(spawnPoint);
 
-            // Instantiate the icon
-            if (i == -1) {
-                leftIcon = (GameObject)Instantiate(tutorialIcons.gameObject, spawnPoint, tutorialIcons.transform.rotation);
-            } else if (i == 1) {
-                rightIcon = (GameObject)Instantiate(tutorialIcons.gameObject, spawnPoint, tutorialIcons.transform.rotation);
+                // Instantiate the icon
+                if (i == -1) {
+                    leftIcon = (GameObject)Instantiate(tutorialIcons.gameObject, spawnPoint, tutorialIcons.transform.rotation);
+                } else if (i == 1) {
+                    rightIcon = (GameObject)Instantiate(tutorialIcons.gameObject, spawnPoint, tutorialIcons.transform.rotation);
+                }
             }
+
+            // Spawn tutorial text
+            // Set up an appropriate spawn point
+            Vector3 transform = new Vector3(Screen.width / 2.0f, Screen.height - Screen.height / 3.0f, -Camera.main.transform.position.z);
+            transform = Camera.main.ScreenToWorldPoint(transform);
+
+            // Instantiate the text
+            text = (GameObject)Instantiate(tutorialText.gameObject, transform, tutorialIcons.transform.rotation);
         }
-
-        // Spawn tutorial text
-        // Set up an appropriate spawn point
-        Vector3 transform = new Vector3(Screen.width / 2.0f, Screen.height - Screen.height / 3.0f, -Camera.main.transform.position.z);
-        transform = Camera.main.ScreenToWorldPoint(transform);
-
-        // Instantiate the text
-        text = (GameObject)Instantiate(tutorialText.gameObject, transform, tutorialIcons.transform.rotation);
 	}
 	// Update is called once per frame
 	void Update () {
