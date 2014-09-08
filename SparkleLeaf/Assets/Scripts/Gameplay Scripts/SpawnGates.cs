@@ -112,7 +112,7 @@ public class SpawnGates : MonoBehaviour {
 				
                 // Spawn a random gate
 				if (randomNumber < summedProbabilities) {
-					spawnedObstacle = (Transform)Instantiate(obstacles[i], spawnPoint, Quaternion.identity);
+					spawnedObstacle = (Transform)Instantiate(obstacles[i], spawnPoint, obstacles[i].rotation);
 					spawnedGateNum = i;
                     gateNumber = i + 1;
 					break;
