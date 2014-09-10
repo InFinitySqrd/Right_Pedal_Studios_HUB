@@ -49,7 +49,9 @@ public class SpawnGates : MonoBehaviour {
     private float addNewGateTimer = 0.0f;
     private bool startRotationTimer = true;
     private float rotatableTimer = 0.0f;
-	
+
+	[SerializeField] Font interfaceFont;
+
 	void Awake() {
 		gatesList = new List<Transform>();
 		planeVars = this.GetComponent<PlaneMovement>();
@@ -74,8 +76,9 @@ public class SpawnGates : MonoBehaviour {
 	void OnGUI() {
 		// Draw the player's score in the top corner of the screen
 		GUIStyle skin = new GUIStyle();
-		skin.fontSize = 40;
-		skin.alignment = TextAnchor.MiddleCenter;
+		skin.font = interfaceFont;
+		skin.fontSize = 48;
+		skin.alignment = TextAnchor.MiddleRight;
         skin.normal.textColor = Color.white;
 		GUI.Box(new Rect(0.0f, 0.0f + Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), score.ToString(), skin);
 	}
@@ -112,7 +115,7 @@ public class SpawnGates : MonoBehaviour {
 				
                 // Spawn a random gate
 				if (randomNumber < summedProbabilities) {
-					spawnedObstacle = (Transform)Instantiate(obstacles[i], spawnPoint, Quaternion.identity);
+					spawnedObstacle = (Transform)Instantiate(obstacles[i], spawnPoint, obstacles[i].rotation);
 					spawnedGateNum = i;
                     gateNumber = i + 1;
 					break;

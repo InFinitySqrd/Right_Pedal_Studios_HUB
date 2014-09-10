@@ -9,6 +9,8 @@ public class LevelLost : MonoBehaviour {
 	private float timeUntilDeath;
 	private GameAnalytics GAStuff;
 
+    private bool menuUp = false;
+
 	// Use this for initialization
 	void Start () {
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
@@ -19,29 +21,17 @@ public class LevelLost : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		timeUntilDeath += Time.deltaTime;
-	}
-	
-	void OnGUI() {
-		if (lost) {
-			// Display that the player has lost the game
-			GUIStyle skin = new GUIStyle();
-			skin.fontSize = 40;
-			skin.alignment = TextAnchor.MiddleCenter;			
-			skin.normal.textColor = Color.white;
-			
-			GUI.Box(new Rect(0.0f, Screen.height - Screen.height / 8.0f, Screen.width, Screen.height / 8.0f), "Game Over", skin);
 
-			skin.fontSize = 34;
-			if (GUI.Button(new Rect(0.0f, 0.0f + Screen.height / 3.0f, Screen.width, Screen.height / 8.0f), "Restart?", skin)) {
-				Application.LoadLevel(Application.loadedLevel);
-			}
+        if (!menuUp && lost) {
+            Application.LoadLevelAdditive("MenuScreen");
+            menuUp = true;
 
-			if (GUI.Button(new Rect(0.0f + Screen.width / 3.0f, 0.0f + 1.6f * Screen.height / 3.0f, Screen.width / 3.0f, Screen.height / 8.0f), "Menu", skin)) {
-				Application.LoadLevel(Application.loadedLevel-1);
-			}
-		}
+            if (Input.touchCount >= 3 || Input.GetKeyDown(KeyCode.Delete)) {
+                Application.LoadLevel("MainMenu");
+            }
+        }
 	}
-	
+
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == "Obstacle") {
 			lost = true;

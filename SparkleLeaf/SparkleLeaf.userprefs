@@ -1,12 +1,11 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlaneMovement.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay Scripts\SpawnGates.cs">
     <Files>
-      <File FileName="Assets\Scripts\PlaneMovement.cs" Line="50" Column="25" />
-      <File FileName="Assets\Scripts\menuButtons.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\RotateObstacle.cs" Line="34" Column="1" />
-      <File FileName="Assets\Scripts\SpawnGates.cs" Line="151" Column="1" />
-      <File FileName="Assets\Scripts\DebugControls.cs" Line="78" Column="28" />
+      <File FileName="Assets\Scripts\Gameplay Scripts\SpawnGates.cs" Line="80" Column="21" />
+      <File FileName="Assets\Scripts\Interface\SetUpMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Interface\ButtonControls.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Interface\MenuTween.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
