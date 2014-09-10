@@ -69,17 +69,15 @@ public class DebugControls : MonoBehaviour
     {
         if (!debugWindow)
         {
-            paused = false;
 
             if (Input.touchCount >= 3 || Input.GetKeyDown(KeyCode.Delete))
             {
                 debugWindow = true;
+				paused = true;
             }
         }
         else
         {
-            paused = true;
-
             // Draw all control options
             if (planeWindow)
             {
@@ -129,6 +127,7 @@ public class DebugControls : MonoBehaviour
             if (GUI.Button(new Rect(Screen.width - Screen.width / 4.0f, Screen.height - Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), "Close Window"))
             {
                 debugWindow = false;
+				paused = false;
 
                 // Save all values to player prefs on close
                 // Set values for the plane variables

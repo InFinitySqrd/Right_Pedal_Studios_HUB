@@ -17,9 +17,15 @@ public class ButtonControls : MonoBehaviour {
 	[SerializeField] float buttonFadeMod = 2.0f;
 
     private Camera parentCamera;
-    private bool inSubMenu = false;
+    public bool inSubMenu = false;
+	private ButtonControls subMenuParent;
 	private float fadeSpeed = 0.0f;
 	private bool bgmEnabled = true, sfxEnabled = true;
+	private bool settingsOpen = false;
+
+	private DebugControls pause;
+	private LevelLost lostGame;
+	private Tutorial tutorial;
 
 	// Use this for initialization
 	void Start () {
@@ -31,11 +37,27 @@ public class ButtonControls : MonoBehaviour {
 			backButton.color = new Color(backButton.color.r, backButton.color.g, backButton.color.b, 0.0f);
 		}
 
+		inSubMenu = false;
+		if (this.transform.parent.name == "Settings") {
+			subMenuParent = this.transform.parent.GetComponent<ButtonControls>();
+		}
+
         if (this.transform.parent.camera != null) {
             parentCamera = this.transform.parent.camera;
         } else {
             parentCamera = this.transform.parent.parent.camera;
         }
+
+		// Pause the game when the menu is drawn
+		if (this.collider.name == "Play") {
+			pause = GameObject.FindGameObjectWithTag("Player").GetComponent<DebugControls>();
+			lostGame = GameObject.FindGameObjectWithTag("Player").GetComponent<LevelLost>();
+			tutorial = GameObject.FindGameObjectWithTag("Player").GetComponent<Tutorial>();
+
+			if (pause != null) {
+				pause.paused = true;
+			} 
+		}
 	}
 	
 	// Update is called once per frame
@@ -63,15 +85,26 @@ public class ButtonControls : MonoBehaviour {
                     switch (buttonType) {
                         case ButtonFunction.Play:
                             // Restart the game
-                            Application.LoadLevel(Application.loadedLevel);
-                            break;
+                            //Application.LoadLevel(Application.loadedLevel);
+							if (pause != null && lostGame != null && tutorial != null && !lostGame.lost) {
+								pause.paused = false;
+								
+								if (PlayerPrefs.GetInt("TutorialComplete") == 0) {
+									tutorial.enabled = true;
+								}
+
+								Destroy(this.transform.root.gameObject);
+							} else if (pause != null && lostGame != null && lostGame.lost) {
+								Application.LoadLevel(Application.loadedLevel);
+							}
+							break;
                         case ButtonFunction.Leaderboards:
                             // Open the leaderboards scene
                             break;
                         case ButtonFunction.Settings:
                             // Open the settings scene
 							if (settingsButton.color.a > 0.9f && backButton.color.a < 0.1f) {
-	                            inSubMenu = !inSubMenu;
+	                            inSubMenu = true;
 	                            SubMenu(inSubMenu);
 
 								this.buttonType = ButtonFunction.Back;
@@ -82,7 +115,7 @@ public class ButtonControls : MonoBehaviour {
                         case ButtonFunction.Back:
                             // Return to the previous screen
 							if (settingsButton.color.a < 0.1f && backButton.color.a > 0.9f) {
-	                            inSubMenu = !inSubMenu;
+	                            inSubMenu = false;
 	                            SubMenu(inSubMenu);
 
 	                            this.buttonType = ButtonFunction.Settings;
@@ -92,27 +125,33 @@ public class ButtonControls : MonoBehaviour {
                             break;
                         case ButtonFunction.Info:
                             // Switch the the credits and game info screen
-                            Application.LoadLevelAdditive("CreditsScreen");
-                            Destroy(this.transform.root.gameObject);
+							if (subMenuParent.inSubMenu) {
+	                            Application.LoadLevelAdditive("CreditsScreen");
+	                            Destroy(this.transform.root.gameObject);
+							}
                             break;
                         case ButtonFunction.MuteBGM:
                             // Mute background track
-							bgmEnabled = !bgmEnabled;
-							
-							if (bgmEnabled) {
-								this.renderer.material = BGMOn;
-							} else {
-								this.renderer.material = BGMOff;
+							if (subMenuParent.inSubMenu) {
+								bgmEnabled = !bgmEnabled;
+								
+								if (bgmEnabled) {
+									this.renderer.material = BGMOn;
+								} else {
+									this.renderer.material = BGMOff;
+								}
 							}
                             break;
                         case ButtonFunction.MuteSFX:
 							// Mute all sound effects
-							sfxEnabled = !sfxEnabled;
+							if (subMenuParent.inSubMenu) {
+								sfxEnabled = !sfxEnabled;
 
-							if (sfxEnabled) {
-								this.renderer.material = SFXOn;
-							} else {
-								this.renderer.material = SFXOff;
+								if (sfxEnabled) {
+									this.renderer.material = SFXOn;
+								} else {
+									this.renderer.material = SFXOff;
+								}
 							}
                             break;
                         case ButtonFunction.ExitCredits:

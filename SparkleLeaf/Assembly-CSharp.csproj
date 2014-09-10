@@ -107,6 +107,7 @@
      <Compile Include="Assets\Scripts\Interface\DebugControls.cs" />
      <Compile Include="Assets\Scripts\Interface\GameAnalytics.cs" />
      <Compile Include="Assets\Scripts\Interface\MenuTween.cs" />
+     <Compile Include="Assets\Scripts\Interface\SetUpCredits.cs" />
      <Compile Include="Assets\Scripts\Interface\SetUpMenu.cs" />
      <Compile Include="Assets\Scripts\Interface\SettingsSubMenu.cs" />
      <Compile Include="Assets\Scripts\Interface\Tutorial.cs" />

@@ -38,20 +38,28 @@ public class PlaneMovement : MonoBehaviour {
 
 	private GameAnalytics GAStuff;
 
+	private bool tutorialActivated = false;
+
 	void Awake() {
 		Application.targetFrameRate = 60;
+		this.GetComponent<Tutorial>().enabled = false;
 	}
 
 	// Use this for initialization
 	void Start () {
 		gameState = this.GetComponent<LevelLost>();	
+
 		pause = this.GetComponent<DebugControls>();
+		if (PlayerPrefs.GetInt("TutorialComplete") == 0) {
+			pause.paused = true;
+		}
+
 		environmentCentre = GameObject.FindGameObjectWithTag("EnvironmentCentre").transform;
 		rotationSound = GameObject.Find("Rotation Sound");
 
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
 
-        if (PlayerPrefs.GetInt("Tutorial Complete") == 0) {
+        if (PlayerPrefs.GetInt("TutorialComplete") == 0) {
             momentum = maxMomentum * 0.85f;
         } else {
             momentum = 0.0f;
@@ -62,10 +70,22 @@ public class PlaneMovement : MonoBehaviour {
 		if (controlMethod == 0) {
 			controlMethod = 1;
 		}
+
+		// Start the game with the menu when the game launches
+		if (PlayerPrefs.GetInt("FirstLaunch") == 0) {
+			Application.LoadLevelAdditive("MenuScreen");
+			PlayerPrefs.SetInt("FirstLaunch", 1);
+		}
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {	
+		if (PlayerPrefs.GetInt("TutorialComplete") == 0 && !pause.paused && !tutorialActivated) {
+			this.GetComponent<Tutorial>().enabled = true;
+			tutorialActivated = true;
+			//PlayerPrefs.SetInt("TutorialComplete", 1);
+		}
+
 		if (!gameState.lost && !pause.paused) {
 			// Move the plane forward
 			//this.transform.Translate(Vector3.forward * forwardSpeed);
@@ -254,13 +274,15 @@ public class PlaneMovement : MonoBehaviour {
 	}
 	
 	public void IncreaseMovement(ref float incrementor) {
-		forwardSpeed += incrementor;
-		incrementor *= speedGrowthPerStep;
-		
-		if (rotationSpeed < maxRotationSpeed) {
-			rotationSpeed += incrementor;
-		} else {
-			rotationSpeed = maxRotationSpeed;
+		if (PlayerPrefs.GetInt("TutorialComplete") == 1) {
+			forwardSpeed += incrementor;
+			incrementor *= speedGrowthPerStep;
+			
+			if (rotationSpeed < maxRotationSpeed) {
+				rotationSpeed += incrementor;
+			} else {
+				rotationSpeed = maxRotationSpeed;
+			}
 		}
 	}
 }

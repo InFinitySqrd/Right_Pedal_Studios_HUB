@@ -13,33 +13,16 @@ public class Tutorial : MonoBehaviour {
     private GameObject leftIcon, rightIcon, text;
     private bool leftAchieved, rightAchieved;
 
+	private bool instantiated = false;
+
 	// Use this for initialization
 	void Start () {
-        if (PlayerPrefs.GetInt("Tutorial Completed") == 1) {
-            this.GetComponent<Tutorial>().enabled = false;
-        } else {        
-            // Spawn hold points
-            for (int i = -1; i < 2; i += 2) {
-                // Set up an appropriate spawn point
-                Vector3 spawnPoint = new Vector3(Screen.width / 2.0f + (i * Screen.width / 3.0f), Screen.height / 8.0f, -Camera.main.transform.position.z);
-                spawnPoint = Camera.main.ScreenToWorldPoint(spawnPoint);
-
-                // Instantiate the icon
-                if (i == -1) {
-                    leftIcon = (GameObject)Instantiate(tutorialIcons.gameObject, spawnPoint, tutorialIcons.transform.rotation);
-                } else if (i == 1) {
-                    rightIcon = (GameObject)Instantiate(tutorialIcons.gameObject, spawnPoint, tutorialIcons.transform.rotation);
-                }
-            }
-
-            // Spawn tutorial text
-            // Set up an appropriate spawn point
-            Vector3 transform = new Vector3(Screen.width / 2.0f, Screen.height - Screen.height / 3.0f, -Camera.main.transform.position.z);
-            transform = Camera.main.ScreenToWorldPoint(transform);
-
-            // Instantiate the text
-            text = (GameObject)Instantiate(tutorialText.gameObject, transform, tutorialIcons.transform.rotation);
-        }
+		if (PlayerPrefs.GetInt("TutorialComplete") == 0 && !instantiated) {
+			InstantiateTuteVars();
+			instantiated = true;
+		} else {
+			this.enabled = false;
+		}
 	}
 	// Update is called once per frame
 	void Update () {
@@ -76,13 +59,37 @@ public class Tutorial : MonoBehaviour {
             }
 
             if (text.renderer.material.color.a < 0.1f) {
-                PlayerPrefs.SetInt("Tutorial Completed", 1);
+                PlayerPrefs.SetInt("TutorialComplete", 1);
                 Destroy(leftIcon);
                 Destroy(rightIcon);
                 Destroy(text);
                 this.GetComponent<Tutorial>().enabled = false;
             }
         }
+	}
+
+	private void InstantiateTuteVars() {
+		// Spawn hold points
+		for (int i = -1; i < 2; i += 2) {
+			// Set up an appropriate spawn point
+			Vector3 spawnPoint = new Vector3(Screen.width / 2.0f + (i * Screen.width / 3.0f), Screen.height / 8.0f, -Camera.main.transform.position.z);
+			spawnPoint = Camera.main.ScreenToWorldPoint(spawnPoint);
+			
+			// Instantiate the icon
+			if (i == -1) {
+				leftIcon = (GameObject)Instantiate(tutorialIcons.gameObject, spawnPoint, tutorialIcons.transform.rotation);
+			} else if (i == 1) {
+				rightIcon = (GameObject)Instantiate(tutorialIcons.gameObject, spawnPoint, tutorialIcons.transform.rotation);
+			}
+		}
+		
+		// Spawn tutorial text
+		// Set up an appropriate spawn point
+		Vector3 transform = new Vector3(Screen.width / 2.0f, Screen.height - Screen.height / 3.0f, -Camera.main.transform.position.z);
+		transform = Camera.main.ScreenToWorldPoint(transform);
+		
+		// Instantiate the text
+		text = (GameObject)Instantiate(tutorialText.gameObject, transform, tutorialIcons.transform.rotation);
 	}
 
     IEnumerator Fade(Material transparentMat) {
