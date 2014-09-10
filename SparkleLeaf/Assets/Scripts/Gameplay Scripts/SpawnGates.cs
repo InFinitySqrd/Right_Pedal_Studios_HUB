@@ -29,17 +29,17 @@ public class SpawnGates : MonoBehaviour {
 	private Transform spawnedObstacle;
 	private List<Transform> gatesList;
 	private Color planeColor;
-	private Material planeBodyColor;
+	//private Material planeBodyColor;
 	
 	private PlaneMovement planeVars;
 	private DebugControls pause;
 	private LevelLost lostGame;
 
-	[SerializeField] bool RightSideUpScore = false;
-	private bool crossAvailable = false;
+	//[SerializeField] bool RightSideUpScore = false;
+	//private bool crossAvailable = false;
 
 	private GameAnalytics GAStuff;
-	private int doubleScore = 0;
+	//private int doubleScore = 0;
 
     private int spawnedGateNum = 0;
 
@@ -92,7 +92,7 @@ public class SpawnGates : MonoBehaviour {
             if (score > PlayerPrefs.GetInt("Top Score")) {
                 PlayerPrefs.SetInt("Top Score", score);
             }
-        } else if (PlayerPrefs.GetInt("Tutorial Complete") == 1){
+        } else if (PlayerPrefs.GetInt("TutorialComplete") == 1){
             // Counters to increase the difficulty of the game over time
             IncreaseRandomRotationRange();
             IncreaseGatesToBeSpawned();
@@ -106,7 +106,7 @@ public class SpawnGates : MonoBehaviour {
 		}
 
         // Spawn a gate if we are able to
-		if (PlayerPrefs.GetInt("Tutorial Completed") == 1 && timer >= spawnTime && !pause.paused && !lostGame.lost) {
+		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && timer >= spawnTime && !pause.paused && !lostGame.lost) {
             // Grab a spawn point
 			Vector3 spawnPoint = new Vector3(this.transform.position.x, planeVars.environmentCentre.position.y / 16.0f, this.transform.position.z + spawnDistance);
 			
@@ -153,7 +153,7 @@ public class SpawnGates : MonoBehaviour {
 		
         // Determine the score to be added to the player's total
 		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
-			Vector3 playerRotation = this.transform.rotation.eulerAngles;
+			//Vector3 playerRotation = this.transform.rotation.eulerAngles;
 			score++;
 			GAStuff.SetScore(score);
 			gatesList.RemoveAt(0);
@@ -165,10 +165,10 @@ public class SpawnGates : MonoBehaviour {
 		if (Quaternion.Angle(this.transform.rotation, gatesList[0].transform.rotation) <= closeRotation ||
 		    Quaternion.Angle(this.transform.rotation, gatesList[0].transform.rotation) >= 180.0f - closeRotation) {
 			this.renderer.material.color = Color.Lerp(this.renderer.material.color, Color.green, Time.deltaTime * colourChangeRate);
-			planeBodyColor.color = this.renderer.material.color;
+			//planeBodyColor.color = this.renderer.material.color;
 		} else {
 			this.renderer.material.color = Color.Lerp(this.renderer.material.color, planeColor, Time.deltaTime * colourChangeRate * 4.0f);
-			planeBodyColor.color = this.renderer.material.color;
+			//planeBodyColor.color = this.renderer.material.color;
 		}
 	}
 

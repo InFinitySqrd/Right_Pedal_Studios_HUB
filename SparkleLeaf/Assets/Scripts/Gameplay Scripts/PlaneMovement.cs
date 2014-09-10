@@ -59,7 +59,7 @@ public class PlaneMovement : MonoBehaviour {
 
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
 
-        if (PlayerPrefs.GetInt("Tutorial Complete") == 0) {
+        if (PlayerPrefs.GetInt("TutorialComplete") == 0) {
             momentum = maxMomentum * 0.85f;
         } else {
             momentum = 0.0f;
@@ -72,7 +72,10 @@ public class PlaneMovement : MonoBehaviour {
 		}
 
 		// Start the game with the menu when the game launches
-		Application.LoadLevelAdditive("MenuScreen");
+		if (PlayerPrefs.GetInt("FirstLaunch") == 0) {
+			Application.LoadLevelAdditive("MenuScreen");
+			PlayerPrefs.SetInt("FirstLaunch", 1);
+		}
 	}
 	
 	// Update is called once per frame
@@ -80,7 +83,7 @@ public class PlaneMovement : MonoBehaviour {
 		if (PlayerPrefs.GetInt("TutorialComplete") == 0 && !pause.paused && !tutorialActivated) {
 			this.GetComponent<Tutorial>().enabled = true;
 			tutorialActivated = true;
-			PlayerPrefs.SetInt("TutorialComplete", 1);
+			//PlayerPrefs.SetInt("TutorialComplete", 1);
 		}
 
 		if (!gameState.lost && !pause.paused) {
@@ -271,7 +274,7 @@ public class PlaneMovement : MonoBehaviour {
 	}
 	
 	public void IncreaseMovement(ref float incrementor) {
-		if (PlayerPrefs.GetInt("Tutorial Complete") == 1) {
+		if (PlayerPrefs.GetInt("TutorialComplete") == 1) {
 			forwardSpeed += incrementor;
 			incrementor *= speedGrowthPerStep;
 			

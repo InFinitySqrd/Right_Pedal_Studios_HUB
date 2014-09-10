@@ -4,6 +4,7 @@ using System.Collections;
 public class SetUpMenu : MonoBehaviour {
     // Declare variables
     [SerializeField] Transform title, play, leaderboards, settings, backButton, information, muteSFX, muteBGM;
+	[SerializeField] Font gameFont;
 
 	void Awake () {
 	    // Set up all UI elements to scale with screen size
@@ -22,13 +23,13 @@ public class SetUpMenu : MonoBehaviour {
         muteBGM.transform.position = new Vector3(muteBGM.transform.position.x, settings.transform.position.y + 2.0f * settings.transform.localScale.y, muteBGM.transform.position.z);
     }
 
-    // Use this for initialization
-    void Start() {
+	void OnGUI() {
+		GUIStyle skin = new GUIStyle();
+		skin.font = gameFont;
+		skin.alignment = TextAnchor.MiddleCenter;
+		skin.normal.textColor = Color.white;
+		skin.fontSize = 48;
 
-    }
-	
-	// Update is called once per frame
-	void Update () {
-	
+		GUI.Box(new Rect(Screen.width / 4.0f, Screen.height / 3.0f + Screen.height / 12.0f, Screen.width / 2.0f, Screen.height / 6.0f), "Top Score... " + PlayerPrefs.GetInt("Top Score"), skin);
 	}
 }

@@ -17,7 +17,8 @@ public class ButtonControls : MonoBehaviour {
 	[SerializeField] float buttonFadeMod = 2.0f;
 
     private Camera parentCamera;
-    private bool inSubMenu = false;
+    public bool inSubMenu = false;
+	private ButtonControls subMenuParent;
 	private float fadeSpeed = 0.0f;
 	private bool bgmEnabled = true, sfxEnabled = true;
 	private bool settingsOpen = false;
@@ -34,6 +35,11 @@ public class ButtonControls : MonoBehaviour {
 		if (this.collider.name == "Settings") {
 			settingsButton.color = new Color(settingsButton.color.r, settingsButton.color.g, settingsButton.color.b, 1.0f);
 			backButton.color = new Color(backButton.color.r, backButton.color.g, backButton.color.b, 0.0f);
+		}
+
+		inSubMenu = false;
+		if (this.transform.parent.name == "Settings") {
+			subMenuParent = this.transform.parent.GetComponent<ButtonControls>();
 		}
 
         if (this.transform.parent.camera != null) {
@@ -57,7 +63,7 @@ public class ButtonControls : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         CheckClick();
-		Debug.Log (inSubMenu);
+
 		if (this.collider.name == "Settings") {
 			if (buttonType == ButtonFunction.Settings && settingsButton.color.a > 0.95f && backButton.color.a < 0.05f) {
 				settingsButton.color = new Color(settingsButton.color.r, settingsButton.color.g, settingsButton.color.b, 1.0f);
@@ -119,14 +125,14 @@ public class ButtonControls : MonoBehaviour {
                             break;
                         case ButtonFunction.Info:
                             // Switch the the credits and game info screen
-							if (true) {
+							if (subMenuParent.inSubMenu) {
 	                            Application.LoadLevelAdditive("CreditsScreen");
 	                            Destroy(this.transform.root.gameObject);
 							}
                             break;
                         case ButtonFunction.MuteBGM:
                             // Mute background track
-							if (true) {
+							if (subMenuParent.inSubMenu) {
 								bgmEnabled = !bgmEnabled;
 								
 								if (bgmEnabled) {
@@ -138,7 +144,7 @@ public class ButtonControls : MonoBehaviour {
                             break;
                         case ButtonFunction.MuteSFX:
 							// Mute all sound effects
-							if (true) {
+							if (subMenuParent.inSubMenu) {
 								sfxEnabled = !sfxEnabled;
 
 								if (sfxEnabled) {

@@ -13,21 +13,19 @@ public class Tutorial : MonoBehaviour {
     private GameObject leftIcon, rightIcon, text;
     private bool leftAchieved, rightAchieved;
 
-	private DebugControls pause;
-
 	private bool instantiated = false;
 
 	// Use this for initialization
 	void Start () {
-		pause = GameObject.FindGameObjectWithTag("Player").GetComponent<DebugControls>();
-	}
-	// Update is called once per frame
-	void Update () {
 		if (PlayerPrefs.GetInt("TutorialComplete") == 0 && !instantiated) {
 			InstantiateTuteVars();
 			instantiated = true;
+		} else {
+			this.enabled = false;
 		}
-
+	}
+	// Update is called once per frame
+	void Update () {
         // Determine when the player has completed the tutorial
         if (Input.GetMouseButton(0)) {
             if (Input.mousePosition.x > Screen.width / 2.0f) {
@@ -61,7 +59,7 @@ public class Tutorial : MonoBehaviour {
             }
 
             if (text.renderer.material.color.a < 0.1f) {
-                PlayerPrefs.SetInt("Tutorial Completed", 1);
+                PlayerPrefs.SetInt("TutorialComplete", 1);
                 Destroy(leftIcon);
                 Destroy(rightIcon);
                 Destroy(text);

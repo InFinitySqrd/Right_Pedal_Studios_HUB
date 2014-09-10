@@ -9,7 +9,8 @@ public class MenuButtons : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         // Reset the tutorial values in player prefs
-        PlayerPrefs.SetInt("Tutorial Completed", 0);
+        PlayerPrefs.SetInt("TutorialComplete", 0);
+		PlayerPrefs.SetInt("FirstLaunch", 0);
 
 		// Load default variables into player prefs for the optimum planeVars configuration
 		PlayerPrefs.SetFloat("movement", planeVars.forwardSpeed);
@@ -46,8 +47,5 @@ public class MenuButtons : MonoBehaviour {
 		if (GUI.Button(new Rect(0.0f, 0.0f, Screen.width, Screen.height), "Start Game!", skin)) {
 			Application.LoadLevel(Application.loadedLevel + 1);
 		}
-
-        skin.fontSize = 32;
-        GUI.Box(new Rect(Screen.width / 4.0f, 0.0f, Screen.width / 2.0f, Screen.height / 6.0f), "Top Score: " + PlayerPrefs.GetInt("Top Score"), skin);
 	}
 }
