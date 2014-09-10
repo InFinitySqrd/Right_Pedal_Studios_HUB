@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SetUpMenu : MonoBehaviour {
     // Declare variables
-    [SerializeField] Transform title, play, leaderboards, settings, information, muteSFX, muteBGM;
+    [SerializeField] Transform title, play, leaderboards, settings, backButton, information, muteSFX, muteBGM;
 
 	void Awake () {
 	    // Set up all UI elements to scale with screen size
@@ -11,7 +11,8 @@ public class SetUpMenu : MonoBehaviour {
         play.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height / 4.0f, 1.0f));
         leaderboards.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f - Screen.width / 3.0f, Screen.height / 5.6f, 1.0f));
         settings.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 3.0f, Screen.height / 5.6f, 1.0f));
-        information.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
+		backButton.transform.position = settings.transform.position;
+		information.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
         muteSFX.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
         muteBGM.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
 	
