@@ -75,12 +75,15 @@ public class SpawnGates : MonoBehaviour {
 	
 	void OnGUI() {
 		// Draw the player's score in the top corner of the screen
-		GUIStyle skin = new GUIStyle();
-		skin.font = interfaceFont;
-		skin.fontSize = 48;
-		skin.alignment = TextAnchor.MiddleRight;
-        skin.normal.textColor = Color.white;
-		GUI.Box(new Rect(0.0f, 0.0f + Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), score.ToString(), skin);
+		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && !pause.paused) {
+			GUIStyle skin = new GUIStyle();
+			skin.font = interfaceFont;
+			skin.fontSize = 48;
+			skin.alignment = TextAnchor.MiddleRight;
+	        skin.normal.textColor = Color.white;
+
+			GUI.Box(new Rect(0.0f, 0.0f + Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), score.ToString(), skin);
+		}
 	}
 	
 	// Update is called once per frame
