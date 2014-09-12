@@ -85,11 +85,11 @@ public class SpawnGates : MonoBehaviour {
 		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && !pause.paused) {
 			GUIStyle skin = new GUIStyle();
 			skin.font = interfaceFont;
-			skin.fontSize = 48;
-			skin.alignment = TextAnchor.MiddleRight;
+			skin.fontSize = 52;
+			skin.alignment = TextAnchor.MiddleCenter;
 	        skin.normal.textColor = Color.white;
 
-			GUI.Box(new Rect(0.0f, 0.0f + Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), score.ToString(), skin);
+			GUI.Box(new Rect(0.0f, 0.0f + Screen.height / 8.0f, Screen.width, Screen.height / 8.0f), "SCORE " + score.ToString(), skin);
 		}
 	}
 	
@@ -115,7 +115,7 @@ public class SpawnGates : MonoBehaviour {
         // Spawn a gate if we are able to
 		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && timer >= spawnTime && !pause.paused && !lostGame.lost) {
             // Grab a spawn point
-			Vector3 spawnPoint = new Vector3(this.transform.position.x, planeVars.environmentCentre.position.y / 16.0f, this.transform.position.z + spawnDistance);
+			Vector3 spawnPoint = new Vector3(-50, -50, -50);
 			
 			float randomNumber = Random.value;
 			float summedProbabilities = 0.0f;
@@ -219,7 +219,8 @@ public class SpawnGates : MonoBehaviour {
 
     private void SetNextObstacleToBeRotatable() {
         if (startRotationTimer) {
-            if (rotatableTimer >= rotationSpeedIncreaseTime) {
+            if (rotatableTimer >= rotateNewObstacleTime) {
+				print ("New rotation available");
                 rotatable[gatesAbleToSpawn - 1] = true;
 
                 rotatableTimer = 0.0f;
