@@ -14,8 +14,12 @@ public class MonsterPopUp : MonoBehaviour {
     private Vector3 pivotPoint, differenceVector;
     private GameObject pivotObject;
 
+	private Animator animate;
+
     void Awake() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+		animate = this.GetComponent<Animator>();
     }
 
 	// Use this for initialization
@@ -57,6 +61,7 @@ public class MonsterPopUp : MonoBehaviour {
             pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * flipSpeed);
         } else {
             flipped = true;
+			animate.SetTrigger("TriggerSpawnAnim");
             this.transform.parent = gateParent;
         }
     }

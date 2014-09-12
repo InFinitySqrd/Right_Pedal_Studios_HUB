@@ -4,6 +4,7 @@ Base path: C:/Program Files (x86)/Unity/Editor/Data
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Pipe name: \\.\pipe\UnityShaderCompiler-1-8224
 =======
 Base path: /Applications/Unity/Unity.app/Contents
@@ -20,6 +21,9 @@ Pipe name: \\.\pipe\UnityShaderCompiler-1-4496
 >>>>>>> origin/jamesProgramming
 =======
 Pipe name: \\.\pipe\UnityShaderCompiler-1-1700
+>>>>>>> origin/jamesProgramming
+=======
+Pipe name: \\.\pipe\UnityShaderCompiler-1-4812
 >>>>>>> origin/jamesProgramming
 Cmd: getPlatforms
 Cmd: preprocess
