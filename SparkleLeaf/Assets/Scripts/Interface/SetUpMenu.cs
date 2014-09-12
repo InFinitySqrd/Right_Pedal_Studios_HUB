@@ -34,13 +34,13 @@ public class SetUpMenu : MonoBehaviour {
 		skin.font = gameFont;
 		skin.alignment = TextAnchor.MiddleCenter;
 		skin.normal.textColor = Color.white;
-		skin.fontSize = 58;
+		skin.fontSize = 72;
 
 		if (scoreVal.score > 0) {
-			GUI.Box(new Rect(Screen.width / 4.0f, Screen.height / 3.0f + Screen.height / 8.0f, Screen.width / 2.0f, Screen.height / 6.0f), "Score " + scoreVal.score, skin);
+			GUI.Box(new Rect(Screen.width / 4.0f, Screen.height / 3.0f + Screen.height / 12.0f, Screen.width / 2.0f, Screen.height / 6.0f), "Score:" + scoreVal.score, skin);
 		}
 
 		skin.fontSize = 46;
-		GUI.Box(new Rect(Screen.width / 4.0f, Screen.height / 3.0f + Screen.height / 12.0f, Screen.width / 2.0f, Screen.height / 6.0f), "Top Score... " + PlayerPrefs.GetInt("Top Score"), skin);
+		GUI.Box(new Rect(Screen.width / 4.0f, Screen.height / 3.0f + Screen.height / 5.0f, Screen.width / 2.0f, Screen.height / 6.0f), "High Score: " + PlayerPrefs.GetInt("Top Score"), skin);
 	}
 }

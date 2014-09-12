@@ -12,7 +12,7 @@ public class SetUpCredits : MonoBehaviour {
 	void Awake () {
 	    // Set up all UI elements to scale with screen size
 		creditsList.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height / 2.2f, 1.0f));
-		backButton.transform.position = this.camera.ScreenToWorldPoint(new Vector3(0.0f + Screen.width / 8.0f, Screen.height - Screen.height / 12.0f, 1.0f));
+		backButton.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width - Screen.width / 8.0f, Screen.height, 1.0f));
     
 		fadeSpeed = this.transform.GetChild(0).GetComponent<MenuTween>().fadeSpeed;
 		textColour = new Color(Color.white.r, Color.white.g, Color.white.b, 0.0f);

@@ -85,11 +85,11 @@ public class SpawnGates : MonoBehaviour {
 		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && !pause.paused) {
 			GUIStyle skin = new GUIStyle();
 			skin.font = interfaceFont;
-			skin.fontSize = 52;
+			skin.fontSize = 64;
 			skin.alignment = TextAnchor.MiddleCenter;
 	        skin.normal.textColor = Color.white;
 
-			GUI.Box(new Rect(0.0f, 0.0f + Screen.height / 8.0f, Screen.width, Screen.height / 8.0f), "SCORE " + score.ToString(), skin);
+			GUI.Box(new Rect(0.0f, 0.0f + Screen.height / 8.0f, Screen.width, Screen.height / 8.0f), score.ToString(), skin);
 		}
 	}
 	
