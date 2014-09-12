@@ -14,6 +14,7 @@ public class SpawnGates : MonoBehaviour {
     public float maxSpeed = 1.4f;    
     public float randomRotationSpeedIncrementor = 0.4f;
     public float rotationSpeedIncreaseTime = 10.0f;
+	public int spawnSpacing = 5;
 
 	// Declare variables	
     [SerializeField] int numRotations = 360;
@@ -50,6 +51,10 @@ public class SpawnGates : MonoBehaviour {
     private bool startRotationTimer = true;
     private float rotatableTimer = 0.0f;
 
+	private RandomlyGenerateEnvironment enviroVars;
+	[SerializeField] int startingSpawnPoint = 20;
+	private int currentSpawnPoint = 0;
+
 	[SerializeField] Font interfaceFont;
 
 	void Awake() {
@@ -57,8 +62,10 @@ public class SpawnGates : MonoBehaviour {
 		planeVars = this.GetComponent<PlaneMovement>();
 		pause = this.GetComponent<DebugControls>();
 		lostGame = this.GetComponent<LevelLost>();
+		enviroVars = GameObject.FindGameObjectWithTag("EnvironmentCentre").GetComponent<RandomlyGenerateEnvironment>();
 
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
+		currentSpawnPoint = startingSpawnPoint;
 	}
 	
 	// Use this for initialization
@@ -134,8 +141,17 @@ public class SpawnGates : MonoBehaviour {
 			
             // Move the gate towards the player
             spawnedObstacle.gameObject.AddComponent<MovingGates>();
-			spawnedObstacle.GetComponent<MovingGates>().gateType = gateNumber;
-			
+			MovingGates moveVars = spawnedObstacle.GetComponent<MovingGates>();
+			moveVars.gateType = gateNumber;
+			moveVars.followPoint = enviroVars.spawnPoints[currentSpawnPoint];
+
+			// Appropriately wrap the incrementor for the enemy spawning
+			if (currentSpawnPoint + spawnSpacing < enviroVars.spawnPoints.Count - 1) {
+				currentSpawnPoint += spawnSpacing;
+			} else {
+				int difference = enviroVars.spawnPoints.Count - currentSpawnPoint;
+				currentSpawnPoint = difference;
+			}			
             // Determine if this object should be rotating or not
 			if (rotatable[spawnedGateNum]) {
 				float randomNum = Random.value;
@@ -152,11 +168,14 @@ public class SpawnGates : MonoBehaviour {
 		}
 		
         // Determine the score to be added to the player's total
-		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
+		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z && Vector3.Distance(this.transform.position, gatesList[0].position) <= 3.0f) {
 			//Vector3 playerRotation = this.transform.rotation.eulerAngles;
 			score++;
-			GAStuff.SetScore(score);
+			GameObject currentGate = gatesList[0].gameObject;
 			gatesList.RemoveAt(0);
+			Destroy(currentGate.gameObject);
+
+			GAStuff.SetScore(score);
 		}
 	}
 	

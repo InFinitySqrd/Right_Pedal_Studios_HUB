@@ -13,6 +13,8 @@ public class MovingGates : MonoBehaviour {
 	private Transform player;
 	private float movementSpeed;
 	private bool atPlayer = false;
+
+	public Transform followPoint;
 	
 	void Awake () {
 		player = GameObject.FindGameObjectWithTag("Player").transform;
@@ -47,11 +49,15 @@ public class MovingGates : MonoBehaviour {
 			}
 
 			if (!lostGame.lost) {
+				/*
 				if (!atPlayer ) {	
 					this.transform.position = Vector3.MoveTowards(this.transform.position, player.position, movementSpeed);
 				} else {
 					this.transform.Translate(Vector3.back * movementSpeed);	
 				}
+				*/
+
+				this.transform.position = followPoint.position;
 			}
 			
 			/*if (this.transform.eulerAngles.x > 0.05f) {

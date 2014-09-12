@@ -19,7 +19,6 @@ public class FadeInGameScene : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		print ("A");
 		if (screenFade.GetPixel(1,1).a <= 0.05f) {
 			this.GetComponent<FadeInGameScene>().enabled = false;
 		}

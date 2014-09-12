@@ -6,7 +6,7 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 	// Declare variables
 	[SerializeField] GameObject plane;
 	[SerializeField] int numPlanes = 20;
-	[SerializeField] float minDist = 1.0f, maxDist = 2.0f;
+	[SerializeField] float rotationVariation = 0.5f;
 	[SerializeField] float environmentChance = 0.5f;
 	[SerializeField] int maxNumElements = 3;
 	[SerializeField] Texture[] textures;
@@ -18,11 +18,14 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 	
 	private Transform centre;
 	private Transform player;
+	public List<Transform> spawnPoints;
 	
 	void Awake() {
 		// Initialise variables
 		player = GameObject.FindGameObjectWithTag("Player").transform;
 		centre = this.transform;
+
+		spawnPoints = new List<Transform>();
 	}
 	
 	// Use this for initialization
@@ -32,7 +35,7 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 	
 		for (int i = 0; i < numPlanes; i++) {
 			// Rotate the centre around before spawning the next piece
-			centre.Rotate(Vector3.left, Random.Range (minDist, maxDist));
+			centre.Rotate(Vector3.left, (360.0f / numPlanes) + Random.Range(-rotationVariation, rotationVariation));
 			
 			// Get a starting point
 			Vector3 spawnPoint = new Vector3(centre.position.x, centre.position.y + plane.transform.localScale.z * 4.0f, centre.position.z);
@@ -40,11 +43,9 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 			Vector3 startingRotation = new Vector3(0,0,0);
 
 			if (i % 2 == 0) {
-			 startingRotation = new Vector3(-90.0f, -180.0f, 0.0f);
-			}
-
-			else {
-				 startingRotation = new Vector3(-90.0f, 0, 0.0f);
+				startingRotation = new Vector3(-90.0f, -180.0f, 0.0f);
+			} else {
+				startingRotation = new Vector3(-90.0f, 0, 0.0f);
 			}
 				// Spawn the object
 			GameObject spawnedObj = (GameObject)GameObject.Instantiate(plane, spawnPoint, Quaternion.Euler(startingRotation)); 
@@ -56,6 +57,14 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 			spawnedObj.renderer.material.SetTexture(0, textures[Random.Range(0, textures.Length)]);
 			
 			SpawnEnvironment(spawnedObj.transform);
+
+			GameObject point = new GameObject();
+			point.name = "Monster Spawn Point";
+			point.transform.position = player.transform.position;
+
+			point.transform.parent = spawnedObj.transform;
+
+			spawnPoints.Add(point.transform);
 		}
 	}
 	
@@ -63,8 +72,7 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 	void Update () {
 
 	}
-	
-	
+
 	private void SpawnEnvironment(Transform planeSpawned) {
 		int numPasses = Random.Range (1, maxNumElements);
 	
