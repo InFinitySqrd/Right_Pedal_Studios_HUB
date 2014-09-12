@@ -29,14 +29,17 @@ public class MonsterPopUp : MonoBehaviour {
 
         // Set pivot point position
         pivotObject = new GameObject();
-        pivotPoint = new Vector3(gateParent.transform.position.x, gateParent.transform.position.y - pivotPointYDistance, gateParent.transform.position.z);
-        differenceVector = gateParent.transform.position - pivotPoint;
+        pivotPoint = new Vector3(gateParent.transform.position.x, gateParent.transform.position.y + pivotPointYDistance, gateParent.transform.position.z);
+		differenceVector = pivotPoint - gateParent.transform.position;
         pivotObject.transform.position = pivotPoint;
         
         // Set the sprite's object to follow the pivot point
         this.transform.parent = pivotObject.transform;
 
         // Set starting rotation
+		//GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
+		//cube.transform.parent = pivotObject.transform;
+		//pivotObject.transform.GetChild(1).position = Vector3.zero;
         pivotObject.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
 
         pivotObject.AddComponent<DestroyEmpty>();
@@ -57,12 +60,12 @@ public class MonsterPopUp : MonoBehaviour {
 	}
 
     private void Flip() {
-        if (pivotObject.transform.eulerAngles.x >= 0.0f && pivotObject.transform.eulerAngles.x <= 90.0f) {
-            pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * flipSpeed);
-        } else {
-            flipped = true;
+		if (pivotObject.transform.eulerAngles.x >= 0.0f && pivotObject.transform.eulerAngles.x <= 90.0f) {
+			pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * flipSpeed);
+		} else {
+			flipped = true;
 			animate.SetTrigger("TriggerSpawnAnim");
-            this.transform.parent = gateParent;
-        }
+			this.transform.parent = gateParent;
+		}
     }
 }

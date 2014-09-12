@@ -25,7 +25,7 @@ public class SetUpCredits : MonoBehaviour {
 	void OnGUI() {
 		GUIStyle skin = new GUIStyle();
 		skin.font = fontStyle;
-		skin.fontSize = 36;
+		skin.fontSize = 42;
 		skin.normal.textColor = textColour;
 		skin.alignment = TextAnchor.MiddleCenter;
 

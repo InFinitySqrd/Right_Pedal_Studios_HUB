@@ -30,6 +30,7 @@ Global
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 																																																																																													GlobalSection(MonoDevelopProperties) = preSolution
 =======
 																																																																	GlobalSection(MonoDevelopProperties) = preSolution
@@ -51,6 +52,9 @@ Global
 >>>>>>> origin/jamesProgramming
 =======
 																																																																																																																									GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> origin/jamesProgramming
+=======
+																																																																																																																										GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/jamesProgramming
 																						GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj

@@ -1,8 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Visual Scripts\MonsterPopUp.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Gameplay Scripts\SpawnGates.cs">
     <Files>
-      <File FileName="Assets\Scripts\Visual Scripts\MonsterPopUp.cs" Line="47" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay Scripts\SpawnGates.cs" Line="222" Column="57" />
+      <File FileName="Assets\Scripts\Interface\SetUpMenu.cs" Line="40" Column="82" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
