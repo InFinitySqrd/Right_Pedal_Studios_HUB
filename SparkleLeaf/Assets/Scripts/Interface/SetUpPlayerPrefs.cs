@@ -11,6 +11,7 @@ public class SetUpPlayerPrefs : MonoBehaviour {
         // Reset the tutorial values in player prefs
         PlayerPrefs.SetInt("TutorialComplete", 0);
 		PlayerPrefs.SetInt("FirstLaunch", 0);
+		PlayerPrefs.SetInt("Control Method", 1);
 
 		// Load default variables into player prefs for the optimum planeVars configuration
 		PlayerPrefs.SetFloat("movement", planeVars.forwardSpeed);
