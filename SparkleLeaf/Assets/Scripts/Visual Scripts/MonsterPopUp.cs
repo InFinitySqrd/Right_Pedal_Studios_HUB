@@ -9,6 +9,10 @@ public class MonsterPopUp : MonoBehaviour {
     [SerializeField] float flipDistance = 5.0f;
     [SerializeField] float flipSpeed = 2.0f;
     [SerializeField] float pivotPointYDistance = 2.0f;
+	[SerializeField] float jiggleSpeed = 2.0f;
+	[SerializeField] float firstJiggleRotation = 4.0f;
+	[SerializeField] float jiggleDecrementor = 0.5f;
+	[SerializeField] float jiggleCutOff = 0.5f;
     private Transform player;
     private Transform gateParent;
     private Vector3 pivotPoint, differenceVector;
@@ -16,9 +20,13 @@ public class MonsterPopUp : MonoBehaviour {
 
 	private Animator animate;
 
+	private bool jiggleForward = true;
+	private bool jiggled = false;
+	private float jiggleRotation;
+
     void Awake() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-
+		jiggleRotation = firstJiggleRotation;
 		animate = this.GetComponent<Animator>();
     }
 
@@ -48,16 +56,17 @@ public class MonsterPopUp : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //this.transform.position = gateParent.position;
-        pivotObject.transform.position = gateParent.position + differenceVector;
-
-        /*if (!flipped) {
-            pivotObject.transform.position = pivotPoint;
-        }*/
+        if (!jiggled) {	
+			pivotObject.transform.position = gateParent.position + differenceVector;
+		}
 
         if (!flipped && Vector3.Distance(gateParent.transform.position, player.position) <= flipDistance) {
             Flip();
         }
+
+		if (flipped && !jiggled) {
+			StartCoroutine(Jiggle());
+		}
 	}
 
     private void Flip() {
@@ -65,8 +74,50 @@ public class MonsterPopUp : MonoBehaviour {
 			pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * flipSpeed);
 		} else {
 			flipped = true;
+			pivotObject.transform.eulerAngles = Vector3.zero;
 			animate.SetTrigger("TriggerSpawnAnim");
-			this.transform.parent = gateParent;
 		}
     }
+
+	IEnumerator Jiggle() {
+		if (jiggleForward) {
+			if (pivotObject.transform.eulerAngles.x >= 360.0f - jiggleRotation || pivotObject.transform.eulerAngles.x <= 0.0f + jiggleRotation / jiggleDecrementor) {
+				pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * jiggleSpeed);
+			} else {
+				print ("A");
+				pivotObject.transform.eulerAngles = new Vector3(360.0f - jiggleRotation, 0.0f, 0.0f);
+
+				jiggleForward = false;
+				jiggleRotation *= jiggleDecrementor;
+			}
+		} else {
+			if (pivotObject.transform.eulerAngles.x >= 360.0f - jiggleRotation / jiggleDecrementor || pivotObject.transform.eulerAngles.x <= 0.0f + jiggleRotation) {
+				pivotObject.transform.Rotate(Vector3.right, Time.deltaTime * jiggleSpeed);
+			}else {
+				print ("A");
+				pivotObject.transform.eulerAngles = new Vector3(0.0f + jiggleRotation, 0.0f, 0.0f);
+
+				jiggleForward = true;
+				jiggleRotation *= jiggleDecrementor;
+			}
+		}
+
+		if (jiggleRotation <= jiggleCutOff) {
+			//StartCoroutine(SetRotationToDefault());
+			this.transform.parent = gateParent;
+			jiggled = true;
+		}
+
+		yield return null;
+	}
+
+	IEnumerator SetRotationToDefault() {
+		if (pivotObject.transform.eulerAngles.x > 90.0f) {
+			pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * flipSpeed);
+		} else if (pivotObject.transform.eulerAngles.x < 90.0f) {
+			pivotObject.transform.Rotate(Vector3.right, Time.deltaTime * flipSpeed);
+		}
+
+		yield return null;
+	}
 }
