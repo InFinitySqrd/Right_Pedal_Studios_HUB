@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipped: 0
-  flipDistance: 100
+  flipDistance: 80
   flipSpeed: 200
   pivotPointYDistance: -10
 --- !u!137 &13700000

@@ -27,32 +27,33 @@ public class MonsterPopUp : MonoBehaviour {
         // Get the transform of the gate
         gateParent = this.transform.parent;
 
-        // Set pivot point position
-        pivotObject = new GameObject();
+		// Set up an object to pivot around
+		pivotObject = new GameObject();
+		pivotObject.transform.position = Vector3.zero;
+
+        // Set the position of this object
         pivotPoint = new Vector3(gateParent.transform.position.x, gateParent.transform.position.y + pivotPointYDistance, gateParent.transform.position.z);
 		differenceVector = pivotPoint - gateParent.transform.position;
         pivotObject.transform.position = pivotPoint;
         
-        // Set the sprite's object to follow the pivot point
+        // Set the model as a child of the pivoting object
         this.transform.parent = pivotObject.transform;
 
         // Set starting rotation
-		//GameObject cube = GameObject.CreatePrimitive(PrimitiveType.Cube);
-		//cube.transform.parent = pivotObject.transform;
-		//pivotObject.transform.GetChild(1).position = Vector3.zero;
         pivotObject.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
 
-        pivotObject.AddComponent<DestroyEmpty>();
+        // Destroy this new object when the model is no longer a child
+		//pivotObject.AddComponent<DestroyEmpty>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        this.transform.position = gateParent.transform.position;
-        pivotPoint = gateParent.transform.position + differenceVector;
+        //this.transform.position = gateParent.position;
+        pivotObject.transform.position = gateParent.position + differenceVector;
 
-        if (!flipped) {
+        /*if (!flipped) {
             pivotObject.transform.position = pivotPoint;
-        }
+        }*/
 
         if (!flipped && Vector3.Distance(gateParent.transform.position, player.position) <= flipDistance) {
             Flip();

@@ -1653,7 +1653,7 @@ MonoBehaviour:
   rotateNewObstacleTime: 15
   percentageToRotate: .600000024
   minSpeed: .100000001
-  maxSpeed: 1.39999998
+  maxSpeed: .300000012
   randomRotationSpeedIncrementor: .0799999982
   rotationSpeedIncreaseTime: 8
   spawnSpacing: 7
