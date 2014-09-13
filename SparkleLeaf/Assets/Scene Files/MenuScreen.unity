@@ -290,7 +290,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1033946095}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 729707e430e781245bd2c680bf5c80b5, type: 3}
   m_Name: 
@@ -866,7 +866,8 @@ MonoBehaviour:
   information: {fileID: 1033946096}
   muteSFX: {fileID: 1230040720}
   muteBGM: {fileID: 1389911147}
-  gameFont: {fileID: 12800000, guid: 6dd92e3d30cbac8498fb5c2606c8edd2, type: 3}
+  prevScoreFont: {fileID: 12800000, guid: ab4874f733caf0546885090592d10a6d, type: 3}
+  highScoreFont: {fileID: 12800000, guid: 1fb5f0fb2b0c6a9489d4f5ec980b9206, type: 3}
 --- !u!1 &1561841625
 GameObject:
   m_ObjectHideFlags: 0

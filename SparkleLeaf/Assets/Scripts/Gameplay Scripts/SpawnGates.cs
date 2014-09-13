@@ -52,10 +52,10 @@ public class SpawnGates : MonoBehaviour {
     private float rotatableTimer = 0.0f;
 
 	private RandomlyGenerateEnvironment enviroVars;
-	[SerializeField] int startingSpawnPoint = 20;
-	private int currentSpawnPoint = 0;
+	public int startingSpawnPoint = 20;
+	public int currentSpawnPoint = 0;
 
-	[SerializeField] Font interfaceFont;
+	[SerializeField] Font scoreFont;
 
 	void Awake() {
 		gatesList = new List<Transform>();
@@ -84,7 +84,7 @@ public class SpawnGates : MonoBehaviour {
 		// Draw the player's score in the top corner of the screen
 		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && !pause.paused) {
 			GUIStyle skin = new GUIStyle();
-			skin.font = interfaceFont;
+			skin.font = scoreFont;
 			skin.fontSize = 64;
 			skin.alignment = TextAnchor.MiddleCenter;
 	        skin.normal.textColor = Color.white;
@@ -146,7 +146,7 @@ public class SpawnGates : MonoBehaviour {
 			moveVars.followPoint = enviroVars.spawnPoints[currentSpawnPoint];
 
 			// Appropriately wrap the incrementor for the enemy spawning
-			if (currentSpawnPoint + spawnSpacing < enviroVars.spawnPoints.Count - 1) {
+			if (currentSpawnPoint + spawnSpacing < enviroVars.spawnPoints.Count) {
 				currentSpawnPoint += spawnSpacing;
 			} else {
 				int difference = enviroVars.spawnPoints.Count - currentSpawnPoint;
@@ -220,7 +220,6 @@ public class SpawnGates : MonoBehaviour {
     private void SetNextObstacleToBeRotatable() {
         if (startRotationTimer) {
             if (rotatableTimer >= rotateNewObstacleTime) {
-				print ("New rotation available");
                 rotatable[gatesAbleToSpawn - 1] = true;
 
                 rotatableTimer = 0.0f;

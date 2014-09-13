@@ -49,11 +49,6 @@ public class PlaneMovement : MonoBehaviour {
 	void Start () {
 		gameState = this.GetComponent<LevelLost>();	
 
-		pause = this.GetComponent<DebugControls>();
-		if (PlayerPrefs.GetInt("TutorialComplete") == 0) {
-			pause.paused = true;
-		}
-
 		environmentCentre = GameObject.FindGameObjectWithTag("EnvironmentCentre").transform;
 		rotationSound = GameObject.Find("Rotation Sound");
 
@@ -70,11 +65,15 @@ public class PlaneMovement : MonoBehaviour {
 		if (controlMethod == 0) {
 			controlMethod = 1;
 		}
+		
+		pause = this.GetComponent<DebugControls>();
 
 		// Start the game with the menu when the game launches
 		if (PlayerPrefs.GetInt("FirstLaunch") == 0) {
 			Application.LoadLevelAdditive("MenuScreen");
 			PlayerPrefs.SetInt("FirstLaunch", 1);
+
+			pause.paused = true;
 		}
 	}
 	

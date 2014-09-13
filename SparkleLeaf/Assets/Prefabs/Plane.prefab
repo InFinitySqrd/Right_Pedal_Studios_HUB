@@ -333,14 +333,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   score: 0
   spawnTime: 2
-  spawnDistance: 140
+  spawnDistance: 280
   newObstacleTime: 25
   rotateNewObstacleTime: 15
   percentageToRotate: .600000024
-  minSpeed: .200000003
+  minSpeed: .100000001
   maxSpeed: 1.39999998
-  randomRotationSpeedIncrementor: .100000001
-  rotationSpeedIncreaseTime: 5
+  randomRotationSpeedIncrementor: .0799999982
+  rotationSpeedIncreaseTime: 8
   spawnSpacing: 7
   numRotations: 10
   obstacles:
@@ -348,7 +348,8 @@ MonoBehaviour:
   closeRotation: 120
   colourChangeRate: 2
   startingSpawnPoint: 12
-  interfaceFont: {fileID: 12800000, guid: 6dd92e3d30cbac8498fb5c2606c8edd2, type: 3}
+  currentSpawnPoint: 0
+  scoreFont: {fileID: 12800000, guid: 7077e341d5b4cd849b8d1d3756708cf5, type: 3}
 --- !u!114 &11400004
 MonoBehaviour:
   m_ObjectHideFlags: 1

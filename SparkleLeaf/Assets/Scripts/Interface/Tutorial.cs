@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class Tutorial : MonoBehaviour {
     // Declare variables
@@ -13,10 +14,16 @@ public class Tutorial : MonoBehaviour {
     private GameObject leftIcon, rightIcon, text;
     private bool leftAchieved, rightAchieved;
 
+	private RandomlyGenerateEnvironment enviroVars;
+	private SpawnGates setStartingPoint;
+
 	private bool instantiated = false;
 
 	// Use this for initialization
 	void Start () {
+		enviroVars = GameObject.FindGameObjectWithTag("EnvironmentCentre").GetComponent<RandomlyGenerateEnvironment>();
+		setStartingPoint = this.GetComponent<SpawnGates>();
+
 		if (PlayerPrefs.GetInt("TutorialComplete") == 0 && !instantiated) {
 			InstantiateTuteVars();
 			instantiated = true;
@@ -63,6 +70,21 @@ public class Tutorial : MonoBehaviour {
                 Destroy(leftIcon);
                 Destroy(rightIcon);
                 Destroy(text);
+
+				// Find the nearest monster spawn point to the player
+				List<Transform> spawnPoints = enviroVars.spawnPoints;
+				float distanceValue = 100.0f;
+				int pointNumber = 0;
+
+				foreach (Transform point in spawnPoints) {
+					if (Vector3.Distance(point.position, this.transform.position) <= distanceValue) {
+						distanceValue = Vector3.Distance(point.position, this.transform.position);
+						pointNumber = spawnPoints.IndexOf (point);
+					}
+				}
+
+				setStartingPoint.currentSpawnPoint = pointNumber + setStartingPoint.startingSpawnPoint;
+
                 this.GetComponent<Tutorial>().enabled = false;
             }
         }
