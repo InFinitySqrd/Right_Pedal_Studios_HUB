@@ -23,15 +23,27 @@ public class SetUpCredits : MonoBehaviour {
 		StartCoroutine("FadeTextIn");
 	}
 
+	float nativeWidth = 1920.0f;
+	float nativeHeight = 1080.0f;
 	void OnGUI() {
+		// Get a scaling factor based off of the native resolution and preset resolution
+		float rx = Screen.width / nativeWidth;
+		float ry = Screen.height / nativeHeight;
+		
+		// Scale width the same as height - cut off edges to keep ratio the same
+		GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(ry, ry, 1));
+		
+		// Get width taking into account edges being cut off or extended
+		float adjustedWidth = nativeWidth * (rx / ry);
+		
 		GUIStyle skin = new GUIStyle();
 		skin.font = creditsFont;
 		skin.normal.textColor = textColour;
 		skin.alignment = TextAnchor.MiddleCenter;
-
-		GUI.Box(new Rect(0.0f, 0.0f, Screen.width, Screen.height), "\n\n\n\nDebra Polson\nNathaniel Holloway\nJames Finlayson\nWade Taylor\nRachel Grieveson\nNathan Corporal\n Nicky Watson", skin);
+		
+		GUI.Box(new Rect(0.0f, 0.0f, adjustedWidth, nativeHeight), "\n\n\n\nDebra Polson\nNathaniel Holloway\nJames Finlayson\nWade Taylor\nRachel Grieveson\nNathan Corporal\n Nicky Watson", skin);
 	}
-
+	
 	IEnumerator FadeTextIn() {
 		while (textColour.a <= 1.0f) {
 			textColour = new Color(Color.white.r, Color.white.g, Color.white.b, textColour.a + Time.deltaTime * fadeSpeed);

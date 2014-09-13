@@ -194,6 +194,7 @@ Transform:
   - {fileID: 1077784464}
   - {fileID: 1700817780}
   - {fileID: 1561841627}
+  - {fileID: 1807036849}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!81 &1541275151
@@ -438,6 +439,48 @@ MeshCollider:
   m_SmoothSphereCollisions: 0
   m_Convex: 0
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1807036848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1807036849}
+  - 114: {fileID: 1807036850}
+  m_Layer: 0
+  m_Name: GUI Helper
+  m_TagString: GUIHelp
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1807036849
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807036848}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1541275150}
+  m_RootOrder: 4
+--- !u!114 &1807036850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1807036848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92c1c194a00c54345b7a2e974128a982, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nativeWidth: 1920
+  nativeHeight: 1080
+  adjustedWidth: 0
 --- !u!1 &2009495092
 GameObject:
   m_ObjectHideFlags: 0

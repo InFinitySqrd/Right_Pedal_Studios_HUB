@@ -29,17 +29,29 @@ public class SetUpMenu : MonoBehaviour {
 		scoreVal = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
 	}
 
+	float nativeWidth = 1920.0f;
+	float nativeHeight = 1080.0f;
 	void OnGUI() {
+		// Get a scaling factor based off of the native resolution and preset resolution
+		float rx = Screen.width / nativeWidth;
+		float ry = Screen.height / nativeHeight;
+			
+		// Scale width the same as height - cut off edges to keep ratio the same
+		GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(ry, ry, 1));
+			
+		// Get width taking into account edges being cut off or extended
+		float adjustedWidth = nativeWidth * (rx / ry);
+
 		GUIStyle skin = new GUIStyle();
 		skin.font = prevScoreFont;
-		skin.alignment = TextAnchor.MiddleCenter;
+		skin.alignment = TextAnchor.MiddleLeft;
 		skin.normal.textColor = Color.white;
 
 		if (scoreVal.score > 0) {
-			GUI.Box(new Rect(Screen.width / 4.0f, Screen.height / 4.0f + Screen.height / 8.0f, Screen.width / 2.0f, Screen.height / 6.0f), "Score:" + scoreVal.score, skin);
+			GUI.Box(new Rect(adjustedWidth / 8.0f, nativeHeight / 4.0f + nativeHeight / 8.0f, adjustedWidth / 2.0f, nativeHeight / 6.0f), "Score:" + scoreVal.score, skin);
 		}
 
 		skin.font = highScoreFont;
-		GUI.Box(new Rect(Screen.width / 4.0f, Screen.height / 4.0f + Screen.height / 4.0f, Screen.width / 2.0f, Screen.height / 6.0f), "High Score: " + PlayerPrefs.GetInt("Top Score"), skin);
+		GUI.Box(new Rect(adjustedWidth / 8.0f, nativeHeight / 4.0f + nativeHeight / 4.0f, adjustedWidth / 2.0f, nativeHeight / 6.0f), "High Score: " + PlayerPrefs.GetInt("Top Score"), skin);
 	}
 }

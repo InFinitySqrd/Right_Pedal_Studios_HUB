@@ -2,7 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Interface\SetUpMenu.cs">
     <Files>
-      <File FileName="Assets\Scripts\Interface\SetUpMenu.cs" Line="43" Column="80" />
+      <File FileName="Assets\Scripts\Interface\SetUpCredits.cs" Line="29" Column="1" />
+      <File FileName="Assets\Scripts\Gameplay Scripts\SpawnGates.cs" Line="105" Column="4" />
+      <File FileName="Assets\Scripts\Interface\SetUpMenu.cs" Line="54" Column="29" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

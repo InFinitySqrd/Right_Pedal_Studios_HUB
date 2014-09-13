@@ -79,17 +79,29 @@ public class SpawnGates : MonoBehaviour {
             rotatable[i] = false;
         }
 	}
-	
+
+	float nativeWidth = 1920.0f;
+	float nativeHeight = 1080.0f;
 	void OnGUI() {
 		// Draw the player's score in the top corner of the screen
 		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && !pause.paused) {
+			// Get a scaling factor based off of the native resolution and preset resolution
+			float rx = Screen.width / nativeWidth;
+			float ry = Screen.height / nativeHeight;
+			
+			// Scale width the same as height - cut off edges to keep ratio the same
+			GUI.matrix = Matrix4x4.TRS(new Vector3(0, 0, 0), Quaternion.identity, new Vector3(ry, ry, 1));
+			
+			// Get width taking into account edges being cut off or extended
+			float adjustedWidth = nativeWidth * (rx / ry);
+
 			GUIStyle skin = new GUIStyle();
 			skin.font = scoreFont;
 			skin.fontSize = 64;
 			skin.alignment = TextAnchor.MiddleCenter;
 	        skin.normal.textColor = Color.white;
 
-			GUI.Box(new Rect(0.0f, 0.0f + Screen.height / 8.0f, Screen.width, Screen.height / 8.0f), score.ToString(), skin);
+			GUI.Box(new Rect(0.0f, 0.0f + nativeHeight / 24.0f, adjustedWidth, nativeHeight / 8.0f), score.ToString(), skin);
 		}
 	}
 	

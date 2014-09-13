@@ -1,0 +1,131 @@
+fileFormatVersion: 2
+guid: 548d3e7e4a6990a42a25338fa7670a7a
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: body
+    100002: Bone
+    100004: Bone_001
+    100006: Bone_002
+    100008: Bone_003
+    100010: Bone_004
+    100012: Bone_005
+    100014: Bone_006
+    100016: Bone_007
+    100018: Bone_008
+    100020: Bone_009
+    100022: Bone_010
+    100024: tentacle_01
+    100026: tentacle_02
+    100028: tentacle_03
+    100030: tentacle_04
+    100032: tentacle_05
+    100034: tentacle_06
+    100036: tentacle_07
+    100038: tentacle_08
+    100040: tentacle_09
+    100042: tentacle_10
+    100044: tentacleMonsterArmature
+    100046: //RootNode
+    400000: body
+    400002: Bone
+    400004: Bone_001
+    400006: Bone_002
+    400008: Bone_003
+    400010: Bone_004
+    400012: Bone_005
+    400014: Bone_006
+    400016: Bone_007
+    400018: Bone_008
+    400020: Bone_009
+    400022: Bone_010
+    400024: tentacle_01
+    400026: tentacle_02
+    400028: tentacle_03
+    400030: tentacle_04
+    400032: tentacle_05
+    400034: tentacle_06
+    400036: tentacle_07
+    400038: tentacle_08
+    400040: tentacle_09
+    400042: tentacle_10
+    400044: tentacleMonsterArmature
+    400046: //RootNode
+    4300000: tentacle_02
+    4300002: tentacle_03
+    4300004: tentacle_04
+    4300006: tentacle_05
+    4300008: tentacle_06
+    4300010: tentacle_07
+    4300012: tentacle_08
+    4300014: tentacle_09
+    4300016: tentacle_10
+    4300018: tentacle_01
+    4300020: body
+    7400000: Default Take
+    9500000: //RootNode
+    13700000: body
+    13700002: tentacle_01
+    13700004: tentacle_02
+    13700006: tentacle_03
+    13700008: tentacle_04
+    13700010: tentacle_05
+    13700012: tentacle_06
+    13700014: tentacle_07
+    13700016: tentacle_08
+    13700018: tentacle_09
+    13700020: tentacle_10
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
