@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SetUpMenu : MonoBehaviour {
     // Declare variables
-    [SerializeField] Transform title, play, leaderboards, settings, backButton, information, muteSFX, muteBGM;
+    [SerializeField] Transform title, play, leaderboards, settings, backButton, information, muteSFX;
 	[SerializeField] Font prevScoreFont, highScoreFont;
 
 	private SpawnGates scoreVal;
@@ -17,12 +17,12 @@ public class SetUpMenu : MonoBehaviour {
 		backButton.transform.position = settings.transform.position;
 		information.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
         muteSFX.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
-        muteBGM.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
+        //muteBGM.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
 	
         // Further set the positions of sub menus
-        information.transform.position = new Vector3(information.transform.position.x, settings.transform.position.y + 3.0f * settings.transform.localScale.y, information.transform.position.z);
+        information.transform.position = new Vector3(information.transform.position.x, settings.transform.position.y + 2.0f * settings.transform.localScale.y, information.transform.position.z);
         muteSFX.transform.position = new Vector3(muteSFX.transform.position.x, settings.transform.position.y + 1.0f * settings.transform.localScale.y, muteSFX.transform.position.z);
-        muteBGM.transform.position = new Vector3(muteBGM.transform.position.x, settings.transform.position.y + 2.0f * settings.transform.localScale.y, muteBGM.transform.position.z);
+        //muteBGM.transform.position = new Vector3(muteBGM.transform.position.x, settings.transform.position.y + 2.0f * settings.transform.localScale.y, muteBGM.transform.position.z);
     }
 
 	void Start() {

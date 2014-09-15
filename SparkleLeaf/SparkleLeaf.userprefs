@@ -1,11 +1,11 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Interface\ButtonControls.cs">
     <Files>
-      <File FileName="Assets\Scripts\Visual Scripts\MonsterPopUp.cs" Line="98" Column="38" />
-      <File FileName="Assets\GameAnalytics\Plugins\Framework\Scripts\GA.cs" Line="217" Column="1" />
-      <File FileName="Assets\Scripts\Interface\ButtonControls.cs" Line="102" Column="59" />
-      <File FileName="Assets\Scripts\Interface\SetUpMenu.cs" Line="50" Column="1" />
+      <File FileName="Assets\Scripts\Interface\SetUpMenu.cs" Line="6" Column="101" />
+      <File FileName="Assets\Scripts\Interface\ButtonControls.cs" Line="148" Column="22" />
+      <File FileName="Assets\Scripts\Visual Scripts\MonsterPopUp.cs" Line="22" Column="2" />
+      <File FileName="Assets\Facebook\Scripts\FB.cs" Line="157" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
