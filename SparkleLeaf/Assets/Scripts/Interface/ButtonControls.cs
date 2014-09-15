@@ -146,7 +146,7 @@ public class ButtonControls : MonoBehaviour {
 							break;
                         case ButtonFunction.Leaderboards:
                             // Open the leaderboards scene
-
+						/*
 							// Temporary store space for social integration
 							if (!FB.IsLoggedIn) {	
 								// Call code to log the player into facebook
@@ -155,9 +155,9 @@ public class ButtonControls : MonoBehaviour {
 							} else {
                                 SendFacebookFeed();
 							}
-                            
-                            //string tags = "@HUBGamesAus #SilentGrove";
-							//ShareToTwitter("I just scored " + getScore.score + " point in Silent Grove! " + tags);
+*/
+                            string tags = "@HUBGamesAus #SilentGrove";
+						 ShareToTwitter("I just scored " + getScore.score + " point in Silent Grove! " + tags);
 							
                             break;
                         case ButtonFunction.Settings:
