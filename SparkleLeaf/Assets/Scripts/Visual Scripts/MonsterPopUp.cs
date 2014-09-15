@@ -84,7 +84,6 @@ public class MonsterPopUp : MonoBehaviour {
 			if (pivotObject.transform.eulerAngles.x >= 360.0f - jiggleRotation || pivotObject.transform.eulerAngles.x <= 0.0f + jiggleRotation / jiggleDecrementor) {
 				pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * jiggleSpeed);
 			} else {
-				print ("A");
 				pivotObject.transform.eulerAngles = new Vector3(360.0f - jiggleRotation, 0.0f, 0.0f);
 
 				jiggleForward = false;
@@ -94,7 +93,6 @@ public class MonsterPopUp : MonoBehaviour {
 			if (pivotObject.transform.eulerAngles.x >= 360.0f - jiggleRotation / jiggleDecrementor || pivotObject.transform.eulerAngles.x <= 0.0f + jiggleRotation) {
 				pivotObject.transform.Rotate(Vector3.right, Time.deltaTime * jiggleSpeed);
 			}else {
-				print ("A");
 				pivotObject.transform.eulerAngles = new Vector3(0.0f + jiggleRotation, 0.0f, 0.0f);
 
 				jiggleForward = true;

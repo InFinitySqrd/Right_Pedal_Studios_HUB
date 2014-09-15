@@ -8,7 +8,6 @@ public class ButtonControls : MonoBehaviour {
         Settings,
         Back,
         MuteSFX,
-        MuteBGM,
         Info,
         ExitCredits
     }
@@ -25,7 +24,44 @@ public class ButtonControls : MonoBehaviour {
 
 	private DebugControls pause;
 	private LevelLost lostGame;
+	private SpawnGates getScore;
 	private Tutorial tutorial;
+
+	private const string TwitterAddress = "http://twitter.com/intent/tweet";
+	private const string TweetLanguage = "en";
+
+	void Awake() {
+		if (PlayerPrefs.GetInt("FacebookInitialised") == 0) {
+			FB.Init(SetInit, OnHideUnity);
+			PlayerPrefs.SetInt("FacebookInitialised", 1);
+		}
+	}
+
+	private void SetInit() {
+		// Facebook is initialized
+		enabled = true; 
+	}
+
+	private void OnHideUnity(bool isGameShown) {
+		// Pause the game if Facebook tries to hide unity
+		if (!isGameShown) {
+			Time.timeScale = 0;
+		} else {
+			Time.timeScale = 1;
+		}
+	}
+
+	private void AuthCallback(FBResult result) {
+		if (FB.IsLoggedIn) {
+			Debug.Log (FB.UserId);
+		} else {
+			Debug.Log ("User Cancelled");
+		}
+	}
+
+	private void ShareToTwitter(string textToDisplay) {
+		Application.OpenURL(TwitterAddress + "?text=" + WWW.EscapeURL(textToDisplay) + "&amp;lang=" + WWW.EscapeURL(TweetLanguage));
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -57,6 +93,11 @@ public class ButtonControls : MonoBehaviour {
 			if (pause != null) {
 				pause.paused = true;
 			} 
+		}
+
+		// TODO Change this later
+		if (this.collider.name == "Leaderboards") {
+			getScore = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
 		}
 	}
 	
@@ -100,6 +141,24 @@ public class ButtonControls : MonoBehaviour {
 							break;
                         case ButtonFunction.Leaderboards:
                             // Open the leaderboards scene
+
+							// Temporary store space for social integration
+							/*if (!FB.IsLoggedIn) {	
+								// Call code to log the player into facebook
+								FB.Login("email,publish_actions", AuthCallback);
+							} else {
+								FB.Feed(
+								linkCaption: "I just scored " + getScore.score + " point in Silent Grove!",
+								//linkDescription: "I just scored " + getScore.score + " point in Silent Grove!",
+								// For future use picture: "URL",
+								linkName: "Silent Grove"
+								//actionName: "I just scored " + getScore.score + " point in Silent Grove!",
+								//reference: "I just scored " + getScore.score + " point in Silent Grove!"
+								);
+							}*/
+
+							ShareToTwitter("I just scored " + getScore.score + " point in Silent Grove!");
+							
                             break;
                         case ButtonFunction.Settings:
                             // Open the settings scene
@@ -130,20 +189,8 @@ public class ButtonControls : MonoBehaviour {
 	                            Destroy(this.transform.root.gameObject);
 							}
                             break;
-                        case ButtonFunction.MuteBGM:
-                            // Mute background track
-							if (subMenuParent.inSubMenu) {
-								bgmEnabled = !bgmEnabled;
-								
-								if (bgmEnabled) {
-									this.renderer.material = BGMOn;
-								} else {
-									this.renderer.material = BGMOff;
-								}
-							}
-                            break;
                         case ButtonFunction.MuteSFX:
-							// Mute all sound effects
+							// Mute all sounds
 							if (subMenuParent.inSubMenu) {
 								sfxEnabled = !sfxEnabled;
 

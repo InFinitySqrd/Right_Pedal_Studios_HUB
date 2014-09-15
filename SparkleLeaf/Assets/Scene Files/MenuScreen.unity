@@ -537,113 +537,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1230040719}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1389911146
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1389911147}
-  - 33: {fileID: 1389911152}
-  - 64: {fileID: 1389911151}
-  - 23: {fileID: 1389911150}
-  - 114: {fileID: 1389911149}
-  - 114: {fileID: 1389911148}
-  m_Layer: 5
-  m_Name: MuteBGM
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1389911147
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1389911146}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
-  m_Children: []
-  m_Father: {fileID: 2138793781}
-  m_RootOrder: 2
---- !u!114 &1389911148
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1389911146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44a743ffb7c204840885e67fe7ee069a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  downTween: 0
-  tweenSpeed: 1
-  fadeSpeed: 2
-  subMenu: 1
---- !u!114 &1389911149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1389911146}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 729707e430e781245bd2c680bf5c80b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonType: 5
-  settingsButton: {fileID: 0}
-  backButton: {fileID: 0}
-  BGMOn: {fileID: 2100000, guid: e0d85bd470a75204ba5d324717837bb8, type: 2}
-  BGMOff: {fileID: 2100000, guid: 2a902042be8a0784396b4a7d649f4361, type: 2}
-  SFXOn: {fileID: 0}
-  SFXOff: {fileID: 0}
-  buttonFadeMod: 2
-  inSubMenu: 0
---- !u!23 &1389911150
-Renderer:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1389911146}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_LightmapIndex: 255
-  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
-  m_Materials:
-  - {fileID: 2100000, guid: e0d85bd470a75204ba5d324717837bb8, type: 2}
-  m_SubsetIndices: 
-  m_StaticBatchRoot: {fileID: 0}
-  m_UseLightProbes: 0
-  m_LightProbeAnchor: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
---- !u!64 &1389911151
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1389911146}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_SmoothSphereCollisions: 0
-  m_Convex: 0
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &1389911152
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1389911146}
-  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1441827951
 GameObject:
   m_ObjectHideFlags: 0
@@ -865,7 +758,6 @@ MonoBehaviour:
   backButton: {fileID: 641510665}
   information: {fileID: 1033946096}
   muteSFX: {fileID: 1230040720}
-  muteBGM: {fileID: 1389911147}
   prevScoreFont: {fileID: 12800000, guid: ab4874f733caf0546885090592d10a6d, type: 3}
   highScoreFont: {fileID: 12800000, guid: 1fb5f0fb2b0c6a9489d4f5ec980b9206, type: 3}
 --- !u!1 &1561841625
@@ -1033,7 +925,6 @@ Transform:
   m_Children:
   - {fileID: 1033946096}
   - {fileID: 1230040720}
-  - {fileID: 1389911147}
   m_Father: {fileID: 1541275150}
   m_RootOrder: 3
 --- !u!114 &2138793782
