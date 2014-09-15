@@ -71,6 +71,7 @@ public class PlaneMovement : MonoBehaviour {
 		// Start the game with the menu when the game launches
 		if (PlayerPrefs.GetInt("FirstLaunch") == 0) {
 			Application.LoadLevelAdditive("MenuScreen");
+            PlayerPrefs.SetInt("FacebookInitialised", 0);
 			PlayerPrefs.SetInt("FirstLaunch", 1);
 
 			pause.paused = true;

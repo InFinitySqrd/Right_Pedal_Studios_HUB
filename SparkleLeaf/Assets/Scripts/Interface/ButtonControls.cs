@@ -52,16 +52,21 @@ public class ButtonControls : MonoBehaviour {
 	}
 
 	private void AuthCallback(FBResult result) {
-		if (FB.IsLoggedIn) {
-			Debug.Log (FB.UserId);
-		} else {
-			Debug.Log ("User Cancelled");
-		}
 	}
 
-	private void ShareToTwitter(string textToDisplay) {
-		Application.OpenURL(TwitterAddress + "?text=" + WWW.EscapeURL(textToDisplay) + "&amp;lang=" + WWW.EscapeURL(TweetLanguage));
-	}
+    private void SendFacebookFeed() {
+        FB.Feed(linkName: "Silent Grove",
+                linkCaption: "I am playing Silent Grove",
+                linkDescription: "I got " + getScore.score + " points in Silent Grove");
+    }
+
+    private void ShareToTwitter(string text) {
+        if (Application.platform == RuntimePlatform.Android) {
+            Application.OpenURL(TwitterAddress + "?text=" + WWW.EscapeURL(text) + "&amp;lang=" + WWW.EscapeURL(TweetLanguage));
+        } else if (TwitterPlugin.isAvailable && Application.platform == RuntimePlatform.IPhonePlayer) {
+            TwitterPlugin.ComposeTweet(text);
+        }
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -146,15 +151,9 @@ public class ButtonControls : MonoBehaviour {
 							/*if (!FB.IsLoggedIn) {	
 								// Call code to log the player into facebook
 								FB.Login("email,publish_actions", AuthCallback);
+                                SendFacebookFeed();
 							} else {
-								FB.Feed(
-								linkCaption: "I just scored " + getScore.score + " point in Silent Grove!",
-								//linkDescription: "I just scored " + getScore.score + " point in Silent Grove!",
-								// For future use picture: "URL",
-								linkName: "Silent Grove"
-								//actionName: "I just scored " + getScore.score + " point in Silent Grove!",
-								//reference: "I just scored " + getScore.score + " point in Silent Grove!"
-								);
+                                SendFacebookFeed();
 							}*/
 
 							ShareToTwitter("I just scored " + getScore.score + " point in Silent Grove!");
