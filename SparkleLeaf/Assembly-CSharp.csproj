@@ -137,7 +137,8 @@
      <Compile Include="Assets\Scripts\Visual Scripts\MaterialLerp.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\MonsterPopUp.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\RandomlyGenerateEnvironment.cs" />
-     <Compile Include="Assets\Twitter iOS\Plugins\TwitterPlugin.cs" />
+     <Compile Include="Assets\Twitter iOS\Assets\Example\TweetComposer.cs" />
+     <Compile Include="Assets\Twitter iOS\Assets\Plugins\TwitterPlugin.cs" />
      <None Include="Assets\Plugins\Android\facebook\res\layout\com_facebook_usersettingsfragment.xml" />
      <None Include="Assets\Plugins\Android\facebook\res\layout\com_facebook_tooltip_bubble.xml" />
      <None Include="Assets\Plugins\Android\facebook\res\drawable\com_facebook_picker_list_selector_background_transition.xml" />
