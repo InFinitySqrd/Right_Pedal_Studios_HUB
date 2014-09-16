@@ -57,6 +57,8 @@ public class SpawnGates : MonoBehaviour {
 
 	[SerializeField] Font scoreFont;
 
+    private int gateNumber = 0;
+
 	void Awake() {
 		gatesList = new List<Transform>();
 		planeVars = this.GetComponent<PlaneMovement>();
@@ -65,7 +67,7 @@ public class SpawnGates : MonoBehaviour {
 		enviroVars = GameObject.FindGameObjectWithTag("EnvironmentCentre").GetComponent<RandomlyGenerateEnvironment>();
 
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
-		currentSpawnPoint = startingSpawnPoint;
+		currentSpawnPoint = 0;
 	}
 	
 	// Use this for initialization
@@ -78,6 +80,8 @@ public class SpawnGates : MonoBehaviour {
         for (int i = 0; i < rotatable.Length; i++) {
             rotatable[i] = false;
         }
+
+        currentSpawnPoint = startingSpawnPoint;
 	}
 
 	float nativeWidth = 1920.0f;
@@ -118,70 +122,24 @@ public class SpawnGates : MonoBehaviour {
             SetNextObstacleToBeRotatable();
         }
 
-		int gateNumber = 0;
-
 		if (gatesList.Count > 0) {
 			//RotationColour();
 		}
 
         // Spawn a gate if we are able to
 		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && timer >= spawnTime && !pause.paused && !lostGame.lost) {
-            // Grab a spawn point
-			Vector3 spawnPoint = new Vector3(-50, -50, -50);
-			
-			float randomNumber = Random.value;
-			float summedProbabilities = 0.0f;
-			
-			for (int i = 0; i < gatesAbleToSpawn; i++) {
-				summedProbabilities += (1.0f / (float)gatesAbleToSpawn);
-				
-                // Spawn a random gate
-				if (randomNumber < summedProbabilities) {
-					spawnedObstacle = (Transform)Instantiate(obstacles[i], spawnPoint, obstacles[i].rotation);
-					spawnedGateNum = i;
-                    gateNumber = i + 1;
-					break;
-				}
-			}
-			
-            // Add the obstacle to the list of gates that are currently active
-			gatesList.Add(spawnedObstacle);
-			
-            // Set the rotation of the gate
-			int randomNotch = (int)Random.Range(0, numRotations);
-			spawnedObstacle.transform.eulerAngles = new Vector3(spawnedObstacle.transform.eulerAngles.x, spawnedObstacle.transform.eulerAngles.y, randomNotch * (360.0f / numRotations));
-			
-            // Move the gate towards the player
-            spawnedObstacle.gameObject.AddComponent<MovingGates>();
-			MovingGates moveVars = spawnedObstacle.GetComponent<MovingGates>();
-			moveVars.gateType = gateNumber;
-			moveVars.followPoint = enviroVars.spawnPoints[currentSpawnPoint];
-
-			// Appropriately wrap the incrementor for the enemy spawning
-			if (currentSpawnPoint + spawnSpacing < enviroVars.spawnPoints.Count) {
-				currentSpawnPoint += spawnSpacing;
-			} else {
-				int difference = enviroVars.spawnPoints.Count - currentSpawnPoint;
-				currentSpawnPoint = difference;
-			}			
-            // Determine if this object should be rotating or not
-			if (rotatable[spawnedGateNum]) {
-				float randomNum = Random.value;
-				
-				if (randomNum <= percentageToRotate) {
-					spawnedObstacle.gameObject.AddComponent<RotateObstacle>();
-                    spawnedObstacle.GetComponent<RotateObstacle>().SetRotationSpeed(Random.Range(minSpeed, maxSpeed));
-				}
-			}
+            SpawnNewGate();
+	        SetSpawnPosition();
+            AddNecessaryComponents();
 			
 			timer = 0.0f;
 		} else if (!pause.paused){
 			timer += Time.deltaTime * planeVars.forwardSpeed;
 		}
-		
+
         // Determine the score to be added to the player's total
-		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z && Vector3.Distance(this.transform.position, gatesList[0].position) <= 3.0f) {
-			//Vector3 playerRotation = this.transform.rotation.eulerAngles;
+		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
+			
 			score++;
 			GameObject currentGate = gatesList[0].gameObject;
 			gatesList.RemoveAt(0);
@@ -190,7 +148,74 @@ public class SpawnGates : MonoBehaviour {
 			GAStuff.SetScore(score);
 		}
 	}
-	
+
+    private void SpawnNewGate() {
+        //Grab a spawn point
+	    Vector3 spawnPoint = new Vector3(50, 50, 50);
+			
+		float randomNumber = Random.value;
+		float summedProbabilities = 0.0f;
+		
+		for (int i = 0; i < gatesAbleToSpawn; i++) {
+			summedProbabilities += (1.0f / (float)gatesAbleToSpawn);
+			
+            // Spawn a random gate
+			if (randomNumber < summedProbabilities) {
+				spawnedObstacle = (Transform)Instantiate(obstacles[i], spawnPoint, obstacles[i].rotation);
+				spawnedGateNum = i;
+                gateNumber = i + 1;
+				break;
+			}
+		}
+			
+        // Add the obstacle to the list of gates that are currently active
+		gatesList.Add(spawnedObstacle);
+
+        // Set the rotation of the gate
+		int randomNotch = (int)Random.Range(0, numRotations);
+		spawnedObstacle.transform.eulerAngles = new Vector3(spawnedObstacle.transform.eulerAngles.x, spawnedObstacle.transform.eulerAngles.y, randomNotch * (360.0f / numRotations));
+			
+    }
+
+    private void SetSpawnPosition() {
+        List<Transform> spawnPoints = enviroVars.spawnPoints;
+		float distanceValue = 100.0f;
+		int pointNumber = 0;
+
+		foreach (Transform point in spawnPoints) {
+			if (Vector3.Distance(point.position, this.transform.position) <= distanceValue) {
+				distanceValue = Vector3.Distance(point.position, this.transform.position);
+				pointNumber = spawnPoints.IndexOf (point);
+			}
+		}
+
+		// Appropriately wrap the incrementor for the enemy spawning
+		if (pointNumber + spawnSpacing < enviroVars.spawnPoints.Count) {
+			currentSpawnPoint = pointNumber + spawnSpacing;
+		} else {
+			int difference = enviroVars.spawnPoints.Count - pointNumber;
+			currentSpawnPoint = difference;
+		}	
+    }
+
+    private void AddNecessaryComponents() {
+        // Move the gate towards the player
+        spawnedObstacle.gameObject.AddComponent<MovingGates>();
+		MovingGates moveVars = spawnedObstacle.GetComponent<MovingGates>();
+		moveVars.gateType = gateNumber;
+		moveVars.followPoint = enviroVars.spawnPoints[currentSpawnPoint];
+		
+        // Determine if this object should be rotating or not
+		if (rotatable[spawnedGateNum]) {
+			float randomNum = Random.value;
+			
+			if (randomNum <= percentageToRotate) {
+				spawnedObstacle.gameObject.AddComponent<RotateObstacle>();
+                spawnedObstacle.GetComponent<RotateObstacle>().SetRotationSpeed(Random.Range(minSpeed, maxSpeed));
+			}
+		}
+    }
+
 	private void RotationColour() {
         // Colour the plane if the plane matches the rotation of the obstacle
 		if (Quaternion.Angle(this.transform.rotation, gatesList[0].transform.rotation) <= closeRotation ||
