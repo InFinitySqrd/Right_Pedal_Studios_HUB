@@ -58,10 +58,10 @@ public class CallToFacebook : MonoBehaviour {
 	/// </summary>
 	void PostToFacebookFeed() {
 		FB.Feed(
-			link: "http://apps.facebook.com/" + FB.AppId + "/?challenge_brag=" + (FB.IsLoggedIn ? FB.UserId : "guest"),
+			link: "https://www.facebook.com/HubGames?fref=ts",
 			linkName: "Silent Grove",
 			linkDescription: "I just scored " + getScore.score.ToString() + " points in Silent Grove!",
-			picture: "http://www.friendsmash.com/images/logo_large.jpg"
+			picture: "https://dl.dropboxusercontent.com/u/67190200/Icon.png"
 			//callback: FeedPostCallback
 		);
 	}

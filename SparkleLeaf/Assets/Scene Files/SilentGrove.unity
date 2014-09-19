@@ -1334,7 +1334,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 0
   InitialModule:
     enabled: 1
@@ -2531,7 +2531,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: dba041200e7b76e4b88e8bf559bfa5a1, type: 2}
     - target: {fileID: 19800000, guid: 824444fb729eeab4d96d2b6cfa1f1513, type: 2}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 824444fb729eeab4d96d2b6cfa1f1513, type: 2}
@@ -4324,7 +4324,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 0
   InitialModule:
     enabled: 1
@@ -5409,7 +5409,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 0
   InitialModule:
     enabled: 1
@@ -6805,7 +6805,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: f9591750e5bb65743866a267da03c63d, type: 2}
     - target: {fileID: 19800000, guid: 824444fb729eeab4d96d2b6cfa1f1513, type: 2}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 824444fb729eeab4d96d2b6cfa1f1513, type: 2}
@@ -6887,7 +6887,7 @@ ParticleSystem:
   randomSeed: 0
   looping: 0
   prewarm: 0
-  playOnAwake: 1
+  playOnAwake: 0
   moveWithTransform: 0
   InitialModule:
     enabled: 1
@@ -9484,7 +9484,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 19800000, guid: 824444fb729eeab4d96d2b6cfa1f1513, type: 2}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 824444fb729eeab4d96d2b6cfa1f1513, type: 2}
@@ -9965,7 +9965,7 @@ Prefab:
       objectReference: {fileID: 2100000, guid: 2cd31a1fe4519074980d07a237247306, type: 2}
     - target: {fileID: 19800000, guid: 824444fb729eeab4d96d2b6cfa1f1513, type: 2}
       propertyPath: playOnAwake
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 824444fb729eeab4d96d2b6cfa1f1513, type: 2}
