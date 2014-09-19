@@ -70,6 +70,8 @@ public class ButtonControls : MonoBehaviour {
             Application.OpenURL(TwitterAddress + "?text=" + WWW.EscapeURL(text) + "&amp;lang=" + WWW.EscapeURL(TweetLanguage));
         } else if (TwitterPlugin.isAvailable && Application.platform == RuntimePlatform.IPhonePlayer) {
             TwitterPlugin.ComposeTweet(text);
+        } else {
+            Application.OpenURL(TwitterAddress + "?text=" + WWW.EscapeURL(text) + "&amp;lang=" + WWW.EscapeURL(TweetLanguage));
         }
     }
 
@@ -77,6 +79,13 @@ public class ButtonControls : MonoBehaviour {
 	void Start () {
 		settingsButton = this.renderer.material;
 		fadeSpeed = this.GetComponent<MenuTween>().fadeSpeed;
+
+        getScore = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
+
+        if (getScore.score == 0 && this.collider.name == "Share") {
+            this.collider.enabled = false;
+            this.renderer.enabled = false;
+        }
 
 		if (this.collider.name == "Settings") {
 			settingsButton.color = new Color(settingsButton.color.r, settingsButton.color.g, settingsButton.color.b, 1.0f);
@@ -103,11 +112,6 @@ public class ButtonControls : MonoBehaviour {
 			if (pause != null) {
 				pause.paused = true;
 			} 
-		}
-
-		// TODO Change this later
-		if (this.collider.name == "Leaderboards") {
-			getScore = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
 		}
 	}
 	
@@ -211,7 +215,12 @@ public class ButtonControls : MonoBehaviour {
                         case ButtonFunction.TwitterShare:
                             // Use code to share player score on twitter
                             string tags = "@HUBGamesAus #SilentGrove";
-						    ShareToTwitter("I just scored " + getScore.score + " point in Silent Grove! " + tags);
+
+                            if (getScore.score == 1) {
+                                ShareToTwitter("I just scored " + getScore.score + " point in Silent Grove! " + tags);
+                            } else {
+                                ShareToTwitter("I just scored " + getScore.score + " points in Silent Grove! " + tags);
+                            }
                             break;
                         case ButtonFunction.FacebookShare:
                             CallToFacebook facebook = GameObject.Find("FacebookPost").GetComponent<CallToFacebook>();

@@ -251,7 +251,7 @@ GameObject:
   - 114: {fileID: 817571857}
   - 114: {fileID: 817571856}
   m_Layer: 5
-  m_Name: Share
+  m_Name: Twitter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -295,7 +295,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 729707e430e781245bd2c680bf5c80b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonType: 7
+  buttonType: 8
   settingsButton: {fileID: 0}
   backButton: {fileID: 0}
   BGMOn: {fileID: 0}

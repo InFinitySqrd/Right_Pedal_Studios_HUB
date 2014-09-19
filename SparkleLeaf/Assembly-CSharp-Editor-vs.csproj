@@ -146,17 +146,10 @@
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
-<<<<<<< HEAD
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
       <Project>{DD0D1AD8-51D1-B079-5317-CA5C789641C0}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
-=======
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
-      <Project>{DD0D1AD8-51D1-B079-5317-CA5C789641C0}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
->>>>>>> FETCH_HEAD
     <ProjectReference Include="Assembly-CSharp-vs.csproj">
       <Project>{80B4F1E5-79D1-E511-5979-5DEBC21EC0AC}</Project>      <Name>Assembly-CSharp-vs</Name>    </ProjectReference>
   </ItemGroup>

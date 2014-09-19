@@ -18,7 +18,7 @@ public class SetUpMenu : MonoBehaviour {
 		information.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 6.8f, 1.0f));
         muteSFX.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 6.8f, 1.0f));
         //muteBGM.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
-        share.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 1.3f, Screen.height / 2.14f, 1.0f));
+        share.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 1.14f, Screen.height / 2.14f, 1.0f));
 
         // Further set the positions of sub menus
         information.transform.position = new Vector3(information.transform.position.x, settings.transform.position.y + 1.6f * settings.transform.localScale.y, information.transform.position.z);
@@ -53,6 +53,7 @@ public class SetUpMenu : MonoBehaviour {
 		}
 
 		skin.font = highScoreFont;
-		GUI.Box(new Rect(adjustedWidth / 14.0f, nativeHeight / 2.4f + nativeHeight / 8.0f, adjustedWidth / 2.0f, nativeHeight / 6.0f), "High Score: " + PlayerPrefs.GetInt("Top Score"), skin);
+        skin.alignment = TextAnchor.MiddleCenter;
+		GUI.Box(new Rect(adjustedWidth / 2.0f - adjustedWidth / 4.0f, nativeHeight / 2.4f + nativeHeight / 8.0f, adjustedWidth / 2.0f, nativeHeight / 6.0f), "High Score: " + PlayerPrefs.GetInt("Top Score"), skin);
 	}
 }

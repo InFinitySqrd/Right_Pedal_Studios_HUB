@@ -14,6 +14,7 @@ public class MonsterPopUp : MonoBehaviour {
 	[SerializeField] float jiggleDecrementor = 0.5f;
 	[SerializeField] float jiggleCutOff = 0.5f;
     private Transform player;
+    private PlaneMovement planeVars;
     private Transform gateParent;
     private Vector3 pivotPoint, differenceVector;
     private GameObject pivotObject;
@@ -26,6 +27,7 @@ public class MonsterPopUp : MonoBehaviour {
 
     void Awake() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+        planeVars = player.GetComponent<PlaneMovement>();
 		jiggleRotation = firstJiggleRotation;
 		animate = this.GetComponent<Animator>();
     }
@@ -71,7 +73,7 @@ public class MonsterPopUp : MonoBehaviour {
 
     private void Flip() {
 		if (pivotObject.transform.eulerAngles.x >= 0.0f && pivotObject.transform.eulerAngles.x <= 90.0f) {
-			pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * flipSpeed);
+			pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * flipSpeed * planeVars.forwardSpeed);
 		} else {
 			flipped = true;
 			pivotObject.transform.eulerAngles = Vector3.zero;
@@ -82,7 +84,7 @@ public class MonsterPopUp : MonoBehaviour {
 	IEnumerator Jiggle() {
 		if (jiggleForward) {
 			if (pivotObject.transform.eulerAngles.x >= 360.0f - jiggleRotation || pivotObject.transform.eulerAngles.x <= 0.0f + jiggleRotation / jiggleDecrementor) {
-				pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * jiggleSpeed);
+				pivotObject.transform.Rotate(Vector3.left, Time.deltaTime * jiggleSpeed * planeVars.forwardSpeed);
 			} else {
 				pivotObject.transform.eulerAngles = new Vector3(360.0f - jiggleRotation, 0.0f, 0.0f);
 
@@ -91,7 +93,7 @@ public class MonsterPopUp : MonoBehaviour {
 			}
 		} else {
 			if (pivotObject.transform.eulerAngles.x >= 360.0f - jiggleRotation / jiggleDecrementor || pivotObject.transform.eulerAngles.x <= 0.0f + jiggleRotation) {
-				pivotObject.transform.Rotate(Vector3.right, Time.deltaTime * jiggleSpeed);
+				pivotObject.transform.Rotate(Vector3.right, Time.deltaTime * jiggleSpeed * planeVars.forwardSpeed);
 			}else {
 				pivotObject.transform.eulerAngles = new Vector3(0.0f + jiggleRotation, 0.0f, 0.0f);
 

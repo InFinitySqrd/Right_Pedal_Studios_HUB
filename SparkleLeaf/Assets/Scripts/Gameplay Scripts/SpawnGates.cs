@@ -72,7 +72,7 @@ public class SpawnGates : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		timer = spawnTime;
+		timer = 0.0f;
 		planeColor = this.renderer.material.color;
 		
         // Initialise the array of booleans to tell if an object can be rotated
