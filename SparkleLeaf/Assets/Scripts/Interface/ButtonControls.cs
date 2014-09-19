@@ -214,18 +214,8 @@ public class ButtonControls : MonoBehaviour {
 						    ShareToTwitter("I just scored " + getScore.score + " point in Silent Grove! " + tags);
                             break;
                         case ButtonFunction.FacebookShare:
-                            // Use code to share player score on facebook
-                            /*
-							// Temporary store space for social integration
-							if (!FB.IsLoggedIn) {	
-								// Call code to log the player into facebook
-								FB.Login("email,publish_actions", AuthCallback);
-                                SendFacebookFeed();
-							} else {
-                                SendFacebookFeed();
-							}
-							*/
-
+                            CallToFacebook facebook = GameObject.Find("FacebookPost").GetComponent<CallToFacebook>();
+                            facebook.ShareClick();
                             break;
                         default:
                             break;

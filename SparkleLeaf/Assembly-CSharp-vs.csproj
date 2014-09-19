@@ -120,6 +120,7 @@
      <Compile Include="Assets\Scripts\Gameplay Scripts\RotateObstacle.cs" />
      <Compile Include="Assets\Scripts\Gameplay Scripts\SpawnGates.cs" />
      <Compile Include="Assets\Scripts\Interface\ButtonControls.cs" />
+     <Compile Include="Assets\Scripts\Interface\CallToFacebook.cs" />
      <Compile Include="Assets\Scripts\Interface\DebugControls.cs" />
      <Compile Include="Assets\Scripts\Interface\FadeInGameScene.cs" />
      <Compile Include="Assets\Scripts\Interface\GameAnalytics.cs" />
