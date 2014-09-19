@@ -51,7 +51,7 @@ public class MonsterPopUp : MonoBehaviour {
         pivotObject.transform.eulerAngles = new Vector3(90.0f, 0.0f, 0.0f);
 
         // Destroy this new object when the model is no longer a child
-		//pivotObject.AddComponent<DestroyEmpty>();
+		pivotObject.AddComponent<DestroyEmpty>();
 	}
 	
 	// Update is called once per frame
