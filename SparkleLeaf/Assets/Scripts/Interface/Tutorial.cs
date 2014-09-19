@@ -19,6 +19,15 @@ public class Tutorial : MonoBehaviour {
 
 	private bool instantiated = false;
 
+	private float tutorialTimer = 0.0f;
+	private bool lerpUp = true;
+	private Vector3 tutorialLowerBound = new Vector3(1.5f,1.5f,1.5f);
+	private Vector3 tutorialUpperBound = new Vector3(2f,2f,2f);
+	private Vector3 tutorialHeldUpperBound = new Vector3 (4f, 4f, 4f);
+	private Vector3 tutorialFinishedUpperBound = new Vector3(8f,8f,8f);
+
+	private bool rightHeld, leftHeld;
+
 	// Use this for initialization
 	void Start () {
 		enviroVars = GameObject.FindGameObjectWithTag("EnvironmentCentre").GetComponent<RandomlyGenerateEnvironment>();
@@ -30,32 +39,87 @@ public class Tutorial : MonoBehaviour {
 		} else {
 			this.enabled = false;
 		}
+
+		rightIcon.transform.localScale = tutorialLowerBound;
+		leftIcon.transform.localScale = tutorialLowerBound;
 	}
 	// Update is called once per frame
 	void Update () {
+
+		if (lerpUp) {
+			if (!leftHeld && !leftAchieved) {
+				// Pulse circles up
+				leftIcon.transform.localScale = Vector3.Lerp(leftIcon.transform.localScale, tutorialUpperBound, 0.05f);
+			}
+			
+			if (!rightHeld && !rightAchieved) {
+				rightIcon.transform.localScale = Vector3.Lerp(rightIcon.transform.localScale, tutorialUpperBound, 0.05f);
+			}
+		}
+		
+		else {
+			if (!leftHeld && !leftAchieved) {
+				leftIcon.transform.localScale = Vector3.Lerp(leftIcon.transform.localScale, tutorialLowerBound, 0.1f);
+			}
+			
+			if (!rightHeld && !rightAchieved) {
+				rightIcon.transform.localScale = Vector3.Lerp(rightIcon.transform.localScale, tutorialLowerBound, 0.1f);
+			}
+		}
+		
+		tutorialTimer += Time.deltaTime;
+		if (tutorialTimer >= 1.5f && lerpUp) {
+			lerpUp= false;
+			tutorialTimer = 0;
+		}
+		
+		if (tutorialTimer >= 0.75f && !lerpUp) {
+			lerpUp = true;
+			tutorialTimer = 0;
+		}
+
+
         // Determine when the player has completed the tutorial
-        if (Input.GetMouseButton(0)) {
-            if (Input.mousePosition.x > Screen.width / 2.0f) {
-                rightTimer += Time.deltaTime;
+        if (Input.GetMouseButton (0)) {
+			if (Input.mousePosition.x > Screen.width / 2.0f) {
+				rightTimer += Time.deltaTime;
+				rightHeld = true;
+				rightIcon.transform.localScale = Vector3.Lerp(rightIcon.transform.localScale, tutorialHeldUpperBound, 0.015f);
 
-                if (rightTimer > minHoldTime) {
-                    rightAchieved = true;
-                }
-            } else {
-                leftTimer += Time.deltaTime;
+				if (rightTimer > minHoldTime) {
+					rightAchieved = true;
+				}
 
-                if (leftTimer > minHoldTime) {
-                    leftAchieved = true;
-                }
-            }
-        }
+				leftHeld = false;
+			} 
+
+			else {
+				leftTimer += Time.deltaTime;
+				leftHeld = true;
+				leftIcon.transform.localScale = Vector3.Lerp(leftIcon.transform.localScale, tutorialHeldUpperBound, 0.015f);
+
+				if (leftTimer > minHoldTime) {
+					leftAchieved = true;
+				}
+
+				rightHeld = false;
+			}
+		} 
+		else {
+			rightHeld = false;
+			leftHeld = false;
+			leftTimer = 0.0f;
+			rightTimer = 0.0f;
+			}
 
         if (rightAchieved) {
             StartCoroutine(Fade(rightIcon.renderer.material));
+			rightIcon.transform.localScale = Vector3.Lerp(rightIcon.transform.localScale, tutorialFinishedUpperBound, 0.085f);
         }
 
         if (leftAchieved) {
             StartCoroutine(Fade(leftIcon.renderer.material));
+			leftIcon.transform.localScale = Vector3.Lerp(leftIcon.transform.localScale, tutorialFinishedUpperBound, 0.085f);
         }
 
         if (leftAchieved && rightAchieved) {
@@ -86,7 +150,7 @@ public class Tutorial : MonoBehaviour {
 				setStartingPoint.currentSpawnPoint = pointNumber + setStartingPoint.startingSpawnPoint;
 
                 this.GetComponent<Tutorial>().enabled = false;
-            }
+			}
         }
 	}
 
@@ -109,7 +173,8 @@ public class Tutorial : MonoBehaviour {
 		// Set up an appropriate spawn point
 		Vector3 transform = new Vector3(Screen.width / 2.0f, Screen.height - Screen.height / 3.0f, -Camera.main.transform.position.z);
 		transform = Camera.main.ScreenToWorldPoint(transform);
-		
+
+		/// No tutorial text in this game!
 		// Instantiate the text
 		text = (GameObject)Instantiate(tutorialText.gameObject, transform, tutorialIcons.transform.rotation);
 	}
