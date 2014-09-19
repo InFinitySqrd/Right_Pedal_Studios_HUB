@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/Scene Files/MenuScreen.unity
   - enabled: 1
     path: Assets/Scene Files/CreditsScreen.unity
+  - enabled: 1
+    path: Assets/Scene Files/ShareMenu.unity

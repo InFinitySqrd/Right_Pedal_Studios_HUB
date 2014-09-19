@@ -9,7 +9,10 @@ public class ButtonControls : MonoBehaviour {
         Back,
         MuteSFX,
         Info,
-        ExitCredits
+        ExitCredits,
+        ShareMenu,
+        TwitterShare,
+        FacebookShare
     }
     [SerializeField] ButtonFunction buttonType;
 	[SerializeField] Material settingsButton, backButton, BGMOn, BGMOff, SFXOn, SFXOff;
@@ -29,6 +32,8 @@ public class ButtonControls : MonoBehaviour {
 
 	private const string TwitterAddress = "http://twitter.com/intent/tweet";
 	private const string TweetLanguage = "en";
+
+    private bool shareUp = false;
 
 	void Awake() {
 		if (PlayerPrefs.GetInt("FacebookInitialised") == 0) {
@@ -145,20 +150,7 @@ public class ButtonControls : MonoBehaviour {
 							}
 							break;
                         case ButtonFunction.Leaderboards:
-                            // Open the leaderboards scene
-						/*
-							// Temporary store space for social integration
-							if (!FB.IsLoggedIn) {	
-								// Call code to log the player into facebook
-								FB.Login("email,publish_actions", AuthCallback);
-                                SendFacebookFeed();
-							} else {
-                                SendFacebookFeed();
-							}
-*/
-                            string tags = "@HUBGamesAus #SilentGrove";
-						 ShareToTwitter("I just scored " + getScore.score + " point in Silent Grove! " + tags);
-							
+                            // Display leaderboards
                             break;
                         case ButtonFunction.Settings:
                             // Open the settings scene
@@ -205,6 +197,35 @@ public class ButtonControls : MonoBehaviour {
                             // Bring up the regular menu screen
                             Application.LoadLevelAdditive("MenuScreen");
                             Destroy(this.transform.root.gameObject);
+                            break;
+                        case ButtonFunction.ShareMenu:
+                            // Load the share screen over the top of the menu
+                            shareUp = !shareUp;
+
+                            if (shareUp) {
+                                Application.LoadLevelAdditive("ShareMenu");
+                            } else {
+                                Destroy(GameObject.Find("ShareCamera").gameObject);
+                            }
+                            break;
+                        case ButtonFunction.TwitterShare:
+                            // Use code to share player score on twitter
+                            string tags = "@HUBGamesAus #SilentGrove";
+						    ShareToTwitter("I just scored " + getScore.score + " point in Silent Grove! " + tags);
+                            break;
+                        case ButtonFunction.FacebookShare:
+                            // Use code to share player score on facebook
+                            /*
+							// Temporary store space for social integration
+							if (!FB.IsLoggedIn) {	
+								// Call code to log the player into facebook
+								FB.Login("email,publish_actions", AuthCallback);
+                                SendFacebookFeed();
+							} else {
+                                SendFacebookFeed();
+							}
+							*/
+
                             break;
                         default:
                             break;

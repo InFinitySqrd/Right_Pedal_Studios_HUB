@@ -129,6 +129,7 @@
      <Compile Include="Assets\Scripts\Interface\SetUpCredits.cs" />
      <Compile Include="Assets\Scripts\Interface\SetUpMenu.cs" />
      <Compile Include="Assets\Scripts\Interface\SetUpPlayerPrefs.cs" />
+     <Compile Include="Assets\Scripts\Interface\SetUpSharing.cs" />
      <Compile Include="Assets\Scripts\Interface\SplashScreenTransitions.cs" />
      <Compile Include="Assets\Scripts\Interface\Tutorial.cs" />
      <Compile Include="Assets\Scripts\Obsolete Scripts\CameraMovement.cs" />
