@@ -193,7 +193,7 @@ public class SpawnGates : MonoBehaviour {
 		if (pointNumber + spawnSpacing < enviroVars.spawnPoints.Count) {
 			currentSpawnPoint = pointNumber + spawnSpacing;
 		} else {
-			int difference = enviroVars.spawnPoints.Count - pointNumber;
+			int difference = (pointNumber + spawnSpacing) - enviroVars.spawnPoints.Count;
 			currentSpawnPoint = difference;
 		}	
     }
