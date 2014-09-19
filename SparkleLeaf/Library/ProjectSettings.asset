@@ -98,8 +98,8 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: 
-  AndroidKeyaliasName: 
+  AndroidKeystoreName: C:/Users/SeveN_000/Desktop/Game Development/Right_Pedal_Studios_HUB/SparkleLeaf/SilentGroveKey.keystore
+  AndroidKeyaliasName: silentgrove
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
   - m_BuildTarget: 
