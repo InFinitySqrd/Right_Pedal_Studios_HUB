@@ -467,7 +467,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: -.999999404, w: .00108888606}
-  m_LocalPosition: {x: -2.03981924, y: -2.06601906, z: 0}
+  m_LocalPosition: {x: -1.79348338, y: -1.83417368, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 400024}
@@ -479,7 +479,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: -.710269272, w: -.70393014}
-  m_LocalPosition: {x: 2.07386804, y: -2.01741743, z: 0}
+  m_LocalPosition: {x: 1.95794511, y: -1.82904291, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 400024}
@@ -515,7 +515,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: -.70470345, w: .709501982}
-  m_LocalPosition: {x: 2.1071682, y: 2.1356802, z: 0}
+  m_LocalPosition: {x: 1.80287099, y: 1.93281555, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 400024}
@@ -575,7 +575,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100022}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.99518692, y: 1.98195457, z: 0}
+  m_LocalPosition: {x: -1.7923218, y: 1.7645998, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 400024}
@@ -587,7 +587,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -7.40307856, y: -9.11328983, z: -10.4518032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400060}
@@ -1019,12 +1019,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipped: 0
-  flipDistance: 80
-  flipSpeed: 200
+  flipDistance: 90
+  flipSpeed: 300
   pivotPointYDistance: -10
-  jiggleSpeed: 100
+  jiggleSpeed: 400
   firstJiggleRotation: 10
-  jiggleDecrementor: .800000012
+  jiggleDecrementor: .75
   jiggleCutOff: 4
 --- !u!137 &13700000
 SkinnedMeshRenderer:

@@ -17,8 +17,8 @@ public class SetUpMenu : MonoBehaviour {
 		backButton.transform.position = settings.transform.position;
 		information.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 6.8f, 1.0f));
         muteSFX.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 6.8f, 1.0f));
-        //muteBGM.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));
-        share.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 1.14f, Screen.height / 2.14f, 1.0f));
+        //muteBGM.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));		
+		share.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 1.14f, Screen.height / 2.14f, 1.0f));
 
         // Further set the positions of sub menus
         information.transform.position = new Vector3(information.transform.position.x, settings.transform.position.y + 1.6f * settings.transform.localScale.y, information.transform.position.z);
@@ -28,6 +28,13 @@ public class SetUpMenu : MonoBehaviour {
 
 	void Start() {
 		scoreVal = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
+	}
+
+	void Update() {
+		if (scoreVal.score == 0) {	
+			share.collider.enabled = false;
+			share.renderer.enabled = false;
+		}
 	}
 
 	float nativeWidth = 1920.0f;

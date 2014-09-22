@@ -223,7 +223,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .493774116, y: .920000017, z: -.768362522}
+  m_LocalPosition: {x: .489583969, y: .875083745, z: -.768362522}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -247,7 +247,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100012}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.488901317, y: .920000017, z: -.786533713}
+  m_LocalPosition: {x: -.500341952, y: .847731054, z: -.786533713}
   m_LocalScale: {x: .99999994, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400000}
@@ -436,9 +436,9 @@ MonoBehaviour:
   oppositeDirectionPush: 4.80000019
   deadZone: 0
   tiltDeadZone: .100000001
-  speedIncreaseRate: 7
-  speedIncrementor: .0399999991
-  speedGrowthPerStep: 1.00999999
+  speedIncreaseRate: 10
+  speedIncrementor: .0299999993
+  speedGrowthPerStep: 1
   environmentCentre: {fileID: 0}
 --- !u!114 &11400002
 MonoBehaviour:
@@ -455,19 +455,21 @@ MonoBehaviour:
   spawnTime: 2
   spawnDistance: 280
   newObstacleTime: 25
-  rotateNewObstacleTime: 15
-  percentageToRotate: .600000024
+  rotateNewObstacleTime: 20
+  percentageToRotate: .75
   minSpeed: .100000001
   maxSpeed: .300000012
-  randomRotationSpeedIncrementor: .0799999982
-  rotationSpeedIncreaseTime: 8
+  randomRotationSpeedIncrementor: .0199999996
+  rotationSpeedIncreaseTime: 5
   spawnSpacing: 7
-  numRotations: 10
+  minRotation: 30
+  maxRotation: 150
   obstacles:
   - {fileID: 400000, guid: cb6fe56391b2f2e4595673a9628aa8a1, type: 2}
   - {fileID: 400024, guid: 4031f0f5e63f72646a9a80a4c2a66dc3, type: 2}
   closeRotation: 120
   colourChangeRate: 2
+  decSpawnTime: 30
   startingSpawnPoint: 12
   currentSpawnPoint: 0
   scoreFont: {fileID: 12800000, guid: 7077e341d5b4cd849b8d1d3756708cf5, type: 3}
@@ -495,6 +497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b9b38ecda70bbe4ea33fe18763edd6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugEnabled: 0
   paused: 0
   moveMax: 10
   rotateMax: 10

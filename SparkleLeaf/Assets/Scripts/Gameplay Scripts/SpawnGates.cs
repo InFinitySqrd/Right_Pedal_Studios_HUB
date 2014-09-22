@@ -17,7 +17,7 @@ public class SpawnGates : MonoBehaviour {
 	public int spawnSpacing = 5;
 
 	// Declare variables	
-    [SerializeField] int numRotations = 360;
+	[SerializeField] int minRotation = 0, maxRotation = 360;
 	[SerializeField] Transform[] obstacles;
 
     // Colour change variables
@@ -50,6 +50,9 @@ public class SpawnGates : MonoBehaviour {
     private float addNewGateTimer = 0.0f;
     private bool startRotationTimer = true;
     private float rotatableTimer = 0.0f;
+	private float decSpawnSpacingTimer = 0.0f;
+	[SerializeField] float decSpawnTime = 0.0f;
+	private bool tutorialFinished = false;
 
 	private RandomlyGenerateEnvironment enviroVars;
 	public int startingSpawnPoint = 20;
@@ -126,6 +129,7 @@ public class SpawnGates : MonoBehaviour {
 			//RotationColour();
 		}
 
+
         // Spawn a gate if we are able to
 		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && timer >= spawnTime && !pause.paused && !lostGame.lost) {
             SpawnNewGate();
@@ -133,8 +137,28 @@ public class SpawnGates : MonoBehaviour {
             AddNecessaryComponents();
 			
 			timer = 0.0f;
+
+		
+
 		} else if (!pause.paused){
 			timer += Time.deltaTime * planeVars.forwardSpeed;
+		
+			if (!tutorialFinished && PlayerPrefs.GetInt("TutorialComplete") == 1) {
+				print (spawnSpacing);
+				if (decSpawnSpacingTimer >= decSpawnTime) {
+					spawnSpacing --;
+					print (spawnSpacing);
+					decSpawnSpacingTimer = 0;
+					if (spawnSpacing == 5) {
+						tutorialFinished = true;
+					}
+				} 
+				
+				else {
+					decSpawnSpacingTimer += Time.deltaTime;
+				}
+			}
+
 		}
 
         // Determine the score to be added to the player's total
@@ -172,8 +196,8 @@ public class SpawnGates : MonoBehaviour {
 		gatesList.Add(spawnedObstacle);
 
         // Set the rotation of the gate
-		int randomNotch = (int)Random.Range(0, numRotations);
-		spawnedObstacle.transform.eulerAngles = new Vector3(spawnedObstacle.transform.eulerAngles.x, spawnedObstacle.transform.eulerAngles.y, randomNotch * (360.0f / numRotations));
+		int randomNotch = (int)Random.Range(minRotation, maxRotation);
+		spawnedObstacle.transform.eulerAngles = new Vector3(spawnedObstacle.transform.eulerAngles.x, spawnedObstacle.transform.eulerAngles.y, randomNotch);
 			
     }
 
