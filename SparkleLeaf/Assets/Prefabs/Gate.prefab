@@ -281,7 +281,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -16.0694828, y: 19.8143806, z: 81.5257874}
+  m_LocalPosition: {x: 1.57614648, y: -10.0758448, z: -11.7987661}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400032}
@@ -677,12 +677,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipped: 0
-  flipDistance: 80
-  flipSpeed: 200
+  flipDistance: 90
+  flipSpeed: 300
   pivotPointYDistance: -10
-  jiggleSpeed: 100
+  jiggleSpeed: 400
   firstJiggleRotation: 10
-  jiggleDecrementor: .800000012
+  jiggleDecrementor: .75
   jiggleCutOff: 4
 --- !u!137 &13700000
 SkinnedMeshRenderer:

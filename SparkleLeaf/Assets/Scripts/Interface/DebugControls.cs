@@ -4,6 +4,7 @@ using System.Collections;
 public class DebugControls : MonoBehaviour
 {
     // Declare variables
+	public bool debugEnabled = true;
     public bool paused = false;
 
     // Serialized plane maxSliderValues
@@ -69,12 +70,13 @@ public class DebugControls : MonoBehaviour
     {
         if (!debugWindow)
         {
-
-            if (Input.touchCount >= 3 || Input.GetKeyDown(KeyCode.Delete))
-            {
-                debugWindow = true;
-				paused = true;
-            }
+			if (debugEnabled) {
+	            if (Input.touchCount >= 3 || Input.GetKeyDown(KeyCode.Delete))
+	            {
+	                debugWindow = true;
+					paused = true;
+	            }
+			}
         }
         else
         {
