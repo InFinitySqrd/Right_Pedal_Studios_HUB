@@ -62,6 +62,9 @@ public class SpawnGates : MonoBehaviour {
 
     private int gateNumber = 0;
 
+    // Fly through audio object
+    private AudioSource flyThroughSound;
+
 	void Awake() {
 		gatesList = new List<Transform>();
 		planeVars = this.GetComponent<PlaneMovement>();
@@ -71,6 +74,8 @@ public class SpawnGates : MonoBehaviour {
 
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
 		currentSpawnPoint = 0;
+
+        flyThroughSound = GameObject.Find("FlyThrough Sound").GetComponent<AudioSource>();
 	}
 	
 	// Use this for initialization
@@ -144,10 +149,8 @@ public class SpawnGates : MonoBehaviour {
 			timer += Time.deltaTime * planeVars.forwardSpeed;
 		
 			if (!tutorialFinished && PlayerPrefs.GetInt("TutorialComplete") == 1) {
-				print (spawnSpacing);
 				if (decSpawnSpacingTimer >= decSpawnTime) {
 					spawnSpacing --;
-					print (spawnSpacing);
 					decSpawnSpacingTimer = 0;
 					if (spawnSpacing == 5) {
 						tutorialFinished = true;
@@ -167,6 +170,10 @@ public class SpawnGates : MonoBehaviour {
 			score++;
 			GameObject currentGate = gatesList[0].gameObject;
 			gatesList.RemoveAt(0);
+
+            flyThroughSound.pitch = Random.Range(0.9f, 1.1f);
+            flyThroughSound.Play();
+
 			Destroy(currentGate.gameObject);
 
 			GAStuff.SetScore(score);

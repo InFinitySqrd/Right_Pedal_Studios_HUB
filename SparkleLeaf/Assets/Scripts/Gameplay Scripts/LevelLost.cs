@@ -12,6 +12,7 @@ public class LevelLost : MonoBehaviour {
     private bool menuUp = false;
 
 	// FMOD relating to death and BGM
+    /*
 	private FMOD.Studio.EventInstance FMOD_Music;
 	private FMOD.Studio.ParameterInstance FMOD_Death;
 	private float deathMusicTime = 0.0f;
@@ -19,11 +20,13 @@ public class LevelLost : MonoBehaviour {
 	// FMOD relating to ambience
 	private FMOD.Studio.EventInstance FMOD_Ambience;
 	private FMOD.Studio.ParameterInstance FMOD_AmbienceTime;
+    */
 
 	// Use this for initialization
 	void Start () {
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
 
+        /*
 		FMOD_Music = FMOD_StudioSystem.instance.GetEvent ("event:Music/Gameplay");
 		FMOD_Ambience = FMOD_StudioSystem.instance.GetEvent ("event:/Ambience/Forest");
 
@@ -41,6 +44,8 @@ public class LevelLost : MonoBehaviour {
 
 		this.FMOD_Music.start ();
 		this.FMOD_Ambience.start ();
+        */
+
 		timeUntilDeath = 0.0f;
 	}
 	

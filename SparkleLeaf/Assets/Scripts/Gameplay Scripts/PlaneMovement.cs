@@ -62,7 +62,23 @@ public class PlaneMovement : MonoBehaviour {
 
 		controlMethod = PlayerPrefs.GetInt ("Control Method");
 
-		FMOD_PlaneRotation = FMOD_StudioSystem.instance.GetEvent ("event:/Character/Paper_Plane/Rotation");
+        FMODAudioSetUp();
+		
+		pause = this.GetComponent<DebugControls>();
+
+		// Start the game with the menu when the game launches
+		if (PlayerPrefs.GetInt("FirstLaunch") == 0) {
+			Application.LoadLevelAdditive("MenuScreen");
+            PlayerPrefs.SetInt("FacebookInitialised", 0);
+			PlayerPrefs.SetInt("FirstLaunch", 1);
+
+			pause.paused = true;
+		}
+	}
+
+    void FMODAudioSetUp() {
+        /*
+    	FMOD_PlaneRotation = FMOD_StudioSystem.instance.GetEvent ("event:/Character/Paper_Plane/Rotation");
 
 		if (FMOD_PlaneRotation.getParamter("Wind", out FMOD_Wind) != FMOD.RESULT.OK){
 			Debug.LogError("Wind not working");
@@ -82,20 +98,8 @@ public class PlaneMovement : MonoBehaviour {
 			controlMethod = 1;
 		
 		}
-
-	}
-		
-		pause = this.GetComponent<DebugControls>();
-
-		// Start the game with the menu when the game launches
-		if (PlayerPrefs.GetInt("FirstLaunch") == 0) {
-			Application.LoadLevelAdditive("MenuScreen");
-            PlayerPrefs.SetInt("FacebookInitialised", 0);
-			PlayerPrefs.SetInt("FirstLaunch", 1);
-
-			pause.paused = true;
-		}
-	}
+        */
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {	

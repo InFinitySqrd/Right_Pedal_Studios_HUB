@@ -8,6 +8,8 @@ public class SetUpMenu : MonoBehaviour {
 
 	private SpawnGates scoreVal;
 
+    private FadeBetweenAudio audioFade; 
+
 	void Awake () {
 	    // Set up all UI elements to scale with screen size
         title.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, 3.0f * Screen.height / 4.0f, 1.0f));
@@ -24,6 +26,9 @@ public class SetUpMenu : MonoBehaviour {
         information.transform.position = new Vector3(information.transform.position.x, settings.transform.position.y + 1.6f * settings.transform.localScale.y, information.transform.position.z);
         muteSFX.transform.position = new Vector3(muteSFX.transform.position.x, settings.transform.position.y + 0.8f * settings.transform.localScale.y, muteSFX.transform.position.z);
         //muteBGM.transform.position = new Vector3(muteBGM.transform.position.x, settings.transform.position.y + 2.0f * settings.transform.localScale.y, muteBGM.transform.position.z);
+    
+        audioFade = GameObject.Find("AudioManager").GetComponent<FadeBetweenAudio>();
+        audioFade.FadeAudio(false);
     }
 
 	void Start() {

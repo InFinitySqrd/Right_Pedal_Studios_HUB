@@ -35,11 +35,15 @@ public class ButtonControls : MonoBehaviour {
 
     private bool shareUp = false;
 
+    private FadeBetweenAudio audioFade;
+
 	void Awake() {
 		if (PlayerPrefs.GetInt("FacebookInitialised") == 0) {
 			FB.Init(SetInit, OnHideUnity);
 			PlayerPrefs.SetInt("FacebookInitialised", 1);
 		}
+
+        audioFade = GameObject.Find("AudioManager").GetComponent<FadeBetweenAudio>();
 	}
 
 	private void SetInit() {
@@ -141,6 +145,8 @@ public class ButtonControls : MonoBehaviour {
                         case ButtonFunction.Play:
                             // Restart the game
                             //Application.LoadLevel(Application.loadedLevel);
+                            audioFade.FadeAudio(true);
+
 							if (pause != null && lostGame != null && tutorial != null && !lostGame.lost) {
 								pause.paused = false;
 								
