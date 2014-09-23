@@ -88,6 +88,7 @@ GameObject:
   - 81: {fileID: 190662941}
   - 114: {fileID: 190662945}
   - 114: {fileID: 190662946}
+  - 114: {fileID: 190662947}
   m_Layer: 0
   m_Name: BackgroundCamera
   m_TagString: Untagged
@@ -116,7 +117,7 @@ AudioListener:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 190662939}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!92 &190662942
 Behaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +195,18 @@ MonoBehaviour:
   - {fileID: 1184029861}
   fadeSpeed: 1
   splashDuration: 1.39999998
+--- !u!114 &190662947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 190662939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e45ca4b15a7074ca8dd9898aacb147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pluginPaths: []
 --- !u!1 &1104008172
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +338,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1656752977}
   - 82: {fileID: 1656752976}
+  - 114: {fileID: 1656752978}
   m_Layer: 0
   m_Name: Menu Music
   m_TagString: Untagged
@@ -338,7 +352,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1656752975}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 56cfc4af96be75441838d2594f35765f, type: 3}
   m_PlayOnAwake: 1
@@ -402,3 +416,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &1656752978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1656752975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3db6ea8f409b646a661fb22f191ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000, guid: cf54bead0baa94793a82f1beb80ad15c, type: 2}
+  path: '{259a209b-3e09-4c38-a21f-5e99990798a3}'
+  startEventOnAwake: 1

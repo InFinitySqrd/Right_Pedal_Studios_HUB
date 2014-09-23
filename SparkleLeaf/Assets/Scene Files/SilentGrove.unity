@@ -2855,6 +2855,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 451166909}
   - 82: {fileID: 451166910}
+  - 114: {fileID: 451166911}
   m_Layer: 0
   m_Name: Background Track
   m_TagString: Untagged
@@ -2880,7 +2881,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 451166908}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: 57ac6b0f4e7b7d24ca8d6d47f3ef264c, type: 3}
   m_PlayOnAwake: 1
@@ -2932,6 +2933,20 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &451166911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 451166908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3db6ea8f409b646a661fb22f191ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000, guid: 2ce39c05c130443c0ad564c53b92ca03, type: 2}
+  path: '{8c947dc2-6d4b-42c2-819a-53e327b812b4}'
+  startEventOnAwake: 1
 --- !u!1 &527682736
 GameObject:
   m_ObjectHideFlags: 0
@@ -4123,7 +4138,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &687734205
 Renderer:
   m_ObjectHideFlags: 0
@@ -6395,6 +6409,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1281979919}
   - 82: {fileID: 1281979920}
+  - 114: {fileID: 1281979921}
   m_Layer: 0
   m_Name: Ambient Sound 1
   m_TagString: Untagged
@@ -6420,7 +6435,7 @@ AudioSource:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1281979918}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_audioClip: {fileID: 8300000, guid: fc47c1886c4374e4796b74cad11c3efd, type: 3}
   m_PlayOnAwake: 1
@@ -6472,6 +6487,20 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+--- !u!114 &1281979921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281979918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec3db6ea8f409b646a661fb22f191ec7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asset: {fileID: 11400000, guid: f172fedc52a6f4d08aa4d5e645a98b9c, type: 2}
+  path: '{3f3e6f4b-0335-45ae-9e06-7f7fc25ab916}'
+  startEventOnAwake: 1
 --- !u!1 &1288035499
 GameObject:
   m_ObjectHideFlags: 0
@@ -7794,7 +7823,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1547825245
 Renderer:
   m_ObjectHideFlags: 0
@@ -7848,6 +7876,7 @@ GameObject:
   - 124: {fileID: 1601006219}
   - 92: {fileID: 1601006218}
   - 81: {fileID: 1601006217}
+  - 114: {fileID: 1601006222}
   m_Layer: 0
   m_Name: BackgroundCamera
   m_TagString: Untagged
@@ -7925,6 +7954,18 @@ Transform:
   - {fileID: 1288035501}
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1601006222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1601006216}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e45ca4b15a7074ca8dd9898aacb147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pluginPaths: []
 --- !u!1 &1611463830
 GameObject:
   m_ObjectHideFlags: 0
@@ -9340,7 +9381,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &1931640168
 Renderer:
   m_ObjectHideFlags: 0
@@ -9415,7 +9455,6 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
 --- !u!23 &2004214784
 Renderer:
   m_ObjectHideFlags: 0
@@ -9471,6 +9510,7 @@ GameObject:
   - 81: {fileID: 2011436109}
   - 114: {fileID: 2011436114}
   - 114: {fileID: 2011436115}
+  - 114: {fileID: 2011436116}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9484,7 +9524,7 @@ AudioListener:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2011436108}
-  m_Enabled: 1
+  m_Enabled: 0
 --- !u!124 &2011436110
 Behaviour:
   m_ObjectHideFlags: 0
@@ -9568,6 +9608,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a52ba5e85c886174b872f56ad53a39c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2011436116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2011436108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e45ca4b15a7074ca8dd9898aacb147, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pluginPaths: []
 --- !u!1 &2126217742
 GameObject:
   m_ObjectHideFlags: 0

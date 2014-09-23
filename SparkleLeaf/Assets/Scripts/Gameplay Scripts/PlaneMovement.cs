@@ -62,9 +62,28 @@ public class PlaneMovement : MonoBehaviour {
 
 		controlMethod = PlayerPrefs.GetInt ("Control Method");
 
-		if (controlMethod == 0) {
-			controlMethod = 1;
+		FMOD_PlaneRotation = FMOD_StudioSystem.instance.GetEvent ("event:/Character/Paper_Plane/Rotation");
+
+		if (FMOD_PlaneRotation.getParamter("Wind", out FMOD_Wind) != FMOD.RESULT.OK){
+			Debug.LogError("Wind not working");
+			return;
+
 		}
+
+		if (FMOD_PlaneRotation.getParameter("Paper", out FMOD_Paper) != FMOD.RESULT.OK){
+			Debug.LogError("Paper not working");
+			return;
+		
+		}
+
+		this.FMOD_PlaneRotation.start ();
+
+		if (controlMethod ==0) {
+			controlMethod = 1;
+		
+		}
+
+	}
 		
 		pause = this.GetComponent<DebugControls>();
 
