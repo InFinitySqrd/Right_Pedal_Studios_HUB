@@ -425,7 +425,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controlMethod: 1
-  forwardSpeed: .5
+  forwardSpeed: .550000012
   rotationSpeed: 4
   momentumReduction: 1.70000005
   levelingForce: 7
@@ -436,8 +436,8 @@ MonoBehaviour:
   oppositeDirectionPush: 4.80000019
   deadZone: 0
   tiltDeadZone: .100000001
-  speedIncreaseRate: 10
-  speedIncrementor: .0299999993
+  speedIncreaseRate: 7.5
+  speedIncrementor: .0500000007
   speedGrowthPerStep: 1
   environmentCentre: {fileID: 0}
 --- !u!114 &11400002
@@ -459,7 +459,7 @@ MonoBehaviour:
   percentageToRotate: .75
   minSpeed: .100000001
   maxSpeed: .300000012
-  randomRotationSpeedIncrementor: .0199999996
+  randomRotationSpeedIncrementor: .0500000007
   rotationSpeedIncreaseTime: 5
   spawnSpacing: 7
   minRotation: 30
