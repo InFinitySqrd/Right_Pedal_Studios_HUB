@@ -40,9 +40,24 @@ public class PlaneMovement : MonoBehaviour {
 
 	private bool tutorialActivated = false;
 
+    private GameObject audioManager;
+
+    // Firefly particle effects
+   [SerializeField] ParticleSystem fireflyParticles;
+   [SerializeField] float particleMinSpeed = 1.0f, particleMaxSpeed = 1.0f;
+
 	void Awake() {
 		Application.targetFrameRate = 60;
 		this.GetComponent<Tutorial>().enabled = false;
+
+        audioManager = GameObject.Find("AudioManager");
+
+        // Set audio levels to mute if the game is muted
+        if (PlayerPrefs.GetInt("AudioEnabled") == 0) {
+            foreach (AudioSource child in audioManager.transform.GetComponentsInChildren<AudioSource>()) {
+                child.volume = 0.0f;
+            }
+        }
 	}
 
 	// Use this for initialization
@@ -103,6 +118,9 @@ public class PlaneMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {	
+        // Update the speed of the firefly particles
+        fireflyParticles.startSpeed = Random.Range(particleMinSpeed * forwardSpeed, particleMaxSpeed * forwardSpeed);
+
 		if (PlayerPrefs.GetInt("TutorialComplete") == 0 && !pause.paused && !tutorialActivated) {
 			this.GetComponent<Tutorial>().enabled = true;
 			tutorialActivated = true;

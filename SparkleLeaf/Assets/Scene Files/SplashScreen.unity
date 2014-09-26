@@ -180,6 +180,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   planeVars: {fileID: 11400000, guid: accface51138d1d4cbff364ef3f9334e, type: 2}
   gateVars: {fileID: 11400002, guid: accface51138d1d4cbff364ef3f9334e, type: 2}
+  audioManager: {fileID: 100002, guid: feb51477bbd28374980553f6e6a13877, type: 2}
 --- !u!114 &190662946
 MonoBehaviour:
   m_ObjectHideFlags: 0

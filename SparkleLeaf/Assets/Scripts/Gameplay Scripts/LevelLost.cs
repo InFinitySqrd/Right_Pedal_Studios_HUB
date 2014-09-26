@@ -11,6 +11,11 @@ public class LevelLost : MonoBehaviour {
 
     private bool menuUp = false;
 
+    private bool died = false;
+    [SerializeField] GameObject planeModel;
+    [SerializeField] GameObject brokenPlane;
+    [SerializeField] ParticleSystem[] rippingEffects;
+
 	// FMOD relating to death and BGM
     /*
 	private FMOD.Studio.EventInstance FMOD_Music;
@@ -53,15 +58,37 @@ public class LevelLost : MonoBehaviour {
 	void Update () {
 		timeUntilDeath += Time.deltaTime;
 
+        if (lost && !died) {
+            PlaneDeath();
+        }
+
         if (!menuUp && lost) {
             Application.LoadLevelAdditive("MenuScreen");
             menuUp = true;
 
+            /*
             if (Input.touchCount >= 3 || Input.GetKeyDown(KeyCode.Delete)) {
                 Application.LoadLevel("MainMenu");
             }
+            */
         }
 	}
+
+    private void PlaneDeath() {
+        // Spawn the broken plane
+        Instantiate(brokenPlane, planeModel.transform.position, planeModel.transform.rotation);
+
+        // Disable the plane model
+        planeModel.SetActive(false);
+
+        // Play particle effects
+        foreach (ParticleSystem effect in rippingEffects) {
+            effect.Play();
+        }
+
+        // Show that the death effect has already been played
+        died = true;
+    }
 
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == "Obstacle") {

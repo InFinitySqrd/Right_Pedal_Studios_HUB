@@ -440,6 +440,9 @@ MonoBehaviour:
   speedIncrementor: .0500000007
   speedGrowthPerStep: 1
   environmentCentre: {fileID: 0}
+  fireflyParticles: {fileID: 0}
+  particleMinSpeed: 15
+  particleMaxSpeed: 20
 --- !u!114 &11400002
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -486,6 +489,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   loseText: YOU LOST
   lost: 0
+  planeModel: {fileID: 100002}
+  brokenPlane: {fileID: 100000, guid: a2cf935e8e7758845b9f79fad8a41987, type: 2}
+  rippingEffects:
+  - {fileID: 19800006}
+  - {fileID: 19800004}
+  - {fileID: 19800008}
+  - {fileID: 19800010}
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

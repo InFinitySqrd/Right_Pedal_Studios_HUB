@@ -37,13 +37,23 @@ public class ButtonControls : MonoBehaviour {
 
     private FadeBetweenAudio audioFade;
 
+    private GameObject audioManager;
+
 	void Awake() {
 		if (PlayerPrefs.GetInt("FacebookInitialised") == 0) {
 			FB.Init(SetInit, OnHideUnity);
 			PlayerPrefs.SetInt("FacebookInitialised", 1);
 		}
 
-        audioFade = GameObject.Find("AudioManager").GetComponent<FadeBetweenAudio>();
+        audioManager = GameObject.Find("AudioManager");
+        audioFade = audioManager.GetComponent<FadeBetweenAudio>();
+
+        
+        if (SFXOff != null && PlayerPrefs.GetInt("AudioEnabled") == 0) {
+            sfxEnabled = false;
+            this.renderer.material = SFXOff;
+            SetAudioMute(true);
+        }
 	}
 
 	private void SetInit() {
@@ -198,8 +208,12 @@ public class ButtonControls : MonoBehaviour {
 
 								if (sfxEnabled) {
 									this.renderer.material = SFXOn;
+                                    SetAudioMute(false);
+                                    PlayerPrefs.SetInt("AudioEnabled", 1);
 								} else {
 									this.renderer.material = SFXOff;
+                                    SetAudioMute(true);
+                                    PlayerPrefs.SetInt("AudioEnabled", 0);
 								}
 							}
                             break;
@@ -236,6 +250,18 @@ public class ButtonControls : MonoBehaviour {
                             break;
                     }
                 }
+            }
+        }
+    }
+
+    private void SetAudioMute(bool muted) {
+        if (muted) {
+            for (int i = 0; i < audioManager.transform.childCount; i++) {
+                audioManager.transform.GetChild(i).audio.volume = 0.0f;
+            }
+        } else {
+            for (int i = 0; i < audioManager.transform.childCount; i++) {
+                audioManager.transform.GetChild(i).audio.volume = PlayerPrefs.GetFloat("AudioChild" + i);
             }
         }
     }
