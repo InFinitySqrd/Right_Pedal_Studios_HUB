@@ -42,14 +42,18 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 			// Get the starting rotation
 			Vector3 startingRotation = new Vector3(0,0,0);
 
-			if (i % 2 == 0) {
-				startingRotation = new Vector3(-90.0f, -180.0f, 0.0f);
-			} else {
-				startingRotation = new Vector3(-90.0f, 0, 0.0f);
-			}
-				// Spawn the object
-			GameObject spawnedObj = (GameObject)GameObject.Instantiate(plane, spawnPoint, Quaternion.Euler(startingRotation)); 
+			// Spawn the object
+			GameObject spawnedObj = (GameObject)GameObject.Instantiate(plane, spawnPoint, Quaternion.identity); 
 			
+            
+			if (i % 2 == 0) {
+				spawnedObj.transform.eulerAngles = new Vector3(270.0f, 180.0f, 0.0f);
+                spawnedObj.transform.localScale = new Vector3(-spawnedObj.transform.localScale.x, spawnedObj.transform.localScale.y, spawnedObj.transform.localScale.z);
+			} else {
+				spawnedObj.transform.eulerAngles = new Vector3(270.0f, 180.0f, 0.0f);
+                spawnedObj.transform.localScale = new Vector3(spawnedObj.transform.localScale.x, spawnedObj.transform.localScale.y, spawnedObj.transform.localScale.z);
+			}
+
 			// Parent new object to the centre
 			spawnedObj.transform.parent = centre;
 			
@@ -84,13 +88,14 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 				
 				if (Random.value > 0.5f) {
 					environment.position = new Vector3(Random.Range(-maxXRange, -minXRange), Random.Range(minYRange, maxYRange), 0.0f);
-					environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range (0, 180));
+					environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range (-20, 20));
 				} else {
 					environment.position = new Vector3(Random.Range(minXRange, maxXRange), Random.Range(minYRange, minYRange), 0.0f);
-					environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range (180,360));
+					environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range (-20, 20));
+                    environment.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
 				}
 				
-				environment.localScale = new Vector3(7.0f, 7.0f, 7.0f);
+				environment.localScale *= 10.0f;
 				
 				environment.parent = centre;
 			}

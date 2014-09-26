@@ -207,7 +207,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f5e45ca4b15a7074ca8dd9898aacb147, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pluginPaths: []
 --- !u!1 &1104008172
 GameObject:
   m_ObjectHideFlags: 0
@@ -428,6 +427,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec3db6ea8f409b646a661fb22f191ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asset: {fileID: 11400000, guid: cf54bead0baa94793a82f1beb80ad15c, type: 2}
-  path: '{259a209b-3e09-4c38-a21f-5e99990798a3}'
-  startEventOnAwake: 1

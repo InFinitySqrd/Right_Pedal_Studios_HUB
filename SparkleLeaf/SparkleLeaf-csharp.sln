@@ -29,7 +29,10 @@ Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																																																																																																																																																											GlobalSection(MonoDevelopProperties) = preSolution
+																																																																																																																																																																																GlobalSection(MonoDevelopProperties) = preSolution
+=======
+																																																																																																																																																										GlobalSection(MonoDevelopProperties) = preSolution
+>>>>>>> origin/jamesProgramming
 =======
 																																																																																																																																															GlobalSection(MonoDevelopProperties) = preSolution
 >>>>>>> origin/development

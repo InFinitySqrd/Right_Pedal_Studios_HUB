@@ -4,13 +4,46 @@ ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
     100000: //RootNode
+    100002: plane
+    100004: planeArmature
+    100006: root
+    100008: spine_L
+    100010: spine_R
+    100012: spineController_L
+    100014: spineController_R
+    100016: wing_01_L
+    100018: wing_01_R
+    100020: wing_02_L
+    100022: wing_02_R
+    100024: wing_03_L
+    100026: wing_03_R
     400000: //RootNode
+    400002: plane
+    400004: planeArmature
+    400006: root
+    400008: spine_L
+    400010: spine_R
+    400012: spineController_L
+    400014: spineController_R
+    400016: wing_01_L
+    400018: wing_01_R
+    400020: wing_02_L
+    400022: wing_02_R
+    400024: wing_03_L
+    400026: wing_03_R
     2300000: //RootNode
     3300000: //RootNode
     4300000: Plane_002
     4300002: paperPlane
+    4300004: plane
     7400000: Default Take
+    7400002: idle
+    7400004: rotateL
+    7400006: rotateLidle
+    7400008: rotateR
+    7400010: rotateRidle
     9500000: //RootNode
+    13700000: plane
   materials:
     importMaterials: 1
     materialName: 0
@@ -26,7 +59,331 @@ ModelImporter:
     animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 19
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: plane
+        weight: 1
+      - path: planeArmature
+        weight: 1
+      - path: planeArmature/root
+        weight: 1
+      - path: planeArmature/root/spine_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L/wing_03_L
+        weight: 1
+      - path: planeArmature/root/spine_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R/wing_03_R
+        weight: 1
+      - path: planeArmature/root/spineController_L
+        weight: 1
+      - path: planeArmature/root/spineController_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: idle
+      takeName: idle
+      firstFrame: -1
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: plane
+        weight: 1
+      - path: planeArmature
+        weight: 1
+      - path: planeArmature/root
+        weight: 1
+      - path: planeArmature/root/spine_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L/wing_03_L
+        weight: 1
+      - path: planeArmature/root/spine_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R/wing_03_R
+        weight: 1
+      - path: planeArmature/root/spineController_L
+        weight: 1
+      - path: planeArmature/root/spineController_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: rotateL
+      takeName: rotateL
+      firstFrame: -1
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: plane
+        weight: 1
+      - path: planeArmature
+        weight: 1
+      - path: planeArmature/root
+        weight: 1
+      - path: planeArmature/root/spine_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L/wing_03_L
+        weight: 1
+      - path: planeArmature/root/spine_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R/wing_03_R
+        weight: 1
+      - path: planeArmature/root/spineController_L
+        weight: 1
+      - path: planeArmature/root/spineController_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: rotateLidle
+      takeName: rotateLidle
+      firstFrame: -1
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: plane
+        weight: 1
+      - path: planeArmature
+        weight: 1
+      - path: planeArmature/root
+        weight: 1
+      - path: planeArmature/root/spine_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L/wing_03_L
+        weight: 1
+      - path: planeArmature/root/spine_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R/wing_03_R
+        weight: 1
+      - path: planeArmature/root/spineController_L
+        weight: 1
+      - path: planeArmature/root/spineController_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: rotateR
+      takeName: rotateR
+      firstFrame: -1
+      lastFrame: 13
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: plane
+        weight: 1
+      - path: planeArmature
+        weight: 1
+      - path: planeArmature/root
+        weight: 1
+      - path: planeArmature/root/spine_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L/wing_03_L
+        weight: 1
+      - path: planeArmature/root/spine_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R/wing_03_R
+        weight: 1
+      - path: planeArmature/root/spineController_L
+        weight: 1
+      - path: planeArmature/root/spineController_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: rotateRidle
+      takeName: rotateRidle
+      firstFrame: -1
+      lastFrame: 9
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: plane
+        weight: 1
+      - path: planeArmature
+        weight: 1
+      - path: planeArmature/root
+        weight: 1
+      - path: planeArmature/root/spine_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L
+        weight: 1
+      - path: planeArmature/root/spine_L/wing_01_L/wing_02_L/wing_03_L
+        weight: 1
+      - path: planeArmature/root/spine_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R
+        weight: 1
+      - path: planeArmature/root/spine_R/wing_01_R/wing_02_R/wing_03_R
+        weight: 1
+      - path: planeArmature/root/spineController_L
+        weight: 1
+      - path: planeArmature/root/spineController_R
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
     isReadable: 1
   meshes:
     lODScreenPercentages: []
