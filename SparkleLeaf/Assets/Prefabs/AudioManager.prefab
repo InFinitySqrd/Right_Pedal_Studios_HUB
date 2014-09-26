@@ -26,9 +26,10 @@ GameObject:
   m_Component:
   - 4: {fileID: 400002}
   - 114: {fileID: 11400002}
+  - 114: {fileID: 11400006}
   m_Layer: 0
   m_Name: AudioManager
-  m_TagString: Untagged
+  m_TagString: FMOD_Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -504,6 +505,26 @@ MonoBehaviour:
   asset: {fileID: 11400000, guid: f172fedc52a6f4d08aa4d5e645a98b9c, type: 2}
   path: '{3f3e6f4b-0335-45ae-9e06-7f7fc25ab916}'
   startEventOnAwake: 0
+--- !u!114 &11400006
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 486f2add78514394bbba59262d3ca4bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathFadeLength: 0
+  fadeFromDeathLength: 0
+  fadeUpFromScoreLength: 0
+  menuFadeUpLength: 0
+  menuFadeDownLength: 0
+  targetScoreOne: 0
+  targetScoreTwo: 0
+  targetScoreThree: 0
+  targetScoreFour: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

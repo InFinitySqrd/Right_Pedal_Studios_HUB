@@ -113,6 +113,7 @@
      <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SendUserEvent.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetCustomArea.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Playmaker\SetCustomUserID.cs" />
+     <Compile Include="Assets\Scripts\FMOD Scripts\FMOD_Manager.cs" />
      <Compile Include="Assets\Scripts\Gameplay Scripts\DestroyEmpty.cs" />
      <Compile Include="Assets\Scripts\Gameplay Scripts\LevelLost.cs" />
      <Compile Include="Assets\Scripts\Gameplay Scripts\MovingGates.cs" />
@@ -143,6 +144,7 @@
      <Compile Include="Assets\Scripts\Visual Scripts\MonsterPopUp.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\MoonMovement.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\RandomlyGenerateEnvironment.cs" />
+     <Compile Include="Assets\Scripts\Visual Scripts\SelectiveGroundSpawning.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\SpinBrokenPlane.cs" />
      <Compile Include="Assets\Twitter iOS\Assets\Example\TweetComposer.cs" />
      <None Include="Assets\Plugins\Android\facebook\res\layout\com_facebook_usersettingsfragment.xml" />

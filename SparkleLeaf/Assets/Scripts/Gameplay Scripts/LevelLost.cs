@@ -16,6 +16,10 @@ public class LevelLost : MonoBehaviour {
     [SerializeField] GameObject brokenPlane;
     [SerializeField] ParticleSystem[] rippingEffects;
 
+    private GameObject audioManager;
+
+    private Animator killerAnim;
+
 	// FMOD relating to death and BGM
     /*
 	private FMOD.Studio.EventInstance FMOD_Music;
@@ -30,6 +34,7 @@ public class LevelLost : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
+        audioManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
 
         /*
 		FMOD_Music = FMOD_StudioSystem.instance.GetEvent ("event:Music/Gameplay");
@@ -58,7 +63,7 @@ public class LevelLost : MonoBehaviour {
 	void Update () {
 		timeUntilDeath += Time.deltaTime;
 
-        if (lost && !died) {
+        if (lost && !died && !killerAnim.GetCurrentAnimatorStateInfo(0).IsName("KillAnim")) {
             PlaneDeath();
         }
 
@@ -93,6 +98,16 @@ public class LevelLost : MonoBehaviour {
 	void OnTriggerEnter(Collider other) {
 		if (other.tag == "Obstacle") {
 			lost = true;
+
+            audioManager.GetComponent<FMOD_Manager>().PlaneDeath();
+
+            if (other.transform.parent.name.Contains("Gate")) {
+                killerAnim = other.transform.parent.FindChild("lineMonster").GetComponent<Animator>();
+                killerAnim.SetTrigger("TriggerKillAnim");
+            } else if (other.transform.parent.name.Contains("Cross")) {
+                killerAnim = other.transform.parent.FindChild("crossMonster").GetComponent<Animator>();
+                killerAnim.SetTrigger("TriggerKillAnim");
+            }
 
 			string name = other.transform.parent.GetComponent<MovingGates>().gateName;
 			GAStuff.SetObstacleDeath(name);

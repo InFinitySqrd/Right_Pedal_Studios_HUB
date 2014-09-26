@@ -1,0 +1,298 @@
+fileFormatVersion: 2
+guid: a59dd229d918cd44eba573e00bf1f12f
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: arm_L
+    100002: arm_L_0
+    100004: arm_R
+    100006: arm_R_0
+    100008: body
+    100010: head
+    100012: iMonsterArmature
+    100014: jaw
+    100016: jaw_0
+    100018: //RootNode
+    100020: root
+    100022: skull
+    400000: arm_L
+    400002: arm_L_0
+    400004: arm_R
+    400006: arm_R_0
+    400008: body
+    400010: head
+    400012: iMonsterArmature
+    400014: jaw
+    400016: jaw_0
+    400018: //RootNode
+    400020: root
+    400022: skull
+    4300000: body
+    4300002: head
+    4300004: arm_R
+    4300006: arm_L
+    4300008: jaw
+    7400000: Default Take
+    7400002: lineIdle
+    7400004: lineKill
+    7400006: lineSpawn
+    9500000: //RootNode
+    13700000: arm_L
+    13700002: arm_R
+    13700004: body
+    13700006: head
+    13700008: jaw
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 38
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_L
+        weight: 1
+      - path: arm_R
+        weight: 1
+      - path: body
+        weight: 1
+      - path: head
+        weight: 1
+      - path: iMonsterArmature
+        weight: 1
+      - path: iMonsterArmature/root
+        weight: 1
+      - path: iMonsterArmature/root/arm_L_0
+        weight: 1
+      - path: iMonsterArmature/root/arm_R_0
+        weight: 1
+      - path: iMonsterArmature/root/jaw_0
+        weight: 1
+      - path: iMonsterArmature/root/skull
+        weight: 1
+      - path: jaw
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: lineIdle
+      takeName: idle
+      firstFrame: -1
+      lastFrame: 39
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_L
+        weight: 1
+      - path: arm_R
+        weight: 1
+      - path: body
+        weight: 1
+      - path: head
+        weight: 1
+      - path: iMonsterArmature
+        weight: 1
+      - path: iMonsterArmature/root
+        weight: 1
+      - path: iMonsterArmature/root/arm_L_0
+        weight: 1
+      - path: iMonsterArmature/root/arm_R_0
+        weight: 1
+      - path: iMonsterArmature/root/jaw_0
+        weight: 1
+      - path: iMonsterArmature/root/skull
+        weight: 1
+      - path: jaw
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: lineKill
+      takeName: kill
+      firstFrame: -1
+      lastFrame: 17
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_L
+        weight: 1
+      - path: arm_R
+        weight: 1
+      - path: body
+        weight: 1
+      - path: head
+        weight: 1
+      - path: iMonsterArmature
+        weight: 1
+      - path: iMonsterArmature/root
+        weight: 1
+      - path: iMonsterArmature/root/arm_L_0
+        weight: 1
+      - path: iMonsterArmature/root/arm_R_0
+        weight: 1
+      - path: iMonsterArmature/root/jaw_0
+        weight: 1
+      - path: iMonsterArmature/root/skull
+        weight: 1
+      - path: jaw
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: lineSpawn
+      takeName: spawn
+      firstFrame: -1
+      lastFrame: 54
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: arm_L
+        weight: 1
+      - path: arm_R
+        weight: 1
+      - path: body
+        weight: 1
+      - path: head
+        weight: 1
+      - path: iMonsterArmature
+        weight: 1
+      - path: iMonsterArmature/root
+        weight: 1
+      - path: iMonsterArmature/root/arm_L_0
+        weight: 1
+      - path: iMonsterArmature/root/arm_R_0
+        weight: 1
+      - path: iMonsterArmature/root/jaw_0
+        weight: 1
+      - path: iMonsterArmature/root/skull
+        weight: 1
+      - path: jaw
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

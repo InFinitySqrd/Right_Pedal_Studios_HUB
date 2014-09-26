@@ -44,6 +44,8 @@ public class PlaneMovement : MonoBehaviour {
 
     private GameObject audioManager;
 
+    private bool gameInitliased = false;
+
     // Firefly particle effects
    [SerializeField] ParticleSystem fireflyParticles;
    [SerializeField] float particleMinSpeed = 1.0f, particleMaxSpeed = 1.0f;
@@ -136,6 +138,11 @@ public class PlaneMovement : MonoBehaviour {
 			environmentCentre.transform.Rotate(Vector3.left * forwardSpeed / 4.0f);
 					
 			PlaneRotation();
+
+            if (!gameInitliased) {
+				gameInitliased = true;
+				audioManager.GetComponent<FMOD_Manager>().ResumeGame();
+			}
 		}
 
 		if (pause.paused) {

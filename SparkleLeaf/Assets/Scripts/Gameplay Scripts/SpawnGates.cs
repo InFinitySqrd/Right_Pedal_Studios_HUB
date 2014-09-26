@@ -65,6 +65,8 @@ public class SpawnGates : MonoBehaviour {
     // Fly through audio object
     private AudioSource flyThroughSound;
 
+    private FMOD_Manager audioManager;
+
 	void Awake() {
 		gatesList = new List<Transform>();
 		planeVars = this.GetComponent<PlaneMovement>();
@@ -175,6 +177,8 @@ public class SpawnGates : MonoBehaviour {
             flyThroughSound.Play();
 
 			Destroy(currentGate.gameObject);
+
+            audioManager.GetComponent<FMOD_Manager>().SetGameplayTime(score);
 
 			GAStuff.SetScore(score);
 		}

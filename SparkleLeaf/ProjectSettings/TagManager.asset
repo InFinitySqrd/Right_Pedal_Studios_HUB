@@ -8,6 +8,7 @@ TagManager:
   - EnvironmentCentre
   - GameAnalytics
   - GUIHelp
+  - FMOD_Manager
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

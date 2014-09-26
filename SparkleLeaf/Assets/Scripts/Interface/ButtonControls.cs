@@ -38,6 +38,7 @@ public class ButtonControls : MonoBehaviour {
     private FadeBetweenAudio audioFade;
 
     private GameObject audioManager;
+    private GameObject FMODManager;
 
 	void Awake() {
 		if (PlayerPrefs.GetInt("FacebookInitialised") == 0) {
@@ -93,7 +94,9 @@ public class ButtonControls : MonoBehaviour {
 	void Start () {
 		settingsButton = this.renderer.material;
 		fadeSpeed = this.GetComponent<MenuTween>().fadeSpeed;
-
+        
+        FMODManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
+        
         getScore = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
 
         if (getScore.score == 0 && this.collider.name == "Share") {
@@ -198,6 +201,7 @@ public class ButtonControls : MonoBehaviour {
                             // Switch the the credits and game info screen
 							if (subMenuParent.inSubMenu) {
 	                            Application.LoadLevelAdditive("CreditsScreen");
+                                audioManager.GetComponent<FMOD_Manager>().MenuTransition(true);
 	                            Destroy(this.transform.root.gameObject);
 							}
                             break;
@@ -220,6 +224,7 @@ public class ButtonControls : MonoBehaviour {
                         case ButtonFunction.ExitCredits:
                             // Bring up the regular menu screen
                             Application.LoadLevelAdditive("MenuScreen");
+                            audioManager.GetComponent<FMOD_Manager>().MenuTransition(false);
                             Destroy(this.transform.root.gameObject);
                             break;
                         case ButtonFunction.ShareMenu:

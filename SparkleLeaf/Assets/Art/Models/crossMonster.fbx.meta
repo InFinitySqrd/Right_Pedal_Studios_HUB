@@ -1,0 +1,430 @@
+fileFormatVersion: 2
+guid: aadf651ea2f34db41856f298fc9a8ab4
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: body
+    100002: Bone
+    100004: Bone_001
+    100006: Bone_002
+    100008: Bone_003
+    100010: Bone_004
+    100012: Bone_005
+    100014: Bone_006
+    100016: Bone_007
+    100018: Bone_008
+    100020: Bone_009
+    100022: Bone_010
+    100024: //RootNode
+    100026: tentacle_01
+    100028: tentacle_02
+    100030: tentacle_03
+    100032: tentacle_04
+    100034: tentacle_05
+    100036: tentacle_06
+    100038: tentacle_07
+    100040: tentacle_08
+    100042: tentacle_09
+    100044: tentacle_10
+    100046: tentacleMonsterArmature
+    400000: body
+    400002: Bone
+    400004: Bone_001
+    400006: Bone_002
+    400008: Bone_003
+    400010: Bone_004
+    400012: Bone_005
+    400014: Bone_006
+    400016: Bone_007
+    400018: Bone_008
+    400020: Bone_009
+    400022: Bone_010
+    400024: //RootNode
+    400026: tentacle_01
+    400028: tentacle_02
+    400030: tentacle_03
+    400032: tentacle_04
+    400034: tentacle_05
+    400036: tentacle_06
+    400038: tentacle_07
+    400040: tentacle_08
+    400042: tentacle_09
+    400044: tentacle_10
+    400046: tentacleMonsterArmature
+    4300000: tentacle_02
+    4300002: tentacle_03
+    4300004: tentacle_04
+    4300006: tentacle_05
+    4300008: tentacle_06
+    4300010: tentacle_07
+    4300012: tentacle_08
+    4300014: tentacle_09
+    4300016: tentacle_10
+    4300018: tentacle_01
+    4300020: body
+    7400000: Default Take
+    7400002: crossKill
+    7400004: crossIdle
+    7400006: crossSpawn
+    9500000: //RootNode
+    13700000: body
+    13700002: tentacle_01
+    13700004: tentacle_02
+    13700006: tentacle_03
+    13700008: tentacle_04
+    13700010: tentacle_05
+    13700012: tentacle_06
+    13700014: tentacle_07
+    13700016: tentacle_08
+    13700018: tentacle_09
+    13700020: tentacle_10
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Default Take
+      takeName: Default Take
+      firstFrame: 0
+      lastFrame: 65
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: tentacle_01
+        weight: 1
+      - path: tentacle_02
+        weight: 1
+      - path: tentacle_03
+        weight: 1
+      - path: tentacle_04
+        weight: 1
+      - path: tentacle_05
+        weight: 1
+      - path: tentacle_06
+        weight: 1
+      - path: tentacle_07
+        weight: 1
+      - path: tentacle_08
+        weight: 1
+      - path: tentacle_09
+        weight: 1
+      - path: tentacle_10
+        weight: 1
+      - path: tentacleMonsterArmature
+        weight: 1
+      - path: tentacleMonsterArmature/Bone
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_001
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_002
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_003
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_004
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_005
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_006
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_007
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_008
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_009
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_010
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: crossKill
+      takeName: kill
+      firstFrame: -1
+      lastFrame: 59
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: tentacle_01
+        weight: 1
+      - path: tentacle_02
+        weight: 1
+      - path: tentacle_03
+        weight: 1
+      - path: tentacle_04
+        weight: 1
+      - path: tentacle_05
+        weight: 1
+      - path: tentacle_06
+        weight: 1
+      - path: tentacle_07
+        weight: 1
+      - path: tentacle_08
+        weight: 1
+      - path: tentacle_09
+        weight: 1
+      - path: tentacle_10
+        weight: 1
+      - path: tentacleMonsterArmature
+        weight: 1
+      - path: tentacleMonsterArmature/Bone
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_001
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_002
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_003
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_004
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_005
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_006
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_007
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_008
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_009
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_010
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: crossIdle
+      takeName: idle
+      firstFrame: -1
+      lastFrame: 77
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: tentacle_01
+        weight: 1
+      - path: tentacle_02
+        weight: 1
+      - path: tentacle_03
+        weight: 1
+      - path: tentacle_04
+        weight: 1
+      - path: tentacle_05
+        weight: 1
+      - path: tentacle_06
+        weight: 1
+      - path: tentacle_07
+        weight: 1
+      - path: tentacle_08
+        weight: 1
+      - path: tentacle_09
+        weight: 1
+      - path: tentacle_10
+        weight: 1
+      - path: tentacleMonsterArmature
+        weight: 1
+      - path: tentacleMonsterArmature/Bone
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_001
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_002
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_003
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_004
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_005
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_006
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_007
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_008
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_009
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_010
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: crossSpawn
+      takeName: spawn
+      firstFrame: -1
+      lastFrame: 36
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: body
+        weight: 1
+      - path: tentacle_01
+        weight: 1
+      - path: tentacle_02
+        weight: 1
+      - path: tentacle_03
+        weight: 1
+      - path: tentacle_04
+        weight: 1
+      - path: tentacle_05
+        weight: 1
+      - path: tentacle_06
+        weight: 1
+      - path: tentacle_07
+        weight: 1
+      - path: tentacle_08
+        weight: 1
+      - path: tentacle_09
+        weight: 1
+      - path: tentacle_10
+        weight: 1
+      - path: tentacleMonsterArmature
+        weight: 1
+      - path: tentacleMonsterArmature/Bone
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_001
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_002
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_003
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_004
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_005
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_006
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_007
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_008
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_009
+        weight: 1
+      - path: tentacleMonsterArmature/Bone/Bone_010
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
