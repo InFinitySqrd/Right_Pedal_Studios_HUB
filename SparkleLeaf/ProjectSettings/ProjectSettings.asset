@@ -54,6 +54,7 @@ PlayerSettings:
   xboxEnableKinectAutoTracking: 0
   xboxEnableFitness: 0
   macFullscreenMode: 2
+  d3d9FullscreenMode: 1
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
@@ -69,7 +70,7 @@ PlayerSettings:
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: b517d98dc63cb66419b730e581817c02
   iPhoneBundleVersion: 0.1.1
-  AndroidBundleVersionCode: 3
+  AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 9
   AndroidPreferredInstallLocation: 1
   aotOptions: 
@@ -97,7 +98,7 @@ PlayerSettings:
   iPadHighResLandscapeSplashScreen: {fileID: 0}
   AndroidTargetDevice: 0
   AndroidSplashScreenScale: 0
-  AndroidKeystoreName: C:/Users/Nathaniel/Documents/Repositories/Right Pedal Project/Right_Pedal_Studios_HUB/SparkleLeaf/SilentGroveKey.keystore
+  AndroidKeystoreName: C:/Users/SeveN_000/Desktop/Game Development/Right_Pedal_Studios_HUB/SparkleLeaf/SilentGroveKey.keystore
   AndroidKeyaliasName: silentgrove
   resolutionDialogBanner: {fileID: 0}
   m_BuildTargetIcons:
@@ -162,6 +163,7 @@ PlayerSettings:
   metroPackageLogo: 
   metroPackageLogo140: 
   metroPackageLogo180: 
+  metroPackageLogo240: 
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
@@ -169,26 +171,44 @@ PlayerSettings:
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: RPS Games
-  metroTileLogo80: 
-  metroTileLogo: 
-  metroTileLogo140: 
-  metroTileLogo180: 
-  metroTileWideLogo80: 
-  metroTileWideLogo: 
-  metroTileWideLogo140: 
-  metroTileWideLogo180: 
-  metroTileSmallLogo80: 
-  metroTileSmallLogo: 
-  metroTileSmallLogo140: 
-  metroTileSmallLogo180: 
-  metroSmallTile80: 
-  metroSmallTile: 
-  metroSmallTile140: 
-  metroSmallTile180: 
-  metroLargeTile80: 
-  metroLargeTile: 
-  metroLargeTile140: 
-  metroLargeTile180: 
+  metroStoreTileLogo80: 
+  metroStoreTileLogo: 
+  metroStoreTileLogo140: 
+  metroStoreTileLogo180: 
+  metroStoreTileWideLogo80: 
+  metroStoreTileWideLogo: 
+  metroStoreTileWideLogo140: 
+  metroStoreTileWideLogo180: 
+  metroStoreTileSmallLogo80: 
+  metroStoreTileSmallLogo: 
+  metroStoreTileSmallLogo140: 
+  metroStoreTileSmallLogo180: 
+  metroStoreSmallTile80: 
+  metroStoreSmallTile: 
+  metroStoreSmallTile140: 
+  metroStoreSmallTile180: 
+  metroStoreLargeTile80: 
+  metroStoreLargeTile: 
+  metroStoreLargeTile140: 
+  metroStoreLargeTile180: 
+  metroStoreSplashScreenImage: 
+  metroStoreSplashScreenImage140: 
+  metroStoreSplashScreenImage180: 
+  metroPhoneAppIcon: 
+  metroPhoneAppIcon140: 
+  metroPhoneAppIcon240: 
+  metroPhoneSmallTile: 
+  metroPhoneSmallTile140: 
+  metroPhoneSmallTile240: 
+  metroPhoneMediumTile: 
+  metroPhoneMediumTile140: 
+  metroPhoneMediumTile240: 
+  metroPhoneWideTile: 
+  metroPhoneWideTile140: 
+  metroPhoneWideTile240: 
+  metroPhoneSplashScreenImage: 
+  metroPhoneSplashScreenImage140: 
+  metroPhoneSplashScreenImage240: 
   metroTileShortName: 
   metroCommandLineArgsFile: 
   metroTileShowName: 0
@@ -198,9 +218,6 @@ PlayerSettings:
   metroDefaultTileSize: 1
   metroTileForegroundText: 1
   metroTileBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
-  metroSplashScreenImage: 
-  metroSplashScreenImage140: 
-  metroSplashScreenImage180: 
   metroSplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenUseBackgroundColor: 0
   metroCapabilities: {}
