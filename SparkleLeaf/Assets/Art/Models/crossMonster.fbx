@@ -11,8 +11,8 @@ FBXHeaderExtension:  {
 		Year: 2014
 		Month: 09
 		Day: 26
-		Hour: 19
-		Minute: 43
+		Hour: 23
+		Minute: 22
 		Second: 27
 		Millisecond: 0
 	}
@@ -21,7 +21,7 @@ FBXHeaderExtension:  {
 		FlagPLE: 0
 	}
 }
-CreationTime: "2014-09-26 19:43:27:000"
+CreationTime: "2014-09-26 23:22:27:000"
 Creator: "Blender version 2.71 (sub 0)"
 
 ; Object definitions
@@ -6573,247 +6573,247 @@ Relations:  {
 	}
 	Deformer: "Deformer::Skin body", "Skin" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster body Bone", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_001", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_001", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_001", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_001", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_001", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_001", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_001", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_001", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_001", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone_001", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone_001", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_002", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone_001", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_001", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_001", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_001", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_001", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_001", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_001", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_001", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_002", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_002", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_002", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_002", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_002", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_002", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_002", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_002", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone_002", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone_002", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_003", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone_002", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_002", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_002", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_002", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_002", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_002", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_002", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_002", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_003", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_003", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_003", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_003", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_003", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_003", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_003", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_003", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone_003", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone_003", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_004", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone_003", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_003", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_003", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_003", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_003", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_003", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_003", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_003", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_004", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_004", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_004", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_004", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_004", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_004", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_004", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_004", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone_004", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone_004", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_005", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone_004", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_004", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_004", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_004", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_004", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_004", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_004", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_004", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_005", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_005", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_005", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_005", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_005", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_005", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_005", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_005", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone_005", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone_005", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_006", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone_005", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_005", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_005", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_005", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_005", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_005", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_005", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_005", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_006", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_006", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_006", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_006", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_006", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_006", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_006", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_006", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone_006", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone_006", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_007", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone_006", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_006", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_006", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_006", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_006", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_006", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_006", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_006", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_007", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_007", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_007", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_007", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_007", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_007", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_007", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_007", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone_007", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone_007", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_008", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone_007", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_007", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_007", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_007", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_007", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_007", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_007", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_007", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_008", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_008", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_008", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_008", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_008", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_008", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_008", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_008", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone_008", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone_008", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_009", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone_008", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_008", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_008", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_008", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_008", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_008", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_008", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_008", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_009", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_009", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_009", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_009", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_009", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_009", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_009", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_009", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_04 Bone_009", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_10 Bone_009", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_03 Bone_010", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_04 Bone_009", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_009", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_009", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_009", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_009", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_009", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_009", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_009", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_07 Bone_010", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_05 Bone_010", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_08 Bone_010", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_06 Bone_010", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_09 Bone_010", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_01 Bone_010", "Cluster" {
-	}
-	Deformer: "SubDeformer::Cluster tentacle_02 Bone_010", "Cluster" {
-	}
 	Deformer: "SubDeformer::Cluster body Bone_010", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_10 Bone_010", "Cluster" {
 	}
 	Deformer: "SubDeformer::Cluster tentacle_04 Bone_010", "Cluster" {
 	}
-	Deformer: "SubDeformer::Cluster tentacle_10 Bone_010", "Cluster" {
+	Deformer: "SubDeformer::Cluster tentacle_06 Bone_010", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_05 Bone_010", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_09 Bone_010", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_02 Bone_010", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_01 Bone_010", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_08 Bone_010", "Cluster" {
+	}
+	Deformer: "SubDeformer::Cluster tentacle_03 Bone_010", "Cluster" {
 	}
 }
 
@@ -6890,248 +6890,248 @@ Connections:  {
 	Connect: "OO", "Deformer::Skin tentacle_10", "Model::tentacle_10"
 	Connect: "OO", "Deformer::Skin tentacle_01", "Model::tentacle_01"
 	Connect: "OO", "Deformer::Skin body", "Model::body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_001", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_001", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_001", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_001", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_001", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_001", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_001", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_001", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_001", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_001", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_001", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_002", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_001", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_001", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_001", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_001", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_001", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_001", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_001", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_001", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_002", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_002", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_002", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_002", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_002", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_002", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_002", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_002", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_002", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_002", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_003", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_002", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_002", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_002", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_002", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_002", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_002", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_002", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_002", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_003", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_003", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_003", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_003", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_003", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_003", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_003", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_003", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_003", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_003", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_004", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_003", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_003", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_003", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_003", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_003", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_003", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_003", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_003", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_004", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_004", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_004", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_004", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_004", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_004", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_004", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_004", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_004", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_004", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_005", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_004", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_004", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_004", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_004", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_004", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_004", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_004", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_004", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_005", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_005", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_005", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_005", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_005", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_005", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_005", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_005", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_005", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_005", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_006", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_005", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_005", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_005", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_005", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_005", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_005", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_005", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_005", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_006", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_006", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_006", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_006", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_006", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_006", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_006", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_006", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_006", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_006", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_007", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_006", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_006", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_006", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_006", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_006", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_006", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_006", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_006", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_007", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_007", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_007", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_007", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_007", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_007", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_007", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_007", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_007", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_007", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_008", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_007", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_007", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_007", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_007", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_007", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_007", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_007", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_007", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_008", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_008", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_008", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_008", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_008", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_008", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_008", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_008", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_008", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_008", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_009", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_008", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_008", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_008", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_008", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_008", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_008", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_008", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_008", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_009", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_009", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_009", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_009", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_009", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_009", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_009", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_009", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_009", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_009", "Deformer::Skin tentacle_10"
-	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_010", "Deformer::Skin tentacle_03"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_009", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_009", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_009", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_009", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_009", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_009", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_009", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_009", "Deformer::Skin tentacle_03"
 	Connect: "OO", "SubDeformer::Cluster tentacle_07 Bone_010", "Deformer::Skin tentacle_07"
-	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_010", "Deformer::Skin tentacle_05"
-	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_010", "Deformer::Skin tentacle_08"
-	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_010", "Deformer::Skin tentacle_06"
-	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_010", "Deformer::Skin tentacle_09"
-	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_010", "Deformer::Skin tentacle_01"
-	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_010", "Deformer::Skin tentacle_02"
 	Connect: "OO", "SubDeformer::Cluster body Bone_010", "Deformer::Skin body"
-	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_010", "Deformer::Skin tentacle_04"
 	Connect: "OO", "SubDeformer::Cluster tentacle_10 Bone_010", "Deformer::Skin tentacle_10"
-	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_03 Bone"
+	Connect: "OO", "SubDeformer::Cluster tentacle_04 Bone_010", "Deformer::Skin tentacle_04"
+	Connect: "OO", "SubDeformer::Cluster tentacle_06 Bone_010", "Deformer::Skin tentacle_06"
+	Connect: "OO", "SubDeformer::Cluster tentacle_05 Bone_010", "Deformer::Skin tentacle_05"
+	Connect: "OO", "SubDeformer::Cluster tentacle_09 Bone_010", "Deformer::Skin tentacle_09"
+	Connect: "OO", "SubDeformer::Cluster tentacle_02 Bone_010", "Deformer::Skin tentacle_02"
+	Connect: "OO", "SubDeformer::Cluster tentacle_01 Bone_010", "Deformer::Skin tentacle_01"
+	Connect: "OO", "SubDeformer::Cluster tentacle_08 Bone_010", "Deformer::Skin tentacle_08"
+	Connect: "OO", "SubDeformer::Cluster tentacle_03 Bone_010", "Deformer::Skin tentacle_03"
 	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_07 Bone"
-	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_05 Bone"
-	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_08 Bone"
-	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_06 Bone"
-	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_09 Bone"
-	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_01 Bone"
-	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_02 Bone"
 	Connect: "OO", "Model::Bone", "SubDeformer::Cluster body Bone"
-	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_04 Bone"
 	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_10 Bone"
-	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_03 Bone_001"
+	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_04 Bone"
+	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_06 Bone"
+	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_05 Bone"
+	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_09 Bone"
+	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_02 Bone"
+	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_01 Bone"
+	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_08 Bone"
+	Connect: "OO", "Model::Bone", "SubDeformer::Cluster tentacle_03 Bone"
 	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_07 Bone_001"
-	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_05 Bone_001"
-	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_08 Bone_001"
-	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_06 Bone_001"
-	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_09 Bone_001"
-	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_01 Bone_001"
-	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_02 Bone_001"
 	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster body Bone_001"
-	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_04 Bone_001"
 	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_10 Bone_001"
-	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_03 Bone_002"
+	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_04 Bone_001"
+	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_06 Bone_001"
+	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_05 Bone_001"
+	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_09 Bone_001"
+	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_02 Bone_001"
+	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_01 Bone_001"
+	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_08 Bone_001"
+	Connect: "OO", "Model::Bone_001", "SubDeformer::Cluster tentacle_03 Bone_001"
 	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_07 Bone_002"
-	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_05 Bone_002"
-	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_08 Bone_002"
-	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_06 Bone_002"
-	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_09 Bone_002"
-	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_01 Bone_002"
-	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_02 Bone_002"
 	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster body Bone_002"
-	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_04 Bone_002"
 	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_10 Bone_002"
-	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_03 Bone_003"
+	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_04 Bone_002"
+	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_06 Bone_002"
+	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_05 Bone_002"
+	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_09 Bone_002"
+	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_02 Bone_002"
+	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_01 Bone_002"
+	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_08 Bone_002"
+	Connect: "OO", "Model::Bone_002", "SubDeformer::Cluster tentacle_03 Bone_002"
 	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_07 Bone_003"
-	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_05 Bone_003"
-	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_08 Bone_003"
-	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_06 Bone_003"
-	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_09 Bone_003"
-	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_01 Bone_003"
-	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_02 Bone_003"
 	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster body Bone_003"
-	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_04 Bone_003"
 	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_10 Bone_003"
-	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_03 Bone_004"
+	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_04 Bone_003"
+	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_06 Bone_003"
+	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_05 Bone_003"
+	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_09 Bone_003"
+	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_02 Bone_003"
+	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_01 Bone_003"
+	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_08 Bone_003"
+	Connect: "OO", "Model::Bone_003", "SubDeformer::Cluster tentacle_03 Bone_003"
 	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_07 Bone_004"
-	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_05 Bone_004"
-	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_08 Bone_004"
-	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_06 Bone_004"
-	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_09 Bone_004"
-	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_01 Bone_004"
-	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_02 Bone_004"
 	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster body Bone_004"
-	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_04 Bone_004"
 	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_10 Bone_004"
-	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_03 Bone_005"
+	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_04 Bone_004"
+	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_06 Bone_004"
+	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_05 Bone_004"
+	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_09 Bone_004"
+	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_02 Bone_004"
+	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_01 Bone_004"
+	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_08 Bone_004"
+	Connect: "OO", "Model::Bone_004", "SubDeformer::Cluster tentacle_03 Bone_004"
 	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_07 Bone_005"
-	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_05 Bone_005"
-	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_08 Bone_005"
-	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_06 Bone_005"
-	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_09 Bone_005"
-	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_01 Bone_005"
-	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_02 Bone_005"
 	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster body Bone_005"
-	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_04 Bone_005"
 	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_10 Bone_005"
-	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_03 Bone_006"
+	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_04 Bone_005"
+	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_06 Bone_005"
+	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_05 Bone_005"
+	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_09 Bone_005"
+	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_02 Bone_005"
+	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_01 Bone_005"
+	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_08 Bone_005"
+	Connect: "OO", "Model::Bone_005", "SubDeformer::Cluster tentacle_03 Bone_005"
 	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_07 Bone_006"
-	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_05 Bone_006"
-	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_08 Bone_006"
-	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_06 Bone_006"
-	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_09 Bone_006"
-	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_01 Bone_006"
-	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_02 Bone_006"
 	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster body Bone_006"
-	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_04 Bone_006"
 	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_10 Bone_006"
-	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_03 Bone_007"
+	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_04 Bone_006"
+	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_06 Bone_006"
+	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_05 Bone_006"
+	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_09 Bone_006"
+	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_02 Bone_006"
+	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_01 Bone_006"
+	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_08 Bone_006"
+	Connect: "OO", "Model::Bone_006", "SubDeformer::Cluster tentacle_03 Bone_006"
 	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_07 Bone_007"
-	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_05 Bone_007"
-	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_08 Bone_007"
-	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_06 Bone_007"
-	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_09 Bone_007"
-	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_01 Bone_007"
-	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_02 Bone_007"
 	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster body Bone_007"
-	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_04 Bone_007"
 	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_10 Bone_007"
-	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_03 Bone_008"
+	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_04 Bone_007"
+	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_06 Bone_007"
+	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_05 Bone_007"
+	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_09 Bone_007"
+	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_02 Bone_007"
+	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_01 Bone_007"
+	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_08 Bone_007"
+	Connect: "OO", "Model::Bone_007", "SubDeformer::Cluster tentacle_03 Bone_007"
 	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_07 Bone_008"
-	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_05 Bone_008"
-	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_08 Bone_008"
-	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_06 Bone_008"
-	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_09 Bone_008"
-	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_01 Bone_008"
-	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_02 Bone_008"
 	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster body Bone_008"
-	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_04 Bone_008"
 	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_10 Bone_008"
-	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_03 Bone_009"
+	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_04 Bone_008"
+	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_06 Bone_008"
+	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_05 Bone_008"
+	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_09 Bone_008"
+	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_02 Bone_008"
+	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_01 Bone_008"
+	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_08 Bone_008"
+	Connect: "OO", "Model::Bone_008", "SubDeformer::Cluster tentacle_03 Bone_008"
 	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_07 Bone_009"
-	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_05 Bone_009"
-	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_08 Bone_009"
-	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_06 Bone_009"
-	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_09 Bone_009"
-	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_01 Bone_009"
-	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_02 Bone_009"
 	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster body Bone_009"
-	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_04 Bone_009"
 	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_10 Bone_009"
-	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_03 Bone_010"
+	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_04 Bone_009"
+	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_06 Bone_009"
+	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_05 Bone_009"
+	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_09 Bone_009"
+	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_02 Bone_009"
+	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_01 Bone_009"
+	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_08 Bone_009"
+	Connect: "OO", "Model::Bone_009", "SubDeformer::Cluster tentacle_03 Bone_009"
 	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_07 Bone_010"
-	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_05 Bone_010"
-	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_08 Bone_010"
-	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_06 Bone_010"
-	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_09 Bone_010"
-	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_01 Bone_010"
-	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_02 Bone_010"
 	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster body Bone_010"
-	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_04 Bone_010"
 	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_10 Bone_010"
+	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_04 Bone_010"
+	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_06 Bone_010"
+	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_05 Bone_010"
+	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_09 Bone_010"
+	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_02 Bone_010"
+	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_01 Bone_010"
+	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_08 Bone_010"
+	Connect: "OO", "Model::Bone_010", "SubDeformer::Cluster tentacle_03 Bone_010"
 	Connect: "OO", "Model::Bone", "Model::tentacleMonsterArmature"
 	Connect: "OO", "Model::Bone_001", "Model::Bone"
 	Connect: "OO", "Model::Bone_002", "Model::Bone"
@@ -7177,11 +7177,11 @@ Takes:  {
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: 6.791664123535156
+						Default: 0.000000000000000
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,6.791664123535156,L
+							1924423250,0.000000000000000,L
 						Color: 0,0,1
 					}
 					LayerType: 1
@@ -7247,11 +7247,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 0.601929843425751
+						Default: 0.601929724216461
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,0.601929843425751,L
+							1924423250,0.601929724216461,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -7274,113 +7274,85 @@ Takes:  {
 				}
 				Channel: "R" {
 					Channel: "X" {
-						Default: 0.000007675652867
+						Default: 0.000007177342490
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000007675652867,L,
-							125087511250,0.000006115564842,L
+							0,0.000007177342490,L,
+							125087511250,0.000007691055504,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.000005398241368
+						Default: 0.000006045032861
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000005398241368,L,
-							125087511250,0.000007117341656,L
+							0,0.000006045032861,L,
+							125087511250,0.000005376276101,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: -72.807132287887498
+						Default: -77.794010495257552
 						KeyVer: 4005
-						KeyCount: 64
+						KeyCount: 38
 						Key: 
-							0,-72.807132287887498,L,
-							1924423250,-73.302361983847732,L,
-							3848846500,-74.125181212779651,L,
-							5773269750,-75.254512010904605,L,
-							7697693000,-76.646866563777223,L,
-							9622116250,-78.233888338184087,L,
-							13470962750,-81.616102392521157,L,
-							15395386000,-83.203335902792290,L,
-							17319809250,-84.596004644366715,L,
-							19244232500,-85.725656461382670,L,
-							21168655750,-86.548762558259725,L,
-							23093079000,-87.044176669327555,L,
-							25017502250,-87.208032907515928,L,
-							26941925500,-86.984699382035160,L,
-							28866348750,-86.310170390173184,L,
-							30790772000,-85.196999819624452,L,
-							32715195250,-83.693067296470673,L,
-							34639618500,-81.890539393371881,L,
-							38488465000,-77.959478658090049,L,
-							40412888250,-76.157230792747214,L,
-							42337311500,-74.653673929997794,L,
-							44261734750,-73.540865359475063,L,
-							46186158000,-72.866589084612372,L,
-							48110581250,-72.643337521401662,L,
-							50035004500,-72.833428516192015,L,
-							51959427750,-73.407922557470130,L,
-							53883851000,-74.359784550390913,L,
-							55808274250,-75.657595624772341,L,
-							57732697500,-77.238743436492996,L,
-							59657120750,-79.007571186226997,L,
-							61581544000,-80.842364902964889,L,
-							63505967250,-82.611363407428129,L,
-							65430390500,-84.192818577661441,L,
-							67354813750,-85.490977991690542,L,
-							69279237000,-86.443154173313147,L,
-							71203660250,-87.017873610833874,L,
-							73128083500,-87.208032907515928,L,
-							75052506750,-87.017873610833874,L,
-							76976930000,-86.443161003502311,L,
-							78901353250,-85.490977991690542,L,
-							80825776500,-84.192818577661441,L,
-							82750199750,-82.611363407428129,L,
-							84674623000,-80.842364902964889,L,
-							86599046250,-79.007571186226997,L,
-							88523469500,-77.238743436492996,L,
-							90447892750,-75.657595624772341,L,
-							92372316000,-74.359784550390913,L,
-							94296739250,-73.407922557470130,L,
-							96221162500,-72.833421686002836,L,
-							98145585750,-72.643337521401662,L,
-							100070009000,-72.833428516192015,L,
-							101994432250,-73.407922557470130,L,
-							103918855500,-74.359784550390913,L,
-							105843278750,-75.657595624772341,L,
-							107767702000,-77.238743436492996,L,
-							109692125250,-79.007571186226997,L,
-							111616548500,-80.842364902964889,L,
-							113540971750,-82.611363407428129,L,
-							115465395000,-84.192818577661441,L,
-							117389818250,-85.490977991690542,L,
-							119314241500,-86.443154173313147,L,
-							121238664750,-87.017873610833874,L,
-							123163088000,-87.208032907515928,L,
-							125087511250,-87.017873610833874,L
+							0,-77.794010495257552,L,
+							1924423250,-90.970039630651016,L,
+							3848846500,-102.593676050729513,L,
+							5773269750,-112.091245336915364,L,
+							7697693000,-120.740669052726929,L,
+							9622116250,-123.820565274021334,L,
+							11546539500,-121.729502859624930,L,
+							13470962750,-115.238842393262843,L,
+							15395386000,-104.564260758356241,L,
+							17319809250,-91.160711191520818,L,
+							19244232500,-77.530904778239872,L,
+							21168655750,-65.890397790911450,L,
+							23093079000,-57.238429829634072,L,
+							25017502250,-49.878713168753727,L,
+							26941925500,-42.897020157676373,L,
+							28866348750,-38.204758745059813,L,
+							30790772000,-36.727743997425016,L,
+							32715195250,-37.728028616466531,L,
+							34639618500,-40.760246702259728,L,
+							36564041750,-45.751407438239376,L,
+							38488465000,-52.366431989008881,L,
+							40412888250,-59.927738268147273,L,
+							42337311500,-67.495943038347363,L,
+							44261734750,-74.127127816693104,L,
+							46186158000,-79.133635987737748,L,
+							48110581250,-82.171840734338446,L,
+							50035004500,-83.165906466140669,L,
+							51959427750,-82.923120561903744,L,
+							53883851000,-82.216291605456831,L,
+							55808274250,-81.074386429069889,L,
+							57732697500,-79.583779604986788,L,
+							59657120750,-77.895834955403956,L,
+							61581544000,-76.207623928443496,L,
+							63505967250,-74.717037594927916,L,
+							65430390500,-73.577270267751175,L,
+							67354813750,-72.876260632477099,L,
+							69279237000,-72.643337521401662,L,
+							125087511250,-72.643337521401662,L
 						Color: 0,0,1
 					}
 					LayerType: 2
 				}
 				Channel: "S" {
 					Channel: "X" {
-						Default: 0.999999940395355
+						Default: 0.999999880790710
 						KeyVer: 4005
-						KeyCount: 2
+						KeyCount: 1
 						Key: 
-							0,0.999999940395355,L,
-							125087511250,0.999999821186066,L
+							1924423250,0.999999880790710,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.999999940395355
+						Default: 0.999999880790710
 						KeyVer: 4005
-						KeyCount: 2
+						KeyCount: 1
 						Key: 
-							0,0.999999940395355,L,
-							125087511250,0.999999821186066,L
+							1924423250,0.999999880790710,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -7400,11 +7372,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 1.995176553726196
+						Default: 1.995176434516907
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,1.995176553726196,L
+							1924423250,1.995176434516907,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -7427,112 +7399,87 @@ Takes:  {
 				}
 				Channel: "R" {
 					Channel: "X" {
-						Default: 0.000010349125558
+						Default: 0.000010045338516
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000010349125558,L,
-							125087511250,0.000009273650660,L
+							0,0.000010045338516,L,
+							125087511250,0.000010371611112,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.000004145544132
+						Default: 0.000004835403898
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000004145544132,L,
-							125087511250,0.000006187838851,L
+							0,0.000004835403898,L,
+							125087511250,0.000004088964252,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: -63.070267324130604
+						Default: -66.944944847814057
 						KeyVer: 4005
-						KeyCount: 63
+						KeyCount: 38
 						Key: 
-							0,-63.070267324130604,L,
-							1924423250,-64.012580712591713,L,
-							3848846500,-65.546408973742601,L,
-							5773269750,-67.554914891641175,L,
-							9622116250,-72.109182577361580,L,
-							11546539500,-74.118043665096991,L,
-							13470962750,-75.652288567787238,L,
-							15395386000,-76.594916144950176,L,
-							17319809250,-76.907936884422242,L,
-							19244232500,-76.690921283923743,L,
-							21168655750,-76.035496331170265,L,
-							23093079000,-74.953915385532781,L,
-							25017502250,-73.492739846583220,L,
-							26941925500,-71.741533984907832,L,
-							30790772000,-67.922522502959893,L,
-							32715195250,-66.171576188472969,L,
-							34639618500,-64.710748989171080,L,
-							36564041750,-63.629495892613761,L,
-							38488465000,-62.974296336102888,L,
-							40412888250,-62.757362697874427,L,
-							42337311500,-62.942078333787990,L,
-							44261734750,-63.500316524841494,L,
-							46186158000,-64.425192440351594,L,
-							48110581250,-65.686154644160851,L,
-							50035004500,-67.222311999818714,L,
-							51959427750,-68.940753444045598,L,
-							53883851000,-70.723234741930440,L,
-							55808274250,-72.441833280508234,L,
-							57732697500,-73.978270673922054,L,
-							59657120750,-75.239547066433133,L,
-							61581544000,-76.164716680077547,L,
-							63505967250,-76.723152946616977,L,
-							65430390500,-76.907936884422242,L,
-							67354813750,-76.723152946616977,L,
-							69279237000,-76.164716680077547,L,
-							71203660250,-75.239547066433133,L,
-							73128083500,-73.978270673922054,L,
-							75052506750,-72.441833280508234,L,
-							76976930000,-70.723234741930440,L,
-							78901353250,-68.940753444045598,L,
-							80825776500,-67.222311999818714,L,
-							82750199750,-65.686154644160851,L,
-							84674623000,-64.425192440351594,L,
-							86599046250,-63.500316524841494,L,
-							88523469500,-62.942078333787990,L,
-							90447892750,-62.757362697874427,L,
-							92372316000,-62.916533426292176,L,
-							94296739250,-63.397740743886395,L,
-							96221162500,-64.197248537181082,L,
-							98145585750,-65.294518427342055,L,
-							100070009000,-66.647285203785330,L,
-							101994432250,-68.189111616454284,L,
-							105843278750,-71.474924380845934,L,
-							107767702000,-73.016948869000814,L,
-							109692125250,-74.369995683200059,L,
-							111616548500,-75.467566101684511,L,
-							113540971750,-76.267333442167669,L,
-							115465395000,-76.748711514491134,L,
-							117389818250,-76.907936884422242,L,
-							119314241500,-76.786161441710263,L,
-							121238664750,-76.417911792609559,L,
-							123163088000,-75.803905106982967,L,
-							125087511250,-74.953915385532781,L
+							0,-66.944944847814057,L,
+							1924423250,-79.098228287080445,L,
+							3848846500,-94.199926806118683,L,
+							5773269750,-105.669679064197027,L,
+							7697693000,-115.056380719775376,L,
+							9622116250,-123.250435723622843,L,
+							11546539500,-126.109730495104486,L,
+							13470962750,-124.098431029835382,L,
+							15395386000,-117.905580471663768,L,
+							17319809250,-107.850456013341415,L,
+							19244232500,-95.393037910713133,L,
+							21168655750,-82.835482404663438,L,
+							23093079000,-72.119803521520936,L,
+							25017502250,-64.100942869884051,L,
+							26941925500,-57.185888599443821,L,
+							28866348750,-50.612408674300859,L,
+							30790772000,-46.244451473665208,L,
+							32715195250,-44.886521074209412,L,
+							34639618500,-45.500182835282914,L,
+							36564041750,-47.351983723054111,L,
+							38488465000,-50.376500770558131,L,
+							40412888250,-54.351404490122206,L,
+							42337311500,-58.868717437338319,L,
+							44261734750,-63.386983195943635,L,
+							46186158000,-67.363737896772790,L,
+							48110581250,-70.388835510356259,L,
+							50035004500,-72.238218511161278,L,
+							51959427750,-72.846248781264109,L,
+							53883851000,-72.564564949704021,L,
+							55808274250,-71.733262625822960,L,
+							57732697500,-70.402222681129459,L,
+							59657120750,-68.709961351991197,L,
+							61581544000,-66.884122013255180,L,
+							63505967250,-65.191744570901022,L,
+							65430390500,-63.861592550799635,L,
+							67354813750,-63.033363812045074,L,
+							69279237000,-62.757362697874427,L,
+							125087511250,-62.757362697874427,L
 						Color: 0,0,1
 					}
 					LayerType: 2
 				}
 				Channel: "S" {
 					Channel: "X" {
-						Default: 1.000000000000000
+						Default: 0.999999761581421
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,1.000000000000000,L,
-							125087511250,0.999999821186066,L
+							0,0.999999761581421,L,
+							125087511250,1.000000000000000,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 1.000000000000000
+						Default: 0.999999761581421
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,1.000000000000000,L,
-							125087511250,0.999999821186066,L
+							0,0.999999761581421,L,
+							125087511250,1.000000000000000,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -7579,112 +7526,85 @@ Takes:  {
 				}
 				Channel: "R" {
 					Channel: "X" {
-						Default: 0.000016005720380
+						Default: 0.000015919862299
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000016005720380,L,
-							125087511250,0.000015570225602,L
+							0,0.000015919862299,L,
+							125087511250,0.000016017025038,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.000003280769939
+						Default: 0.000003674851758
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000003280769939,L,
-							125087511250,0.000004951220056,L
+							0,0.000003674851758,L,
+							125087511250,0.000003225129468,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: -58.220628107753420
+						Default: -59.635051001834306
 						KeyVer: 4005
-						KeyCount: 63
+						KeyCount: 38
 						Key: 
-							0,-58.220628107753420,L,
-							1924423250,-58.821179320715096,L,
-							3848846500,-59.806365806596318,L,
-							5773269750,-61.119927297203773,L,
-							7697693000,-62.658324954909382,L,
-							9622116250,-64.277182241037636,L,
-							11546539500,-65.815675521391626,L,
-							13470962750,-67.129400936539156,L,
-							15395386000,-68.114751346960460,L,
-							17319809250,-68.715425503327197,L,
-							19244232500,-68.914573328956976,L,
-							21168655750,-68.747363467886132,L,
-							23093079000,-68.242455393872007,L,
-							25017502250,-67.409506994400985,L,
-							26941925500,-66.284649970182372,L,
-							28866348750,-64.936992175238260,L,
-							32715195250,-61.998542341465445,L,
-							34639618500,-60.650993829548050,L,
-							36564041750,-59.526300729869519,L,
-							38488465000,-58.693502594560229,L,
-							40412888250,-58.188703803572821,L,
-							42337311500,-58.021528093447834,L,
-							44261734750,-58.220628107753420,L,
-							46186158000,-58.821179320715096,L,
-							48110581250,-59.806365806596318,L,
-							50035004500,-61.119927297203773,L,
-							51959427750,-62.658324954909382,L,
-							53883851000,-64.277182241037636,L,
-							55808274250,-65.815675521391626,L,
-							57732697500,-67.129400936539156,L,
-							59657120750,-68.114751346960460,L,
-							61581544000,-68.715425503327197,L,
-							63505967250,-68.914573328956976,L,
-							65430390500,-68.747363467886132,L,
-							67354813750,-68.242455393872007,L,
-							69279237000,-67.409506994400985,L,
-							71203660250,-66.284649970182372,L,
-							73128083500,-64.936992175238260,L,
-							76976930000,-61.998542341465445,L,
-							78901353250,-60.651000659737221,L,
-							80825776500,-59.526300729869519,L,
-							82750199750,-58.693502594560229,L,
-							84674623000,-58.188703803572821,L,
-							86599046250,-58.021528093447834,L,
-							88523469500,-58.262647431527277,L,
-							90447892750,-58.988607747839374,L,
-							92372316000,-60.169738700629644,L,
-							94296739250,-61.715663226800601,L,
-							98145585750,-65.219891780470604,L,
-							100070009000,-66.765980231181643,L,
-							101994432250,-67.947302429268674,L,
-							103918855500,-68.673399349364175,L,
-							105843278750,-68.914573328956976,L,
-							107767702000,-68.865061287663622,L,
-							109692125250,-68.715425503327197,L,
-							111616548500,-68.465003447598207,L,
-							113540971750,-68.114751346960460,L,
-							115465395000,-67.667708635594593,L,
-							117389818250,-67.129400936539156,L,
-							119314241500,-66.508236212662410,L,
-							121238664750,-65.815675521391626,L,
-							123163088000,-65.066246675091392,L,
-							125087511250,-64.277182241037636,L
+							0,-59.635051001834306,L,
+							1924423250,-64.532576674482385,L,
+							3848846500,-71.753138476307669,L,
+							5773269750,-79.139598742883152,L,
+							7697693000,-84.945614707222489,L,
+							9622116250,-90.430003893735559,L,
+							11546539500,-95.577036376763843,L,
+							13470962750,-97.435203000841483,L,
+							15395386000,-94.954908596214125,L,
+							17319809250,-87.255461741112427,L,
+							19244232500,-74.605596228430144,L,
+							21168655750,-58.958213406032861,L,
+							23093079000,-43.728780104231824,L,
+							25017502250,-31.794001246702997,L,
+							26941925500,-24.230022656051844,L,
+							28866348750,-19.520789930895116,L,
+							30790772000,-16.464816447168644,L,
+							32715195250,-15.130624370173196,L,
+							34639618500,-14.862466020717005,L,
+							36564041750,-15.991405790511987,L,
+							38488465000,-19.416619300768815,L,
+							40412888250,-25.061517932776951,L,
+							42337311500,-32.547227678181748,L,
+							44261734750,-41.093317462040339,L,
+							46186158000,-49.616686621624908,L,
+							48110581250,-57.044609551556896,L,
+							50035004500,-62.620615480501797,L,
+							51959427750,-65.989756552767489,L,
+							53883851000,-67.091670971564056,L,
+							55808274250,-66.769770986170997,L,
+							57732697500,-65.827833258114225,L,
+							59657120750,-64.350012548157366,L,
+							61581544000,-62.550968041535278,L,
+							63505967250,-60.751698138670577,L,
+							65430390500,-59.274376032523129,L,
+							67354813750,-58.335921700943068,L,
+							69279237000,-58.021528093447834,L,
+							125087511250,-58.021528093447834,L
 						Color: 0,0,1
 					}
 					LayerType: 2
 				}
 				Channel: "S" {
 					Channel: "X" {
-						Default: 0.999999940395355
+						Default: 0.999999880790710
 						KeyVer: 4005
-						KeyCount: 2
+						KeyCount: 1
 						Key: 
-							0,0.999999940395355,L,
-							125087511250,1.000000000000000,L
+							1924423250,0.999999880790710,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.999999940395355
+						Default: 0.999999880790710
 						KeyVer: 4005
-						KeyCount: 2
+						KeyCount: 1
 						Key: 
-							0,0.999999940395355,L,
-							125087511250,1.000000000000000,L
+							1924423250,0.999999880790710,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -7704,11 +7624,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 3.242973327636719
+						Default: 3.242973804473877
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,3.242973327636719,L
+							1924423250,3.242973804473877,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -7739,101 +7659,77 @@ Takes:  {
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.000002137391573
+						Default: 0.000002618026819
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000002137391573,L,
-							125087511250,0.000006308943788,L
+							0,0.000002618026819,L,
+							125087511250,0.000002097038528,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: 49.498169179147013
+						Default: 48.313892924243959
 						KeyVer: 4005
-						KeyCount: 62
+						KeyCount: 38
 						Key: 
-							0,49.498169179147013,L,
-							1924423250,49.197838931152816,L,
-							3848846500,48.697151914045754,L,
-							5773269750,48.004160920857252,L,
-							7697693000,47.136525405686363,L,
-							9622116250,46.123143898911373,L,
-							11546539500,45.004358912864888,L,
-							15395386000,42.655801781853967,L,
-							17319809250,41.536928003348272,L,
-							19244232500,40.523423553168215,L,
-							21168655750,39.655648019119340,L,
-							23093079000,38.962513591958277,L,
-							25017502250,38.461717291824492,L,
-							26941925500,38.161315326844004,L,
-							28866348750,38.061970225366316,L,
-							30790772000,38.140394457416285,L,
-							32715195250,38.377514719736695,L,
-							34639618500,38.773638370840182,L,
-							36564041750,39.324725353832704,L,
-							38488465000,40.021213403876239,L,
-							40412888250,40.846833010367853,L,
-							42337311500,41.778088322562738,L,
-							44261734750,42.784523526951837,L,
-							48110581250,44.875637167767010,L,
-							50035004500,45.882004070264415,L,
-							51959427750,46.813160344716330,L,
-							53883851000,47.638657007802884,L,
-							55808274250,48.335011869157611,L,
-							57732697500,48.885992984217992,L,
-							59657120750,49.282021012673106,L,
-							61581544000,49.519086633480150,L,
-							63505967250,49.597490374962611,L,
-							65430390500,49.342191564166242,L,
-							67354813750,48.573525490068697,L,
-							69279237000,47.322805154919855,L,
-							71203660250,45.685660037288926,L,
-							75052506750,41.974449431011152,L,
-							76976930000,40.337116483178043,L,
-							78901353250,39.086170751786597,L,
-							80825776500,38.317330507865215,L,
-							82750199750,38.061970225366316,L,
-							84674623000,38.317330507865215,L,
-							86599046250,39.086167336692007,L,
-							88523469500,40.337116483178043,L,
-							90447892750,41.974449431011152,L,
-							94296739250,45.685660037288926,L,
-							96221162500,47.322805154919855,L,
-							98145585750,48.573525490068697,L,
-							100070009000,49.342191564166242,L,
-							101994432250,49.597490374962611,L,
-							103918855500,49.484426838536969,L,
-							105843278750,49.142569040389155,L,
-							107767702000,48.573525490068697,L,
-							109692125250,47.788880188407930,L,
-							111616548500,46.813160344716330,L,
-							113540971750,45.685660037288926,L,
-							115465395000,44.459968930353561,L,
-							117389818250,43.200212254932801,L,
-							119314241500,41.974449431011152,L,
-							121238664750,40.846836425462442,L,
-							123163088000,39.870959487419931,L,
-							125087511250,39.086170751786597,L
+							0,48.313892924243959,L,
+							1924423250,44.315626542623889,L,
+							3848846500,37.878835778245609,L,
+							5773269750,30.130891164942302,L,
+							7697693000,22.547449950251224,L,
+							9622116250,16.118228743020602,L,
+							11546539500,8.885432364844549,L,
+							13470962750,1.294595122499415,L,
+							15395386000,-1.596662372976910,L,
+							17319809250,0.697979005634157,L,
+							19244232500,7.854025988849915,L,
+							21168655750,19.711517840825568,L,
+							23093079000,34.682092095725380,L,
+							25017502250,49.878764395172503,L,
+							26941925500,62.720855336760764,L,
+							28866348750,72.095324123535647,L,
+							30790772000,79.863175323174929,L,
+							32715195250,87.081660747492535,L,
+							34639618500,91.878284035532147,L,
+							36564041750,93.380065049097382,L,
+							38488465000,92.225134701963242,L,
+							40412888250,88.714779468607745,L,
+							42337311500,82.909924636427306,L,
+							44261734750,75.177248911013535,L,
+							46186158000,66.306438273634669,L,
+							48110581250,57.422076540942527,L,
+							50035004500,49.657418454740217,L,
+							51959427750,43.820977412743105,L,
+							53883851000,40.295322555646798,L,
+							55808274250,39.146798925954123,L,
+							57732697500,39.632770300494421,L,
+							59657120750,41.037900722209521,L,
+							61581544000,43.171300064176179,L,
+							63505967250,45.590354992705294,L,
+							65430390500,47.723713353536930,L,
+							67354813750,49.124120699440972,L,
+							69279237000,49.597490374962611,L,
+							125087511250,49.597490374962611,L
 						Color: 0,0,1
 					}
 					LayerType: 2
 				}
 				Channel: "S" {
 					Channel: "X" {
-						Default: 1.000000357627869
+						Default: 1.000000000000000
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,1.000000357627869,L,
-							125087511250,1.000000119209290,L
+							0,1.000000000000000,L,
+							125087511250,1.000000238418579,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 1.000000238418579
+						Default: 0.999999940395355
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,1.000000238418579,L,
+							0,0.999999940395355,L,
 							125087511250,1.000000000000000,L
 						Color: 0,1,0
 					}
@@ -7889,83 +7785,56 @@ Takes:  {
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.000001993137694
+						Default: 0.000003543297910
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000001993137694,L,
-							125087511250,0.000007196115192,L
+							0,0.000003543297910,L,
+							125087511250,0.000001894175727,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: 49.688263589031955
+						Default: 47.274358623137026
 						KeyVer: 4005
-						KeyCount: 64
+						KeyCount: 37
 						Key: 
-							0,49.688263589031955,L,
-							1924423250,49.224210291538199,L,
-							3848846500,48.463118897230189,L,
-							5773269750,47.448606994147553,L,
-							7697693000,46.260703908795229,L,
-							9622116250,45.010775875590106,L,
-							11546539500,43.822824978913587,L,
-							13470962750,42.808237943750086,L,
-							15395386000,42.047074832455792,L,
-							17319809250,41.582960063259506,L,
-							19244232500,41.429069071070174,L,
-							21168655750,41.582960063259506,L,
-							23093079000,42.047071417361209,L,
-							25017502250,42.808237943750086,L,
-							26941925500,43.822824978913587,L,
-							28866348750,45.010775875590106,L,
-							30790772000,46.260700493700647,L,
-							32715195250,47.448606994147553,L,
-							34639618500,48.463118897230189,L,
-							36564041750,49.224210291538199,L,
-							38488465000,49.688263589031955,L,
-							40412888250,49.842134090653779,L,
-							42337311500,49.655792869717757,L,
-							44261734750,49.094856753942096,L,
-							46186158000,48.182452763856425,L,
-							48110581250,46.988580093169517,L,
-							51959427750,44.282882615742892,L,
-							53883851000,43.088931397880529,L,
-							55808274250,42.176438615335648,L,
-							57732697500,41.615434197668286,L,
-							59657120750,41.429069071070174,L,
-							61581544000,41.467328375705939,L,
-							63505967250,41.582960063259506,L,
-							65430390500,41.776459322445689,L,
-							67354813750,42.047071417361209,L,
-							69279237000,42.392429687458652,L,
-							71203660250,42.808237943750086,L,
-							73128083500,43.287997261240264,L,
-							75052506750,43.822824978913587,L,
-							76976930000,44.401516171436676,L,
-							78901353250,45.010775875590106,L,
-							82750199750,46.260700493700647,L,
-							84674623000,46.869946537475734,L,
-							86599046250,47.448606994147553,L,
-							88523469500,47.983403975969615,L,
-							90447892750,48.463118897230189,L,
-							92372316000,48.878889587481190,L,
-							94296739250,49.224210291538199,L,
-							96221162500,49.494795065697033,L,
-							98145585750,49.688263589031955,L,
-							100070009000,49.803878201112596,L,
-							101994432250,49.842134090653779,L,
-							103918855500,49.688263589031955,L,
-							105843278750,49.224210291538199,L,
-							107767702000,48.463118897230189,L,
-							109692125250,47.448606994147553,L,
-							111616548500,46.260703908795229,L,
-							113540971750,45.010775875590106,L,
-							115465395000,43.822828394008177,L,
-							117389818250,42.808237943750086,L,
-							119314241500,42.047074832455792,L,
-							121238664750,41.582960063259506,L,
-							123163088000,41.429069071070174,L,
-							125087511250,41.539089758220577,L
+							0,47.274358623137026,L,
+							1924423250,39.526045179618535,L,
+							3848846500,28.272483776696422,L,
+							5773269750,17.167465327843527,L,
+							7697693000,9.005505382905907,L,
+							9622116250,2.340881065600899,L,
+							11546539500,-3.173225847104029,L,
+							13470962750,-5.032043687030345,L,
+							15395386000,-3.249020242880140,L,
+							17319809250,2.328518209759783,L,
+							19244232500,11.616927466766274,L,
+							21168655750,23.591787581891964,L,
+							23093079000,36.399147011550760,L,
+							25017502250,48.276948431023413,L,
+							26941925500,58.288253810725614,L,
+							28866348750,69.240175276880180,L,
+							30790772000,82.449754301476702,L,
+							32715195250,92.770989760051535,L,
+							34639618500,96.305558014014693,L,
+							36564041750,95.142602194605800,L,
+							38488465000,91.609584393584242,L,
+							40412888250,85.772320313792136,L,
+							42337311500,78.006012736905276,L,
+							44261734750,69.109479607112178,L,
+							46186158000,60.211853647051882,L,
+							48110581250,52.443602881346159,L,
+							50035004500,46.606236348716507,L,
+							51959427750,43.076551680009899,L,
+							53883851000,41.919507389327649,L,
+							55808274250,42.199207050933850,L,
+							57732697500,43.021469619448411,L,
+							59657120750,44.312580278254067,L,
+							63505967250,47.456714428692351,L,
+							65430390500,48.747497238417843,L,
+							67354813750,49.567434127520016,L,
+							69279237000,49.842134090653779,L,
+							125087511250,49.842134090653779,L
 						Color: 0,0,1
 					}
 					LayerType: 2
@@ -7974,18 +7843,18 @@ Takes:  {
 					Channel: "X" {
 						Default: 0.999999761581421
 						KeyVer: 4005
-						KeyCount: 1
+						KeyCount: 2
 						Key: 
-							1924423250,0.999999761581421,L
+							0,0.999999761581421,L,
+							125087511250,0.999999821186066,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.999999940395355
+						Default: 0.999999880790710
 						KeyVer: 4005
-						KeyCount: 2
+						KeyCount: 1
 						Key: 
-							0,0.999999940395355,L,
-							125087511250,1.000000000000000,L
+							1924423250,0.999999880790710,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -8005,11 +7874,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 0.333997040987015
+						Default: 0.333997160196304
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,0.333997040987015,L
+							1924423250,0.333997160196304,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -8032,112 +7901,87 @@ Takes:  {
 				}
 				Channel: "R" {
 					Channel: "X" {
-						Default: 0.000038786868615
+						Default: 0.000037539669413
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000038786868615,L,
-							125087511250,0.000036416795396,L
+							0,0.000037539669413,L,
+							125087511250,0.000038833930647,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 179.999991348319355
+						Default: 179.999977687941026
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,179.999991348319355,L,
-							125087511250,179.999977687941026,L
+							0,179.999977687941026,L,
+							125087511250,179.999991348319355,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: -49.774675727316243
+						Default: -54.353890678980086
 						KeyVer: 4005
-						KeyCount: 63
+						KeyCount: 38
 						Key: 
-							0,-49.774675727316243,L,
-							1924423250,-50.356047769088555,L,
-							3848846500,-51.315313687069619,L,
-							5773269750,-52.611058629227117,L,
-							7697693000,-54.163823589851830,L,
-							11546539500,-57.550156248258418,L,
-							13470962750,-59.103102208896139,L,
-							15395386000,-60.399089622769175,L,
-							17319809250,-61.358580936992844,L,
-							19244232500,-61.940123733494410,L,
-							21168655750,-62.132694086953471,L,
-							23093079000,-61.903336334624768,L,
-							25017502250,-61.211492813216836,L,
-							26941925500,-60.076390505243218,L,
-							28866348750,-58.562711302143846,L,
-							30790772000,-56.789782023813260,L,
-							32715195250,-54.924153418067391,L,
-							34639618500,-53.151377818993126,L,
-							36564041750,-51.637944502703874,L,
-							38488465000,-50.503101741918719,L,
-							40412888250,-49.811446050712959,L,
-							42337311500,-49.582156600275958,L,
-							44261734750,-49.774675727316243,L,
-							46186158000,-50.356047769088555,L,
-							48110581250,-51.315313687069619,L,
-							50035004500,-52.611058629227117,L,
-							51959427750,-54.163823589851830,L,
-							55808274250,-57.550156248258418,L,
-							57732697500,-59.103102208896139,L,
-							59657120750,-60.399082792580003,L,
-							61581544000,-61.358580936992844,L,
-							63505967250,-61.940123733494410,L,
-							65430390500,-62.132694086953471,L,
-							67354813750,-61.940123733494410,L,
-							69279237000,-61.358587767182016,L,
-							71203660250,-60.399089622769175,L,
-							73128083500,-59.103102208896139,L,
-							75052506750,-57.550156248258418,L,
-							78901353250,-54.163823589851830,L,
-							80825776500,-52.611058629227117,L,
-							82750199750,-51.315320517258790,L,
-							84674623000,-50.356047769088555,L,
-							86599046250,-49.774675727316243,L,
-							88523469500,-49.582156600275958,L,
-							90447892750,-49.811446050712959,L,
-							92372316000,-50.503101741918719,L,
-							94296739250,-51.637944502703874,L,
-							96221162500,-53.151377818993126,L,
-							98145585750,-54.924153418067391,L,
-							100070009000,-56.789782023813260,L,
-							101994432250,-58.562711302143846,L,
-							103918855500,-60.076390505243218,L,
-							105843278750,-61.211492813216836,L,
-							107767702000,-61.903336334624768,L,
-							109692125250,-62.132694086953471,L,
-							111616548500,-62.063647704633908,L,
-							113540971750,-61.854937614166133,L,
-							115465395000,-61.505860306065621,L,
-							117389818250,-61.018608271055953,L,
-							119314241500,-60.399089622769175,L,
-							121238664750,-59.657686248743694,L,
-							123163088000,-58.809827546314551,L,
-							125087511250,-57.876168007531831,L
+							0,-54.353890678980086,L,
+							1924423250,-68.083407608859318,L,
+							3848846500,-84.676197895411718,L,
+							5773269750,-96.392567793851356,L,
+							7697693000,-104.193524920397650,L,
+							9622116250,-109.639883613612142,L,
+							11546539500,-111.268856409901161,L,
+							13470962750,-109.476423526395635,L,
+							15395386000,-103.923247504751458,L,
+							17319809250,-94.814466246500530,L,
+							19244232500,-83.302762966540030,L,
+							21168655750,-71.272778102170534,L,
+							23093079000,-60.395162263996426,L,
+							25017502250,-51.489401548634653,L,
+							26941925500,-42.253452413322016,L,
+							28866348750,-31.706202580017194,L,
+							30790772000,-23.778412255678539,L,
+							32715195250,-21.124383451775696,L,
+							34639618500,-21.915529385979013,L,
+							36564041750,-24.306817887984771,L,
+							38488465000,-28.223325197692617,L,
+							40412888250,-33.385575342191665,L,
+							42337311500,-39.263113632424691,L,
+							44261734750,-45.141464715168944,L,
+							46186158000,-50.305210671096226,L,
+							48110581250,-54.221972405350655,L,
+							50035004500,-56.610909614734638,L,
+							51959427750,-57.397358086336283,L,
+							53883851000,-57.179051580084646,L,
+							55808274250,-56.534910099840012,L,
+							57732697500,-55.503804252168855,L,
+							59657120750,-54.193138761769482,L,
+							61581544000,-52.779135924322553,L,
+							63505967250,-51.468350905612702,L,
+							65430390500,-50.437863190061435,L,
+							67354813750,-49.796071294891277,L,
+							69279237000,-49.582156600275958,L,
+							125087511250,-49.582156600275958,L
 						Color: 0,0,1
 					}
 					LayerType: 2
 				}
 				Channel: "S" {
 					Channel: "X" {
-						Default: 0.999999761581421
-						KeyVer: 4005
-						KeyCount: 2
-						Key: 
-							0,0.999999761581421,L,
-							125087511250,0.999999880790710,L
-						Color: 1,0,0
-					}
-					Channel: "Y" {
 						Default: 0.999999821186066
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
 							0,0.999999821186066,L,
-							125087511250,0.999999880790710,L
+							125087511250,0.999999642372131,L
+						Color: 1,0,0
+					}
+					Channel: "Y" {
+						Default: 0.999999880790710
+						KeyVer: 4005
+						KeyCount: 2
+						Key: 
+							0,0.999999880790710,L,
+							125087511250,0.999999761581421,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -8184,115 +8028,86 @@ Takes:  {
 				}
 				Channel: "R" {
 					Channel: "X" {
-						Default: 0.000049440605207
+						Default: 0.000047293283586
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000049440605207,L,
-							125087511250,0.000045085400132,L
+							0,0.000047293283586,L,
+							125087511250,0.000049459058735,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 179.999991348319355
+						Default: 179.999977687941026
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,179.999991348319355,L,
-							125087511250,179.999977687941026,L
+							0,179.999977687941026,L,
+							125087511250,179.999991348319355,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: -71.089107485199975
+						Default: -80.153465193089218
 						KeyVer: 4005
-						KeyCount: 66
+						KeyCount: 37
 						Key: 
-							0,-71.089107485199975,L,
-							1924423250,-71.420071131621640,L,
-							3848846500,-71.973528190256147,L,
-							5773269750,-72.745278094763947,L,
-							7697693000,-73.724460844364742,L,
-							9622116250,-74.892027041463393,L,
-							11546539500,-76.219822646301125,L,
-							13470962750,-77.670500184496390,L,
-							15395386000,-79.198652558446994,L,
-							17319809250,-80.753340217323071,L,
-							19244232500,-82.281656515813751,L,
-							21168655750,-83.732627752143330,L,
-							23093079000,-85.060833168331271,L,
-							25017502250,-86.228843327725968,L,
-							26941925500,-87.208476869811975,L,
-							28866348750,-87.980622925291641,L,
-							30790772000,-88.534387342438791,L,
-							32715195250,-88.865562724724725,L,
-							34639618500,-88.975071147687387,L,
-							36564041750,-88.646825916555386,L,
-							38488465000,-87.656236751040680,L,
-							40412888250,-86.029791124744563,L,
-							42337311500,-83.859075044247589,L,
-							44261734750,-81.314911540691540,L,
-							46186158000,-78.637129046402720,L,
-							48110581250,-76.093409505142716,L,
-							50035004500,-73.923431085076103,L,
-							51959427750,-72.297736779588675,L,
-							53883851000,-71.307700859396761,L,
-							55808274250,-70.979653703750685,L,
-							57732697500,-71.376945317202242,L,
-							59657120750,-72.573881327731897,L,
-							61581544000,-74.523470033850032,L,
-							63505967250,-77.078233990997930,L,
-							65430390500,-79.975989557695868,L,
-							67354813750,-82.874025162149763,L,
-							69279237000,-85.429526779728022,L,
-							71203660250,-87.379962429303234,L,
-							73128083500,-88.577540477614875,L,
-							75052506750,-88.975071147687387,L,
-							76976930000,-88.646825916555386,L,
-							78901353250,-87.656236751040680,L,
-							80825776500,-86.029791124744563,L,
-							82750199750,-83.859075044247589,L,
-							84674623000,-81.314911540691540,L,
-							86599046250,-78.637129046402720,L,
-							88523469500,-76.093416335331881,L,
-							90447892750,-73.923431085076103,L,
-							92372316000,-72.297743609777854,L,
-							94296739250,-71.307707689585925,L,
-							96221162500,-70.979653703750685,L,
-							98145585750,-71.307707689585925,L,
-							100070009000,-72.297736779588675,L,
-							101994432250,-73.923431085076103,L,
-							103918855500,-76.093409505142716,L,
-							105843278750,-78.637129046402720,L,
-							107767702000,-81.314904710502375,L,
-							109692125250,-83.859075044247589,L,
-							111616548500,-86.029791124744563,L,
-							113540971750,-87.656236751040680,L,
-							115465395000,-88.646825916555386,L,
-							117389818250,-88.975071147687387,L,
-							119314241500,-88.820435664878516,L,
-							121238664750,-88.352717970895057,L,
-							123163088000,-87.572635235599847,L,
-							125087511250,-86.492317874958829,L
+							0,-80.153465193089218,L,
+							1924423250,-103.035821516460487,L,
+							3848846500,-120.778317055431984,L,
+							5773269750,-130.533083945003455,L,
+							7697693000,-136.429627236602016,L,
+							9622116250,-137.974547724964964,L,
+							11546539500,-135.632844688786150,L,
+							13470962750,-128.379238431756391,L,
+							15395386000,-116.488630407589980,L,
+							17319809250,-101.647626548792417,L,
+							19244232500,-86.685660039794101,L,
+							21168655750,-74.004095619173839,L,
+							23093079000,-64.589431169133491,L,
+							25017502250,-56.549779421663111,L,
+							26941925500,-48.963744442634720,L,
+							28866348750,-43.923129721969666,L,
+							30790772000,-42.352193043058165,L,
+							32715195250,-43.150095741897907,L,
+							34639618500,-45.561920915190569,L,
+							36564041750,-49.512375972620625,L,
+							38488465000,-54.719756592060463,L,
+							40412888250,-60.648849150148671,L,
+							42337311500,-66.578457387519208,L,
+							44261734750,-71.786647384375698,L,
+							46186158000,-75.736627743658445,L,
+							48110581250,-78.145669614864332,L,
+							50035004500,-78.938920954879293,L,
+							51959427750,-78.758351243791935,L,
+							53883851000,-78.225241318694856,L,
+							55808274250,-77.361632200039693,L,
+							57732697500,-76.233353251046907,L,
+							61581544000,-73.677496463631797,L,
+							63505967250,-72.549224344828190,L,
+							65430390500,-71.686530471521792,L,
+							67354813750,-71.155947716417629,L,
+							69279237000,-70.979653703750685,L,
+							125087511250,-70.979653703750685,L
 						Color: 0,0,1
 					}
 					LayerType: 2
 				}
 				Channel: "S" {
 					Channel: "X" {
-						Default: 0.999999880790710
+						Default: 0.999999821186066
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.999999880790710,L,
-							125087511250,0.999999821186066,L
+							0,0.999999821186066,L,
+							125087511250,0.999999880790710,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.999999880790710
+						Default: 0.999999940395355
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.999999880790710,L,
-							125087511250,0.999999821186066,L
+							0,0.999999940395355,L,
+							125087511250,1.000000000000000,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -8339,93 +8154,66 @@ Takes:  {
 				}
 				Channel: "R" {
 					Channel: "X" {
-						Default: 0.000062438177528
+						Default: 0.000061202396976
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000062438177528,L,
-							125087511250,0.000057442632448,L
+							0,0.000061202396976,L,
+							125087511250,0.000062495922153,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 179.999991348319355
+						Default: 179.999977687941026
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,179.999991348319355,L,
-							125087511250,179.999977687941026,L
+							0,179.999977687941026,L,
+							125087511250,179.999991348319355,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: -8.026171515369731
+						Default: -12.724229197270686
 						KeyVer: 4005
-						KeyCount: 65
+						KeyCount: 38
 						Key: 
-							0,-8.026171515369731,L,
-							1924423250,-8.832413875186047,L,
-							3848846500,-10.155670819320321,L,
-							5773269750,-11.921010049935743,L,
-							7697693000,-13.989526863655609,L,
-							9622116250,-16.166786265377446,L,
-							11546539500,-18.235860593288312,L,
-							13470962750,-20.002103116421466,L,
-							15395386000,-21.326302626661199,L,
-							17319809250,-22.133221175205350,L,
-							19244232500,-22.400691383102664,L,
-							21168655750,-22.274681223105279,L,
-							23093079000,-21.893609601385183,L,
-							25017502250,-21.258215885920027,L,
-							26941925500,-20.378589973661200,L,
-							28866348750,-19.277058045458144,L,
-							30790772000,-17.990238452998543,L,
-							32715195250,-16.569408841476193,L,
-							36564041750,-13.586967466806684,L,
-							38488465000,-12.166536567577131,L,
-							40412888250,-10.880300102517920,L,
-							42337311500,-9.779428995117064,L,
-							44261734750,-8.900447681961154,L,
-							46186158000,-8.265578183514796,L,
-							48110581250,-7.884844656158615,L,
-							50035004500,-7.758946340508889,L,
-							51959427750,-7.983312932101608,L,
-							53883851000,-8.660979542113559,L,
-							55808274250,-9.779427287569771,L,
-							57732697500,-11.290683481061082,L,
-							59657120750,-13.102290413114105,L,
-							61581544000,-15.078118998476091,L,
-							63505967250,-17.054191763100906,L,
-							65430390500,-18.866464638598003,L,
-							67354813750,-20.378588266113905,L,
-							69279237000,-21.497866733327921,L,
-							71203660250,-22.176116470740258,L,
-							73128083500,-22.400691383102664,L,
-							75052506750,-22.209478529741137,L,
-							76976930000,-21.631595007087409,L,
-							78901353250,-20.674181777918708,L,
-							80825776500,-19.368929212436562,L,
-							82750199750,-17.778903862342190,L,
-							84674623000,-16.000406272290757,L,
-							86599046250,-14.155884658627492,L,
-							88523469500,-12.377797733699907,L,
-							90447892750,-10.788478454410985,L,
-							92372316000,-9.484042950308300,L,
-							94296739250,-8.527370796664545,L,
-							96221162500,-7.949985877820225,L,
-							98145585750,-7.758946340508889,L,
-							100070009000,-7.902264199863061,L,
-							101994432250,-8.335652509304440,L,
-							103918855500,-9.057232966811279,L,
-							105843278750,-10.052538377947862,L,
-							107767702000,-11.290684334834729,L,
-							109692125250,-12.721929131067688,L,
-							111616548500,-14.278241521192571,L,
-							113540971750,-15.878033188026400,L,
-							115465395000,-17.434657205532165,L,
-							117389818250,-18.866464638598003,L,
-							119314241500,-20.105303859685627,L,
-							121238664750,-21.101305950117549,L,
-							123163088000,-21.823472096345714,L,
-							125087511250,-22.257243750154263,L
+							0,-12.724229197270686,L,
+							1924423250,-27.038949905046596,L,
+							3848846500,-44.366740263277606,L,
+							5773269750,-56.618402332254128,L,
+							7697693000,-64.852038282341752,L,
+							9622116250,-70.689964890483353,L,
+							11546539500,-72.460923659238389,L,
+							13470962750,-70.432002305910672,L,
+							15395386000,-64.178076196180882,L,
+							17319809250,-54.005219767135195,L,
+							19244232500,-41.365080443830998,L,
+							21168655750,-28.563347382500996,L,
+							23093079000,-17.553444440482270,L,
+							25017502250,-9.198465910921307,L,
+							26941925500,-1.742021391675855,L,
+							28866348750,5.629922588479260,L,
+							30790772000,10.675917790662982,L,
+							32715195250,12.275582245223520,L,
+							34639618500,11.542340093482549,L,
+							36564041750,9.327166311678026,L,
+							38488465000,5.702115126685253,L,
+							40412888250,0.928056435785792,L,
+							42337311500,-4.504996408595300,L,
+							44261734750,-9.939637912288651,L,
+							46186158000,-14.716817359308569,L,
+							48110581250,-18.342896487771426,L,
+							50035004500,-20.554115590046518,L,
+							51959427750,-21.277946594884874,L,
+							53883851000,-20.898828407267398,L,
+							55808274250,-19.784568421546044,L,
+							57732697500,-18.001252133035173,L,
+							59657120750,-15.733637866330660,L,
+							61581544000,-13.286763577312129,L,
+							63505967250,-11.019050272864652,L,
+							65430390500,-9.237339932582378,L,
+							67354813750,-8.128403225545396,L,
+							69279237000,-7.758946340508889,L,
+							125087511250,-7.758946340508889,L
 						Color: 0,0,1
 					}
 					LayerType: 2
@@ -8434,10 +8222,9 @@ Takes:  {
 					Channel: "X" {
 						Default: 1.000000119209290
 						KeyVer: 4005
-						KeyCount: 2
+						KeyCount: 1
 						Key: 
-							0,1.000000119209290,L,
-							125087511250,1.000000476837158,L
+							1924423250,1.000000119209290,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -8446,7 +8233,7 @@ Takes:  {
 						KeyCount: 2
 						Key: 
 							0,1.000007629394531,L,
-							125087511250,1.000007510185242,L
+							125087511250,1.000007748603821,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -8493,111 +8280,84 @@ Takes:  {
 				}
 				Channel: "R" {
 					Channel: "X" {
-						Default: 0.000069995056575
+						Default: 0.000069725907351
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000069995056575,L,
-							125087511250,0.000066966710926,L
+							0,0.000069725907351,L,
+							125087511250,0.000070026544168,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
 						Default: 179.999991348319355
 						KeyVer: 4005
-						KeyCount: 2
+						KeyCount: 1
 						Key: 
-							0,179.999991348319355,L,
-							125087511250,179.999977687941026,L
+							1924423250,179.999991348319355,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: 51.139818806535565
+						Default: 49.733855101741725
 						KeyVer: 4005
-						KeyCount: 62
+						KeyCount: 38
 						Key: 
-							0,51.139818806535565,L,
-							1924423250,50.594995107011940,L,
-							3848846500,49.696101231104528,L,
-							5773269750,48.482038521231097,L,
-							7697693000,47.027279945006754,L,
-							11546539500,43.854855151026321,L,
-							13470962750,42.399946310640239,L,
-							15395386000,41.185678695091703,L,
-							17319809250,40.286596988982119,L,
-							19244232500,39.741650346053433,L,
-							21168655750,39.561179672709031,L,
-							23093079000,39.693586304864127,L,
-							25017502250,40.093852465699221,L,
-							26941925500,40.758730400263985,L,
-							28866348750,41.670973880904164,L,
-							30790772000,42.795267414516253,L,
-							32715195250,44.076334280147421,L,
-							36564041750,46.805811061169408,L,
-							38488465000,48.086765228679269,L,
-							40412888250,49.210901667940448,L,
-							42337311500,50.122967563662208,L,
-							44261734750,50.787695234065232,L,
-							46186158000,51.187862357157364,L,
-							48110581250,51.320238253461191,L,
-							50035004500,51.139818806535565,L,
-							51959427750,50.594995107011940,L,
-							53883851000,49.696108061293700,L,
-							55808274250,48.482038521231097,L,
-							57732697500,47.027279945006754,L,
-							61581544000,43.854855151026321,L,
-							63505967250,42.399946310640239,L,
-							65430390500,41.185678695091703,L,
-							67354813750,40.286596988982119,L,
-							69279237000,39.741650346053433,L,
-							71203660250,39.561179672709031,L,
-							73128083500,39.741643515864268,L,
-							75052506750,40.286596988982119,L,
-							76976930000,41.185678695091703,L,
-							78901353250,42.399946310640239,L,
-							80825776500,43.854855151026321,L,
-							84674623000,47.027279945006754,L,
-							86599046250,48.482038521231097,L,
-							88523469500,49.696101231104528,L,
-							90447892750,50.594995107011940,L,
-							92372316000,51.139815391440976,L,
-							94296739250,51.320238253461191,L,
-							96221162500,51.166613638649487,L,
-							98145585750,50.702399831710231,L,
-							100070009000,49.933470795329640,L,
-							101994432250,48.885426078516886,L,
-							103918855500,47.608996911332149,L,
-							105843278750,46.181419072909833,L,
-							107767702000,44.700760419352846,L,
-							109692125250,43.273083543187568,L,
-							111616548500,41.996497281651919,L,
-							113540971750,40.948271564826157,L,
-							115465395000,40.179171773716313,L,
-							117389818250,39.714838438466586,L,
-							119314241500,39.561179672709031,L,
-							121238664750,39.676456190425760,L,
-							123163088000,40.025004158865592,L,
-							125087511250,40.605184332627736,L
+							0,49.733855101741725,L,
+							1924423250,44.844894486312832,L,
+							3848846500,37.443120935618197,L,
+							5773269750,29.511290554385486,L,
+							7697693000,22.747996257113556,L,
+							9622116250,15.210467574023239,L,
+							11546539500,7.249330558609337,L,
+							13470962750,4.209775568987086,L,
+							15395386000,6.058821329201832,L,
+							17319809250,11.766252477495463,L,
+							19244232500,21.068748145891437,L,
+							21168655750,32.646262006052211,L,
+							23093079000,44.352789601897875,L,
+							25017502250,54.315631374344321,L,
+							26941925500,61.663446430595926,L,
+							28866348750,67.696723279188774,L,
+							30790772000,73.120310121710475,L,
+							32715195250,76.589568106830072,L,
+							34639618500,77.642469088142704,L,
+							36564041750,76.872488202629924,L,
+							38488465000,74.545080752383910,L,
+							40412888250,70.732899459605989,L,
+							42337311500,65.707096004156085,L,
+							44261734750,59.982564196614888,L,
+							46186158000,54.253797671788284,L,
+							48110581250,49.218182649595668,L,
+							50035004500,45.397009412775432,L,
+							51959427750,43.066996245361068,L,
+							53883851000,42.302595624400183,L,
+							55808274250,42.622552420974387,L,
+							57732697500,43.559005507127644,L,
+							59657120750,45.028285065527406,L,
+							61581544000,46.816951099705683,L,
+							63505967250,48.605832284842812,L,
+							65430390500,50.074620069622341,L,
+							67354813750,51.007651231001418,L,
+							69279237000,51.320238253461191,L,
+							125087511250,51.320238253461191,L
 						Color: 0,0,1
 					}
 					LayerType: 2
 				}
 				Channel: "S" {
 					Channel: "X" {
-						Default: 0.999999582767487
+						Default: 0.999999523162842
 						KeyVer: 4005
-						KeyCount: 2
+						KeyCount: 1
 						Key: 
-							0,0.999999582767487,L,
-							125087511250,0.999999344348907,L
+							1924423250,0.999999523162842,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.999999582767487
+						Default: 0.999999523162842
 						KeyVer: 4005
-						KeyCount: 2
+						KeyCount: 1
 						Key: 
-							0,0.999999582767487,L,
-							125087511250,0.999999642372131,L
+							1924423250,0.999999523162842,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -8652,103 +8412,78 @@ Takes:  {
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 0.000003054690209
+						Default: 0.000006064439028
 						KeyVer: 4005
 						KeyCount: 2
 						Key: 
-							0,0.000003054690209,L,
-							125087511250,0.000024605744825,L
+							0,0.000006064439028,L,
+							125087511250,0.000002551575516,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: -44.718201307398445
+						Default: -46.645219653404297
 						KeyVer: 4005
-						KeyCount: 65
+						KeyCount: 38
 						Key: 
-							0,-44.718201307398445,L,
-							1924423250,-45.689488358318712,L,
-							3848846500,-47.284320454041477,L,
-							5773269750,-49.413006965480832,L,
-							7697693000,-51.908218503255476,L,
-							9622116250,-54.534938503309355,L,
-							11546539500,-57.030686210933844,L,
-							13470962750,-59.160229911114044,L,
-							15395386000,-60.755953346523491,L,
-							17319809250,-61.727882435225737,L,
-							19244232500,-62.049966835726394,L,
-							21168655750,-61.727882435225737,L,
-							23093079000,-60.755953346523491,L,
-							25017502250,-59.160229911114044,L,
-							26941925500,-57.030686210933844,L,
-							28866348750,-54.534938503309355,L,
-							30790772000,-51.908221918350065,L,
-							32715195250,-49.413006965480832,L,
-							34639618500,-47.284320454041477,L,
-							36564041750,-45.689491773413302,L,
-							38488465000,-44.718201307398445,L,
-							40412888250,-44.396352548424154,L,
-							42337311500,-44.666578737651562,L,
-							44261734750,-45.482933192534070,L,
-							46186158000,-46.830778817680354,L,
-							48110581250,-48.652830816521600,L,
-							50035004500,-50.837883464086410,L,
-							51959427750,-53.221544352336565,L,
-							53883851000,-55.605440882113086,L,
-							55808274250,-57.791118491986950,L,
-							57732697500,-59.614000358812355,L,
-							59657120750,-60.962641700996947,L,
-							61581544000,-61.779545986107635,L,
-							63505967250,-62.049966835726394,L,
-							65430390500,-61.819707498427256,L,
-							67354813750,-61.123718052193126,L,
-							69279237000,-59.970222044784691,L,
-							71203660250,-58.396935780798700,L,
-							73128083500,-56.479571907184649,L,
-							75052506750,-54.334219734170482,L,
-							76976930000,-52.108916781826842,L,
-							78901353250,-49.963957344689952,L,
-							80825776500,-48.047259414519971,L,
-							82750199750,-46.474751792099369,L,
-							84674623000,-45.321959294175443,L,
-							86599046250,-44.626441130994039,L,
-							88523469500,-44.396352548424154,L,
-							90447892750,-44.594612449461827,L,
-							92372316000,-45.194139134048008,L,
-							94296739250,-46.190581771681394,L,
-							96221162500,-47.558774530365120,L,
-							98145585750,-49.246374255394855,L,
-							100070009000,-51.170640035165199,L,
-							103918855500,-55.272622839331767,L,
-							105843278750,-57.197366732344015,L,
-							107767702000,-58.885642646101580,L,
-							109692125250,-60.254562819931913,L,
-							111616548500,-61.251620174590599,L,
-							113540971750,-61.851563500716146,L,
-							115465395000,-62.049966835726394,L,
-							117389818250,-61.915617014752435,L,
-							119314241500,-61.509309551596473,L,
-							121238664750,-60.830907842475099,L,
-							123163088000,-59.888751548364894,L,
-							125087511250,-58.702272557454513,L
+							0,-46.645219653404297,L,
+							1924423250,-53.383604250773224,L,
+							3848846500,-62.423858221081524,L,
+							5773269750,-70.497865820077010,L,
+							7697693000,-79.552702244263273,L,
+							9622116250,-89.294546415925097,L,
+							11546539500,-93.039183968000870,L,
+							13470962750,-91.730929534378504,L,
+							15395386000,-87.684868904041338,L,
+							17319809250,-81.069905824974370,L,
+							19244232500,-72.720026885402447,L,
+							21168655750,-63.963867803431256,L,
+							23093079000,-55.996356513974447,L,
+							25017502250,-49.451788779588114,L,
+							26941925500,-42.703049615437457,L,
+							28866348750,-35.062297990968176,L,
+							30790772000,-29.353311693977904,L,
+							32715195250,-27.448064575951435,L,
+							34639618500,-28.111574765134907,L,
+							36564041750,-30.114642144906867,L,
+							38488465000,-33.388549889575202,L,
+							40412888250,-37.694502632925570,L,
+							42337311500,-42.590467607348302,L,
+							44261734750,-47.487542487511156,L,
+							46186158000,-51.795636495166320,L,
+							48110581250,-55.070244334224583,L,
+							50035004500,-57.070509628889546,L,
+							51959427750,-57.727331355328296,L,
+							53883851000,-57.356042272046935,L,
+							55808274250,-56.258475268657065,L,
+							57732697500,-54.499834746070128,L,
+							59657120750,-52.262800943827010,L,
+							61581544000,-49.848803770378289,L,
+							63505967250,-47.611766553040582,L,
+							65430390500,-45.854375955071752,L,
+							67354813750,-44.760698744414206,L,
+							69279237000,-44.396352548424154,L,
+							125087511250,-44.396352548424154,L
 						Color: 0,0,1
 					}
 					LayerType: 2
 				}
 				Channel: "S" {
 					Channel: "X" {
-						Default: 1.000000119209290
+						Default: 1.000000000000000
 						KeyVer: 4005
-						KeyCount: 1
+						KeyCount: 2
 						Key: 
-							1924423250,1.000000119209290,L
+							0,1.000000000000000,L,
+							125087511250,1.000000119209290,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
-						Default: 1.000000000000000
+						Default: 0.999999940395355
 						KeyVer: 4005
-						KeyCount: 1
+						KeyCount: 2
 						Key: 
-							1924423250,1.000000000000000,L
+							0,0.999999940395355,L,
+							125087511250,1.000000000000000,L
 						Color: 0,1,0
 					}
 					Channel: "Z" {
@@ -8878,11 +8613,11 @@ Takes:  {
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: 6.791664123535156
+						Default: 0.000000000000000
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,6.791664123535156,L
+							1924423250,0.000000000000000,L
 						Color: 0,0,1
 					}
 					LayerType: 1
@@ -9017,11 +8752,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 0.601929843425751
+						Default: 0.601929724216461
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,0.601929843425751,L
+							1924423250,0.601929724216461,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -9146,11 +8881,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 1.995176553726196
+						Default: 1.995176434516907
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,1.995176553726196,L
+							1924423250,1.995176434516907,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -9404,11 +9139,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 3.242973327636719
+						Default: 3.242973804473877
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,3.242973327636719,L
+							1924423250,3.242973804473877,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -9662,11 +9397,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 0.333997040987015
+						Default: 0.333997160196304
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,0.333997040987015,L
+							1924423250,0.333997160196304,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -10417,11 +10152,11 @@ Takes:  {
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: 6.791664123535156
+						Default: 0.000000000000000
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,6.791664123535156,L
+							1924423250,0.000000000000000,L
 						Color: 0,0,1
 					}
 					LayerType: 1
@@ -10487,11 +10222,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 0.601929843425751
+						Default: 0.601929724216461
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,0.601929843425751,L
+							1924423250,0.601929724216461,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -10649,11 +10384,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 1.995176553726196
+						Default: 1.995176434516907
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,1.995176553726196,L
+							1924423250,1.995176434516907,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -10969,11 +10704,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 3.242973327636719
+						Default: 3.242973804473877
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,3.242973327636719,L
+							1924423250,3.242973804473877,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -11291,11 +11026,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 0.333997040987015
+						Default: 0.333997160196304
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,0.333997040987015,L
+							1924423250,0.333997160196304,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -12210,11 +11945,11 @@ Takes:  {
 						Color: 0,1,0
 					}
 					Channel: "Z" {
-						Default: 6.791664123535156
+						Default: 0.000000000000000
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,6.791664123535156,L
+							1924423250,0.000000000000000,L
 						Color: 0,0,1
 					}
 					LayerType: 1
@@ -12280,11 +12015,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 0.601929843425751
+						Default: 0.601929724216461
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,0.601929843425751,L
+							1924423250,0.601929724216461,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -12403,11 +12138,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 1.995176553726196
+						Default: 1.995176434516907
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,1.995176553726196,L
+							1924423250,1.995176434516907,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -12649,11 +12384,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 3.242973327636719
+						Default: 3.242973804473877
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,3.242973327636719,L
+							1924423250,3.242973804473877,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
@@ -12894,11 +12629,11 @@ Takes:  {
 			Channel: "Transform" {
 				Channel: "T" {
 					Channel: "X" {
-						Default: 0.333997040987015
+						Default: 0.333997160196304
 						KeyVer: 4005
 						KeyCount: 1
 						Key: 
-							1924423250,0.333997040987015,L
+							1924423250,0.333997160196304,L
 						Color: 1,0,0
 					}
 					Channel: "Y" {
