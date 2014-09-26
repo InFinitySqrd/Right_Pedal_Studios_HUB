@@ -14,7 +14,9 @@ public class PlaneMovement : MonoBehaviour {
 	public float levelingDelay = 0.3f;
 	public float oppositeDirectionPush = 2.0f;
 	
-	// Declare variables
+    [SerializeField] Animator planeAnim;
+
+    // Declare variables
 	[SerializeField] float deadZone = 0.0f;
 	[SerializeField] float tiltDeadZone = 0.1f;
 	private Vector3 slideTouchPos;
@@ -211,12 +213,18 @@ public class PlaneMovement : MonoBehaviour {
 					} else {
 						momentum += Time.deltaTime * rotationSpeed * oppositeDirectionPush;
 					}
+
+                    planeAnim.SetBool("RotatingRight", false);
+                    planeAnim.SetBool("RotatingLeft", true);
 				} else {
 					if (momentum <= 0.0f) {
 						momentum -= Time.deltaTime * rotationSpeed;
 					} else {
 						momentum -= Time.deltaTime * rotationSpeed * oppositeDirectionPush;
 					}
+                    
+                    planeAnim.SetBool("RotatingLeft", false);
+                    planeAnim.SetBool("RotatingRight", true);
 				}
 				
 				levelingTimer = 0.0f;
@@ -233,6 +241,9 @@ public class PlaneMovement : MonoBehaviour {
 				} else {
 					levelingTimer += Time.deltaTime;
 				}
+
+                planeAnim.SetBool("RotatingLeft", false);
+                planeAnim.SetBool("RotatingRight", false);
 			}
 			
 			break;

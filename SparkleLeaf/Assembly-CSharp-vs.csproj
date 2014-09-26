@@ -138,8 +138,10 @@
      <Compile Include="Assets\Scripts\Obsolete Scripts\DestroyOldGates.cs" />
      <Compile Include="Assets\Scripts\Obsolete Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\FadeOutMonsters.cs" />
+     <Compile Include="Assets\Scripts\Visual Scripts\FogScript.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\MaterialLerp.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\MonsterPopUp.cs" />
+     <Compile Include="Assets\Scripts\Visual Scripts\MoonMovement.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\RandomlyGenerateEnvironment.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\SpinBrokenPlane.cs" />
      <Compile Include="Assets\Twitter iOS\Assets\Example\TweetComposer.cs" />
