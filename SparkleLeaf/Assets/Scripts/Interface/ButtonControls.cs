@@ -40,6 +40,8 @@ public class ButtonControls : MonoBehaviour {
     private GameObject audioManager;
     private GameObject FMODManager;
 
+    private GooglePlayIntegration googlePlay;
+
 	void Awake() {
 		if (PlayerPrefs.GetInt("FacebookInitialised") == 0) {
 			FB.Init(SetInit, OnHideUnity);
@@ -49,7 +51,8 @@ public class ButtonControls : MonoBehaviour {
         audioManager = GameObject.Find("AudioManager");
         audioFade = audioManager.GetComponent<FadeBetweenAudio>();
 
-        
+        googlePlay = Camera.main.GetComponent<GooglePlayIntegration>();
+
         if (SFXOff != null && PlayerPrefs.GetInt("AudioEnabled") == 0) {
             sfxEnabled = false;
             this.renderer.material = SFXOff;
@@ -98,6 +101,16 @@ public class ButtonControls : MonoBehaviour {
         FMODManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
         
         getScore = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
+        googlePlay.UpdateLeaderboard(getScore.score);
+
+        // Update achievements
+        if (getScore.score >= 100) {
+            googlePlay.UnlockAchievement("Scored100");
+        } else if (getScore.score >= 50) {
+            googlePlay.UnlockAchievement("Scored50");
+        } else if (getScore.score >= 10) {
+            googlePlay.UnlockAchievement("Scored10");
+        }
 
         if (getScore.score == 0 && this.collider.name == "Share") {
             this.collider.enabled = false;
@@ -174,6 +187,7 @@ public class ButtonControls : MonoBehaviour {
 							break;
                         case ButtonFunction.Leaderboards:
                             // Display leaderboards
+                            googlePlay.DisplayLeaderboardUI();
                             break;
                         case ButtonFunction.Settings:
                             // Open the settings scene
@@ -200,6 +214,9 @@ public class ButtonControls : MonoBehaviour {
                         case ButtonFunction.Info:
                             // Switch the the credits and game info screen
 							if (subMenuParent.inSubMenu) {
+                                // Unlock the view credits achievement
+                                googlePlay.UnlockAchievement("ViewCredits");
+
 	                            Application.LoadLevelAdditive("CreditsScreen");
                                 audioManager.GetComponent<FMOD_Manager>().MenuTransition(true);
 	                            Destroy(this.transform.root.gameObject);

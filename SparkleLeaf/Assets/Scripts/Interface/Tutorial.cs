@@ -28,10 +28,14 @@ public class Tutorial : MonoBehaviour {
 
 	private bool rightHeld, leftHeld;
 
+    private GooglePlayIntegration googlePlay;
+
 	// Use this for initialization
 	void Start () {
 		enviroVars = GameObject.FindGameObjectWithTag("EnvironmentCentre").GetComponent<RandomlyGenerateEnvironment>();
 		setStartingPoint = this.GetComponent<SpawnGates>();
+    
+        googlePlay = Camera.main.GetComponent<GooglePlayIntegration>();
 
 		if (PlayerPrefs.GetInt("TutorialComplete") == 0 && !instantiated) {
 			InstantiateTuteVars();
@@ -131,6 +135,9 @@ public class Tutorial : MonoBehaviour {
 
             if (text.renderer.material.color.a < 0.1f) {
                 PlayerPrefs.SetInt("TutorialComplete", 1);
+
+                googlePlay.UnlockAchievement("TutorialComplete");
+
                 Destroy(leftIcon);
                 Destroy(rightIcon);
                 Destroy(text);
