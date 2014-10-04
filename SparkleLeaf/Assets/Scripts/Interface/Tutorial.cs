@@ -27,7 +27,7 @@ public class Tutorial : MonoBehaviour {
 	private Vector3 tutorialFinishedUpperBound = new Vector3(8f,8f,8f);
 
 	private bool rightHeld, leftHeld;
-
+	GameObject audioManager;
     private GooglePlayIntegration googlePlay;
 
 	// Use this for initialization
@@ -43,7 +43,7 @@ public class Tutorial : MonoBehaviour {
 		} else {
 			this.enabled = false;
 		}
-
+		audioManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
 		rightIcon.transform.localScale = tutorialLowerBound;
 		leftIcon.transform.localScale = tutorialLowerBound;
 	}
@@ -128,6 +128,7 @@ public class Tutorial : MonoBehaviour {
 
         if (leftAchieved && rightAchieved) {
             if (timer >= delayToPlay) {
+				audioManager.GetComponent<FMOD_Manager>().StartGame();
                 StartCoroutine(Fade(text.renderer.material));
             } else {
                 timer += Time.deltaTime;

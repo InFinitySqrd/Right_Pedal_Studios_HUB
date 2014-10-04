@@ -2,7 +2,7 @@
 using System.Collections;
 
 public class FadeBetweenAudio : MonoBehaviour {
-    // Declare variables
+  /*  // Declare variables
     private AudioSource bgmBackground, bgmTitle;
 
     void Awake() {
@@ -33,5 +33,5 @@ public class FadeBetweenAudio : MonoBehaviour {
                 yield return null;
             }
         }
-    }
+    }*/
 }
