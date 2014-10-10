@@ -15,11 +15,14 @@ public class SetUpPlayerPrefs : MonoBehaviour {
 		PlayerPrefs.SetInt("FirstLaunch", 0);
 		PlayerPrefs.SetInt("Control Method", 1);
 
+        // Variables to track social integration
+        PlayerPrefs.SetInt("GooglePlayActivated", 0);
+
         // Audio levels to be used in the game
-        PlayerPrefs.SetInt("AudioEnabled", 1);
-        for (int i = 0; i < audioManager.transform.childCount; i++) {
-            PlayerPrefs.SetFloat("AudioChild" + i, audioManager.transform.GetChild(i).audio.volume);
-        }
+//        PlayerPrefs.SetInt("AudioEnabled", 1);
+//        for (int i = 0; i < audioManager.transform.childCount; i++) {
+//            PlayerPrefs.SetFloat("AudioChild" + i, audioManager.transform.GetChild(i).audio.volume);
+//        }
 
 		// Load default variables into player prefs for the optimum planeVars configuration
 		PlayerPrefs.SetFloat("movement", planeVars.forwardSpeed);

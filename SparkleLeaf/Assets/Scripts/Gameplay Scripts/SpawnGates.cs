@@ -65,7 +65,7 @@ public class SpawnGates : MonoBehaviour {
     // Fly through audio object
     private AudioSource flyThroughSound;
 
-    private FMOD_Manager audioManager;
+    private GameObject audioManager;
 
 	void Awake() {
 		gatesList = new List<Transform>();
@@ -90,7 +90,7 @@ public class SpawnGates : MonoBehaviour {
         for (int i = 0; i < rotatable.Length; i++) {
             rotatable[i] = false;
         }
-
+		audioManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
         currentSpawnPoint = startingSpawnPoint;
 	}
 
@@ -149,20 +149,6 @@ public class SpawnGates : MonoBehaviour {
 
 		} else if (!pause.paused){
 			timer += Time.deltaTime * planeVars.forwardSpeed;
-		
-			if (!tutorialFinished && PlayerPrefs.GetInt("TutorialComplete") == 1) {
-				if (decSpawnSpacingTimer >= decSpawnTime) {
-					spawnSpacing --;
-					decSpawnSpacingTimer = 0;
-					if (spawnSpacing == 5) {
-						tutorialFinished = true;
-					}
-				} 
-				
-				else {
-					decSpawnSpacingTimer += Time.deltaTime;
-				}
-			}
 
 		}
 
@@ -173,8 +159,8 @@ public class SpawnGates : MonoBehaviour {
 			GameObject currentGate = gatesList[0].gameObject;
 			gatesList.RemoveAt(0);
 
-            flyThroughSound.pitch = Random.Range(0.9f, 1.1f);
-            flyThroughSound.Play();
+            //flyThroughSound.pitch = Random.Range(0.9f, 1.1f);
+            //flyThroughSound.Play();
 
 			Destroy(currentGate.gameObject);
 

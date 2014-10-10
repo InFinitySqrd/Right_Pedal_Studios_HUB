@@ -27,11 +27,15 @@ public class Tutorial : MonoBehaviour {
 	private Vector3 tutorialFinishedUpperBound = new Vector3(8f,8f,8f);
 
 	private bool rightHeld, leftHeld;
+	GameObject audioManager;
+    private GooglePlayIntegration googlePlay;
 
 	// Use this for initialization
 	void Start () {
 		enviroVars = GameObject.FindGameObjectWithTag("EnvironmentCentre").GetComponent<RandomlyGenerateEnvironment>();
 		setStartingPoint = this.GetComponent<SpawnGates>();
+    
+        googlePlay = Camera.main.GetComponent<GooglePlayIntegration>();
 
 		if (PlayerPrefs.GetInt("TutorialComplete") == 0 && !instantiated) {
 			InstantiateTuteVars();
@@ -39,7 +43,7 @@ public class Tutorial : MonoBehaviour {
 		} else {
 			this.enabled = false;
 		}
-
+		audioManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
 		rightIcon.transform.localScale = tutorialLowerBound;
 		leftIcon.transform.localScale = tutorialLowerBound;
 	}
@@ -124,6 +128,7 @@ public class Tutorial : MonoBehaviour {
 
         if (leftAchieved && rightAchieved) {
             if (timer >= delayToPlay) {
+				audioManager.GetComponent<FMOD_Manager>().StartGame();
                 StartCoroutine(Fade(text.renderer.material));
             } else {
                 timer += Time.deltaTime;
@@ -131,6 +136,9 @@ public class Tutorial : MonoBehaviour {
 
             if (text.renderer.material.color.a < 0.1f) {
                 PlayerPrefs.SetInt("TutorialComplete", 1);
+
+                googlePlay.UnlockAchievement("TutorialComplete");
+
                 Destroy(leftIcon);
                 Destroy(rightIcon);
                 Destroy(text);

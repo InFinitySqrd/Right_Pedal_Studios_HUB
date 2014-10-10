@@ -8,8 +8,8 @@ public class FMOD_Manager : MonoBehaviour {
 		get { return instance; }
 	}
 
-	//private FMOD.Studio.EventInstance FMOD_Gameplay;
-	//private FMOD.Studio.ParameterInstance FMOD_MenuTransitions, FMOD_Tutorial, FMOD_Time, FMOD_Death;
+	private FMOD.Studio.EventInstance FMOD_Gameplay;
+	private FMOD.Studio.ParameterInstance FMOD_MenuTransitions, FMOD_Tutorial, FMOD_Time, FMOD_Death;
 
 	private bool isplaying = false;
 
@@ -54,13 +54,13 @@ public class FMOD_Manager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		//FMOD_Gameplay = FMOD_StudioSystem.instance.GetEvent ("event:/Music/Gameplay");
-		//FMOD_Gameplay.getParameter ("Menu Transitions", out FMOD_MenuTransitions);
-		//FMOD_Gameplay.getParameter ("Title/Tutorial", out FMOD_Tutorial);
-		//FMOD_Gameplay.getParameter ("Time", out FMOD_Time);
-		//FMOD_Gameplay.getParameter ("Death", out FMOD_Death);
+		FMOD_Gameplay = FMOD_StudioSystem.instance.GetEvent ("event:/Music/Gameplay");
+		FMOD_Gameplay.getParameter ("Menu Transitions", out FMOD_MenuTransitions);
+		FMOD_Gameplay.getParameter ("Title/Tutorial", out FMOD_Tutorial);
+		FMOD_Gameplay.getParameter ("Time", out FMOD_Time);
+		FMOD_Gameplay.getParameter ("Death", out FMOD_Death);
 
-		//FMOD_Gameplay.start ();
+		FMOD_Gameplay.start ();
 
 	}
 	
@@ -69,7 +69,7 @@ public class FMOD_Manager : MonoBehaviour {
 		if (playerDead) {
 			if (deathTimer <= deathFadeLength) {
 				deathTimer += Time.deltaTime;
-				//FMOD_Death.setValue (deathTimer * 2);
+				FMOD_Death.setValue (deathTimer * 2);
 			} 
 			else { 
 				playerDead = false;
@@ -80,11 +80,11 @@ public class FMOD_Manager : MonoBehaviour {
 		if (fadeOutOfDeath) {
 			if (fadeOutTimer <= fadeFromDeathLength) {
 				fadeOutTimer += Time.deltaTime;
-				//FMOD_Death.setValue(1 - fadeOutTimer);
+				FMOD_Death.setValue(1 - fadeOutTimer);
 			}
 
 			else {
-				//FMOD_Death.setValue(0);
+				FMOD_Death.setValue(0);
 				fadeOutOfDeath = false;
 				fadeOutTimer = 0.0f;
 			}
@@ -95,14 +95,14 @@ public class FMOD_Manager : MonoBehaviour {
 			if (fadeUpTimer <= fadeUpFromScoreLength) {
 				fadeUpTimer += Time.deltaTime;
 
-				//FMOD_Time.setValue(fadeUpTargetValue - 0.1f + (((fadeUpTimer / fadeUpFromScoreLength) / 10)));
+				FMOD_Time.setValue(fadeUpTargetValue - 0.1f + (((fadeUpTimer / fadeUpFromScoreLength) / 10)));
 				print (fadeUpTargetValue - 0.1f + (((fadeUpTimer / fadeUpFromScoreLength) / 10)));
 			}
 
 			else {
 				fadeUpTimer = 0.0f;
 				fadeUpTime = false;
-				//FMOD_Time.setValue(fadeUpTargetValue);
+				FMOD_Time.setValue(fadeUpTargetValue);
 				print (fadeUpTargetValue);
 			}
 		}
@@ -110,12 +110,12 @@ public class FMOD_Manager : MonoBehaviour {
 		if (menuFadeUp) {
 			if (menuFadeUpTimer <= menuFadeUpLength) {
 				menuFadeUpTimer += Time.deltaTime;
-				//FMOD_MenuTransitions.setValue(Mathf.Clamp(menuFadeUpTimer / menuFadeUpLength, 0,1));
+				FMOD_MenuTransitions.setValue(Mathf.Clamp(menuFadeUpTimer / menuFadeUpLength, 0,1));
 				print (menuFadeUpTimer / menuFadeUpLength);
 			}
 
 			else {
-				//FMOD_MenuTransitions.setValue(1);
+				FMOD_MenuTransitions.setValue(1);
 				menuFadeUp = false;
 				menuFadeUpTimer = 0.0f;
 			}
@@ -124,12 +124,12 @@ public class FMOD_Manager : MonoBehaviour {
 		if (menuFadeDown) {
 			if (menuFadeDownTimer <= menuFadeDownLength) {
 				menuFadeDownTimer += Time.deltaTime;
-				//FMOD_MenuTransitions.setValue(Mathf.Clamp(1 - menuFadeDownTimer / menuFadeDownLength, 0,1));
+				FMOD_MenuTransitions.setValue(Mathf.Clamp(1 - menuFadeDownTimer / menuFadeDownLength, 0,1));
 				print (menuFadeDownTimer / menuFadeDownLength);
 			}
 			
 			else {
-				//FMOD_MenuTransitions.setValue(0);
+				FMOD_MenuTransitions.setValue(0);
 				menuFadeDown = false;
 				menuFadeDownTimer = 0.0f;
 			}
@@ -137,7 +137,7 @@ public class FMOD_Manager : MonoBehaviour {
 	}
 
 	public void StartGame() {
-		//FMOD_Tutorial.setValue (1);
+		FMOD_Tutorial.setValue (1);
 	}
 
 	public void PlaneDeath() {
@@ -147,7 +147,7 @@ public class FMOD_Manager : MonoBehaviour {
 	public void ResumeGame() {
 				if (isplaying) {
 					fadeOutOfDeath = true;
-					//FMOD_Time.setValue (0);
+					FMOD_Time.setValue (0);
 				}
 		isplaying = true;
 		}

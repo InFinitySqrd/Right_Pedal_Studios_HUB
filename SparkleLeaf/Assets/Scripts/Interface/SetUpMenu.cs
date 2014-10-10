@@ -27,8 +27,8 @@ public class SetUpMenu : MonoBehaviour {
         muteSFX.transform.position = new Vector3(muteSFX.transform.position.x, settings.transform.position.y + 0.8f * settings.transform.localScale.y, muteSFX.transform.position.z);
         //muteBGM.transform.position = new Vector3(muteBGM.transform.position.x, settings.transform.position.y + 2.0f * settings.transform.localScale.y, muteBGM.transform.position.z);
     
-        audioFade = GameObject.Find("AudioManager").GetComponent<FadeBetweenAudio>();
-        audioFade.FadeAudio(false);
+//        audioFade = GameObject.Find("AudioManager").GetComponent<FadeBetweenAudio>();
+//        audioFade.FadeAudio(false);
     }
 
 	void Start() {

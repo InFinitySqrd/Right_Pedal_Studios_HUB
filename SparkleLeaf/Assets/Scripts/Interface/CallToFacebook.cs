@@ -3,7 +3,7 @@ using System.Collections;
 
 public class CallToFacebook : MonoBehaviour {
 	    // Declare variables
-    private SpawnGates getScore;
+ /*   private SpawnGates getScore;
 
 	void Awake() {
 		FB.Init(this.FacebookInitCallback, OnHideUnity);

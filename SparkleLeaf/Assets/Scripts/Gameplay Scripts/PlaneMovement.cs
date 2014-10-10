@@ -176,7 +176,7 @@ public class PlaneMovement : MonoBehaviour {
 			this.transform.Rotate(Vector3.forward * momentum);
 
 			// Play audio for rotation relative to the momentum of the plane
-			rotationSound.GetComponent<AudioSource>().volume = Mathf.Clamp(Mathf.Abs(momentum), 0.0f, 1.0f);
+			//rotationSound.GetComponent<AudioSource>().volume = Mathf.Clamp(Mathf.Abs(momentum), 0.0f, 1.0f);
 		}
 	}
 	

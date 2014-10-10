@@ -40,16 +40,19 @@ public class ButtonControls : MonoBehaviour {
     private GameObject audioManager;
     private GameObject FMODManager;
 
+    private GooglePlayIntegration googlePlay;
+
 	void Awake() {
-		if (PlayerPrefs.GetInt("FacebookInitialised") == 0) {
+/*		if (PlayerPrefs.GetInt("FacebookInitialised") == 0) {
 			FB.Init(SetInit, OnHideUnity);
 			PlayerPrefs.SetInt("FacebookInitialised", 1);
-		}
+		}*/
 
         audioManager = GameObject.Find("AudioManager");
-        audioFade = audioManager.GetComponent<FadeBetweenAudio>();
+        //audioFade = audioManager.GetComponent<FadeBetweenAudio>();
 
-        
+        googlePlay = Camera.main.GetComponent<GooglePlayIntegration>();
+
         if (SFXOff != null && PlayerPrefs.GetInt("AudioEnabled") == 0) {
             sfxEnabled = false;
             this.renderer.material = SFXOff;
@@ -57,10 +60,10 @@ public class ButtonControls : MonoBehaviour {
         }
 	}
 
-	private void SetInit() {
+	/*private void SetInit() {
 		// Facebook is initialized
 		enabled = true; 
-	}
+	}*/
 
 	private void OnHideUnity(bool isGameShown) {
 		// Pause the game if Facebook tries to hide unity
@@ -70,7 +73,7 @@ public class ButtonControls : MonoBehaviour {
 			Time.timeScale = 1;
 		}
 	}
-
+/*
 	private void AuthCallback(FBResult result) {
 	}
 
@@ -79,7 +82,7 @@ public class ButtonControls : MonoBehaviour {
                 linkCaption: "I am playing Silent Grove",
                 linkDescription: "I got " + getScore.score + " points in Silent Grove");
     }
-
+*/
     private void ShareToTwitter(string text) {
         if (Application.platform == RuntimePlatform.Android) {
             Application.OpenURL(TwitterAddress + "?text=" + WWW.EscapeURL(text) + "&amp;lang=" + WWW.EscapeURL(TweetLanguage));
@@ -98,6 +101,16 @@ public class ButtonControls : MonoBehaviour {
         FMODManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
         
         getScore = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
+        googlePlay.UpdateLeaderboard(getScore.score);
+
+        // Update achievements
+        if (getScore.score >= 100) {
+            googlePlay.UnlockAchievement("Scored100");
+        } else if (getScore.score >= 50) {
+            googlePlay.UnlockAchievement("Scored50");
+        } else if (getScore.score >= 10) {
+            googlePlay.UnlockAchievement("Scored10");
+        }
 
         if (getScore.score == 0 && this.collider.name == "Share") {
             this.collider.enabled = false;
@@ -158,7 +171,7 @@ public class ButtonControls : MonoBehaviour {
                         case ButtonFunction.Play:
                             // Restart the game
                             //Application.LoadLevel(Application.loadedLevel);
-                            audioFade.FadeAudio(true);
+//                            audioFade.FadeAudio(true);
 
 							if (pause != null && lostGame != null && tutorial != null && !lostGame.lost) {
 								pause.paused = false;
@@ -174,6 +187,7 @@ public class ButtonControls : MonoBehaviour {
 							break;
                         case ButtonFunction.Leaderboards:
                             // Display leaderboards
+                            googlePlay.DisplayLeaderboardUI();
                             break;
                         case ButtonFunction.Settings:
                             // Open the settings scene
@@ -200,6 +214,9 @@ public class ButtonControls : MonoBehaviour {
                         case ButtonFunction.Info:
                             // Switch the the credits and game info screen
 							if (subMenuParent.inSubMenu) {
+                                // Unlock the view credits achievement
+                                googlePlay.UnlockAchievement("ViewCredits");
+
 	                            Application.LoadLevelAdditive("CreditsScreen");
                                 audioManager.GetComponent<FMOD_Manager>().MenuTransition(true);
 	                            Destroy(this.transform.root.gameObject);
@@ -248,8 +265,9 @@ public class ButtonControls : MonoBehaviour {
                             }
                             break;
                         case ButtonFunction.FacebookShare:
-                            CallToFacebook facebook = GameObject.Find("FacebookPost").GetComponent<CallToFacebook>();
-                            facebook.ShareClick();
+//                            CallToFacebook facebook = GameObject.Find("FacebookPost").GetComponent<CallToFacebook>();
+//                            facebook.ShareClick();
+						print("SORRY JAMES I NUKED FACEBOOK, WAS GIVING ME SHITTY ERRORS. Love Nathaniel :)");
                             break;
                         default:
                             break;
