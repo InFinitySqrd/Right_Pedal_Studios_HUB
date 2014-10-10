@@ -8,10 +8,14 @@ public class GameCentreIntegration : MonoBehaviour {
     ILeaderboard leaderboard;
 
     void Start() {
+        if (Application.platform != RuntimePlatform.IPhonePlayer) {
+            this.enabled = false;
+        }
+
         // Register the user
         Social.localUser.Authenticate(ProcessAuthentication);
         leaderboard = Social.CreateLeaderboard();
-        leaderboard.id = "scores";
+        leaderboard.id = "SilentGrove_Scores";
     }
 
     private void ProcessAuthentication(bool success) {

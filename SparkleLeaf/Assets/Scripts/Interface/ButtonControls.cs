@@ -41,6 +41,7 @@ public class ButtonControls : MonoBehaviour {
     private GameObject FMODManager;
 
     private GooglePlayIntegration googlePlay;
+    private GameCentreIntegration gameCentre;
 
 	void Awake() {
 /*		if (PlayerPrefs.GetInt("FacebookInitialised") == 0) {
@@ -52,6 +53,7 @@ public class ButtonControls : MonoBehaviour {
         //audioFade = audioManager.GetComponent<FadeBetweenAudio>();
 
         googlePlay = Camera.main.GetComponent<GooglePlayIntegration>();
+        gameCentre = Camera.main.GetComponent<GameCentreIntegration>();
 
         if (SFXOff != null && PlayerPrefs.GetInt("AudioEnabled") == 0) {
             sfxEnabled = false;
@@ -101,15 +103,22 @@ public class ButtonControls : MonoBehaviour {
         FMODManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
         
         getScore = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
-        googlePlay.UpdateLeaderboard(getScore.score);
 
-        // Update achievements
-        if (getScore.score >= 100) {
-            googlePlay.UnlockAchievement("Scored100");
-        } else if (getScore.score >= 50) {
-            googlePlay.UnlockAchievement("Scored50");
-        } else if (getScore.score >= 10) {
-            googlePlay.UnlockAchievement("Scored10");
+        if (googlePlay != null) {
+            googlePlay.UpdateLeaderboard(getScore.score);
+
+            // Update achievements
+            if (getScore.score >= 100) {
+                googlePlay.UnlockAchievement("Scored100");
+            } else if (getScore.score >= 50) {
+                googlePlay.UnlockAchievement("Scored50");
+            } else if (getScore.score >= 10) {
+                googlePlay.UnlockAchievement("Scored10");
+            }
+        }
+
+        if (gameCentre != null) {
+            gameCentre.WriteLeaderboard((long)getScore.score);
         }
 
         if (getScore.score == 0 && this.collider.name == "Share") {
@@ -187,7 +196,13 @@ public class ButtonControls : MonoBehaviour {
 							break;
                         case ButtonFunction.Leaderboards:
                             // Display leaderboards
-                            googlePlay.DisplayLeaderboardUI();
+                            if (googlePlay != null) {
+                                googlePlay.DisplayLeaderboardUI();
+                            }
+
+                            if (gameCentre != null) {
+                                gameCentre.DisplayDefaultLeaderboard();
+                            }
                             break;
                         case ButtonFunction.Settings:
                             // Open the settings scene

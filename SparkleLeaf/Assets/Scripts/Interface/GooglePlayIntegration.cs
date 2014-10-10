@@ -11,6 +11,10 @@ public class GooglePlayIntegration : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (Application.platform != RuntimePlatform.Android) {
+            this.enabled = false;
+        }
+
         // Initialise variables
         pause = GameObject.FindGameObjectWithTag("Player").GetComponent<DebugControls>();
 
