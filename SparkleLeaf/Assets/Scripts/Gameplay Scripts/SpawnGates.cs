@@ -194,7 +194,7 @@ public class SpawnGates : MonoBehaviour {
 
         // Set the rotation of the gate
 		int randomNotch = (int)Random.Range(minRotation, maxRotation);
-		spawnedObstacle.transform.eulerAngles = new Vector3(spawnedObstacle.transform.eulerAngles.x, spawnedObstacle.transform.eulerAngles.y, randomNotch);
+		spawnedObstacle.transform.eulerAngles = new Vector3(spawnedObstacle.transform.eulerAngles.x, spawnedObstacle.transform.eulerAngles.y, spawnedObstacle.transform.eulerAngles.z + randomNotch);
 			
     }
 

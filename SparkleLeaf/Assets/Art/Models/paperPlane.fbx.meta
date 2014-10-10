@@ -17,6 +17,10 @@ ModelImporter:
     100022: wing_02_R
     100024: wing_03_L
     100026: wing_03_R
+    100028: trailThing_L
+    100030: trailThing_R
+    100032: trail_L
+    100034: trail_R
     400000: //RootNode
     400002: plane
     400004: planeArmature
@@ -31,6 +35,10 @@ ModelImporter:
     400022: wing_02_R
     400024: wing_03_L
     400026: wing_03_R
+    400028: trailThing_L
+    400030: trailThing_R
+    400032: trail_L
+    400034: trail_R
     2300000: //RootNode
     3300000: //RootNode
     4300000: Plane_002
@@ -172,7 +180,7 @@ ModelImporter:
       name: rotateL
       takeName: rotateL
       firstFrame: 0
-      lastFrame: 9
+      lastFrame: 7
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -279,8 +287,8 @@ ModelImporter:
     - serializedVersion: 16
       name: rotateR
       takeName: rotateR
-      firstFrame: 1
-      lastFrame: 2
+      firstFrame: 0
+      lastFrame: 7
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

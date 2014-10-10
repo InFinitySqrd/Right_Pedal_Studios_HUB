@@ -15,7 +15,7 @@ public class MoonMovement : MonoBehaviour {
 	void Start () {
         // Set the initial position of the moon
         initialSpawnPos = this.transform.position;
-        initialSpawnRect = new Rect(0.0f - Screen.width / 8.0f, 0.0f - Screen.height / 3.0f, Screen.width / 4.0f, Screen.width / 4.0f);
+        initialSpawnRect = new Rect(0.0f - Screen.width / 8.0f, 0.0f - 0.6f * Screen.height / 3.0f, Screen.width / 3.0f, Screen.width / 3.0f);
 	    this.guiTexture.pixelInset = initialSpawnRect;
 
         //initialSpawnPos = new Vector3(0.0f, -200.0f, 400.0f);

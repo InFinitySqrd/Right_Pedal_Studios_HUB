@@ -161,7 +161,7 @@ ModelImporter:
     - serializedVersion: 16
       name: lineKill
       takeName: kill
-      firstFrame: -1
+      firstFrame: 2
       lastFrame: 17
       wrapMode: 0
       orientationOffsetY: 0

@@ -153,6 +153,7 @@
      <Compile Include="Assets\Scripts\Interface\Tutorial.cs" />
      <Compile Include="Assets\Scripts\Obsolete Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\Obsolete Scripts\DestroyOldGates.cs" />
+     <Compile Include="Assets\Scripts\Obsolete Scripts\PlaneTrail.cs" />
      <Compile Include="Assets\Scripts\Obsolete Scripts\Rotate.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\FadeOutMonsters.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\FogScript.cs" />

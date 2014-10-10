@@ -8,6 +8,7 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 	[SerializeField] int numPlanes = 20;
 	[SerializeField] float rotationVariation = 0.5f;
 	[SerializeField] float environmentChance = 0.5f;
+    [SerializeField] float environmentScale = 10.0f;
 	[SerializeField] int maxNumElements = 3;
 	[SerializeField] Texture[] textures;
 	[SerializeField] Transform[] environmentModels;
@@ -95,7 +96,7 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
                     environment.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
 				}
 				
-				environment.localScale *= 10.0f;
+				environment.localScale = new Vector3(environment.localScale.x * environmentScale * 0.6f, environment.localScale.y * environmentScale, environment.localScale.z * environmentScale);
 				
 				environment.parent = centre;
 			}
