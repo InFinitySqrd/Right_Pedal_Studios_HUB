@@ -117,8 +117,8 @@ ModelImporter:
     - serializedVersion: 16
       name: idle
       takeName: idle
-      firstFrame: -1
-      lastFrame: 9
+      firstFrame: 0
+      lastFrame: 56
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -171,8 +171,8 @@ ModelImporter:
     - serializedVersion: 16
       name: rotateL
       takeName: rotateL
-      firstFrame: -1
-      lastFrame: 13
+      firstFrame: 0
+      lastFrame: 9
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -225,8 +225,8 @@ ModelImporter:
     - serializedVersion: 16
       name: rotateLidle
       takeName: rotateLidle
-      firstFrame: -1
-      lastFrame: 9
+      firstFrame: 1
+      lastFrame: 2
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -279,8 +279,8 @@ ModelImporter:
     - serializedVersion: 16
       name: rotateR
       takeName: rotateR
-      firstFrame: -1
-      lastFrame: 13
+      firstFrame: 1
+      lastFrame: 2
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -333,8 +333,8 @@ ModelImporter:
     - serializedVersion: 16
       name: rotateRidle
       takeName: rotateRidle
-      firstFrame: -1
-      lastFrame: 9
+      firstFrame: 1
+      lastFrame: 2
       wrapMode: 0
       orientationOffsetY: 0
       level: 0

@@ -1522,12 +1522,17 @@ MonoBehaviour:
   numPlanes: 100
   rotationVariation: .5
   environmentChance: 1
-  maxNumElements: 10
+  maxNumElements: 8
   textures:
   - {fileID: 2800000, guid: d1e9340e24bd1f34799fc686fe1bc721, type: 3}
   environmentModels:
-  - {fileID: 400000, guid: ee0b442f64c74e24f9b04be92ba021e1, type: 2}
-  minXRange: 10
+  - {fileID: 400000, guid: eca73e7d955ec5d489b644fd2ca81b55, type: 2}
+  - {fileID: 400000, guid: d50f73ba765e86d498232cc6421afda9, type: 2}
+  - {fileID: 400000, guid: 5f92deb8bb811e742b196c44cd3ad9d5, type: 2}
+  - {fileID: 400000, guid: 1a33efbe5f155724da028e4e00ee7955, type: 2}
+  - {fileID: 400000, guid: 562c98d05d893914aa0b4cd949932826, type: 2}
+  - {fileID: 400000, guid: 2bafd242ca9f23b4f8fe8c57f0d4ca26, type: 2}
+  minXRange: 15
   maxXRange: 40
   minYRange: -20
   maxYRange: -18

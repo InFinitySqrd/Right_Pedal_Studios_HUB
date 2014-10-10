@@ -134,30 +134,30 @@ public class Tutorial : MonoBehaviour {
                 timer += Time.deltaTime;
             }
 
-            if (text.renderer.material.color.a < 0.1f) {
-                PlayerPrefs.SetInt("TutorialComplete", 1);
+            PlayerPrefs.SetInt("TutorialComplete", 1);
+            googlePlay.UnlockAchievement("TutorialComplete");
 
-                googlePlay.UnlockAchievement("TutorialComplete");
+            Destroy(leftIcon);
+            Destroy(rightIcon);
 
-                Destroy(leftIcon);
-                Destroy(rightIcon);
-                Destroy(text);
+            // Find the nearest monster spawn point to the player
+			List<Transform> spawnPoints = enviroVars.spawnPoints;
+			float distanceValue = 100.0f;
+			int pointNumber = 0;
 
-				// Find the nearest monster spawn point to the player
-				List<Transform> spawnPoints = enviroVars.spawnPoints;
-				float distanceValue = 100.0f;
-				int pointNumber = 0;
-
-				foreach (Transform point in spawnPoints) {
-					if (Vector3.Distance(point.position, this.transform.position) <= distanceValue) {
-						distanceValue = Vector3.Distance(point.position, this.transform.position);
-						pointNumber = spawnPoints.IndexOf (point);
-					}
+			foreach (Transform point in spawnPoints) {
+				if (Vector3.Distance(point.position, this.transform.position) <= distanceValue) {
+					distanceValue = Vector3.Distance(point.position, this.transform.position);
+					pointNumber = spawnPoints.IndexOf (point);
 				}
+			}
 
-				setStartingPoint.currentSpawnPoint = pointNumber + setStartingPoint.startingSpawnPoint;
+			setStartingPoint.currentSpawnPoint = pointNumber + setStartingPoint.startingSpawnPoint;
 
-                this.GetComponent<Tutorial>().enabled = false;
+            this.GetComponent<Tutorial>().enabled = false;
+
+            if (text.renderer.material.color.a < 0.1f) {
+                Destroy(text);
 			}
         }
 	}
