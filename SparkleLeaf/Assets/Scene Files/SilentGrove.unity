@@ -1526,7 +1526,7 @@ MonoBehaviour:
   textures:
   - {fileID: 2800000, guid: d1e9340e24bd1f34799fc686fe1bc721, type: 3}
   environmentModels:
-  - {fileID: 400000, guid: 8baef68e494bc814287198477ae92dff, type: 2}
+  - {fileID: 400000, guid: ee0b442f64c74e24f9b04be92ba021e1, type: 2}
   minXRange: 10
   maxXRange: 40
   minYRange: -20
