@@ -149,20 +149,6 @@ public class SpawnGates : MonoBehaviour {
 
 		} else if (!pause.paused){
 			timer += Time.deltaTime * planeVars.forwardSpeed;
-		
-			if (!tutorialFinished && PlayerPrefs.GetInt("TutorialComplete") == 1) {
-				if (decSpawnSpacingTimer >= decSpawnTime) {
-					spawnSpacing --;
-					decSpawnSpacingTimer = 0;
-					if (spawnSpacing == 6) {
-						tutorialFinished = true;
-					}
-				} 
-				
-				else {
-					decSpawnSpacingTimer += Time.deltaTime;
-				}
-			}
 
 		}
 
