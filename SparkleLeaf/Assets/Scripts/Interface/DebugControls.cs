@@ -6,6 +6,7 @@ public class DebugControls : MonoBehaviour
     // Declare variables
 	public bool debugEnabled = true;
     public bool paused = false;
+    public bool tutorialEnabled = false;
 
     // Serialized plane maxSliderValues
     [SerializeField] float moveMax = 10.0f;
@@ -43,6 +44,8 @@ public class DebugControls : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        PlayerPrefs.SetInt("TutorialComplete", 0);
+ 
         // Initialise plane values from player prefs
         planeVars.forwardSpeed = PlayerPrefs.GetFloat("movement");
         planeVars.rotationSpeed = PlayerPrefs.GetFloat("rotation");
