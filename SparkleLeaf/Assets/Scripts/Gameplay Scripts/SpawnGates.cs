@@ -116,12 +116,12 @@ public class SpawnGates : MonoBehaviour {
 
 			GUIStyle skin = new GUIStyle();
 			skin.font = scoreFont;
-			skin.fontSize = 64;
+			skin.fontSize = 72;
 			skin.alignment = TextAnchor.MiddleCenter;
 	        skin.normal.textColor = Color.white;
 
 
-			GUI.Box(new Rect(0.0f, scoreTranslation + 0.0f + nativeHeight / 24.0f, adjustedWidth, nativeHeight / 8.0f), score.ToString(), skin);
+			GUI.Box(new Rect(0.0f, scoreTranslation + 0.0f + nativeHeight / 7, adjustedWidth, nativeHeight / 8.0f), score.ToString(), skin);
 		}
 	}
     
@@ -173,6 +173,7 @@ public class SpawnGates : MonoBehaviour {
             GameObject currentGate = gatesList[0].gameObject;
 			gatesList.RemoveAt(0);
 
+			currentGate.GetComponent<turnOffLight>().destroyLight();
             //flyThroughSound.pitch = Random.Range(0.9f, 1.1f);
             //flyThroughSound.Play();
 

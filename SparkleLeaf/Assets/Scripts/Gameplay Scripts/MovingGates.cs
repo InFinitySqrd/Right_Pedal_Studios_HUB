@@ -46,6 +46,7 @@ public class MovingGates : MonoBehaviour {
 		if (!pauseGame.paused) {
 			if (this.transform.position == player.transform.position) {
 				atPlayer = true;
+				print ("YES");
 			}
 
 			if (!lostGame.lost) {

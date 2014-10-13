@@ -514,7 +514,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100026}
-  m_LocalRotation: {x: -.0285083465, y: -.0805648118, z: -.00689295819, w: .996317744}
+  m_LocalRotation: {x: -.0285083484, y: -.0805648193, z: -.00689295866, w: .996317804}
   m_LocalPosition: {x: -1.16457659e-06, y: -3.06750053e-07, z: -9.01636668e-08}
   m_LocalScale: {x: .999999702, y: 1, z: 1.00000012}
   m_Children:
@@ -604,7 +604,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100042}
-  m_LocalRotation: {x: .236271009, y: -.674880266, z: .302428305, w: -.630277634}
+  m_LocalRotation: {x: .236270994, y: -.674880266, z: .302428305, w: -.630277634}
   m_LocalPosition: {x: -3.08206892, y: .234110847, z: -.96252203}
   m_LocalScale: {x: 10.936553, y: 1.54664195, z: 2.90061069}
   m_Children: []
@@ -776,6 +776,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugEnabled: 0
   paused: 0
+  tutorialEnabled: 0
   moveMax: 10
   rotateMax: 10
   maxRotateMax: 10
@@ -807,7 +808,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tutorialIcons: {fileID: 400000, guid: 8d48a8d69ea25af43886613bb2459098, type: 2}
   tutorialText: {fileID: 400000, guid: bb2caf0754d7fec49bda10f494c3472f, type: 2}
-  minHoldTime: .75
+  tapIconR: {fileID: 400000, guid: a82a5bd45db6f42a8a9f75d2abe4b7e9, type: 2}
+  tapIconL: {fileID: 400000, guid: fd4f2428b69034f4e939e6d163d8719a, type: 2}
+  darknessBox: {fileID: 2800000, guid: f6c980063e4dd4d0f9db1ad563e45c7c, type: 3}
+  minHoldTime: 1
   delayToPlay: 1
   fadeRate: .200000003
 --- !u!137 &13700000

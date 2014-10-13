@@ -55,11 +55,11 @@ public class ButtonControls : MonoBehaviour {
         googlePlay = Camera.main.GetComponent<GooglePlayIntegration>();
         gameCentre = Camera.main.GetComponent<GameCentreIntegration>();
 
-        if (SFXOff != null && PlayerPrefs.GetInt("AudioEnabled") == 0) {
-            sfxEnabled = false;
-            this.renderer.material = SFXOff;
+        //if (SFXOff != null && PlayerPrefs.GetInt("AudioEnabled") == 0) {
+          //  sfxEnabled = false;
+            //this.renderer.material = SFXOff;
             //SetAudioMute(true);
-        }
+        //}
 	}
 
 	/*private void SetInit() {
@@ -242,15 +242,16 @@ public class ButtonControls : MonoBehaviour {
 							// Mute all sounds
 							if (subMenuParent.inSubMenu) {
 								sfxEnabled = !sfxEnabled;
-
+								audioManager.GetComponent<FMOD_Manager>().mute(sfxEnabled);
 								if (sfxEnabled) {
 									this.renderer.material = SFXOn;
                                     //SetAudioMute(false);
-                                    PlayerPrefs.SetInt("AudioEnabled", 1);
+                                    //PlayerPrefs.SetInt("AudioEnabled", 1);
 								} else {
 									this.renderer.material = SFXOff;
                                     //SetAudioMute(true);
-                                    PlayerPrefs.SetInt("AudioEnabled", 0);
+                                    //PlayerPrefs.SetInt("AudioEnabled", 0);
+
 								}
 							}
                             break;

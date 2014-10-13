@@ -10,6 +10,9 @@ public class FMOD_Manager : MonoBehaviour {
 
 	private FMOD.Studio.EventInstance FMOD_InstanceGameplay, FMOD_InstanceRotation, FMOD_InstanceDeath, FMOD_InstanceForest, FMOD_InstanceCleared, FMOD_InstanceHit;
 	private FMOD.Studio.ParameterInstance FMOD_MenuTransitions, FMOD_Tutorial, FMOD_Time, FMOD_Death, FMOD_RotationWind, FMOD_RotationPaper, FMOD_ForestDeath, FMOD_ClearedSpeed, FMOD_HitMonster;
+	//FMOD.Studio.MixerStrip masterBus;
+	FMOD.Studio.Bus masterBus;
+	private bool muted = false;
 
 	private bool isplaying = false;
 
@@ -88,6 +91,16 @@ public class FMOD_Manager : MonoBehaviour {
 		FMOD_InstanceRotation.start ();
 		FMOD_InstanceForest.start ();
 
+		if (PlayerPrefs.GetInt ("TutorialComplete") == 1) {
+			StartGame ();
+		}
+
+		FMOD.GUID guid;
+		FMOD.Studio.System system = FMOD_StudioSystem.instance.System;
+		system.lookupID("bus:/", out guid);
+		//system.getMixerStrip(guid, FMOD.Studio.LOADING_MODE.BEGIN_NOW, out masterBus);
+		system.getBusByID (guid, out masterBus);
+
 	}
 	
 	// Update is called once per frame
@@ -122,14 +135,14 @@ public class FMOD_Manager : MonoBehaviour {
 				fadeUpTimer += Time.deltaTime;
 
 				FMOD_Time.setValue(fadeUpTargetValue - 0.1f + (((fadeUpTimer / fadeUpFromScoreLength) / 10)));
-				print (fadeUpTargetValue - 0.1f + (((fadeUpTimer / fadeUpFromScoreLength) / 10)));
+//				print (fadeUpTargetValue - 0.1f + (((fadeUpTimer / fadeUpFromScoreLength) / 10)));
 			}
 
 			else {
 				fadeUpTimer = 0.0f;
 				fadeUpTime = false;
 				FMOD_Time.setValue(fadeUpTargetValue);
-				print (fadeUpTargetValue);
+//				print (fadeUpTargetValue);
 			}
 		}
 
@@ -137,7 +150,7 @@ public class FMOD_Manager : MonoBehaviour {
 			if (menuFadeUpTimer <= menuFadeUpLength) {
 				menuFadeUpTimer += Time.deltaTime;
 				FMOD_MenuTransitions.setValue(Mathf.Clamp(menuFadeUpTimer / menuFadeUpLength, 0,1));
-				print (menuFadeUpTimer / menuFadeUpLength);
+//				print (menuFadeUpTimer / menuFadeUpLength);
 			}
 
 			else {
@@ -151,7 +164,7 @@ public class FMOD_Manager : MonoBehaviour {
 			if (menuFadeDownTimer <= menuFadeDownLength) {
 				menuFadeDownTimer += Time.deltaTime;
 				FMOD_MenuTransitions.setValue(Mathf.Clamp(1 - menuFadeDownTimer / menuFadeDownLength, 0,1));
-				print (menuFadeDownTimer / menuFadeDownLength);
+//				print (menuFadeDownTimer / menuFadeDownLength);
 			}
 			
 			else {
@@ -229,7 +242,7 @@ public class FMOD_Manager : MonoBehaviour {
 
 	public void WindRotation(float currentMomentum) {
 		FMOD_RotationWind.setValue(Mathf.Abs(currentMomentum));
-		print (Mathf.Abs(currentMomentum));
+//		print (Mathf.Abs(currentMomentum));
 	}
 
 	public void ForestSetDeath (bool dead) {
@@ -242,6 +255,16 @@ public class FMOD_Manager : MonoBehaviour {
 
 	public void PaperPlaneDeath() {
 
-		print ("Plane dead");
+		print ("This function no longer exists");
+	}
+
+	public void mute(bool soundEnabled) {
+		if (soundEnabled) {
+						masterBus.setFaderLevel (1);
+						muted = false;
+				} else {
+						masterBus.setFaderLevel (0);
+						muted = true;
+				}
 	}
 }

@@ -44,7 +44,9 @@ public class DebugControls : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        PlayerPrefs.SetInt("TutorialComplete", 0);
+        if (tutorialEnabled) {
+						PlayerPrefs.SetInt ("TutorialComplete", 0);
+				}
  
         // Initialise plane values from player prefs
         planeVars.forwardSpeed = PlayerPrefs.GetFloat("movement");
