@@ -200,6 +200,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 400024}
+  - 114: {fileID: 11400002}
   m_Layer: 0
   m_Name: Cross
   m_TagString: Untagged
@@ -627,7 +628,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: -.707106829}
-  m_LocalPosition: {x: 3.07249069, y: 6.01932669, z: -2.99003029}
+  m_LocalPosition: {x: 4.62967682, y: 3.26563144, z: 2.12762403}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400056}
@@ -1083,13 +1084,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipped: 0
-  flipDistance: 90
+  flipDistance: 120
   flipSpeed: 300
   pivotPointYDistance: -10
   jiggleSpeed: 400
   firstJiggleRotation: 10
   jiggleDecrementor: .75
   jiggleCutOff: 4
+--- !u!114 &11400002
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c780deb9c9bea425c9ec2b5d73a5099c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  light: {fileID: 100058}
 --- !u!137 &13700000
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
