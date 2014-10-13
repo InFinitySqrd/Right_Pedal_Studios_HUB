@@ -11,7 +11,7 @@ public class SetUpPlayerPrefs : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         // Reset the tutorial values in player prefs
-        PlayerPrefs.SetInt("TutorialComplete", 0);
+        //PlayerPrefs.SetInt("TutorialComplete", 0);
 		PlayerPrefs.SetInt("FirstLaunch", 0);
 		PlayerPrefs.SetInt("Control Method", 1);
 

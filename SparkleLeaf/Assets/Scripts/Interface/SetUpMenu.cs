@@ -36,6 +36,11 @@ public class SetUpMenu : MonoBehaviour {
 	}
 
 	void Update() {
+        // Close the app when the user hits the back button
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.Quit();
+        }
+
 		if (scoreVal.score == 0) {	
 			share.collider.enabled = false;
 			share.renderer.enabled = false;

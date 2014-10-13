@@ -23,6 +23,14 @@ public class SetUpCredits : MonoBehaviour {
 		StartCoroutine("FadeTextIn");
 	}
 
+    void Update() {
+        // Switch back to the main menu if the user hits the back button
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            Application.LoadLevelAdditive("MenuScreen");
+            Destroy(this.gameObject);
+        }
+    }
+
 	float nativeWidth = 1920.0f;
 	float nativeHeight = 1080.0f;
 	void OnGUI() {
