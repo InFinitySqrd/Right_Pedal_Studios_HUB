@@ -25,6 +25,8 @@ public class MonsterPopUp : MonoBehaviour {
 	private bool jiggled = false;
 	private float jiggleRotation;
 
+    private bool spawnAnimTriggered = false;
+
     void Awake() {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         planeVars = player.GetComponent<PlaneMovement>();
@@ -60,6 +62,11 @@ public class MonsterPopUp : MonoBehaviour {
 	void Update () {
         if (!jiggled) {	
 			pivotObject.transform.position = gateParent.position + differenceVector;
+
+            if (!spawnAnimTriggered && this.name == "lineMonster") {
+                animate.SetTrigger("TriggerSpawnAnim");
+                spawnAnimTriggered = true;
+            }
 		}
 
         if (!flipped && Vector3.Distance(gateParent.transform.position, player.position) <= flipDistance) {
@@ -77,7 +84,10 @@ public class MonsterPopUp : MonoBehaviour {
 		} else {
 			flipped = true;
 			pivotObject.transform.eulerAngles = Vector3.zero;
-			animate.SetTrigger("TriggerSpawnAnim");
+
+            if (this.name == "crossMonster") {
+                animate.SetTrigger("TriggerSpawnAnim");
+            }
 		}
     }
 

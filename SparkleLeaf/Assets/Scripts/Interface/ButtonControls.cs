@@ -104,7 +104,7 @@ public class ButtonControls : MonoBehaviour {
         
         getScore = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
 
-        if (googlePlay != null) {
+        if (Application.platform == RuntimePlatform.Android) {
             googlePlay.UpdateLeaderboard(getScore.score);
 
             // Update achievements
@@ -117,7 +117,7 @@ public class ButtonControls : MonoBehaviour {
             }
         }
 
-        if (gameCentre != null) {
+        if (Application.platform == RuntimePlatform.IPhonePlayer) {
             gameCentre.WriteLeaderboard((long)getScore.score);
         }
 
@@ -196,11 +196,11 @@ public class ButtonControls : MonoBehaviour {
 							break;
                         case ButtonFunction.Leaderboards:
                             // Display leaderboards
-                            if (googlePlay != null) {
+                            if (Application.platform == RuntimePlatform.Android) {
                                 googlePlay.DisplayLeaderboardUI();
                             }
 
-                            if (gameCentre != null) {
+                            if (Application.platform == RuntimePlatform.IPhonePlayer) {
                                 gameCentre.DisplayDefaultLeaderboard();
                             }
                             break;

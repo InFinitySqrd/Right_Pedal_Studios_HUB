@@ -265,7 +265,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: .0199999996
   moonDuration: 32
-  timeToNewMoon: 5
+  timeToNewMoon: 15
   timeBetweenXAdditions: 1e+08
 --- !u!114 &11400006
 MonoBehaviour:

@@ -67,6 +67,12 @@ public class SpawnGates : MonoBehaviour {
 
     private GameObject audioManager;
 
+    // UI Things
+    float nativeWidth = 1920.0f;
+	float nativeHeight = 1080.0f;
+    private int scoreTranslation, scoreStart;
+    private bool scoreUp = false;
+
 	void Awake() {
 		gatesList = new List<Transform>();
 		planeVars = this.GetComponent<PlaneMovement>();
@@ -94,8 +100,6 @@ public class SpawnGates : MonoBehaviour {
         currentSpawnPoint = startingSpawnPoint;
 	}
 
-	float nativeWidth = 1920.0f;
-	float nativeHeight = 1080.0f;
 	void OnGUI() {
 		// Draw the player's score in the top corner of the screen
 		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && !pause.paused) {
@@ -115,9 +119,12 @@ public class SpawnGates : MonoBehaviour {
 			skin.alignment = TextAnchor.MiddleCenter;
 	        skin.normal.textColor = Color.white;
 
-			GUI.Box(new Rect(0.0f, 0.0f + nativeHeight / 24.0f, adjustedWidth, nativeHeight / 8.0f), score.ToString(), skin);
+
+			GUI.Box(new Rect(0.0f, scoreTranslation + 0.0f + nativeHeight / 24.0f, adjustedWidth, nativeHeight / 8.0f), score.ToString(), skin);
 		}
 	}
+    
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -156,13 +163,14 @@ public class SpawnGates : MonoBehaviour {
 		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
 			
 			score++;
+            StartCoroutine(JiggleScoreNumber());
 			GameObject currentGate = gatesList[0].gameObject;
 			gatesList.RemoveAt(0);
 
             //flyThroughSound.pitch = Random.Range(0.9f, 1.1f);
             //flyThroughSound.Play();
 
-			Destroy(currentGate.gameObject);
+			StartCoroutine(DestroyGate(currentGate));
 
             audioManager.GetComponent<FMOD_Manager>().SetGameplayTime(score);
 
@@ -286,5 +294,21 @@ public class SpawnGates : MonoBehaviour {
                 rotatableTimer += Time.deltaTime;
             }
         }
+    }
+
+    IEnumerator JiggleScoreNumber() {
+        while (true) {            
+            if (scoreUp) {
+                scoreTranslation++;
+            } else {
+                scoreTranslation--;
+            }
+            yield return null;
+        }
+    }
+
+    IEnumerator DestroyGate(GameObject gate) {
+        yield return new WaitForSeconds(1.0f);
+        Destroy(gate.gameObject);
     }
 }
