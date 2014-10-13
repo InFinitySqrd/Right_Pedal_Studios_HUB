@@ -5,7 +5,7 @@ using System.Collections;
 
 public class GooglePlayIntegration : MonoBehaviour {
     // Declare variables
-    private const string leaderboardName = "CgkIq63S6YYMEAIQBg";
+    [SerializeField]  string leaderboardName = "CgkIq63S6YYMEAIQBg";
     private DebugControls pause;
     private bool authenticationSuccess = false;
 
