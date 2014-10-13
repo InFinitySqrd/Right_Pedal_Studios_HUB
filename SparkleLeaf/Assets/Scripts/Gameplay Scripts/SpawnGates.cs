@@ -70,8 +70,9 @@ public class SpawnGates : MonoBehaviour {
     // UI Things
     float nativeWidth = 1920.0f;
 	float nativeHeight = 1080.0f;
-    private int scoreTranslation, scoreStart;
-    private bool scoreUp = false;
+    private int scoreTranslation = 0, scoreThreshold;
+    private int translationSpeed = 5;
+    private bool scoreUp = true;
 
 	void Awake() {
 		gatesList = new List<Transform>();
@@ -163,8 +164,13 @@ public class SpawnGates : MonoBehaviour {
 		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
 			
 			score++;
+
+            scoreTranslation = 0;
+            scoreThreshold = (int)(Screen.height / 40.0f);
+            scoreUp = true;
             StartCoroutine(JiggleScoreNumber());
-			GameObject currentGate = gatesList[0].gameObject;
+			
+            GameObject currentGate = gatesList[0].gameObject;
 			gatesList.RemoveAt(0);
 
             //flyThroughSound.pitch = Random.Range(0.9f, 1.1f);
@@ -297,11 +303,21 @@ public class SpawnGates : MonoBehaviour {
     }
 
     IEnumerator JiggleScoreNumber() {
-        while (true) {            
-            if (scoreUp) {
-                scoreTranslation++;
+        while (scoreThreshold >= 1) {            
+            if (!scoreUp) {
+                if (scoreTranslation < scoreThreshold) {
+                    scoreTranslation += translationSpeed;
+                } else {
+                    scoreUp = true;
+                    scoreThreshold /= 2;
+                }
             } else {
-                scoreTranslation--;
+                if (scoreTranslation > -scoreThreshold) {
+                    scoreTranslation -= translationSpeed;
+                } else {
+                    scoreUp = false;
+                    scoreThreshold /= 2;
+                }
             }
             yield return null;
         }

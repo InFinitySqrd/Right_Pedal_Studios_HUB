@@ -58,7 +58,7 @@ public class ButtonControls : MonoBehaviour {
         if (SFXOff != null && PlayerPrefs.GetInt("AudioEnabled") == 0) {
             sfxEnabled = false;
             this.renderer.material = SFXOff;
-            SetAudioMute(true);
+            //SetAudioMute(true);
         }
 	}
 
@@ -244,11 +244,11 @@ public class ButtonControls : MonoBehaviour {
 
 								if (sfxEnabled) {
 									this.renderer.material = SFXOn;
-                                    SetAudioMute(false);
+                                    //SetAudioMute(false);
                                     PlayerPrefs.SetInt("AudioEnabled", 1);
 								} else {
 									this.renderer.material = SFXOff;
-                                    SetAudioMute(true);
+                                    //SetAudioMute(true);
                                     PlayerPrefs.SetInt("AudioEnabled", 0);
 								}
 							}
