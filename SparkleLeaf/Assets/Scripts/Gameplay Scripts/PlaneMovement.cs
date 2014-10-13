@@ -54,7 +54,7 @@ public class PlaneMovement : MonoBehaviour {
 		Application.targetFrameRate = 60;
 		this.GetComponent<Tutorial>().enabled = false;
 
-        audioManager = GameObject.Find("AudioManager");
+		audioManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
 
         // Set audio levels to mute if the game is muted
         if (PlayerPrefs.GetInt("AudioEnabled") == 0) {
@@ -136,9 +136,8 @@ public class PlaneMovement : MonoBehaviour {
 			//this.transform.Translate(Vector3.forward * forwardSpeed);
 			// Rotate the environment around the player
 			environmentCentre.transform.Rotate(Vector3.left * forwardSpeed / 4.0f);
-					
+			audioManager.GetComponent<FMOD_Manager>().WindRotation(momentum);
 			PlaneRotation();
-
             if (!gameInitliased) {
 				gameInitliased = true;
 				audioManager.GetComponent<FMOD_Manager>().ResumeGame();

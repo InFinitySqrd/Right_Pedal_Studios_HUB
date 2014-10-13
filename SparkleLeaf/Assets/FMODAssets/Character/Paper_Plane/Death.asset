@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf1e64e08658f004e886a01a13be0b89, type: 3}
-  m_Name: Monster_Voices
+  m_Name: Death
   m_EditorClassIdentifier: 
-  path: event:/SFX/Shadow_Monsters/Monster_Voices
-  id: '{4189fc92-0e15-4804-910f-d6df14d7c335}'
+  path: event:/Character/Paper_Plane/Death
+  id: '{6c7e87ae-855b-44c5-b9cf-1bd35bc866f4}'

@@ -193,13 +193,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFadeLength: .5
   fadeFromDeathLength: .5
-  fadeUpFromScoreLength: 2
+  fadeUpFromScoreLength: 5
   menuFadeUpLength: .5
   menuFadeDownLength: .5
   targetScoreOne: 5
   targetScoreTwo: 10
-  targetScoreThree: 20
-  targetScoreFour: 30
+  targetScoreThree: 15
+  targetScoreFour: 20
+  targetScoreFive: 40
+  targetScoreSix: 60
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

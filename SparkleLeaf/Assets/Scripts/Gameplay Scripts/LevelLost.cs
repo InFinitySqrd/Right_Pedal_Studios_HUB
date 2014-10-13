@@ -9,6 +9,8 @@ public class LevelLost : MonoBehaviour {
 	private float timeUntilDeath;
 	private GameAnalytics GAStuff;
 
+	private int monsterKillType = 0; // 0 = Line, 1 = Cross
+
     private bool menuUp = false;
 
     private bool died = false;
@@ -68,6 +70,8 @@ public class LevelLost : MonoBehaviour {
         }
 
         if (!menuUp && lost) {
+			audioManager.GetComponent<FMOD_Manager>().ForestSetDeath(true);
+			audioManager.GetComponent<FMOD_Manager>().PlaneDeath(monsterKillType);
             Application.LoadLevelAdditive("MenuScreen");
             menuUp = true;
 
@@ -99,14 +103,15 @@ public class LevelLost : MonoBehaviour {
 		if (other.tag == "Obstacle") {
 			lost = true;
 
-            audioManager.GetComponent<FMOD_Manager>().PlaneDeath();
 
             if (other.transform.parent.name.Contains("Gate")) {
                 killerAnim = other.transform.parent.FindChild("lineMonster").GetComponent<Animator>();
                 killerAnim.SetTrigger("TriggerKillAnim");
+				monsterKillType = 0;
             } else if (other.transform.parent.name.Contains("Cross")) {
                 killerAnim = other.transform.parent.FindChild("crossMonster").GetComponent<Animator>();
                 killerAnim.SetTrigger("TriggerKillAnim");
+				monsterKillType = 1;
             }
 
 			string name = other.transform.parent.GetComponent<MovingGates>().gateName;
