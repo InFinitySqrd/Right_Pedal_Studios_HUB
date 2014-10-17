@@ -8,13 +8,7 @@ public class ChartboostAds : MonoBehaviour {
 		CBExternal.init ();
 	}
 
-	// Use this for initialization
-	void Start () {
-		CBExternal.showInterstitial (CBLocation.Default);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-
-	}
+    public void ShowInterstitialAd() {
+        CBExternal.showInterstitial(CBLocation.Default);
+    }
 }

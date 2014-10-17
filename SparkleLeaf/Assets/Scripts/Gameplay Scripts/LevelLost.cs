@@ -22,7 +22,7 @@ public class LevelLost : MonoBehaviour {
 
     private Animator killerAnim;
 
-    private UnityAdsIntegration adCall;
+    private ChartboostAds adCall;
 
 	// FMOD relating to death and BGM
     /*
@@ -39,7 +39,7 @@ public class LevelLost : MonoBehaviour {
 	void Start () {
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
         audioManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
-        adCall = Camera.main.GetComponent<UnityAdsIntegration>();
+        adCall = Camera.main.GetComponent<ChartboostAds>();
         /*
 		FMOD_Music = FMOD_StudioSystem.instance.GetEvent ("event:Music/Gameplay");
 		FMOD_Ambience = FMOD_StudioSystem.instance.GetEvent ("event:/Ambience/Forest");
@@ -70,7 +70,7 @@ public class LevelLost : MonoBehaviour {
         if (lost && !died && !killerAnim.GetCurrentAnimatorStateInfo(0).IsName("KillAnim")) {
             PlaneDeath();
             if (PlayerPrefs.GetInt("AdCounter") >= gamesBetweenAd) {
-                adCall.AdDisplay();
+                adCall.ShowInterstitialAd();
                 PlayerPrefs.SetInt("AdCounter", 0);
             }
         }
