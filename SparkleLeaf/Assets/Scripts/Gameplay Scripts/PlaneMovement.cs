@@ -50,6 +50,8 @@ public class PlaneMovement : MonoBehaviour {
    [SerializeField] ParticleSystem fireflyParticles;
    [SerializeField] float particleMinSpeed = 1.0f, particleMaxSpeed = 1.0f;
 
+	private bool triggerRight, triggerLeft = false;
+
 	void Awake() {
 		Application.targetFrameRate = 60;
 		this.GetComponent<Tutorial>().enabled = false;
@@ -136,7 +138,7 @@ public class PlaneMovement : MonoBehaviour {
 			//this.transform.Translate(Vector3.forward * forwardSpeed);
 			// Rotate the environment around the player
 			environmentCentre.transform.Rotate(Vector3.left * forwardSpeed / 4.0f);
-			audioManager.GetComponent<FMOD_Manager>().WindRotation(momentum);
+			//audioManager.GetComponent<FMOD_Manager>().WindRotation(momentum);
 			PlaneRotation();
             if (!gameInitliased) {
 				gameInitliased = true;
@@ -213,7 +215,22 @@ public class PlaneMovement : MonoBehaviour {
 			//if (Input.touches.Length > 0) {
 			if (Input.GetMouseButton(0)) {
 				// if (Input.touches[0].position.x < Screen.width / 2.0f) {
-				if (Input.mousePosition.x < Screen.width / 2.0f) {
+				print (momentum);
+				if (Input.mousePosition.x < Screen.width / 2.0f && Input.mousePosition.x > 0) {
+				if (triggerLeft) {
+						audioManager.GetComponent<FMOD_Manager>().rotateUltraExtreme();
+
+					}
+					triggerLeft = false;
+
+					if (momentum == 7.5) {
+						triggerRight = true;
+
+					}
+					else {
+						triggerRight = false;
+					}
+
 					if (momentum >= 0.0f) {
 						momentum += Time.deltaTime * rotationSpeed;
 					} else {
@@ -222,13 +239,28 @@ public class PlaneMovement : MonoBehaviour {
 
                     planeAnim.SetBool("RotatingRight", false);
                     planeAnim.SetBool("RotatingLeft", true);
-				} else {
+					
+				} else if (Input.mousePosition.x > Screen.width/2.0f && Input.mousePosition.x < Screen.width) {
+					if (triggerRight) {
+						audioManager.GetComponent<FMOD_Manager>().rotateUltraExtreme();
+
+					}
+					triggerRight = false;
+					if (momentum == -7.5) {
+							triggerLeft = true;
+						//audioManager.GetComponent<FMOD_Manager>().rotateUltraExtreme();
+					}
+						else {
+							triggerLeft = false;
+						}
 					if (momentum <= 0.0f) {
 						momentum -= Time.deltaTime * rotationSpeed;
 					} else {
 						momentum -= Time.deltaTime * rotationSpeed * oppositeDirectionPush;
 					}
                     
+
+
                     planeAnim.SetBool("RotatingLeft", false);
                     planeAnim.SetBool("RotatingRight", true);
 				}
@@ -236,6 +268,17 @@ public class PlaneMovement : MonoBehaviour {
 				levelingTimer = 0.0f;
 				
 			} else {
+				if (triggerLeft) {
+					if (momentum > -6.5f) {
+						triggerLeft = false;
+					}
+				}
+
+				if (triggerRight) {
+					if (momentum < 6.5f) {
+						triggerRight = false;
+					}
+				}
 				if (momentum > 0.0f) {
 					momentum -= Time.deltaTime * momentumReduction;
 				} else if (momentum < 0.0f) {
@@ -250,6 +293,7 @@ public class PlaneMovement : MonoBehaviour {
 
                 planeAnim.SetBool("RotatingLeft", false);
                 planeAnim.SetBool("RotatingRight", false);
+
 			}
 			
 			break;

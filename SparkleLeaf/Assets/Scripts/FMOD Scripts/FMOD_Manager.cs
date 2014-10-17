@@ -9,7 +9,7 @@ public class FMOD_Manager : MonoBehaviour {
 	}
 
 	private FMOD.Studio.EventInstance FMOD_InstanceGameplay, FMOD_InstanceRotation, FMOD_InstanceDeath, FMOD_InstanceForest, FMOD_InstanceCleared, FMOD_InstanceHit;
-	private FMOD.Studio.ParameterInstance FMOD_MenuTransitions, FMOD_Tutorial, FMOD_Time, FMOD_Death, FMOD_RotationWind, FMOD_RotationPaper, FMOD_ForestDeath, FMOD_ClearedSpeed, FMOD_HitMonster;
+	private FMOD.Studio.ParameterInstance FMOD_MenuTransitions, FMOD_Tutorial, FMOD_Time, FMOD_Death, FMOD_RotationWind, FMOD_RotationPaper, FMOD_ForestDeath, FMOD_ClearedSpeed, FMOD_HitMonster, FMOD_ClearedVolume;
 	//FMOD.Studio.MixerStrip masterBus;
 	FMOD.Studio.Bus masterBus;
 	private bool muted = false;
@@ -27,12 +27,15 @@ public class FMOD_Manager : MonoBehaviour {
 	private float fadeUpTimerTarget = 0.0f;
 	private float fadeUpTargetValue = 0.0f;
 
+	private bool brotateUltraExtreme = false;
+	private float rotateUltraExtremeTimer = 0.0f;
 
 	[SerializeField] float deathFadeLength = 0.0f;
 	[SerializeField] float fadeFromDeathLength = 0.0f;
 	[SerializeField] float fadeUpFromScoreLength = 0.0f;
 	[SerializeField] float menuFadeUpLength = 0.0f;
 	[SerializeField] float menuFadeDownLength = 0.0f;
+	[SerializeField] float rotateUltraExtremeLength = 0.0f;
 
 	private float menuFadeUpTimer = 0.0f;
 	private bool menuFadeUp = false;
@@ -46,6 +49,8 @@ public class FMOD_Manager : MonoBehaviour {
 	[SerializeField] int targetScoreFour = 0;
 	[SerializeField] int targetScoreFive = 0;
 	[SerializeField] int targetScoreSix = 0;
+
+	private int currentScore;
 
 	void Awake() {
 		if (instance != null && instance != this) {
@@ -74,7 +79,7 @@ public class FMOD_Manager : MonoBehaviour {
 		FMOD_InstanceGameplay.getParameter ("Death", out FMOD_Death);
 
 		// FMOD Parameters - Rotation
-		FMOD_InstanceRotation.getParameter ("Wind", out FMOD_RotationWind);
+		//FMOD_InstanceRotation.getParameter ("Wind", out FMOD_RotationWind);
 		FMOD_InstanceRotation.getParameter ("Paper", out FMOD_RotationPaper);
 
 		// FMOD Parameters - Forest
@@ -82,6 +87,7 @@ public class FMOD_Manager : MonoBehaviour {
 
 		// FMOD Parameters - Cleared
 		FMOD_InstanceCleared.getParameter ("Speed", out FMOD_ClearedSpeed);
+		FMOD_InstanceCleared.getParameter ("Volume", out FMOD_ClearedVolume);
 
 		// FMOD Parameters - Hit
 		FMOD_InstanceHit.getParameter ("Monster", out FMOD_HitMonster);
@@ -105,6 +111,14 @@ public class FMOD_Manager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (!brotateUltraExtreme) {
+			if (rotateUltraExtremeTimer < rotateUltraExtremeLength) {
+				rotateUltraExtremeTimer += Time.deltaTime;
+			}
+			else {
+				brotateUltraExtreme = true;
+			}
+		}
 		if (playerDead) {
 			if (deathTimer <= deathFadeLength) {
 				deathTimer += Time.deltaTime;
@@ -128,6 +142,7 @@ public class FMOD_Manager : MonoBehaviour {
 				fadeOutTimer = 0.0f;
 			}
 		}
+
 
 		if (fadeUpTime) {
 
@@ -192,7 +207,7 @@ public class FMOD_Manager : MonoBehaviour {
 				if (isplaying) {
 					fadeOutOfDeath = true;
 					FMOD_Time.setValue (0);
-			FMOD_RotationWind.setValue(0);
+			//FMOD_RotationWind.setValue(0);
 			FMOD_ForestDeath.setValue (0);
 				}
 		isplaying = true;
@@ -219,13 +234,17 @@ public class FMOD_Manager : MonoBehaviour {
 						fadeUpTime = true;
 						fadeUpTargetValue = 0.6f;
 		}
+		currentScore = score;
 		FMOD_InstanceCleared.start ();
+		FMOD_ClearedVolume.setValue(Mathf.Clamp((float) currentScore * (1.0f/20.0f), 0.0f, 1.0f));
+		print (Mathf.Clamp((float) currentScore * (1.0f/20.0f), 0.0f, 1.0f));
 		if (score > 20) {
 
-						FMOD_ClearedSpeed.setValue (1);
-				} else {
+			FMOD_ClearedSpeed.setValue (1);
+		} 
+		else {
 			FMOD_ClearedSpeed.setValue(0);
-				}
+		}
 
 
 	}
@@ -240,14 +259,14 @@ public class FMOD_Manager : MonoBehaviour {
 		}
 	}
 
-	public void WindRotation(float currentMomentum) {
-		FMOD_RotationWind.setValue(Mathf.Abs(currentMomentum));
+//	public void WindRotation(float currentMomentum) {
+//		FMOD_RotationWind.setValue(Mathf.Abs(currentMomentum));
 //		print (Mathf.Abs(currentMomentum));
-	}
+//	}
 
 	public void ForestSetDeath (bool dead) {
 		if (dead) {
-						FMOD_ForestDeath.setValue (1);
+						FMOD_ForestDeath.setValue (0.95f);
 				} else {
 						FMOD_ForestDeath.setValue (0);
 				}
@@ -267,4 +286,12 @@ public class FMOD_Manager : MonoBehaviour {
 						muted = true;
 				}
 	}
+
+	public void rotateUltraExtreme() {
+		if (brotateUltraExtreme) {
+				FMOD_StudioSystem.instance.PlayOneShot ("event:/Character/Paper_Plane/Rotation", GameObject.FindGameObjectWithTag ("MainCamera").transform.position);
+				brotateUltraExtreme = false;
+				rotateUltraExtremeTimer = 0.0f;
+			}
+		}
 }
