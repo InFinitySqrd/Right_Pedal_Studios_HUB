@@ -166,14 +166,14 @@ public class SpawnGates : MonoBehaviour {
 			score++;
 
             scoreTranslation = 0;
-            scoreThreshold = (int)(Screen.height / 40.0f);
+            scoreThreshold = (int)(Screen.height / 80.0f);
             scoreUp = true;
             StartCoroutine(JiggleScoreNumber());
 			
             GameObject currentGate = gatesList[0].gameObject;
 			gatesList.RemoveAt(0);
 
-			currentGate.GetComponent<turnOffLight>().destroyLight();
+			currentGate.GetComponent<turnOffLight>().DestroyLight();
             //flyThroughSound.pitch = Random.Range(0.9f, 1.1f);
             //flyThroughSound.Play();
 

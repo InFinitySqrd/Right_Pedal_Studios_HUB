@@ -3,6 +3,8 @@ using System.Collections;
 
 public class turnOffLight : MonoBehaviour {
 	public GameObject light;
+    [SerializeField] float fadeSpeed = 1.0f;
+    private bool fadeLight = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -10,11 +12,13 @@ public class turnOffLight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+        if (fadeLight) {
+            light.light.intensity -= Time.deltaTime * fadeSpeed;
+        }
 	}
 
-	public void destroyLight () {
+	public void DestroyLight () {
 		//light.SetActive (false);
-		light.GetComponent<Light> ().color = new Vector4 (0, 0, 0, 255);
+		fadeLight = true;
 	}
 }
