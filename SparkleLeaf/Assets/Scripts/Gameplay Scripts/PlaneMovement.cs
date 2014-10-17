@@ -136,11 +136,11 @@ public class PlaneMovement : MonoBehaviour {
 			//this.transform.Translate(Vector3.forward * forwardSpeed);
 			// Rotate the environment around the player
 			environmentCentre.transform.Rotate(Vector3.left * forwardSpeed / 4.0f);
-			audioManager.GetComponent<FMOD_Manager>().WindRotation(momentum);
+			//audioManager.GetComponent<FMOD_Manager>().WindRotation(momentum);
 			PlaneRotation();
             if (!gameInitliased) {
 				gameInitliased = true;
-				audioManager.GetComponent<FMOD_Manager>().ResumeGame();
+				//audioManager.GetComponent<FMOD_Manager>().ResumeGame();
 			}
 		}
 

@@ -5521,6 +5521,10 @@ Prefab:
       propertyPath: fireflyParticles
       value: 
       objectReference: {fileID: 1867525663}
+    - target: {fileID: 11400006, guid: accface51138d1d4cbff364ef3f9334e, type: 2}
+      propertyPath: tutorialEnabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: accface51138d1d4cbff364ef3f9334e, type: 2}
   m_RootGameObject: {fileID: 1975744012}
@@ -10009,7 +10013,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debugEnabled: 0
   paused: 0
-  tutorialEnabled: 0
+  tutorialEnabled: 1
   moveMax: 10
   rotateMax: 10
   maxRotateMax: 10
@@ -10381,7 +10385,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a661b34cc4c2549be83e67bf2452c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chartBoost: {fileID: 0}
 --- !u!1 &2126217742
 GameObject:
   m_ObjectHideFlags: 0
