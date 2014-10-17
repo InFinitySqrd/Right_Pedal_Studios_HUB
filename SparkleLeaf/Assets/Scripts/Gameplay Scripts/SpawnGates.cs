@@ -161,7 +161,7 @@ public class SpawnGates : MonoBehaviour {
 		}
 
         // Determine the score to be added to the player's total
-		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z) {
+		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z - 1.0f) {
 			
 			score++;
 

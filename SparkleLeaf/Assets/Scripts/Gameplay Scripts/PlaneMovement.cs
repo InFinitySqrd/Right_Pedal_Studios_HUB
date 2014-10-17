@@ -142,7 +142,7 @@ public class PlaneMovement : MonoBehaviour {
 			PlaneRotation();
             if (!gameInitliased) {
 				gameInitliased = true;
-				audioManager.GetComponent<FMOD_Manager>().ResumeGame();
+				//audioManager.GetComponent<FMOD_Manager>().ResumeGame();
 			}
 		}
 

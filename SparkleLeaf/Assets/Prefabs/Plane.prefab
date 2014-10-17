@@ -754,7 +754,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b557d23fd28b6d40bc6e1c5f03f1594, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loseText: YOU LOST
+  gamesBetweenAd: 10
   lost: 0
   planeModel: {fileID: 100038}
   brokenPlane: {fileID: 100000, guid: a2cf935e8e7758845b9f79fad8a41987, type: 2}

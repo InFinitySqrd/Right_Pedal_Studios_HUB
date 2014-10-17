@@ -3,7 +3,7 @@ using System.Collections;
 
 public class LevelLost : MonoBehaviour {
 	// Declare variables
-	[SerializeField] string loseText;
+	[SerializeField] int gamesBetweenAd = 1;
 	public bool lost = false;
 
 	private float timeUntilDeath;
@@ -22,6 +22,8 @@ public class LevelLost : MonoBehaviour {
 
     private Animator killerAnim;
 
+    private UnityAdsIntegration adCall;
+
 	// FMOD relating to death and BGM
     /*
 	private FMOD.Studio.EventInstance FMOD_Music;
@@ -37,7 +39,7 @@ public class LevelLost : MonoBehaviour {
 	void Start () {
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
         audioManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
-
+        adCall = Camera.main.GetComponent<UnityAdsIntegration>();
         /*
 		FMOD_Music = FMOD_StudioSystem.instance.GetEvent ("event:Music/Gameplay");
 		FMOD_Ambience = FMOD_StudioSystem.instance.GetEvent ("event:/Ambience/Forest");
@@ -67,11 +69,18 @@ public class LevelLost : MonoBehaviour {
 
         if (lost && !died && !killerAnim.GetCurrentAnimatorStateInfo(0).IsName("KillAnim")) {
             PlaneDeath();
+            if (PlayerPrefs.GetInt("AdCounter") >= gamesBetweenAd) {
+                adCall.AdDisplay();
+                PlayerPrefs.SetInt("AdCounter", 0);
+            }
         }
 
         if (!menuUp && lost) {
 			audioManager.GetComponent<FMOD_Manager>().ForestSetDeath(true);
 			audioManager.GetComponent<FMOD_Manager>().PlaneDeath(monsterKillType);
+
+            PlayerPrefs.SetInt("AdCounter", PlayerPrefs.GetInt("AdCounter") + 1);
+
             Application.LoadLevelAdditive("MenuScreen");
             menuUp = true;
 

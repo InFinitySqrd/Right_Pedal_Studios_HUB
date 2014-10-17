@@ -206,7 +206,7 @@ public class Tutorial : MonoBehaviour {
 		for (int i = -1; i < 2; i += 2) {
 			// Set up an appropriate spawn point
 			Vector3 spawnPoint = new Vector3(Screen.width / 2.0f + (i * Screen.width / 5.0f), Screen.height / 8.0f, -Camera.main.transform.position.z);
-			Vector3 tapIconSpawnPoint = new Vector3(Screen.width / 2.0f + (i * Screen.width / 3.0f), Screen.height / 8.0f, -Camera.main.transform.position.z);
+			Vector3 tapIconSpawnPoint = new Vector3(Screen.width / 2.0f + (i * Screen.width / 3.5f), Screen.height / 9.0f, -Camera.main.transform.position.z - 1.0f);
 			spawnPoint = Camera.main.ScreenToWorldPoint(spawnPoint);
 			tapIconSpawnPoint = Camera.main.ScreenToWorldPoint(tapIconSpawnPoint);
 			// Instantiate the icon
