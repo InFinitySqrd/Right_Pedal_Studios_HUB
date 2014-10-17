@@ -196,6 +196,7 @@ MonoBehaviour:
   fadeUpFromScoreLength: 5
   menuFadeUpLength: .5
   menuFadeDownLength: .5
+  rotateUltraExtremeLength: 0
   targetScoreOne: 5
   targetScoreTwo: 10
   targetScoreThree: 15
