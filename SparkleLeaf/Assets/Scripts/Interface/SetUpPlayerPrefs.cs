@@ -14,6 +14,7 @@ public class SetUpPlayerPrefs : MonoBehaviour {
         //PlayerPrefs.SetInt("TutorialComplete", 0);
 		PlayerPrefs.SetInt("FirstLaunch", 0);
 		PlayerPrefs.SetInt("Control Method", 1);
+        PlayerPrefs.SetInt("AdCounter", 0);
 
         // Variables to track social integration
         PlayerPrefs.SetInt("GooglePlayActivated", 0);
