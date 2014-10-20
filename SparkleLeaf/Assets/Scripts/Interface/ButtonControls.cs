@@ -117,9 +117,9 @@ public class ButtonControls : MonoBehaviour {
             }
         }
 
-        if (Application.platform == RuntimePlatform.IPhonePlayer) {
-            gameCentre.WriteLeaderboard((long)getScore.score);
-        }
+        //if (Application.platform == RuntimePlatform.IPhonePlayer) {
+        //    gameCentre.WriteLeaderboard((long)getScore.score);
+        //}
 
         if (getScore.score == 0 && this.collider.name == "Share") {
             this.collider.enabled = false;
@@ -189,7 +189,7 @@ public class ButtonControls : MonoBehaviour {
 									tutorial.enabled = true;
 								}
 							//audioManager.GetComponent<FMOD_Manager>().ResumeGame();
-							audioManager.GetComponent<FMOD_Manager>().ForestSetDeath(false);
+							//audioManager.GetComponent<FMOD_Manager>().ForestSetDeath(false);
 							//print ("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
 								Destroy(this.transform.root.gameObject);
@@ -203,9 +203,9 @@ public class ButtonControls : MonoBehaviour {
                                 googlePlay.DisplayLeaderboardUI();
                             }
 
-                            if (Application.platform == RuntimePlatform.IPhonePlayer) {
-                                gameCentre.DisplayDefaultLeaderboard();
-                            }
+                            //if (Application.platform == RuntimePlatform.IPhonePlayer) {
+                            //    gameCentre.DisplayDefaultLeaderboard();
+                            //}
                             break;
                         case ButtonFunction.Settings:
                             // Open the settings scene

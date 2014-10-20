@@ -46,6 +46,10 @@ public class PlaneMovement : MonoBehaviour {
 
     private bool gameInitliased = false;
 
+	private bool flyIn = true;
+
+	private bool initialiseAudio = false;
+
     // Firefly particle effects
    [SerializeField] ParticleSystem fireflyParticles;
    [SerializeField] float particleMinSpeed = 1.0f, particleMaxSpeed = 1.0f;
@@ -78,12 +82,10 @@ public class PlaneMovement : MonoBehaviour {
         if (PlayerPrefs.GetInt("TutorialComplete") == 0) {
             momentum = maxMomentum * 0.85f;
         } else {
-            momentum = 0.0f;
+            momentum = -6.3f;
         }
 
 		controlMethod = PlayerPrefs.GetInt ("Control Method");
-
-        FMODAudioSetUp();
 		
 		pause = this.GetComponent<DebugControls>();
 
@@ -96,81 +98,78 @@ public class PlaneMovement : MonoBehaviour {
 			pause.paused = true;
 		}
 	}
-
-    void FMODAudioSetUp() {
-        /*
-    	FMOD_PlaneRotation = FMOD_StudioSystem.instance.GetEvent ("event:/Character/Paper_Plane/Rotation");
-
-		if (FMOD_PlaneRotation.getParamter("Wind", out FMOD_Wind) != FMOD.RESULT.OK){
-			Debug.LogError("Wind not working");
-			return;
-
-		}
-
-		if (FMOD_PlaneRotation.getParameter("Paper", out FMOD_Paper) != FMOD.RESULT.OK){
-			Debug.LogError("Paper not working");
-			return;
-		
-		}
-
-		this.FMOD_PlaneRotation.start ();
-
-		if (controlMethod ==0) {
-			controlMethod = 1;
-		
-		}
-        */
-    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {	
-        // Update the speed of the firefly particles
-        fireflyParticles.startSpeed = Random.Range(particleMinSpeed * forwardSpeed, particleMaxSpeed * forwardSpeed);
+				// Update the speed of the firefly particles
+				fireflyParticles.startSpeed = Random.Range (particleMinSpeed * forwardSpeed, particleMaxSpeed * forwardSpeed);
 
-		if (PlayerPrefs.GetInt("TutorialComplete") == 0 && !pause.paused && !tutorialActivated) {
-			this.GetComponent<Tutorial>().enabled = true;
-			tutorialActivated = true;
-			//PlayerPrefs.SetInt("TutorialComplete", 1);
-		}
+				if (PlayerPrefs.GetInt ("TutorialComplete") == 0 && !pause.paused && !tutorialActivated) {
+						this.GetComponent<Tutorial> ().enabled = true;
+						tutorialActivated = true;
+						//PlayerPrefs.SetInt("TutorialComplete", 1);
+				}
 
-		if (!gameState.lost && !pause.paused) {
-			// Move the plane forward
-			//this.transform.Translate(Vector3.forward * forwardSpeed);
-			// Rotate the environment around the player
-			environmentCentre.transform.Rotate(Vector3.left * forwardSpeed / 4.0f);
-			//audioManager.GetComponent<FMOD_Manager>().WindRotation(momentum);
-			PlaneRotation();
-            if (!gameInitliased) {
-				gameInitliased = true;
-				audioManager.GetComponent<FMOD_Manager>().ResumeGame();
-			}
-		}
+				if (!gameState.lost && !pause.paused) {
 
-		if (pause.paused) {
-			momentum = 0.0f;
-		}
+						if (!flyIn) {
+								transform.Translate (0, 0, 0);
+								// Move the plane forward
+								//this.transform.Translate(Vector3.forward * forwardSpeed);
+								// Rotate the environment around the player
+								environmentCentre.transform.Rotate (Vector3.left * forwardSpeed / 4.0f);
+								//audioManager.GetComponent<FMOD_Manager>().WindRotation(momentum);
+								PlaneRotation ();
+								if (!gameInitliased) {
+										gameInitliased = true;
+										
+								}
+						} else {
+								if (!initialiseAudio) {
+										audioManager.GetComponent<FMOD_Manager> ().ResumeGame ();
+										audioManager.GetComponent<FMOD_Manager> ().ForestSetDeath (false);
+										initialiseAudio = true;
+										//momentum = maxMomentum * 0.75f;
+								}
+								PlaneRotation ();
+								transform.position = Vector3.Lerp (transform.position, new Vector3 (0, 0, 0), 0.05f);
+								environmentCentre.transform.eulerAngles = Vector3.Lerp (environmentCentre.transform.rotation.eulerAngles, 
+				                                                       new Vector3 (environmentCentre.transform.rotation.eulerAngles.x - 2, 
+				                                                                   environmentCentre.transform.rotation.eulerAngles.y, 
+				            														environmentCentre.transform.rotation.eulerAngles.z), 0.05f);
+								if (transform.position.x < 0.5f && transform.position.z > -0.5f) {
+										//transform.position = new Vector3(0,0,0);
+										flyIn = false;
+										transform.GetComponent<SpawnGates> ().flyIn = false;
+								}
+						}
+				}
+
+				if (pause.paused) {
+						momentum = 0.0f;
+				} else {
+						Controls ();
 		
-		Controls();
-		
-		if (speedIncreaseTimer >= speedIncreaseRate) {
-			IncreaseMovement(ref speedIncrementor);
-			speedIncreaseTimer = 0.0f;
-		} else {
-			speedIncreaseTimer += Time.deltaTime;
-		}
+						if (speedIncreaseTimer >= speedIncreaseRate) {
+								IncreaseMovement (ref speedIncrementor);
+								speedIncreaseTimer = 0.0f;
+						} else {
+								speedIncreaseTimer += Time.deltaTime;
+						}
 
-		if (Mathf.Abs (momentum) > maxMomentum) {
-			momentum = maxMomentum * Mathf.Clamp(momentum, -1, 1);
-		}
+						if (Mathf.Abs (momentum) > maxMomentum) {
+								momentum = maxMomentum * Mathf.Clamp (momentum, -1, 1);
+						}
 
-		// Calculate the player's average momentum
-		avgMomentum += momentum;
-		avgMomentum /= Time.time;
+						// Calculate the player's average momentum
+						avgMomentum += momentum;
+						avgMomentum /= Time.time;
 
-		if (gameState.lost) {
-			GAStuff.SetAverageMomentum(avgMomentum);
+						if (gameState.lost) {
+								GAStuff.SetAverageMomentum (avgMomentum);
+						}
+				}
 		}
-	}
 	
 	private void PlaneRotation() {	
 		if (!pause.paused) {
@@ -219,11 +218,12 @@ public class PlaneMovement : MonoBehaviour {
 				if (Input.mousePosition.x < Screen.width / 2.0f && Input.mousePosition.x > 0) {
 				if (triggerLeft) {
 						audioManager.GetComponent<FMOD_Manager>().rotateUltraExtreme();
+						//print ("trigger");
 
 					}
 					triggerLeft = false;
 
-					if (momentum == 7.5) {
+					if (momentum >= 6) {
 						triggerRight = true;
 
 					}
@@ -243,10 +243,11 @@ public class PlaneMovement : MonoBehaviour {
 				} else if (Input.mousePosition.x > Screen.width/2.0f && Input.mousePosition.x < Screen.width) {
 					if (triggerRight) {
 						audioManager.GetComponent<FMOD_Manager>().rotateUltraExtreme();
+						//print ("trigger");
 
 					}
 					triggerRight = false;
-					if (momentum == -7.5) {
+					if (momentum <= -6) {
 							triggerLeft = true;
 						//audioManager.GetComponent<FMOD_Manager>().rotateUltraExtreme();
 					}

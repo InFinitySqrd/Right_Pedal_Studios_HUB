@@ -94,7 +94,7 @@ public class FMOD_Manager : MonoBehaviour {
 		
 		// FMOD Start the player
 		FMOD_InstanceGameplay.start ();
-		FMOD_InstanceRotation.start ();
+		//FMOD_InstanceRotation.start ();
 		FMOD_InstanceForest.start ();
 		
 		if (PlayerPrefs.GetInt ("TutorialComplete") == 1) {
@@ -123,6 +123,7 @@ public class FMOD_Manager : MonoBehaviour {
 			if (deathTimer <= deathFadeLength) {
 				deathTimer += Time.deltaTime;
 				FMOD_Death.setValue (deathTimer * 2);
+				print (deathTimer *2);
 			} 
 			else { 
 				playerDead = false;
@@ -197,6 +198,7 @@ public class FMOD_Manager : MonoBehaviour {
 	public void PlaneDeath(float monsterType) {
 		// 0 = Line 1 = Cross
 		playerDead = true;
+		deathTimer = 0;
 		FMOD_StudioSystem.instance.PlayOneShot ("event:/Character/Paper_Plane/Death", GameObject.FindGameObjectWithTag("MainCamera").transform.position);
 		FMOD_InstanceHit.start ();
 		FMOD_HitMonster.setValue (monsterType);
@@ -290,6 +292,8 @@ public class FMOD_Manager : MonoBehaviour {
 	public void rotateUltraExtreme() {
 		if (brotateUltraExtreme) {
 			FMOD_StudioSystem.instance.PlayOneShot ("event:/Character/Paper_Plane/Rotation", GameObject.FindGameObjectWithTag ("MainCamera").transform.position);
+			//FMOD_InstanceRotation.start ();
+			print ("PLAY SFX");
 			brotateUltraExtreme = false;
 			rotateUltraExtremeTimer = 0.0f;
 		}

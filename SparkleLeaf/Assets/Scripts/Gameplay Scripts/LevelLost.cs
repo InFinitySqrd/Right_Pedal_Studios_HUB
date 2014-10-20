@@ -69,13 +69,14 @@ public class LevelLost : MonoBehaviour {
 
         if (lost && !died && !killerAnim.GetCurrentAnimatorStateInfo(0).IsName("KillAnim")) {
             PlaneDeath();
-            if (PlayerPrefs.GetInt("AdCounter") >= gamesBetweenAd) {
-                adCall.ShowInterstitialAd();
-                PlayerPrefs.SetInt("AdCounter", 0);
-            }
+            //if (PlayerPrefs.GetInt("AdCounter") >= gamesBetweenAd) {
+              //  adCall.ShowInterstitialAd();
+                //PlayerPrefs.SetInt("AdCounter", 0);
+            //}
         }
 
         if (!menuUp && lost) {
+			//audioManager.GetComponent<FMOD_Manager>().
 			audioManager.GetComponent<FMOD_Manager>().ForestSetDeath(true);
 			audioManager.GetComponent<FMOD_Manager>().PlaneDeath(monsterKillType);
 

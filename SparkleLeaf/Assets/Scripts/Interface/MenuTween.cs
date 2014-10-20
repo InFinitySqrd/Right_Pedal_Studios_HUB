@@ -34,7 +34,8 @@ public class MenuTween : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (tween) {
-	        this.transform.position = Vector3.MoveTowards(this.transform.position, initialPos, Time.deltaTime * tweenSpeed);
+	        //this.transform.position = Vector3.MoveTowards(this.transform.position, initialPos, Time.deltaTime * tweenSpeed);
+			this.transform.position = Vector3.Lerp(this.transform.position, initialPos, Time.deltaTime * tweenSpeed);
             this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, this.renderer.material.color.a + Time.deltaTime * fadeSpeed);
         } else if (reverse) {
             this.transform.position = Vector3.MoveTowards(this.transform.position, fromPos, Time.deltaTime * tweenSpeed);

@@ -164,7 +164,7 @@ public class Tutorial : MonoBehaviour {
 		
 		if (leftAchieved && rightAchieved) {
 			if (timer >= delayToPlay) {
-				//audioManager.GetComponent<FMOD_Manager>().StartGame();
+				audioManager.GetComponent<FMOD_Manager>().StartGame();
 //				StartCoroutine(Fade(text.renderer.material));
 				PlayerPrefs.SetInt("TutorialComplete", 1);
 				

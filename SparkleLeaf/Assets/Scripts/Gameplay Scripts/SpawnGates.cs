@@ -71,8 +71,10 @@ public class SpawnGates : MonoBehaviour {
     float nativeWidth = 1920.0f;
 	float nativeHeight = 1080.0f;
     private int scoreTranslation = 0, scoreThreshold;
-    private int translationSpeed = 5;
+    private int translationSpeed = 2;
     private bool scoreUp = true;
+
+	public bool flyIn = true;
 
 	void Awake() {
 		gatesList = new List<Transform>();
@@ -99,6 +101,7 @@ public class SpawnGates : MonoBehaviour {
         }
 		audioManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
         currentSpawnPoint = startingSpawnPoint;
+
 	}
 
 	void OnGUI() {
@@ -146,7 +149,7 @@ public class SpawnGates : MonoBehaviour {
 
 
         // Spawn a gate if we are able to
-		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && timer >= spawnTime && !pause.paused && !lostGame.lost) {
+		if (PlayerPrefs.GetInt("TutorialComplete") == 1 && timer >= spawnTime && !pause.paused && !lostGame.lost && !flyIn) {
             SpawnNewGate();
 	        SetSpawnPosition();
             AddNecessaryComponents();
@@ -161,12 +164,12 @@ public class SpawnGates : MonoBehaviour {
 		}
 
         // Determine the score to be added to the player's total
-		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z - 1.0f) {
+		if ((gatesList.Count > 0) && this.transform.position.z > gatesList[0].position.z + 3.0f) {
 			
 			score++;
 
             scoreTranslation = 0;
-            scoreThreshold = (int)(Screen.height / 80.0f);
+            scoreThreshold = (int)(Screen.height / 200.0f);
             scoreUp = true;
             StartCoroutine(JiggleScoreNumber());
 			

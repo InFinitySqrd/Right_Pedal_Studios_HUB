@@ -32,7 +32,7 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// Orientate the centre position accordingly
-		centre.transform.position = new Vector3(player.transform.position.x, player.transform.position.y - plane.transform.localScale.z * 4.5f, player.transform.position.z);
+		centre.transform.position = new Vector3(0, 0 - plane.transform.localScale.z * 4.5f, 0);
 	
 		for (int i = 0; i < numPlanes; i++) {
 			// Rotate the centre around before spawning the next piece
@@ -65,7 +65,7 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 
 			GameObject point = new GameObject();
 			point.name = "Monster Spawn Point";
-			point.transform.position = player.transform.position;
+			point.transform.position = new Vector3(0,0,0);
 
 			point.transform.parent = spawnedObj.transform;
 
