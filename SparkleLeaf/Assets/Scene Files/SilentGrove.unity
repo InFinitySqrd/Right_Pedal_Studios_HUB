@@ -5302,7 +5302,7 @@ MonoBehaviour:
   fadeUpFromScoreLength: 5
   menuFadeUpLength: .5
   menuFadeDownLength: .5
-  rotateUltraExtremeLength: 0
+  rotateUltraExtremeLength: .5
   targetScoreOne: 5
   targetScoreTwo: 10
   targetScoreThree: 15
@@ -10330,7 +10330,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2011436108}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a52ba5e85c886174b872f56ad53a39c2, type: 3}
   m_Name: 
@@ -10358,7 +10358,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6053f0ac81d2c6e4891730524888cd4c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leaderboardName: CgkIq63S6YYMEAIQBw
+  leaderboardName: CgkIq63S6YYMEAIQCA
 --- !u!114 &2011436118
 MonoBehaviour:
   m_ObjectHideFlags: 0

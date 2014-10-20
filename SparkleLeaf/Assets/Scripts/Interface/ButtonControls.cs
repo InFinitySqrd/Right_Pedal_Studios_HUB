@@ -188,7 +188,9 @@ public class ButtonControls : MonoBehaviour {
 								if (PlayerPrefs.GetInt("TutorialComplete") == 0) {
 									tutorial.enabled = true;
 								}
+							//audioManager.GetComponent<FMOD_Manager>().ResumeGame();
 							audioManager.GetComponent<FMOD_Manager>().ForestSetDeath(false);
+							//print ("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
 
 								Destroy(this.transform.root.gameObject);
 							} else if (pause != null && lostGame != null && lostGame.lost) {

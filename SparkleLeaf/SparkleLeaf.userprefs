@@ -1,18 +1,19 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Interface/ButtonControls.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/FMOD Scripts/FMOD_Manager.cs">
     <Files>
-      <File FileName="Assets/Scripts/Interface/ButtonControls.cs" Line="58" Column="18" />
+      <File FileName="Assets/Scripts/FMOD Scripts/FMOD_Manager.cs" Line="298" Column="1" />
+      <File FileName="Assets/Scripts/Gameplay Scripts/PlaneMovement.cs" Line="145" Column="5" />
+      <File FileName="Assets/Scripts/Interface/ButtonControls.cs" Line="191" Column="10" />
       <File FileName="Assets/Scripts/Interface/Tutorial.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/FMOD Scripts/FMOD_Manager.cs" Line="263" Column="33" />
+      <File FileName="Assets/Scripts/FMOD Scripts/FMOD_Manager.cs" Line="298" Column="1" />
       <File FileName="Assets/Scripts/Interface/SetUpPlayerPrefs.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Interface/SplashScreenTransitions.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Interface/ButtonControls.cs" Line="339" Column="1" />
-      <File FileName="Assets/Scripts/Gameplay Scripts/PlaneMovement.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Interface/DebugControls.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Gameplay Scripts/SpawnGates.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Gameplay Scripts/MovingGates.cs" Line="1" Column="1" />
-      <File FileName="Assets/turnOffLight.cs" Line="1" Column="1" />
+      <File FileName="../../Downloads/ButtonControls.cs" Line="1" Column="1" />
+      <File FileName="../../Downloads/FMOD_Manager.cs" Line="24" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

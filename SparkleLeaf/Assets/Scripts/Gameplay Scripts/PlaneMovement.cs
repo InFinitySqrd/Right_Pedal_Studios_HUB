@@ -142,7 +142,7 @@ public class PlaneMovement : MonoBehaviour {
 			PlaneRotation();
             if (!gameInitliased) {
 				gameInitliased = true;
-				//audioManager.GetComponent<FMOD_Manager>().ResumeGame();
+				audioManager.GetComponent<FMOD_Manager>().ResumeGame();
 			}
 		}
 
@@ -215,7 +215,7 @@ public class PlaneMovement : MonoBehaviour {
 			//if (Input.touches.Length > 0) {
 			if (Input.GetMouseButton(0)) {
 				// if (Input.touches[0].position.x < Screen.width / 2.0f) {
-				print (momentum);
+//				print (momentum);
 				if (Input.mousePosition.x < Screen.width / 2.0f && Input.mousePosition.x > 0) {
 				if (triggerLeft) {
 						audioManager.GetComponent<FMOD_Manager>().rotateUltraExtreme();
