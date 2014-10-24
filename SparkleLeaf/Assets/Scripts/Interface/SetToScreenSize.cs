@@ -4,6 +4,7 @@ using System.Collections;
 public class SetToScreenSize : MonoBehaviour {
 	// Declare variables
 	[SerializeField] bool mainMenu = false;
+    [SerializeField] bool isVignette = false;
 
 	// Use this for initialization
 	void Start () {
@@ -12,6 +13,10 @@ public class SetToScreenSize : MonoBehaviour {
 		} else {
 			this.transform.guiTexture.pixelInset = new Rect(-Screen.width * 1.1f / 2, -Screen.height * 1.2f / 2, Screen.width * 1.1f, Screen.height * 1.2f);
 		}
+
+        if (isVignette) {
+            this.transform.guiTexture.pixelInset = new Rect(0.0f, 0.0f, Screen.width * 1.1f, Screen.height * 1.2f);
+        }
 
 
 

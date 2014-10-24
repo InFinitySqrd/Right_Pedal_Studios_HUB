@@ -31,13 +31,17 @@ public class FogScript : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (moveLeft) {
-            this.transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
+            Vector3 targetPosition = new Vector3(position.x + randomSpawnRange + 1.0f, position.y, position.z);
+            this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, Time.deltaTime * moveSpeed);
+            //this.transform.Translate(Vector3.left * Time.deltaTime * moveSpeed);
 
             if (this.transform.position.x > position.x + randomSpawnRange) {
                 moveLeft = false;
             }
-        } else {
-            this.transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
+        } else {            
+            Vector3 targetPosition = new Vector3(position.x - randomSpawnRange - 1.0f, position.y, position.z);
+            this.transform.position = Vector3.Lerp(this.transform.position, targetPosition, Time.deltaTime * moveSpeed);
+            //this.transform.Translate(Vector3.right * Time.deltaTime * moveSpeed);
 
             if (this.transform.position.x < position.x - randomSpawnRange) {
                 moveLeft = true;

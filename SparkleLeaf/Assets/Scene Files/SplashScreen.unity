@@ -224,6 +224,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: 1
+  isVignette: 0
 --- !u!131 &1104008174
 GUITexture:
   m_ObjectHideFlags: 0
@@ -285,6 +286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMenu: 1
+  isVignette: 0
 --- !u!131 &1184029863
 GUITexture:
   m_ObjectHideFlags: 0

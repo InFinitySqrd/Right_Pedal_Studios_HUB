@@ -669,7 +669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chanceToAppear: .200000003
-  moveSpeed: 2.5999999
+  moveSpeed: .5
   randomSpawnRange: 3
 --- !u!1001 &100100000
 Prefab:

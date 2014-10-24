@@ -11,7 +11,7 @@ public class SetUpCredits : MonoBehaviour {
 
 	void Awake () {
 	    // Set up all UI elements to scale with screen size
-		title.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height - Screen.height / 8.0f, 0.5f));
+		title.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height - Screen.height / 7.0f, 0.5f));
 		creditsList.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height / 2.8f, 1.0f));
 		backButton.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width - Screen.width / 8.0f, 0.0f + Screen.height / 12.0f, 0.5f));
     
