@@ -698,13 +698,13 @@ MonoBehaviour:
   maxRotationSpeed: 4
   maxMomentum: 7.5
   levelingDampener: 2.5
-  levelingDelay: .800000012
+  levelingDelay: .600000024
   oppositeDirectionPush: 4.80000019
   planeAnim: {fileID: 9500002}
   deadZone: 0
   tiltDeadZone: .100000001
-  speedIncreaseRate: 10
-  speedIncrementor: .0500000007
+  speedIncreaseRate: 1
+  speedIncrementor: .00999999978
   speedGrowthPerStep: 1
   environmentCentre: {fileID: 0}
   fireflyParticles: {fileID: 0}
@@ -724,13 +724,13 @@ MonoBehaviour:
   score: 0
   spawnTime: 2
   spawnDistance: 280
-  newObstacleTime: 7
-  rotateNewObstacleTime: 20
+  newObstacleTime: 15
+  rotateNewObstacleTime: 9
   percentageToRotate: .75
   minSpeed: .100000001
   maxSpeed: .300000012
-  randomRotationSpeedIncrementor: .100000001
-  rotationSpeedIncreaseTime: 5
+  randomRotationSpeedIncrementor: .0199999996
+  rotationSpeedIncreaseTime: 1
   spawnSpacing: 6
   minRotation: 30
   maxRotation: 150

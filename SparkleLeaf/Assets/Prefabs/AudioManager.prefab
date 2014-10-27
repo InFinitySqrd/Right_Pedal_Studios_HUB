@@ -202,7 +202,7 @@ MonoBehaviour:
   targetScoreThree: 15
   targetScoreFour: 20
   targetScoreFive: 30
-  targetScoreSix: 35
+  targetScoreSix: 40
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

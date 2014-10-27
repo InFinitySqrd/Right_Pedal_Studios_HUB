@@ -82,7 +82,7 @@ public class PlaneMovement : MonoBehaviour {
         if (PlayerPrefs.GetInt("TutorialComplete") == 0) {
             momentum = maxMomentum * 0.85f;
         } else {
-            momentum = -6.3f;
+            momentum = -7.0f;
         }
 
 		controlMethod = PlayerPrefs.GetInt ("Control Method");

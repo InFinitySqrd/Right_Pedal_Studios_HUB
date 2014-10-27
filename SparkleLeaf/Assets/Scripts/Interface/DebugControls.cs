@@ -8,6 +8,9 @@ public class DebugControls : MonoBehaviour
     public bool paused = false;
     public bool tutorialEnabled = false;
 
+	private float timer = 0.0f;
+	private int frameRate = 0;
+
     // Serialized plane maxSliderValues
     [SerializeField] float moveMax = 10.0f;
     [SerializeField] float rotateMax = 10.0f;
@@ -73,6 +76,18 @@ public class DebugControls : MonoBehaviour
 
     void OnGUI()
     {
+		if (timer >= 0.5f) {
+						
+			frameRate = (int)(1.0f / Time.deltaTime);
+			timer = 0.0f;
+
+				}
+
+		GUIStyle skin = new GUIStyle ();
+		skin.fontSize = 24;
+		skin.alignment = TextAnchor.MiddleCenter;
+		skin.normal.textColor = Color.white;
+		GUI.Box (new Rect (0, 0, 100, 100), frameRate.ToString (), skin);
         if (!debugWindow)
         {
 			if (debugEnabled) {
@@ -165,7 +180,7 @@ public class DebugControls : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+		timer += Time.deltaTime;
     }
 
     private void DrawControlOptions()
