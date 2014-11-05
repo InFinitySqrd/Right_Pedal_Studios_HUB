@@ -88,10 +88,10 @@ public class RandomlyGenerateEnvironment : MonoBehaviour {
 				//environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range(0.0f, 360.0f));
 				
 				if (Random.value > 0.5f) {
-					environment.position = new Vector3(Random.Range(-maxXRange, -minXRange), Random.Range(minYRange, maxYRange), 0.0f);
+					environment.position = new Vector3(Random.Range(-maxXRange, -minXRange), Random.Range(minYRange, maxYRange), Random.Range (-1.0f, 1.0f));
 					environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range (-20, 20));
 				} else {
-					environment.position = new Vector3(Random.Range(minXRange, maxXRange), Random.Range(minYRange, minYRange), 0.0f);
+					environment.position = new Vector3(Random.Range(minXRange, maxXRange), Random.Range(minYRange, minYRange), Random.Range (-1.0f, 1.0f));
 					environment.eulerAngles = new Vector3(270.0f, 180.0f, Random.Range (-20, 20));
                     environment.localScale = new Vector3(-1.0f, 1.0f, 1.0f);
 				}
