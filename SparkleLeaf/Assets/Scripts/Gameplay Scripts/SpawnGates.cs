@@ -177,8 +177,6 @@ public class SpawnGates : MonoBehaviour {
 			gatesList.RemoveAt(0);
 
 			currentGate.GetComponent<turnOffLight>().DestroyLight();
-            //flyThroughSound.pitch = Random.Range(0.9f, 1.1f);
-            //flyThroughSound.Play();
 
 			StartCoroutine(DestroyGate(currentGate));
 
