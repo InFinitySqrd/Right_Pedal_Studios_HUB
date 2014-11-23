@@ -698,7 +698,7 @@ MonoBehaviour:
   maxRotationSpeed: 4
   maxMomentum: 7.5
   levelingDampener: 2.5
-  levelingDelay: .600000024
+  levelingDelay: .699999988
   oppositeDirectionPush: 4.80000019
   planeAnim: {fileID: 9500002}
   deadZone: 0
@@ -722,8 +722,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  spawnTime: 2
-  spawnDistance: 280
+  spawnTime: 2.0999999
+  spawnDistance: 300
   newObstacleTime: 15
   rotateNewObstacleTime: 9
   percentageToRotate: .75
@@ -764,6 +764,7 @@ MonoBehaviour:
   - {fileID: 19800004}
   - {fileID: 19800008}
   - {fileID: 19800010}
+  BadPlayerTutorialCount: 2
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

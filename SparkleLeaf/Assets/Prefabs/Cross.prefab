@@ -1084,8 +1084,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flipped: 0
-  flipDistance: 180
-  flipSpeed: 300
+  flipDistance: 400
+  flipSpeed: 210
   pivotPointYDistance: -10
   jiggleSpeed: 400
   firstJiggleRotation: 10

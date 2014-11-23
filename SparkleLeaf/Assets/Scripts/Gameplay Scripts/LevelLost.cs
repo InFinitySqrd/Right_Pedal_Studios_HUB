@@ -17,6 +17,7 @@ public class LevelLost : MonoBehaviour {
     [SerializeField] GameObject planeModel;
     [SerializeField] GameObject brokenPlane;
     [SerializeField] ParticleSystem[] rippingEffects;
+	[SerializeField] int BadPlayerTutorialCount;
 
     private GameObject audioManager;
 
@@ -107,6 +108,16 @@ public class LevelLost : MonoBehaviour {
 
         // Show that the death effect has already been played
         died = true;
+
+		if (GameObject.FindGameObjectWithTag ("Player").GetComponent<SpawnGates> ().score <= 2) {
+						PlayerPrefs.SetInt ("BadPlayerCheck", PlayerPrefs.GetInt ("BadPlayerCheck") + 1);
+						if (PlayerPrefs.GetInt ("BadPlayerCheck") >= BadPlayerTutorialCount) {
+								PlayerPrefs.SetInt ("BadPlayerCheck", 0);
+								PlayerPrefs.SetInt ("TutorialComplete", 0);
+						}
+				} else {
+			PlayerPrefs.SetInt ("BadPlayerCheck", 0);
+				}
     }
 
 	void OnTriggerEnter(Collider other) {
