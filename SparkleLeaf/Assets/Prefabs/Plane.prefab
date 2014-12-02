@@ -698,12 +698,12 @@ MonoBehaviour:
   maxRotationSpeed: 4
   maxMomentum: 7.5
   levelingDampener: 2.5
-  levelingDelay: .699999988
+  levelingDelay: .800000012
   oppositeDirectionPush: 4.80000019
   planeAnim: {fileID: 9500002}
   deadZone: 0
   tiltDeadZone: .100000001
-  speedIncreaseRate: 1
+  speedIncreaseRate: 1.5
   speedIncrementor: .00999999978
   speedGrowthPerStep: 1
   environmentCentre: {fileID: 0}
@@ -722,16 +722,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 0
-  spawnTime: 2.0999999
+  spawnTime: 2.20000005
   spawnDistance: 300
-  newObstacleTime: 15
-  rotateNewObstacleTime: 9
+  newObstacleTime: 20
+  rotateNewObstacleTime: 15
   percentageToRotate: .75
   minSpeed: .100000001
   maxSpeed: .300000012
-  randomRotationSpeedIncrementor: .0199999996
-  rotationSpeedIncreaseTime: 1
-  spawnSpacing: 6
+  randomRotationSpeedIncrementor: .00999999978
+  rotationSpeedIncreaseTime: 1.5
+  spawnSpacing: 7
   minRotation: 30
   maxRotation: 150
   obstacles:

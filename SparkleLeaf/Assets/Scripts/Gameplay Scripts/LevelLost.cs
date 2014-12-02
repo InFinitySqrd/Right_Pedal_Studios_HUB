@@ -23,7 +23,7 @@ public class LevelLost : MonoBehaviour {
 
     private Animator killerAnim;
 
-    private ChartboostAds adCall;
+   // private ChartboostAds adCall;
 
 	// FMOD relating to death and BGM
     /*
@@ -40,7 +40,7 @@ public class LevelLost : MonoBehaviour {
 	void Start () {
 		GAStuff = GameObject.FindGameObjectWithTag("GameAnalytics").GetComponent<GameAnalytics>();
         audioManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
-        adCall = Camera.main.GetComponent<ChartboostAds>();
+        //adCall = Camera.main.GetComponent<ChartboostAds>();
         /*
 		FMOD_Music = FMOD_StudioSystem.instance.GetEvent ("event:Music/Gameplay");
 		FMOD_Ambience = FMOD_StudioSystem.instance.GetEvent ("event:/Ambience/Forest");

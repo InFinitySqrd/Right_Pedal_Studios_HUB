@@ -23,7 +23,15 @@ public class ButtonControls : MonoBehaviour {
 	private ButtonControls subMenuParent;
 	private float fadeSpeed = 0.0f;
 	private bool bgmEnabled = true, sfxEnabled = true;
-	private bool settingsOpen = false;
+	private bool settingsOpen, stopNextFrame = false;
+
+	public Texture blackness;
+	private Color guiColor;
+	private bool animationPlaying, playPressed = false;
+	private float animationTimer = 0.0f;
+	public Sprite animationStartSprite;
+
+	//public GameObject animatedSprite;
 
 	private DebugControls pause;
 	private LevelLost lostGame;
@@ -48,10 +56,12 @@ public class ButtonControls : MonoBehaviour {
 			FB.Init(SetInit, OnHideUnity);
 			PlayerPrefs.SetInt("FacebookInitialised", 1);
 		}*/
-
+		//animatedSprite.GetComponent<Animator> ().StopPlayback ();
         audioManager = GameObject.Find("AudioManager");
         //audioFade = audioManager.GetComponent<FadeBetweenAudio>();
-
+		if (transform.GetComponent<Animator> ()) {
+						transform.GetComponent<Animator> ().enabled = false;
+				}
         googlePlay = Camera.main.GetComponent<GooglePlayIntegration>();
         gameCentre = Camera.main.GetComponent<GameCentreIntegration>();
 
@@ -60,6 +70,8 @@ public class ButtonControls : MonoBehaviour {
             //this.renderer.material = SFXOff;
             //SetAudioMute(true);
         //}
+		guiColor = Color.white;
+		guiColor.a = 0.0f;
 	}
 
 	/*private void SetInit() {
@@ -97,7 +109,7 @@ public class ButtonControls : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		settingsButton = this.renderer.material;
+		//settingsButton = new Material;
 		fadeSpeed = this.GetComponent<MenuTween>().fadeSpeed;
         
         FMODManager = GameObject.FindGameObjectWithTag ("FMOD_Manager");
@@ -156,8 +168,35 @@ public class ButtonControls : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        CheckClick();
+        if (stopNextFrame) {
+			transform.GetComponent<Animator>().enabled = false;
+				}
 
+		CheckClick();
+		if (animationPlaying) {
+			animationTimer += Time.deltaTime;
+			if (playPressed) {
+			if (animationTimer >= 1.5f) {
+				transform.GetComponent<Animator>().enabled = false;
+				animationPlaying = false;
+				animationTimer = 0.0f;
+
+					Application.LoadLevel(Application.loadedLevel);
+					tutorial = GameObject.FindGameObjectWithTag("Player").GetComponent<Tutorial>();
+					if (PlayerPrefs.GetInt("TutorialComplete") == 0) {
+						tutorial.enabled = true;
+					}
+				}
+			}
+			else {
+				if (animationTimer >= 1.0f) {
+					transform.GetComponent<Animator>().enabled = false;
+					animationPlaying = false;
+					animationTimer = 0.0f;
+					print ("stahp");
+				}
+			}
+				}
 		if (this.collider.name == "Settings") {
 			if (buttonType == ButtonFunction.Settings && settingsButton.color.a > 0.95f && backButton.color.a < 0.05f) {
 				settingsButton.color = new Color(settingsButton.color.r, settingsButton.color.g, settingsButton.color.b, 1.0f);
@@ -167,6 +206,15 @@ public class ButtonControls : MonoBehaviour {
 				backButton.color = new Color(backButton.color.r, backButton.color.g, backButton.color.b, 1.0f);
 			}
 		}
+	}
+
+	void OnGUI() {
+		if (playPressed) {
+			GUI.color = guiColor;
+			GUI.DrawTexture(new Rect(0,0,Screen.width, Screen.height), blackness);
+
+			guiColor.a += 0.005f;
+				}
 	}
 
     private void CheckClick() {
@@ -181,7 +229,13 @@ public class ButtonControls : MonoBehaviour {
                             // Restart the game
                             //Application.LoadLevel(Application.loadedLevel);
 //                            audioFade.FadeAudio(true);
+						if (transform.GetComponent<Animator> ()) {
+							transform.GetComponent<Animator> ().enabled = true;
+							animationPlaying = true;
+							playPressed = true;
+						}
 
+						else {
 							if (pause != null && lostGame != null && tutorial != null && !lostGame.lost) {
 								pause.paused = false;
 								
@@ -196,6 +250,7 @@ public class ButtonControls : MonoBehaviour {
 							} else if (pause != null && lostGame != null && lostGame.lost) {
 								Application.LoadLevel(Application.loadedLevel);
 							}
+						}
 							break;
                         case ButtonFunction.Leaderboards:
                             // Display leaderboards
@@ -213,6 +268,10 @@ public class ButtonControls : MonoBehaviour {
 	                            inSubMenu = true;
 	                            SubMenu(inSubMenu);
 
+							if (transform.GetComponent<Animator> ()) {
+								transform.GetComponent<Animator> ().enabled = true;
+								animationPlaying = true;
+							}
 								this.buttonType = ButtonFunction.Back;
 								StartCoroutine(TweenButtonAlpha(true, settingsButton));						
 								StartCoroutine(TweenButtonAlpha(false, backButton));
@@ -223,10 +282,17 @@ public class ButtonControls : MonoBehaviour {
 							if (settingsButton.color.a < 0.1f && backButton.color.a > 0.9f) {
 	                            inSubMenu = false;
 	                            SubMenu(inSubMenu);
+								//GameObject.FindGameObjectWithTag("Settings").transform.GetComponent<SpriteRenderer>().sprite = animationStartSprite;
+							//print ("yes");
+							if (transform.GetComponent<Animator> ()) {
+								transform.GetComponent<Animator> ().Play(0);
+								transform.GetComponent<Animator> ().enabled = false;
+							}
 
 	                            this.buttonType = ButtonFunction.Settings;
 								StartCoroutine(TweenButtonAlpha(false, settingsButton));						
 								StartCoroutine(TweenButtonAlpha(true, backButton));
+
 							}
                             break;
                         case ButtonFunction.Info:

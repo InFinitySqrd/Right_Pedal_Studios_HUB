@@ -46,12 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Chartboost\Examples\ChartboostExample\ChartboostExample.cs" />
-     <Compile Include="Assets\Chartboost\Scripts\CBExternal.cs" />
-     <Compile Include="Assets\Chartboost\Scripts\CBInPlay.cs" />
-     <Compile Include="Assets\Chartboost\Scripts\CBJSON.cs" />
-     <Compile Include="Assets\Chartboost\Scripts\CBSettings.cs" />
-     <Compile Include="Assets\Chartboost\Scripts\Chartboost.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Components\GA_Tracker.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\ComboBox.cs" />
      <Compile Include="Assets\GameAnalytics\Plugins\Examples\Scripts\GA_ExampleBall.cs" />
@@ -143,7 +137,6 @@
      <Compile Include="Assets\Scripts\Gameplay Scripts\SpawnGates.cs" />
      <Compile Include="Assets\Scripts\Interface\ButtonControls.cs" />
      <Compile Include="Assets\Scripts\Interface\CallToFacebook.cs" />
-     <Compile Include="Assets\Scripts\Interface\ChartboostAds.cs" />
      <Compile Include="Assets\Scripts\Interface\DebugControls.cs" />
      <Compile Include="Assets\Scripts\Interface\FadeBetweenAudio.cs" />
      <Compile Include="Assets\Scripts\Interface\FadeInGameScene.cs" />
