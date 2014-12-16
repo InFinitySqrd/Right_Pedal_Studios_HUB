@@ -101,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 35645608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2, y: -3.5999999, z: 2}
+  m_LocalPosition: {x: -2, y: -1.22796106, z: 2}
   m_LocalScale: {x: 1.09416008, y: 1.09416008, z: 1.09416008}
   m_Children: []
   m_Father: {fileID: 1541275150}
@@ -182,6 +182,7 @@ MonoBehaviour:
   downTween: 0
   tweenSpeed: 1
   fadeSpeed: .600000024
+  tweenLocationModifier: 0
   subMenu: 0
 --- !u!1 &641510664
 GameObject:
@@ -351,6 +352,7 @@ MonoBehaviour:
   downTween: 0
   tweenSpeed: 1
   fadeSpeed: .600000024
+  tweenLocationModifier: 0
   subMenu: 0
 --- !u!114 &817571857
 MonoBehaviour:
@@ -442,7 +444,7 @@ Transform:
   m_GameObject: {fileID: 1033946095}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.79999995, y: 1.79999995, z: 1.79999995}
+  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1.29999995}
   m_Children: []
   m_Father: {fileID: 2138793781}
   m_RootOrder: 0
@@ -460,6 +462,7 @@ MonoBehaviour:
   downTween: 0
   tweenSpeed: 1
   fadeSpeed: 2
+  tweenLocationModifier: 0
   subMenu: 1
 --- !u!114 &1033946098
 MonoBehaviour:
@@ -608,6 +611,7 @@ MonoBehaviour:
   downTween: 1
   tweenSpeed: 1
   fadeSpeed: .600000024
+  tweenLocationModifier: 0
   subMenu: 0
 --- !u!1 &1230040719
 GameObject:
@@ -637,7 +641,7 @@ Transform:
   m_GameObject: {fileID: 1230040719}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.79999995, y: 1.79999995, z: 1.79999995}
+  m_LocalScale: {x: 1.29999995, y: 1.29999995, z: 1.29999995}
   m_Children: []
   m_Father: {fileID: 2138793781}
   m_RootOrder: 1
@@ -655,6 +659,7 @@ MonoBehaviour:
   downTween: 0
   tweenSpeed: 1
   fadeSpeed: 2
+  tweenLocationModifier: 0
   subMenu: 1
 --- !u!114 &1230040722
 MonoBehaviour:
@@ -835,6 +840,7 @@ MonoBehaviour:
   downTween: 0
   tweenSpeed: 1
   fadeSpeed: .600000024
+  tweenLocationModifier: 0
   subMenu: 0
 --- !u!95 &1441827958
 Animator:
@@ -1129,7 +1135,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2138793780}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.95681095, y: -3.36245632, z: 2}
+  m_LocalPosition: {x: 2.00115108, y: -.96006918, z: 2}
   m_LocalScale: {x: .629999995, y: .629999995, z: .629999995}
   m_Children:
   - {fileID: 1033946096}
@@ -1222,4 +1228,5 @@ MonoBehaviour:
   downTween: 0
   tweenSpeed: 1
   fadeSpeed: .600000024
+  tweenLocationModifier: 0
   subMenu: 0

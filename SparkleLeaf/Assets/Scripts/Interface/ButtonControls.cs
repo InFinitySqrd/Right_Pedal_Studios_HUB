@@ -270,6 +270,7 @@ public class ButtonControls : MonoBehaviour {
 
 							if (transform.GetComponent<Animator> ()) {
 								transform.GetComponent<Animator> ().enabled = true;
+								transform.GetComponent<Animator> ().playbackTime = 0;
 								animationPlaying = true;
 							}
 								this.buttonType = ButtonFunction.Back;
@@ -282,11 +283,11 @@ public class ButtonControls : MonoBehaviour {
 							if (settingsButton.color.a < 0.1f && backButton.color.a > 0.9f) {
 	                            inSubMenu = false;
 	                            SubMenu(inSubMenu);
-								//GameObject.FindGameObjectWithTag("Settings").transform.GetComponent<SpriteRenderer>().sprite = animationStartSprite;
+								transform.GetComponent<Animator> ().StopPlayback();
+								transform.GetComponent<SpriteRenderer>().sprite = animationStartSprite;
 							//print ("yes");
 							if (transform.GetComponent<Animator> ()) {
-								transform.GetComponent<Animator> ().Play(0);
-								transform.GetComponent<Animator> ().enabled = false;
+
 							}
 
 	                            this.buttonType = ButtonFunction.Settings;

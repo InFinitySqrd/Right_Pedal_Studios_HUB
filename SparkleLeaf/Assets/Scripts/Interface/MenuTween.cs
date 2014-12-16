@@ -6,6 +6,8 @@ public class MenuTween : MonoBehaviour {
     [SerializeField] bool downTween = true;
     [SerializeField] float tweenSpeed = 1.0f;
     public float fadeSpeed = 0.6f;
+
+	[SerializeField] float tweenLocationModifier = 0.0f;
     [SerializeField] bool subMenu = false;
 
     private Vector3 initialPos;
@@ -42,10 +44,10 @@ public class MenuTween : MonoBehaviour {
             this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, this.renderer.material.color.a - Time.deltaTime * fadeSpeed);
         }
 
-		if (this.collider.name == "Settings" && this.renderer.material.color.a > 0.95f) {
-			this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, 1.0f);
-			this.GetComponent<MenuTween>().enabled = false;
-		}
+		//if (this.collider.name == "Settings" && this.renderer.material.color.a > 0.95f) {
+		//	this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, 1.0f);
+		//	this.GetComponent<MenuTween>().enabled = false;
+		//}
     }
 
     public void TriggerForwardTween() {

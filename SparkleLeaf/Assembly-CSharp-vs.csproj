@@ -165,6 +165,7 @@
      <Compile Include="Assets\Scripts\Visual Scripts\SpinBrokenPlane.cs" />
      <Compile Include="Assets\Scripts\Visual Scripts\turnOffLight.cs" />
      <Compile Include="Assets\Twitter iOS\Assets\Example\TweetComposer.cs" />
+     <Compile Include="Assets\creditsMenu.cs" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values\admob_ads_attrs.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values\common_strings.xml" />
      <None Include="Assets\Plugins\Android\google-play-services_lib\res\values-ca\common_strings.xml" />

@@ -12,19 +12,19 @@ public class SetUpMenu : MonoBehaviour {
 
 	void Awake () {
 	    // Set up all UI elements to scale with screen size
-        title.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, 3.0f * Screen.height / 4.0f, 1.0f));
-        play.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height / 5.2f, 1.0f));
+        title.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, 5.0f * Screen.height / 6.0f, 1.0f));
+        play.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f, Screen.height / 4.8f, 1.0f));
         leaderboards.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f - Screen.width / 3.0f, Screen.height / 6.4f, 1.0f));
-        settings.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 3.0f, Screen.height / 6.4f, 1.0f));
-		backButton.transform.position = settings.transform.position;
-		information.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 6.8f, 1.0f));
-        muteSFX.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 6.8f, 1.0f));
+        settings.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 3.0f, Screen.height / 5.5f, 1.0f));
+		backButton.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 3.0f, Screen.height / 6.5f, 1.0f));
+		information.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.5f, 1.0f));
+        muteSFX.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.5f, 1.0f));
         //muteBGM.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));		
-		share.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 1.14f, Screen.height / 2.14f, 1.0f));
+		share.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width * (3.0f/4.0f), Screen.height / 1.9f, 1.0f));
 
         // Further set the positions of sub menus
-        information.transform.position = new Vector3(information.transform.position.x, settings.transform.position.y + 1.6f * settings.transform.localScale.y, information.transform.position.z);
-        muteSFX.transform.position = new Vector3(muteSFX.transform.position.x, settings.transform.position.y + 0.8f * settings.transform.localScale.y, muteSFX.transform.position.z);
+        information.transform.position = new Vector3(information.transform.position.x, settings.transform.position.y + 1.8f * settings.transform.localScale.y * 1.4f, information.transform.position.z);
+        muteSFX.transform.position = new Vector3(muteSFX.transform.position.x, settings.transform.position.y + 0.8f * settings.transform.localScale.y * 1.3f, muteSFX.transform.position.z);
         //muteBGM.transform.position = new Vector3(muteBGM.transform.position.x, settings.transform.position.y + 2.0f * settings.transform.localScale.y, muteBGM.transform.position.z);
     
 //        audioFade = GameObject.Find("AudioManager").GetComponent<FadeBetweenAudio>();
@@ -66,11 +66,11 @@ public class SetUpMenu : MonoBehaviour {
 		skin.normal.textColor = Color.white;
 
 		if (scoreVal.score > 0) {
-			GUI.Box(new Rect(adjustedWidth / 14.0f, nativeHeight / 2.8f + nativeHeight / 12.0f, adjustedWidth / 2.0f, nativeHeight / 6.0f), "Score:" + scoreVal.score, skin);
+			GUI.Box(new Rect(adjustedWidth / 14.0f, nativeHeight / 3.4f + nativeHeight / 12.0f, adjustedWidth / 2.0f, nativeHeight / 6.0f), "Score:" + scoreVal.score, skin);
 		}
 
 		skin.font = highScoreFont;
         skin.alignment = TextAnchor.MiddleCenter;
-		GUI.Box(new Rect(adjustedWidth / 2.0f - adjustedWidth / 4.0f, nativeHeight / 2.4f + nativeHeight / 8.0f, adjustedWidth / 2.0f, nativeHeight / 6.0f), "High Score: " + PlayerPrefs.GetInt("Top Score"), skin);
+		GUI.Box(new Rect(adjustedWidth / 2.0f - adjustedWidth / 4.0f, nativeHeight / 2.7f + nativeHeight / 8.0f, adjustedWidth / 2.0f, nativeHeight / 6.0f), "High Score: " + PlayerPrefs.GetInt("Top Score"), skin);
 	}
 }

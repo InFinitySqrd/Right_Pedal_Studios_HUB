@@ -197,12 +197,12 @@ MonoBehaviour:
   menuFadeUpLength: .5
   menuFadeDownLength: .5
   rotateUltraExtremeLength: .5
-  targetScoreOne: 5
-  targetScoreTwo: 10
-  targetScoreThree: 15
-  targetScoreFour: 20
-  targetScoreFive: 30
-  targetScoreSix: 40
+  targetScoreOne: 2
+  targetScoreTwo: 5
+  targetScoreThree: 10
+  targetScoreFour: 15
+  targetScoreFive: 20
+  targetScoreSix: 30
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
