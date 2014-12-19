@@ -7,7 +7,7 @@ public class DebugControls : MonoBehaviour
 	public bool debugEnabled = true;
     public bool paused = false;
     public bool tutorialEnabled = false;
-
+	public bool FPSOnly = true;
 	private float timer = 0.0f;
 	private int frameRate = 0;
 
@@ -76,107 +76,96 @@ public class DebugControls : MonoBehaviour
 
     void OnGUI()
     {
-		if (timer >= 0.5f) {
+				if (timer >= 0.5f) {
 						
-			frameRate = (int)(1.0f / Time.deltaTime);
-			timer = 0.0f;
+						frameRate = (int)(1.0f / Time.deltaTime);
+						timer = 0.0f;
 
 				}
 
-		GUIStyle skin = new GUIStyle ();
-		skin.fontSize = 24;
-		skin.alignment = TextAnchor.MiddleCenter;
-		skin.normal.textColor = Color.white;
-		GUI.Box (new Rect (0, 0, 100, 100), frameRate.ToString (), skin);
-        if (!debugWindow)
-        {
-			if (debugEnabled) {
-	            if (Input.touchCount >= 3 || Input.GetKeyDown(KeyCode.Delete))
-	            {
-	                debugWindow = true;
-					paused = true;
-	            }
-			}
-        }
-        else
-        {
-            // Draw all control options
-            if (planeWindow)
-            {
-                // Draw controls for the plane variables
-                DrawControlOptions();
-                DrawSliders(0, "MoveSpeed", ref planeVars.forwardSpeed, moveMax);
-                DrawSliders(1, "RotateSpeed", ref planeVars.rotationSpeed, rotateMax);
-                DrawSliders(2, "MaxRotation", ref planeVars.maxRotationSpeed, maxRotateMax);
-                DrawSliders(3, "MomentumReduct", ref planeVars.momentumReduction, momentumReduxMax);
-                DrawSliders(4, "MaxMomentum", ref planeVars.maxMomentum, maxMomentumMax);
-                DrawSliders(5, "LevelingForce", ref planeVars.levelingForce, levelingForceMax);
-                DrawSliders(6, "LevelingDamp", ref planeVars.levelingDampener, levelingDampMax);
-                DrawSliders(7, "LevelingDelay", ref planeVars.levelingDelay, levelingDelayMax);
-                DrawSliders(8, "OppositeDirPush", ref planeVars.oppositeDirectionPush, oppositeDirMax);
-            }
-            else
-            {
-                // Draw controls for the gate spawning variables
-                DrawSliders(0, "SpawnTime", ref gateVars.spawnTime, spawnTimeMax);
-                DrawSliders(1, "SpawnDistance", ref gateVars.spawnDistance, spawnDistanceMax);
-                DrawSliders(2, "NewObstacleTime", ref gateVars.newObstacleTime, newObstacleTimeMax);
-                DrawSliders(3, "NewRotateTime", ref gateVars.rotateNewObstacleTime, rotateNewObstacleMax);
-                DrawSliders(4, "RotatePercentage", ref gateVars.percentageToRotate, rotatePercentageMax);
-                DrawSliders(5, "MinRotateSpeed", ref gateVars.minSpeed, minRotationSpeedMax);
-                DrawSliders(6, "MaxRotateSpeed", ref gateVars.maxSpeed, maxRotationSpeedMax);
-                DrawSliders(7, "RotationSpeed", ref gateVars.randomRotationSpeedIncrementor, rotationSpeedIncrementMax);
-                DrawSliders(8, "IncRotSpeedTime", ref gateVars.rotationSpeedIncreaseTime, rotationSpeedIncreaseTimeMax);
-            }
+				GUIStyle skin = new GUIStyle ();
+				skin.fontSize = 24;
+				skin.alignment = TextAnchor.MiddleCenter;
+				skin.normal.textColor = Color.white;
+				GUI.Box (new Rect (0, 0, 100, 100), frameRate.ToString (), skin);
+				if (!FPSOnly) {
 
-            // Draw a control to switch between windows in the debug menu
-            if (planeWindow)
-            {
-                if (GUI.Button(new Rect(0.0f, Screen.height - Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), "Gate Controls"))
-                {
-                    planeWindow = false;
-                }
-            }
-            else
-            {
-                if (GUI.Button(new Rect(0.0f, Screen.height - Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), "Plane Controls"))
-                {
-                    planeWindow = true;
-                }
-            }
+						if (!debugWindow) {
+								if (debugEnabled) {
+										if (Input.touchCount >= 3 || Input.GetKeyDown (KeyCode.Delete)) {
+												debugWindow = true;
+												paused = true;
+										}
+								}
+						} else {
+								// Draw all control options
+								if (planeWindow) {
+										// Draw controls for the plane variables
+										DrawControlOptions ();
+										DrawSliders (0, "MoveSpeed", ref planeVars.forwardSpeed, moveMax);
+										DrawSliders (1, "RotateSpeed", ref planeVars.rotationSpeed, rotateMax);
+										DrawSliders (2, "MaxRotation", ref planeVars.maxRotationSpeed, maxRotateMax);
+										DrawSliders (3, "MomentumReduct", ref planeVars.momentumReduction, momentumReduxMax);
+										DrawSliders (4, "MaxMomentum", ref planeVars.maxMomentum, maxMomentumMax);
+										DrawSliders (5, "LevelingForce", ref planeVars.levelingForce, levelingForceMax);
+										DrawSliders (6, "LevelingDamp", ref planeVars.levelingDampener, levelingDampMax);
+										DrawSliders (7, "LevelingDelay", ref planeVars.levelingDelay, levelingDelayMax);
+										DrawSliders (8, "OppositeDirPush", ref planeVars.oppositeDirectionPush, oppositeDirMax);
+								} else {
+										// Draw controls for the gate spawning variables
+										DrawSliders (0, "SpawnTime", ref gateVars.spawnTime, spawnTimeMax);
+										DrawSliders (1, "SpawnDistance", ref gateVars.spawnDistance, spawnDistanceMax);
+										DrawSliders (2, "NewObstacleTime", ref gateVars.newObstacleTime, newObstacleTimeMax);
+										DrawSliders (3, "NewRotateTime", ref gateVars.rotateNewObstacleTime, rotateNewObstacleMax);
+										DrawSliders (4, "RotatePercentage", ref gateVars.percentageToRotate, rotatePercentageMax);
+										DrawSliders (5, "MinRotateSpeed", ref gateVars.minSpeed, minRotationSpeedMax);
+										DrawSliders (6, "MaxRotateSpeed", ref gateVars.maxSpeed, maxRotationSpeedMax);
+										DrawSliders (7, "RotationSpeed", ref gateVars.randomRotationSpeedIncrementor, rotationSpeedIncrementMax);
+										DrawSliders (8, "IncRotSpeedTime", ref gateVars.rotationSpeedIncreaseTime, rotationSpeedIncreaseTimeMax);
+								}
 
-            // Draw the close button
-            if (GUI.Button(new Rect(Screen.width - Screen.width / 4.0f, Screen.height - Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), "Close Window"))
-            {
-                debugWindow = false;
-				paused = false;
+								// Draw a control to switch between windows in the debug menu
+								if (planeWindow) {
+										if (GUI.Button (new Rect (0.0f, Screen.height - Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), "Gate Controls")) {
+												planeWindow = false;
+										}
+								} else {
+										if (GUI.Button (new Rect (0.0f, Screen.height - Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), "Plane Controls")) {
+												planeWindow = true;
+										}
+								}
 
-                // Save all values to player prefs on close
-                // Set values for the plane variables
-                PlayerPrefs.SetFloat("movement", planeVars.forwardSpeed);
-                PlayerPrefs.SetFloat("rotation", planeVars.rotationSpeed);
-                PlayerPrefs.SetFloat("maxRotate", planeVars.maxRotationSpeed);
-                PlayerPrefs.SetFloat("momentumRedux", planeVars.momentumReduction);
-                PlayerPrefs.SetFloat("maxMomentum", planeVars.maxMomentum);
-                PlayerPrefs.SetFloat("levelingForce", planeVars.levelingForce);
-                PlayerPrefs.SetFloat("levelingDamp", planeVars.levelingDampener);
-                PlayerPrefs.SetFloat("levelingDelay", planeVars.levelingDelay);
-                PlayerPrefs.SetFloat("oppositeDirPush", planeVars.oppositeDirectionPush);
+								// Draw the close button
+								if (GUI.Button (new Rect (Screen.width - Screen.width / 4.0f, Screen.height - Screen.height / 8.0f, Screen.width / 4.0f, Screen.height / 8.0f), "Close Window")) {
+										debugWindow = false;
+										paused = false;
 
-                // Set values for the gate variables
-                PlayerPrefs.SetFloat("spawnTime", gateVars.spawnTime);
-                PlayerPrefs.SetFloat("spawnDistance", gateVars.spawnDistance);
-                PlayerPrefs.SetFloat("rotationPercentage", gateVars.percentageToRotate);
-                PlayerPrefs.SetFloat("minRotationSpeed", gateVars.minSpeed);
-                PlayerPrefs.SetFloat("maxRotationSpeed", gateVars.maxSpeed);
-                PlayerPrefs.SetFloat("newObstacleTime", gateVars.newObstacleTime);
-                PlayerPrefs.SetFloat("rotateNewObstacleTime", gateVars.rotateNewObstacleTime);
-                PlayerPrefs.SetFloat("randomRotationSpeedIncrementor", gateVars.randomRotationSpeedIncrementor);
-                PlayerPrefs.SetFloat("rotationSpeedIncreaseTime", gateVars.rotationSpeedIncreaseTime);
-            }
-        }
-    }
+										// Save all values to player prefs on close
+										// Set values for the plane variables
+										PlayerPrefs.SetFloat ("movement", planeVars.forwardSpeed);
+										PlayerPrefs.SetFloat ("rotation", planeVars.rotationSpeed);
+										PlayerPrefs.SetFloat ("maxRotate", planeVars.maxRotationSpeed);
+										PlayerPrefs.SetFloat ("momentumRedux", planeVars.momentumReduction);
+										PlayerPrefs.SetFloat ("maxMomentum", planeVars.maxMomentum);
+										PlayerPrefs.SetFloat ("levelingForce", planeVars.levelingForce);
+										PlayerPrefs.SetFloat ("levelingDamp", planeVars.levelingDampener);
+										PlayerPrefs.SetFloat ("levelingDelay", planeVars.levelingDelay);
+										PlayerPrefs.SetFloat ("oppositeDirPush", planeVars.oppositeDirectionPush);
 
+										// Set values for the gate variables
+										PlayerPrefs.SetFloat ("spawnTime", gateVars.spawnTime);
+										PlayerPrefs.SetFloat ("spawnDistance", gateVars.spawnDistance);
+										PlayerPrefs.SetFloat ("rotationPercentage", gateVars.percentageToRotate);
+										PlayerPrefs.SetFloat ("minRotationSpeed", gateVars.minSpeed);
+										PlayerPrefs.SetFloat ("maxRotationSpeed", gateVars.maxSpeed);
+										PlayerPrefs.SetFloat ("newObstacleTime", gateVars.newObstacleTime);
+										PlayerPrefs.SetFloat ("rotateNewObstacleTime", gateVars.rotateNewObstacleTime);
+										PlayerPrefs.SetFloat ("randomRotationSpeedIncrementor", gateVars.randomRotationSpeedIncrementor);
+										PlayerPrefs.SetFloat ("rotationSpeedIncreaseTime", gateVars.rotationSpeedIncreaseTime);
+								}
+						}
+				}
+		}
     // Update is called once per frame
     void Update()
     {

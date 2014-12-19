@@ -5,10 +5,13 @@ public class SetUpMenu : MonoBehaviour {
     // Declare variables
     [SerializeField] Transform title, play, leaderboards, settings, backButton, information, muteSFX, share;
 	[SerializeField] Font prevScoreFont, highScoreFont;
+	[SerializeField] Texture black;
 
 	private SpawnGates scoreVal;
 
     private FadeBetweenAudio audioFade; 
+
+	private bool mixModeDebug, expandMixMode = false;
 
 	void Awake () {
 	    // Set up all UI elements to scale with screen size
@@ -20,7 +23,7 @@ public class SetUpMenu : MonoBehaviour {
 		information.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.5f, 1.0f));
         muteSFX.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.5f, 1.0f));
         //muteBGM.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width / 2.0f + Screen.width / 2.8f, Screen.height / 5.6f, 1.0f));		
-		share.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width * (3.0f/4.0f), Screen.height / 1.9f, 1.0f));
+		share.transform.position = this.camera.ScreenToWorldPoint(new Vector3(Screen.width * (6.0f/7.0f), Screen.height / 1.9f, 1.0f));
 
         // Further set the positions of sub menus
         information.transform.position = new Vector3(information.transform.position.x, settings.transform.position.y + 1.8f * settings.transform.localScale.y * 1.4f, information.transform.position.z);
@@ -33,6 +36,7 @@ public class SetUpMenu : MonoBehaviour {
 
 	void Start() {
 		scoreVal = GameObject.FindGameObjectWithTag("Player").GetComponent<SpawnGates>();
+		mixModeDebug = GameObject.FindGameObjectWithTag ("FMOD_Manager").GetComponent<FMOD_Manager>().mixMode;
 	}
 
 	void Update() {
@@ -72,5 +76,7 @@ public class SetUpMenu : MonoBehaviour {
 		skin.font = highScoreFont;
         skin.alignment = TextAnchor.MiddleCenter;
 		GUI.Box(new Rect(adjustedWidth / 2.0f - adjustedWidth / 4.0f, nativeHeight / 2.7f + nativeHeight / 8.0f, adjustedWidth / 2.0f, nativeHeight / 6.0f), "High Score: " + PlayerPrefs.GetInt("Top Score"), skin);
+
+
 	}
 }

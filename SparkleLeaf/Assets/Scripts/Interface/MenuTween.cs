@@ -14,12 +14,13 @@ public class MenuTween : MonoBehaviour {
     private Vector3 fromPos;
     private bool tween = false;
     private bool reverse = false;
-
+	[SerializeField] bool ignoreColourChange = false;
 	// Use this for initialization
 	void Start () {
         initialPos = this.transform.position;
-        this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, 0.0f);
-
+		if (!ignoreColourChange) {
+						this.renderer.material.color = new Color (this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, 0.0f);
+				}
         if (downTween) {
             this.transform.position = new Vector3(this.transform.position.x, this.transform.position.y + this.transform.localScale.y / 2.0f, this.transform.position.z);
         } else {
@@ -36,13 +37,17 @@ public class MenuTween : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (tween) {
-	        //this.transform.position = Vector3.MoveTowards(this.transform.position, initialPos, Time.deltaTime * tweenSpeed);
-			this.transform.position = Vector3.Lerp(this.transform.position, initialPos, Time.deltaTime * tweenSpeed);
-            this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, this.renderer.material.color.a + Time.deltaTime * fadeSpeed);
-        } else if (reverse) {
-            this.transform.position = Vector3.MoveTowards(this.transform.position, fromPos, Time.deltaTime * tweenSpeed);
-            this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, this.renderer.material.color.a - Time.deltaTime * fadeSpeed);
-        }
+						//this.transform.position = Vector3.MoveTowards(this.transform.position, initialPos, Time.deltaTime * tweenSpeed);
+						this.transform.position = Vector3.Lerp (this.transform.position, initialPos, Time.deltaTime * tweenSpeed);
+						if (!ignoreColourChange) {
+								this.renderer.material.color = new Color (this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, this.renderer.material.color.a + Time.deltaTime * fadeSpeed);
+						}
+				} else if (reverse) {
+						this.transform.position = Vector3.MoveTowards (this.transform.position, fromPos, Time.deltaTime * tweenSpeed);
+						if (!ignoreColourChange) {
+								this.renderer.material.color = new Color (this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, this.renderer.material.color.a - Time.deltaTime * fadeSpeed);
+						}
+				}
 
 		//if (this.collider.name == "Settings" && this.renderer.material.color.a > 0.95f) {
 		//	this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, 1.0f);
@@ -51,16 +56,18 @@ public class MenuTween : MonoBehaviour {
     }
 
     public void TriggerForwardTween() {
-        tween = true;
-        reverse = false;
-
-        this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, 0.0f);
-    }
+				tween = true;
+				reverse = false;
+				if (!ignoreColourChange) {
+						this.renderer.material.color = new Color (this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, 0.0f);
+				}
+		}
 
     public void TriggerReverseTween() {
-        tween = false;
-        reverse = true;
-
-        this.renderer.material.color = new Color(this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, 1.0f);
-    }
+				tween = false;
+				reverse = true;
+				if (!ignoreColourChange) {
+						this.renderer.material.color = new Color (this.renderer.material.color.r, this.renderer.material.color.g, this.renderer.material.color.b, 1.0f);
+				}
+		}
 }

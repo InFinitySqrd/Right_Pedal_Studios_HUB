@@ -36,6 +36,8 @@ public class FMOD_Manager : MonoBehaviour {
 	[SerializeField] float menuFadeUpLength = 0.0f;
 	[SerializeField] float menuFadeDownLength = 0.0f;
 	[SerializeField] float rotateUltraExtremeLength = 0.0f;
+
+	public bool mixMode = false;
 	
 	private float menuFadeUpTimer = 0.0f;
 	private bool menuFadeUp = false;
@@ -292,10 +294,16 @@ public class FMOD_Manager : MonoBehaviour {
 	public void rotateUltraExtreme() {
 		if (brotateUltraExtreme) {
 			FMOD_StudioSystem.instance.PlayOneShot ("event:/Character/Paper_Plane/Rotation", GameObject.FindGameObjectWithTag ("MainCamera").transform.position);
-			//FMOD_InstanceRotation.start ();
-			print ("PLAY SFX");
 			brotateUltraExtreme = false;
 			rotateUltraExtremeTimer = 0.0f;
 		}
+	}
+
+	public void uiStartGame() {
+		FMOD_StudioSystem.instance.PlayOneShot ("event:/UI/Start", GameObject.FindGameObjectWithTag("MainCamera").transform.position);
+	}
+
+	public void uiSelectMenu() {
+		FMOD_StudioSystem.instance.PlayOneShot ("event:/UI/Select", GameObject.FindGameObjectWithTag("MainCamera").transform.position);
 	}
 }

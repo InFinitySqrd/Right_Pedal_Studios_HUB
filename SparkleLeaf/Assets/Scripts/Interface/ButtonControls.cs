@@ -229,6 +229,7 @@ public class ButtonControls : MonoBehaviour {
                             // Restart the game
                             //Application.LoadLevel(Application.loadedLevel);
 //                            audioFade.FadeAudio(true);
+						audioManager.GetComponent<FMOD_Manager>().uiStartGame();
 						if (transform.GetComponent<Animator> ()) {
 							transform.GetComponent<Animator> ().enabled = true;
 							animationPlaying = true;
@@ -253,6 +254,7 @@ public class ButtonControls : MonoBehaviour {
 						}
 							break;
                         case ButtonFunction.Leaderboards:
+						audioManager.GetComponent<FMOD_Manager>().uiSelectMenu();
                             // Display leaderboards
                             if (Application.platform == RuntimePlatform.Android) {
                                 googlePlay.DisplayLeaderboardUI();
@@ -263,6 +265,7 @@ public class ButtonControls : MonoBehaviour {
                             //}
                             break;
                         case ButtonFunction.Settings:
+						audioManager.GetComponent<FMOD_Manager>().uiSelectMenu();
                             // Open the settings scene
 							if (settingsButton.color.a > 0.9f && backButton.color.a < 0.1f) {
 	                            inSubMenu = true;
@@ -279,6 +282,7 @@ public class ButtonControls : MonoBehaviour {
 							}
                             break;
                         case ButtonFunction.Back:
+						audioManager.GetComponent<FMOD_Manager>().uiSelectMenu();
                             // Return to the previous screen
 							if (settingsButton.color.a < 0.1f && backButton.color.a > 0.9f) {
 	                            inSubMenu = false;
@@ -297,6 +301,7 @@ public class ButtonControls : MonoBehaviour {
 							}
                             break;
                         case ButtonFunction.Info:
+						audioManager.GetComponent<FMOD_Manager>().uiSelectMenu();
                             // Switch the the credits and game info screen
 							if (subMenuParent.inSubMenu) {
                                 // Unlock the view credits achievement
@@ -308,6 +313,7 @@ public class ButtonControls : MonoBehaviour {
 							}
                             break;
                         case ButtonFunction.MuteSFX:
+						audioManager.GetComponent<FMOD_Manager>().uiSelectMenu();
 							// Mute all sounds
 							if (subMenuParent.inSubMenu) {
 								sfxEnabled = !sfxEnabled;
@@ -325,6 +331,7 @@ public class ButtonControls : MonoBehaviour {
 							}
                             break;
                         case ButtonFunction.ExitCredits:
+						audioManager.GetComponent<FMOD_Manager>().uiSelectMenu();
                             // Bring up the regular menu screen
                             Application.LoadLevelAdditive("MenuScreen");
                             audioManager.GetComponent<FMOD_Manager>().MenuTransition(false);
@@ -341,6 +348,7 @@ public class ButtonControls : MonoBehaviour {
                             }
                             break;
                         case ButtonFunction.TwitterShare:
+						audioManager.GetComponent<FMOD_Manager>().uiSelectMenu();
                             // Use code to share player score on twitter
                             string tags = "@HUBGamesAus #SilentGrove";
 

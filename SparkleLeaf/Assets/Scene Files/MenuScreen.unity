@@ -184,6 +184,7 @@ MonoBehaviour:
   fadeSpeed: .600000024
   tweenLocationModifier: 0
   subMenu: 0
+  ignoreColourChange: 0
 --- !u!1 &641510664
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,6 +355,7 @@ MonoBehaviour:
   fadeSpeed: .600000024
   tweenLocationModifier: 0
   subMenu: 0
+  ignoreColourChange: 0
 --- !u!114 &817571857
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -464,6 +466,7 @@ MonoBehaviour:
   fadeSpeed: 2
   tweenLocationModifier: 0
   subMenu: 1
+  ignoreColourChange: 0
 --- !u!114 &1033946098
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,6 +616,7 @@ MonoBehaviour:
   fadeSpeed: .600000024
   tweenLocationModifier: 0
   subMenu: 0
+  ignoreColourChange: 0
 --- !u!1 &1230040719
 GameObject:
   m_ObjectHideFlags: 0
@@ -661,6 +665,7 @@ MonoBehaviour:
   fadeSpeed: 2
   tweenLocationModifier: 0
   subMenu: 1
+  ignoreColourChange: 0
 --- !u!114 &1230040722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -842,6 +847,7 @@ MonoBehaviour:
   fadeSpeed: .600000024
   tweenLocationModifier: 0
   subMenu: 0
+  ignoreColourChange: 1
 --- !u!95 &1441827958
 Animator:
   serializedVersion: 3
@@ -975,6 +981,7 @@ MonoBehaviour:
   share: {fileID: 817571855}
   prevScoreFont: {fileID: 12800000, guid: ab4874f733caf0546885090592d10a6d, type: 3}
   highScoreFont: {fileID: 12800000, guid: 1fb5f0fb2b0c6a9489d4f5ec980b9206, type: 3}
+  black: {fileID: 2800000, guid: f6c980063e4dd4d0f9db1ad563e45c7c, type: 3}
 --- !u!1 &1561841625
 GameObject:
   m_ObjectHideFlags: 0
@@ -1230,3 +1237,4 @@ MonoBehaviour:
   fadeSpeed: .600000024
   tweenLocationModifier: 0
   subMenu: 0
+  ignoreColourChange: 1

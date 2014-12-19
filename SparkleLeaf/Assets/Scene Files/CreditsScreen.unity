@@ -150,6 +150,7 @@ MonoBehaviour:
   CreditsTexture: {fileID: 2800000, guid: 270200c3de79c438f89c037978c630b1, type: 3}
   CreditsLogo: {fileID: 2800000, guid: 541e01f9d30924c35b9b768fc04003cf, type: 3}
   BackButton: {fileID: 2800000, guid: 726a6034f3f25884f866a85090cdb38e, type: 3}
+  Black: {fileID: 2800000, guid: 8fdfdafce396e4cf7afa1ca07f2ae326, type: 3}
 --- !u!1 &1077784460
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,6 +238,7 @@ MonoBehaviour:
   fadeSpeed: .5
   tweenLocationModifier: 0
   subMenu: 0
+  ignoreColourChange: 0
 --- !u!1 &1541275149
 GameObject:
   m_ObjectHideFlags: 0
@@ -444,6 +446,7 @@ MonoBehaviour:
   fadeSpeed: .800000012
   tweenLocationModifier: 0
   subMenu: 0
+  ignoreColourChange: 0
 --- !u!23 &1700817778
 Renderer:
   m_ObjectHideFlags: 0
@@ -565,6 +568,7 @@ MonoBehaviour:
   fadeSpeed: .800000012
   tweenLocationModifier: 0
   subMenu: 0
+  ignoreColourChange: 0
 --- !u!23 &2009495095
 Renderer:
   m_ObjectHideFlags: 0
